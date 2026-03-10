@@ -1,6 +1,5 @@
 # Android Assignment Case 1
 
-## 中文版
 
 ### 项目概览
 这个仓库当前是一个 Android 作业案例交付目录，而不是完整源码仓库。目录中包含：
@@ -61,7 +60,6 @@ adb install a1_case1.apk
 
 ---
 
-## English Version
 
 ### Overview
 This repository is currently a delivery/archive folder for an Android assignment case rather than a full source repository. It contains:
