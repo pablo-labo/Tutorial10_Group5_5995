@@ -1,0 +1,6 @@
+package: com.example.mastg_test0016
+main_activity: com.example.mastg_test0016.MainActivity
+activities:
+- com.example.mastg_test0016.Login
+- com.example.mastg_test0016.Profile
+- com.example.mastg_test0016.MainActivity

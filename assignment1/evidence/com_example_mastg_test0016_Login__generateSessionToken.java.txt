@@ -1,0 +1,15 @@
+Lcom/example/mastg_test0016/Login; generateSessionToken()Ljava/lang/String;
+
+
+    private String generateSessionToken()
+    {
+        String v0_1 = new java.util.Random();
+        StringBuilder v1_1 = new StringBuilder(16);
+        int v3 = 0;
+        while (v3 < 16) {
+            v1_1.append("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".charAt(v0_1.nextInt(62)));
+            v3++;
+        }
+        return v1_1.toString();
+    }
+

@@ -1,0 +1,10 @@
+Lcom/example/mastg_test0016/Profile; clearSession()V
+
+
+    public void clearSession()
+    {
+        this.editor.remove("sessionToken");
+        this.editor.apply();
+        return;
+    }
+

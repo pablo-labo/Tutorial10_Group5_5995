@@ -1,0 +1,9 @@
+Lcom/example/mastg_test0016/Login; generateSessionToken()Ljava/lang/String;
+  new-instance v0, Ljava/util/Random;
+  invoke-direct v0, Ljava/util/Random;-><init>()V
+  invoke-virtual v0, v4, Ljava/util/Random;->nextInt(I)I
+
+Lcom/example/mastg_test0016/MainActivity; randomNumberGenerator()I
+  new-instance v0, Ljava/util/Random;
+  invoke-direct v0, Ljava/util/Random;-><init>()V
+  invoke-virtual v0, v1, Ljava/util/Random;->nextInt(I)I

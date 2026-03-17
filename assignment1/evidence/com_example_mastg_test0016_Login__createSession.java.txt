@@ -1,0 +1,10 @@
+Lcom/example/mastg_test0016/Login; createSession()V
+
+
+    public void createSession()
+    {
+        this.editor.putString("sessionToken", this.generateSessionToken());
+        this.editor.apply();
+        return;
+    }
+

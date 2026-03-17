@@ -1,0 +1,16 @@
+Lcom/example/mastg_test0016/Login$1; onClick(Landroid/view/View;)V
+
+
+    public void onClick(android.view.View p3)
+    {
+        android.content.Intent v3_1 = com.example.mastg_test0016.Login.access$000(this.this$0, this.val$text1.getText().toString(), this.val$text2.getText().toString());
+        android.util.Log.d("result func:", new StringBuilder("").append(v3_1).toString());
+        if (v3_1 != null) {
+            this.this$0.createSession();
+            this.this$0.startActivity(new android.content.Intent(this.this$0, com.example.mastg_test0016.Profile));
+        } else {
+            android.widget.Toast.makeText(this.this$0, "Wrong Credential", 0).show();
+        }
+        return;
+    }
+
