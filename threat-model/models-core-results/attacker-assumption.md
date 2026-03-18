@@ -1,37 +1,27 @@
-# Attacker Assumption
+# Attacker Assumptions (Core Result)
 
-## Assumptions Used
-Conclusion
-- The attacker can estimate login timing within a bounded window.
-- The attacker can obtain partial token signal in realistic leakage contexts.
-- The attacker can run offline candidate generation.
+## A. Assumptions We Make
+A1. The attacker can infer approximate login time within a bounded error range.
+A2. The attacker can obtain partial token signal (prefix/sample) in realistic leakage scenarios.
+A3. The attacker can perform offline candidate generation and attempt validation.
 
-Evidence
-- Token generation occurs in login session path: `apk-decompile_code/sources/com/example/mastg_test0016/Login.java` lines 174-176 and 183-188.
+## B. Assumptions We Do Not Make
+N1. We do not assume server-side compromise.
+N2. We do not assume full device takeover by default.
+N3. We do not assume impossible perfect timing precision.
+N4. We do not rely on unrelated vulnerability classes.
 
-## Assumptions Not Used
-Conclusion
-- No assumption of server-side compromise.
-- No assumption of full remote compromise.
-- No assumption of perfect timing precision.
-- No dependence on unrelated vulnerability classes.
+## C. Why These Assumptions Are Realistic
+1. Timing side-information is commonly inferable in interactive login flows.
+2. Partial leakage is plausible in debug/test/instrumented environments.
+3. Deterministic generator behavior allows bounded candidate enumeration when timing context is available.
 
-Evidence
-- Model scope stays tied to randomness misuse in token generation path.
+## D. Evidence Connection to Chosen Vulnerability
+- Token generation function: `Login.generateSessionToken()` (`Login.java` lines 183-188).
+- Token persistence in auth path: `Login.createSession()` (`Login.java` lines 174-176).
+- Session lifecycle endpoint: `Profile.clearSession()` (`Profile.java` lines 50-52).
 
-## Realism Rationale
-Conclusion
-- The assumptions are realistic for bounded threat modeling and tutorial defense.
-- The assumptions are strong enough to evaluate risk but narrow enough to avoid over-claiming.
+These anchors confirm that assumptions apply to authentication-state material, not UI-only randomness.
 
-Evidence
-- Deterministic token source in security role: `Login.java` lines 183-188.
-- Persisted token lifecycle: `Login.java` lines 174-176 and `Profile.java` lines 50-52.
-
-## Risk Interpretation
-Conclusion
-- Under the stated assumptions, predictability risk is credible.
-- If assumptions weaken, exploit practicality may drop, but the design weakness remains.
-
-Evidence
-- Weak randomness is a property of implementation, independent of attacker success rate in every environment.
+## E. Bounded Claim Statement
+Under A1-A3, predictability risk is credible and exploitable in realistic contexts; without such conditions, exploit practicality decreases, but design weakness remains.

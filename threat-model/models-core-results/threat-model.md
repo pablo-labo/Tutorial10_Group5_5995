@@ -1,61 +1,44 @@
-# Threat Model
+# Threat Model (Core Result)
 
-## Selected Vulnerability
-Conclusion
-- The chosen vulnerability is weak session token generation using `java.util.Random`.
-- This is a randomness misuse in a security-sensitive authentication context.
+## A. Threat Linked to Selected Vulnerability
+Selected core issue:
+- `Login.generateSessionToken()` uses deterministic `java.util.Random` for security-sensitive session tokens.
+- Evidence: `Login.java` lines 183-188.
 
-Evidence
-- `apk-decompile_code/sources/com/example/mastg_test0016/Login.java` lines 183-188 show `new Random()` used for token generation.
-- `Login.java` lines 174-176 show token is persisted as session state.
+Threat statement:
+- Under realistic observation conditions, deterministic token generation can reduce effective uncertainty and support session impersonation attempts.
 
-## Threat Statement
-Conclusion
-- Deterministic token generation can reduce effective uncertainty under realistic observation conditions.
-- Reduced uncertainty can support session impersonation attempts.
+## B. Attacker Goals
+Primary goal:
+1. Predict or reproduce a valid `sessionToken`.
+2. Use predicted token context to compromise authentication-state integrity.
 
-Evidence
-- Deterministic source in token path: `Login.java` lines 183-188.
-- Token used in persisted session state: `Login.java` lines 174-176.
+Secondary goal:
+1. Reduce candidate space enough to make verification practical.
 
-## Attacker Goals
-Conclusion
-- Primary goal is to predict or reproduce valid token context to weaken session integrity.
-- Secondary goal is to reduce candidate space for practical validation.
+## C. Attacker Capabilities (realistic)
+1. Bounded login-time estimation.
+2. Partial token signal access in plausible contexts (debug leakage / instrumentation / rooted or test device context).
+3. Offline candidate generation from known PRNG behavior.
 
-Evidence
-- Token is central to session state lifecycle in `Login` and `Profile` paths.
+## D. Attacker Constraints (non-exaggerated)
+1. No backend/server compromise assumed.
+2. No remote code execution assumed.
+3. No universal guaranteed bypass claim.
 
-## Attacker Capabilities
-Conclusion
-- Realistic capabilities include bounded timing estimation, partial token signal access, and offline candidate generation.
-- The model does not require unrealistic omniscient access.
+## E. Attack Preconditions
+P1. Timing window around login is estimable.
+P2. At least partial token signal is available.
+P3. Candidate validation path exists.
 
-Evidence
-- Login-triggered token creation path supports timing-based context: `Login.java` lines 174-176.
-- Deterministic generator supports candidate modeling: `Login.java` lines 183-188.
+Risk meaning:
+- If P1 + P2 hold, predictability risk becomes materially higher than with CSPRNG token generation.
 
-## Attack Preconditions
-Conclusion
-- Attack feasibility depends on timing context, token signal, and a validation path.
-- Claims remain conditional and bounded.
+## F. Why This Threat Model Is Defensible
+- It explicitly links vulnerability location -> protected asset -> attacker capability -> bounded preconditions.
+- It keeps claims calibrated and tutorial-defensible.
+- It remains fully within randomness/crypto scope.
 
-Evidence
-- Session token generation and persistence are observable architectural steps in code path.
-
-## Claim Boundaries
-Conclusion
-- The report does not assume backend compromise.
-- The report does not assume remote code execution.
-- The report does not claim guaranteed bypass in all environments.
-
-Evidence
-- Bounded claim logic is consistent with local-app code evidence and selected vulnerability scope.
-
-## Threat Model Justification
-Conclusion
-- The threat model is defensible because it links vulnerability location, asset impact, attacker capability, and bounded preconditions.
-
-Evidence
-- Vulnerability and persistence anchors: `Login.java` lines 174-176 and 183-188.
-- Session lifecycle anchor: `Profile.java` lines 50-52.
+## G. Security Basis
+- `java.util.Random` is deterministic and unsuitable for authentication token generation.
+- Security-sensitive token generation requires CSPRNG properties (e.g., `SecureRandom`).
