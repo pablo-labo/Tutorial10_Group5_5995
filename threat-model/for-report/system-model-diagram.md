@@ -1,22 +1,22 @@
 # System Model Diagram (Assignment Task 2)
 
-The diagram below is aligned with the agreed C evidence flow and the selected F1 core vulnerability.
+Horizontal diagram with explicit main components, core assets, and data flow (aligned with F1).
 
 ```mermaid
-flowchart TD
-    U["1) User Input<br/>username / password"]
+flowchart LR
+    U["User Input"]
 
-    subgraph APP["Application Processes"]
-      MA["2) MainActivity.saveCredentialsToFile()<br/>stores registration credentials"]
-      LC["4) Login.checkCredentials()<br/>reads + compares credentials"]
-      CS["5) Login.createSession()<br/>creates session state"]
-      GST["6) Login.generateSessionToken()<br/>uses java.util.Random (F1)"]
-      PF["8) Profile<br/>(no explicit token validation gate)"]
-    end
+    MA["MainActivity\nsaveCredentialsToFile"]
+    CRED[("credentials.txt")]
+    LC["Login\ncheckCredentials"]
+    CS["Login\ncreateSession"]
+    GST["Login\ngenerateSessionToken\n(Random)"]
+    SP[("SharedPreferences\nsessionToken")]
+    PF["Profile\n(no token validation)"]
+    SS["Session"]
 
-    CRED[("3) credentials.txt<br/>plaintext credential store")]
-    SP[("7) SharedPreferences<br/>SessionPrefs.sessionToken")]
-    S["Session State"]
+    A1{{"Asset A1\nToken Unpredictability"}}
+    A2{{"Asset A2\nSession Integrity"}}
 
     U --> MA
     MA --> CRED
@@ -25,21 +25,32 @@ flowchart TD
     CS --> GST
     GST --> SP
     SP --> PF
-    PF --> S
+    PF --> SS
 
-    classDef vuln fill:#ffe9e9,stroke:#cc3333,stroke-width:1px,color:#222;
+    SP --> A1
+    SS --> A2
+
+    classDef vuln fill:#ffe9e9,stroke:#cc3333,stroke-width:1px,color:#111;
     classDef store fill:#eaf3ff,stroke:#3b82f6,stroke-width:1px,color:#111;
-    classDef proc fill:#f8fafc,stroke:#64748b,stroke-width:1px,color:#111;
+    classDef asset fill:#f0fdf4,stroke:#16a34a,stroke-width:1px,color:#111;
 
     class GST vuln;
     class CRED,SP store;
-    class MA,LC,CS,PF proc;
+    class A1,A2 asset;
 ```
 
-## Security Path Callout
-`Random` -> `Token` -> `SharedPreferences` -> `Session`
+## Node Notes (for readability)
+- `MainActivity.saveCredentialsToFile`: writes credentials to `credentials.txt`.
+- `Login.checkCredentials`: reads and compares stored credentials.
+- `Login.createSession`: creates auth session state.
+- `Login.generateSessionToken (Random)`: selected F1 weak randomness point.
+- `SharedPreferences(sessionToken)`: persistent token store.
+- `Profile (no token validation)`: no explicit token validation gate shown in observed flow.
 
-## Figure Notes
-- Core weak point: `Login.java` lines 183-188.
-- Token persistence: `Login.java` lines 174-176.
-- Supporting contrast (not core): `MainActivity.randomNumberGenerator()` (`MainActivity.java` lines 17-20).
+## Security Path
+`Random -> Token -> SharedPreferences -> Session`
+
+## Evidence Anchors
+- `Login.java` lines 183-188 (weak token generation)
+- `Login.java` lines 174-176 (token persistence)
+- `MainActivity.java` lines 17-20 (UI-only random contrast)
