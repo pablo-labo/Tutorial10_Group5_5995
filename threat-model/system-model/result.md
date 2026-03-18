@@ -1,58 +1,66 @@
 # System Model (Core Result)
 
-## A. Model Scope
-This system model is built for one selected vulnerability only:
-- Vulnerability: `Login.generateSessionToken()` uses `java.util.Random` for session tokens.
-- Security focus: authentication-state integrity and token unpredictability.
+## A. Scope and Selected Vulnerability
+This system model is scoped to one core vulnerability only:
+- F1: insecure session-token generation using `java.util.Random` in `Login.generateSessionToken()`.
 
-Direct code anchors:
-- Token is generated in `Login.generateSessionToken()` (`Login.java` lines 183-188).
-- Token is persisted in `Login.createSession()` (`Login.java` lines 174-176).
+Why this scope:
+- It is directly in Assignment 1 randomness/crypto marking scope.
+- It sits on the authentication-state creation path.
+
+Code anchors:
+- Token generation: `apk-decompile_code/sources/com/example/mastg_test0016/Login.java` lines 183-188.
+- Token persistence: `Login.java` lines 174-176.
 
 ## B. Main Components
 1. `MainActivity`
-- Handles register input and navigation to login.
-- Contains `randomNumberGenerator()` that is UI-only random usage.
+- Accepts registration inputs.
+- Writes credentials to local file through `saveCredentialsToFile()`.
+- Also contains UI-only random usage (`randomNumberGenerator()`), not selected as core vulnerability.
 
 2. `Login`
-- Reads and checks credentials.
-- Creates and stores session token when login succeeds.
+- Reads and compares stored credentials through `checkCredentials()`.
+- Creates session state by storing `sessionToken`.
+- Generates `sessionToken` through `generateSessionToken()` (selected weak point).
 
 3. `Profile`
 - Represents post-login state.
-- Removes session token on logout.
+- Implements logout token removal (`clearSession()`).
+- Current flow indicates no explicit token validation gate before profile use.
 
-4. Local storage
-- `credentials.txt` for stored credentials.
-- `SharedPreferences("SessionPrefs")` for `sessionToken`.
+4. Data stores
+- `credentials.txt` (plaintext credentials store).
+- `SharedPreferences("SessionPrefs")` with key `sessionToken`.
 
-Manifest evidence for structure:
-- `AndroidManifest.xml` lines 28-37 list `Profile`, `Login`, `MainActivity`.
+Manifest structure evidence:
+- `apk-decompile_code/resources/AndroidManifest.xml` lines 28-37 (`Profile`, `Login`, `MainActivity`).
 
 ## C. Key Assets (explicit)
-Primary assets (in scope):
+Primary assets in scope:
 1. `sessionToken` unpredictability.
-2. Session-state integrity (only legitimate authentication should create valid state).
+2. Authentication-state integrity.
 
-Secondary asset (context only):
-1. Local credentials in `credentials.txt`.
+Context asset:
+1. Local credentials (`credentials.txt`).
 
-## D. Key Data Flows (explicit)
-1. User enters credentials in `Login`.
-2. `checkCredentials(...)` validates against local credential data.
-3. Success path triggers `createSession()`.
-4. `createSession()` calls `generateSessionToken()`.
-5. Token is written to `SharedPreferences` as `sessionToken`.
-6. `Profile.clearSession()` removes token at logout.
+## D. Data Flow (aligned with C evidence)
+1. User input.
+2. `MainActivity.saveCredentialsToFile()`.
+3. `credentials.txt` (plaintext).
+4. `Login.checkCredentials()`.
+5. `Login.createSession()`.
+6. `Login.generateSessionToken()` (insecure randomness).
+7. `SharedPreferences(sessionToken)`.
+8. `Profile` (no explicit validation gate in observed flow).
 
-Security-critical flow linked to vulnerability:
-- `generateSessionToken()` -> `createSession()` -> `SharedPreferences(sessionToken)`.
+Critical security path:
+- `Random` -> `Token` -> `SharedPreferences` -> `Session`.
 
 ## E. Trust Boundaries
-1. External input -> authentication logic (`checkCredentials`).
-2. Authentication logic -> token generation (security decision point).
-3. Runtime token -> persistent token state (`SharedPreferences`).
-4. Authenticated state -> logout invalidation (`clearSession`).
+1. User-controlled input -> registration/login logic.
+2. Credential verification -> session-creation decision.
+3. Token generation -> persistent token storage.
+4. Stored token state -> post-login session behavior.
 
-## F. Why this model supports the chosen vulnerability
-The weak random generator is placed on the exact path that creates persistent authentication state. Therefore the risk is not cosmetic API misuse; it affects a protected asset through a critical trust boundary.
+## F. Why this model supports F1
+The weak random generator is not isolated utility code; it is on the exact path that creates persisted authentication state. Therefore F1 is a system-level security issue, not a cosmetic API-choice issue.

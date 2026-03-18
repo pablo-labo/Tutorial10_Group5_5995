@@ -1,46 +1,45 @@
 # System Model Diagram (Assignment Task 2)
 
-This diagram is designed to satisfy Task 2 requirements: main components, key assets, and data flows, explicitly connected to the chosen vulnerability.
+The diagram below is aligned with the agreed C evidence flow and the selected F1 core vulnerability.
 
 ```mermaid
-flowchart LR
-    U["User"]
+flowchart TD
+    U["1) User Input<br/>username / password"]
 
-    MA["MainActivity<br/>(Register / Navigate to Login)"]
-    LO["Login<br/>(checkCredentials + createSession)"]
-    PR["Profile<br/>(Logout)"]
+    subgraph APP["Application Processes"]
+      MA["2) MainActivity.saveCredentialsToFile()<br/>stores registration credentials"]
+      LC["4) Login.checkCredentials()<br/>reads + compares credentials"]
+      CS["5) Login.createSession()<br/>creates session state"]
+      GST["6) Login.generateSessionToken()<br/>uses java.util.Random (F1)"]
+      PF["8) Profile<br/>(no explicit token validation gate)"]
+    end
 
-    CRED[("credentials.txt")]
-    SP[("SharedPreferences<br/>SessionPrefs.sessionToken")]
+    CRED[("3) credentials.txt<br/>plaintext credential store")]
+    SP[("7) SharedPreferences<br/>SessionPrefs.sessionToken")]
+    S["Session State"]
 
-    RNG1[["Random() in Login.generateSessionToken"]]
-    RNG2[["Random() in MainActivity.randomNumberGenerator"]]
+    U --> MA
+    MA --> CRED
+    CRED --> LC
+    LC --> CS
+    CS --> GST
+    GST --> SP
+    SP --> PF
+    PF --> S
 
-    A1{{"Asset: Authentication state integrity"}}
-    A2{{"Asset: sessionToken unpredictability"}}
+    classDef vuln fill:#ffe9e9,stroke:#cc3333,stroke-width:1px,color:#222;
+    classDef store fill:#eaf3ff,stroke:#3b82f6,stroke-width:1px,color:#111;
+    classDef proc fill:#f8fafc,stroke:#64748b,stroke-width:1px,color:#111;
 
-    U -->|register input| MA
-    U -->|login input| LO
-
-    MA -->|write username/password| CRED
-    LO -->|read + compare credentials| CRED
-
-    LO -->|on valid login -> createSession| SP
-    RNG1 -->|token material| LO
-
-    PR -->|logout clears token| SP
-    U -->|logout action| PR
-
-    SP --> A1
-    SP --> A2
-
-    RNG2 -. UI-only random value .-> MA
-
-    classDef vuln fill:#ffe9e9,stroke:#cc3333,stroke-width:1px;
-    class RNG1 vuln;
+    class GST vuln;
+    class CRED,SP store;
+    class MA,LC,CS,PF proc;
 ```
 
-## Figure notes for report text
-- Chosen vulnerability location: `apk-decompile_code/sources/com/example/mastg_test0016/Login.java` (lines 183-188).
-- Security-relevant data flow: `generateSessionToken()` -> `createSession()` -> `SharedPreferences(sessionToken)`.
-- Lower-priority contrast point: `MainActivity.randomNumberGenerator()` is UI-only and not the selected core vulnerability.
+## Security Path Callout
+`Random` -> `Token` -> `SharedPreferences` -> `Session`
+
+## Figure Notes
+- Core weak point: `Login.java` lines 183-188.
+- Token persistence: `Login.java` lines 174-176.
+- Supporting contrast (not core): `MainActivity.randomNumberGenerator()` (`MainActivity.java` lines 17-20).
