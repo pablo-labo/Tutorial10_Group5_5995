@@ -1,56 +1,66 @@
 # System Model Diagram (Assignment Task 2)
 
-Horizontal diagram with explicit main components, core assets, and data flow (aligned with F1).
+Richer horizontal system model with main components, core assets, end-to-end data flow, and code anchors.
 
 ```mermaid
 flowchart LR
-    U["User Input"]
+    %% Actors and components
+    U["User Input\n(username/password)"]
+    MA["MainActivity\nsaveCredentialsToFile()"]
+    LC["Login\ncheckCredentials()"]
+    CS["Login\ncreateSession()"]
+    GST["Login\ngenerateSessionToken()\nuses Random"]
+    PF["Profile\n(no explicit token validation)"]
 
-    MA["MainActivity\nsaveCredentialsToFile"]
-    CRED[("credentials.txt")]
-    LC["Login\ncheckCredentials"]
-    CS["Login\ncreateSession"]
-    GST["Login\ngenerateSessionToken\n(Random)"]
-    SP[("SharedPreferences\nsessionToken")]
-    PF["Profile\n(no token validation)"]
-    SS["Session"]
+    %% Data stores and state
+    CRED[("credentials.txt\nplaintext store")]
+    SP[("SharedPreferences\nSessionPrefs.sessionToken")]
+    S["Session State"]
 
+    %% Core assets
     A1{{"Asset A1\nToken Unpredictability"}}
-    A2{{"Asset A2\nSession Integrity"}}
+    A2{{"Asset A2\nAuthentication-State Integrity"}}
 
-    U --> MA
-    MA --> CRED
-    CRED --> LC
-    LC --> CS
-    CS --> GST
-    GST --> SP
-    SP --> PF
-    PF --> SS
+    %% Data flow (aligned with C evidence)
+    U -->|register input| MA
+    MA -->|write credentials| CRED
+    CRED -->|read credentials| LC
+    LC -->|valid login| CS
+    CS -->|invoke token generation| GST
+    GST -->|store token| SP
+    SP -->|session token available| PF
+    PF -->|effective logged-in state| S
 
+    %% Asset linkage
     SP --> A1
-    SS --> A2
+    S --> A2
+
+    %% Code anchors
+    E1["Code Anchor\nLogin.java 183-188\nRandom token generation"]
+    E2["Code Anchor\nLogin.java 174-176\nstore sessionToken"]
+    E3["Code Anchor\nProfile.java 50-52\nclearSession()"]
+    E4["Contrast Anchor\nMainActivity.java 17-20\nUI-only random"]
+
+    E1 -. evidence .-> GST
+    E2 -. evidence .-> SP
+    E3 -. evidence .-> PF
+    E4 -. contrast .-> MA
 
     classDef vuln fill:#ffe9e9,stroke:#cc3333,stroke-width:1px,color:#111;
     classDef store fill:#eaf3ff,stroke:#3b82f6,stroke-width:1px,color:#111;
     classDef asset fill:#f0fdf4,stroke:#16a34a,stroke-width:1px,color:#111;
+    classDef anchor fill:#fff7ed,stroke:#f97316,stroke-width:1px,color:#111;
 
     class GST vuln;
     class CRED,SP store;
     class A1,A2 asset;
+    class E1,E2,E3,E4 anchor;
 ```
-
-## Node Notes (for readability)
-- `MainActivity.saveCredentialsToFile`: writes credentials to `credentials.txt`.
-- `Login.checkCredentials`: reads and compares stored credentials.
-- `Login.createSession`: creates auth session state.
-- `Login.generateSessionToken (Random)`: selected F1 weak randomness point.
-- `SharedPreferences(sessionToken)`: persistent token store.
-- `Profile (no token validation)`: no explicit token validation gate shown in observed flow.
 
 ## Security Path
 `Random -> Token -> SharedPreferences -> Session`
 
-## Evidence Anchors
-- `Login.java` lines 183-188 (weak token generation)
-- `Login.java` lines 174-176 (token persistence)
-- `MainActivity.java` lines 17-20 (UI-only random contrast)
+## Mapping to Assignment Wording
+- Main components: `MainActivity`, `Login`, `Profile`
+- Key assets: token unpredictability, authentication-state integrity
+- Key data flows: registration -> credentials store -> login check -> session creation -> token persistence -> profile/session
