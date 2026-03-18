@@ -1,19 +1,27 @@
 # Attacker Assumptions (Core Result)
 
-## 1) Assumptions we make
-A1. Attacker can estimate login timing to a bounded window.
-A2. Attacker can observe token fragment/sample in realistic leakage scenarios.
-A3. Attacker can run offline candidate generation and attempt validation.
+## A. Assumptions We Make
+A1. The attacker can infer approximate login time within a bounded error range.
+A2. The attacker can obtain partial token signal (prefix/sample) in realistic leakage scenarios.
+A3. The attacker can perform offline candidate generation and attempt validation.
 
-## 2) Assumptions we do NOT make
-N1. No full backend/server compromise.
-N2. No impossible perfect knowledge of all runtime state.
-N3. No dependence on unrelated vulnerability categories.
+## B. Assumptions We Do Not Make
+N1. We do not assume server-side compromise.
+N2. We do not assume full device takeover by default.
+N3. We do not assume impossible perfect timing precision.
+N4. We do not rely on unrelated vulnerability classes.
 
-## 3) Defensibility rationale
-- A1 is common in interactive login systems (event timing is often inferable).
-- A2 is realistic in dev/test/log or instrumented-device contexts.
-- A3 is practical when generator is deterministic and candidate space is bounded by timing.
+## C. Why These Assumptions Are Realistic
+1. Timing side-information is commonly inferable in interactive login flows.
+2. Partial leakage is plausible in debug/test/instrumented environments.
+3. Deterministic generator behavior allows bounded candidate enumeration when timing context is available.
 
-## 4) Impact on risk statement
-These assumptions make the attack model realistic but bounded. Even when exploit probability varies by environment, the root design issue remains: non-CSPRNG token generation in a security-sensitive role.
+## D. Evidence Connection to Chosen Vulnerability
+- Token generation function: `Login.generateSessionToken()` (`Login.java` lines 183-188).
+- Token persistence in auth path: `Login.createSession()` (`Login.java` lines 174-176).
+- Session lifecycle endpoint: `Profile.clearSession()` (`Profile.java` lines 50-52).
+
+These anchors confirm that assumptions apply to authentication-state material, not UI-only randomness.
+
+## E. Bounded Claim Statement
+Under A1-A3, predictability risk is credible and exploitable in realistic contexts; without such conditions, exploit practicality decreases, but design weakness remains.
