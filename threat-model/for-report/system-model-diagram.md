@@ -1,66 +1,41 @@
-# System Model Diagram (Assignment Task 2)
+# System Model Diagram
 
-Richer horizontal system model with main components, core assets, end-to-end data flow, and code anchors.
+Compact horizontal diagram for single-column report layout.
 
 ```mermaid
 flowchart LR
-    %% Actors and components
-    U["User Input\n(username/password)"]
-    MA["MainActivity\nsaveCredentialsToFile()"]
-    LC["Login\ncheckCredentials()"]
-    CS["Login\ncreateSession()"]
-    GST["Login\ngenerateSessionToken()\nuses Random"]
-    PF["Profile\n(no explicit token validation)"]
+    U["User"]
+    MA["MainActivity"]
+    CRED[("credentials.txt")]
+    LC["Login checkCredentials"]
+    CS["createSession"]
+    GST["generateSessionToken\nRandom"]
+    SP[("SharedPrefs\nsessionToken")]
+    PF["Profile"]
+    S["Session"]
 
-    %% Data stores and state
-    CRED[("credentials.txt\nplaintext store")]
-    SP[("SharedPreferences\nSessionPrefs.sessionToken")]
-    S["Session State"]
+    A1{{"Asset\nToken entropy"}}
+    A2{{"Asset\nSession integrity"}}
 
-    %% Core assets
-    A1{{"Asset A1\nToken Unpredictability"}}
-    A2{{"Asset A2\nAuthentication-State Integrity"}}
-
-    %% Data flow (aligned with C evidence)
-    U -->|register input| MA
-    MA -->|write credentials| CRED
-    CRED -->|read credentials| LC
-    LC -->|valid login| CS
-    CS -->|invoke token generation| GST
-    GST -->|store token| SP
-    SP -->|session token available| PF
-    PF -->|effective logged-in state| S
-
-    %% Asset linkage
+    U --> MA --> CRED --> LC --> CS --> GST --> SP --> PF --> S
     SP --> A1
     S --> A2
-
-    %% Code anchors
-    E1["Code Anchor\nLogin.java 183-188\nRandom token generation"]
-    E2["Code Anchor\nLogin.java 174-176\nstore sessionToken"]
-    E3["Code Anchor\nProfile.java 50-52\nclearSession()"]
-    E4["Contrast Anchor\nMainActivity.java 17-20\nUI-only random"]
-
-    E1 -. evidence .-> GST
-    E2 -. evidence .-> SP
-    E3 -. evidence .-> PF
-    E4 -. contrast .-> MA
 
     classDef vuln fill:#ffe9e9,stroke:#cc3333,stroke-width:1px,color:#111;
     classDef store fill:#eaf3ff,stroke:#3b82f6,stroke-width:1px,color:#111;
     classDef asset fill:#f0fdf4,stroke:#16a34a,stroke-width:1px,color:#111;
-    classDef anchor fill:#fff7ed,stroke:#f97316,stroke-width:1px,color:#111;
 
     class GST vuln;
     class CRED,SP store;
     class A1,A2 asset;
-    class E1,E2,E3,E4 anchor;
 ```
 
-## Security Path
-`Random -> Token -> SharedPreferences -> Session`
+## Figure Notes
+- Main flow: `User -> MainActivity -> credentials.txt -> Login.checkCredentials -> createSession -> generateSessionToken(Random) -> SharedPreferences(sessionToken) -> Profile -> Session`.
+- Core security path: `Random -> Token -> SharedPreferences -> Session`.
+- Code anchors: `Login.java` 174-176, 183-188; `Profile.java` 50-52.
+- Contrast (not core): `MainActivity.java` 17-20 is UI-only random usage.
 
-## Mapping to Assignment Wording
-- Main components: `MainActivity`, `Login`, `Profile`
-- Key assets: token unpredictability, authentication-state integrity
-- Key data flows: registration -> credentials store -> login check -> session creation -> token persistence -> profile/session
+## LaTeX Placement Tip
+Use one-column figure width:
+`\\includegraphics[width=\\columnwidth]{system-model-diagram}`
