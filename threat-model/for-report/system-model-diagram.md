@@ -4,20 +4,20 @@ This diagram is designed to satisfy Task 2 requirements: main components, key as
 
 ```mermaid
 flowchart LR
-    U[User]
+    U["User"]
 
-    MA[MainActivity\n(Register / Navigate to Login)]
-    LO[Login\n(checkCredentials + createSession)]
-    PR[Profile\n(Logout)]
+    MA["MainActivity<br/>(Register / Navigate to Login)"]
+    LO["Login<br/>(checkCredentials + createSession)"]
+    PR["Profile<br/>(Logout)"]
 
-    CRED[(credentials.txt)]
-    SP[(SharedPreferences\nSessionPrefs.sessionToken)]
+    CRED[("credentials.txt")]
+    SP[("SharedPreferences<br/>SessionPrefs.sessionToken")]
 
-    RNG1[[Random() in Login.generateSessionToken]]
-    RNG2[[Random() in MainActivity.randomNumberGenerator]]
+    RNG1[["Random() in Login.generateSessionToken"]]
+    RNG2[["Random() in MainActivity.randomNumberGenerator"]]
 
-    A1{{Asset: Authentication state integrity}}
-    A2{{Asset: sessionToken unpredictability}}
+    A1{{"Asset: Authentication state integrity"}}
+    A2{{"Asset: sessionToken unpredictability"}}
 
     U -->|register input| MA
     U -->|login input| LO
