@@ -1,41 +1,50 @@
 # System Model Diagram
 
-Compact horizontal diagram for single-column report layout.
+Unified horizontal diagram with style matching the preferred version.
 
 ```mermaid
 flowchart LR
     U["User"]
-    MA["MainActivity"]
+
+    MA["MainActivity<br/>(saveCredentialsToFile)"]
+    LO["Login<br/>(checkCredentials)"]
+    CS["Login<br/>(createSession)"]
+    PR["Profile<br/>(no token validation / logout)"]
+
     CRED[("credentials.txt")]
-    LC["Login checkCredentials"]
-    CS["createSession"]
-    GST["generateSessionToken\nRandom"]
-    SP[("SharedPrefs\nsessionToken")]
-    PF["Profile"]
-    S["Session"]
+    SP[("SharedPreferences<br/>SessionPrefs.sessionToken")]
 
-    A1{{"Asset\nToken entropy"}}
-    A2{{"Asset\nSession integrity"}}
+    RNG1[["Random() in Login.generateSessionToken"]]
+    RNG2[["Random() in MainActivity.randomNumberGenerator"]]
 
-    U --> MA --> CRED --> LC --> CS --> GST --> SP --> PF --> S
+    A1{{"Asset: Authentication state integrity"}}
+    A2{{"Asset: sessionToken unpredictability"}}
+
+    U -->|register input| MA
+    MA -->|write username/password| CRED
+
+    U -->|login input| LO
+    LO -->|read + compare credentials| CRED
+    LO -->|valid login| CS
+
+    CS -->|calls generateSessionToken| RNG1
+    RNG1 -->|token output| CS
+    CS -->|store sessionToken| SP
+
+    SP -->|session state used| PR
+    U -->|logout action| PR
+    PR -->|logout clears token| SP
+
     SP --> A1
-    S --> A2
+    SP --> A2
 
-    classDef vuln fill:#ffe9e9,stroke:#cc3333,stroke-width:1px,color:#111;
-    classDef store fill:#eaf3ff,stroke:#3b82f6,stroke-width:1px,color:#111;
-    classDef asset fill:#f0fdf4,stroke:#16a34a,stroke-width:1px,color:#111;
+    RNG2 -. UI-only random value .-> MA
 
-    class GST vuln;
-    class CRED,SP store;
-    class A1,A2 asset;
+    classDef vuln fill:#ffe9e9,stroke:#cc3333,stroke-width:1px;
+    class RNG1 vuln;
 ```
 
 ## Figure Notes
-- Main flow: `User -> MainActivity -> credentials.txt -> Login.checkCredentials -> createSession -> generateSessionToken(Random) -> SharedPreferences(sessionToken) -> Profile -> Session`.
+- Data flow aligned with agreed chain: `User input -> MainActivity.saveCredentialsToFile -> credentials.txt -> Login.checkCredentials -> Login.createSession -> Login.generateSessionToken -> SharedPreferences(sessionToken) -> Profile`.
 - Core security path: `Random -> Token -> SharedPreferences -> Session`.
-- Code anchors: `Login.java` 174-176, 183-188; `Profile.java` 50-52.
-- Contrast (not core): `MainActivity.java` 17-20 is UI-only random usage.
-
-## LaTeX Placement Tip
-Use one-column figure width:
-`\\includegraphics[width=\\columnwidth]{system-model-diagram}`
+- Code anchors: `Login.java` 174-176 and 183-188, `MainActivity.java` 17-20, `Profile.java` 50-52.
