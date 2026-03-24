@@ -1,82 +1,112 @@
-# System Model (Core Result)
+# System Model (Core Result, Refined Draft)
 
-## A. Scope and Selected Vulnerability
-This system model is scoped to one core vulnerability only:
-- F1: insecure session-token generation using `java.util.Random` in `Login.generateSessionToken()`.
+## A. App Summary (3-5 sentences)
+This APK is a local Android demo app with three key activities: `MainActivity` (register), `Login` (credential check + session creation), and `Profile` (post-login page + logout). User credentials are written to a local file (`credentials.txt`), and login session state is persisted in `SharedPreferences("SessionPrefs")` as `sessionToken`. The selected security issue is **randomness misuse in session token generation (predictable PRNG risk)** in `Login.generateSessionToken()`. The app evidence shows local auth-state creation and storage clearly, but does not show backend-side token validation logic. Therefore, this model focuses on token-generation security properties and bounded local exploitability claims.
 
-Why this scope:
-- It is directly in Assignment 1 randomness/crypto marking scope.
-- It sits on the authentication-state creation path.
-- It is the only application-level random use that is tied to a security-labelled value rather than UI behavior.
+## B. Scope and Selected Vulnerability
+Selected core vulnerability:
+- F1: `Login.generateSessionToken()` uses `java.util.Random` for session token generation (`Login.java` 183-188).
+
+Scope rationale:
+1. Directly in randomness/crypto marking scope.
+2. Located on authentication-state creation path (`createSession()` -> `sessionToken` persistence).
+3. Strongest evidence-backed path among observed random usages.
 
 Code anchors:
-- Token generation: `apk-decompile_code/sources/com/example/mastg_test0016/Login.java` lines 183-188.
-- Token persistence: `Login.java` lines 174-176.
-- Login-to-profile transition: `Login.java` lines 52-59.
-- Observed token lifecycle endpoint: `Profile.java` lines 50-52.
+- Token generation: `apk-decompile_code/sources/com/example/mastg_test0016/Login.java` 183-188.
+- Token persistence: `Login.java` 174-176.
+- Login success to profile: `Login.java` 52-59.
+- Logout token removal: `apk-decompile_code/sources/com/example/mastg_test0016/Profile.java` 50-52.
 
-## B. Main Components
-1. `MainActivity`
-- Accepts registration inputs.
-- Writes credentials to local file through `saveCredentialsToFile()`.
-- Also contains UI-only random usage (`randomNumberGenerator()`), not selected as core vulnerability.
+## C. DFD (with Trust Boundaries)
+```mermaid
+flowchart LR
+    classDef process fill:#efe9ff,stroke:#7a63d1,stroke-width:1.5px,color:#1f1f1f;
+    classDef entity fill:#e8f6e8,stroke:#4b9b5f,stroke-width:1.5px,color:#1f1f1f;
+    classDef datastore fill:#fff6d9,stroke:#b08a00,stroke-width:1.5px,color:#1f1f1f;
 
-2. `Login`
-- Reads and compares stored credentials through `checkCredentials()`.
-- Creates session state by storing `sessionToken`.
-- Generates `sessionToken` through `generateSessionToken()` (selected weak point).
-- Starts `Profile` only after successful credential check and `createSession()`.
+    E1["User / Admin"]
+    A1["Attacker\n(Local / MITM)"]
 
-3. `Profile`
-- Represents post-login state.
-- Implements logout token removal (`clearSession()`).
-- In the observed build, no explicit token-validation gate is visible before entering `Profile`; this bounds current exploit impact and should be stated honestly.
+    subgraph TB1["Trust Boundary 1: External -> App Process"]
+      P1(("P1: Register / Login"))
+      P2(("P2: Session Handling\ngenerateSessionToken()"))
+      P3(("P3: Profile / Logout"))
+    end
 
-4. Data stores
-- `credentials.txt` (plaintext credentials store).
-- `SharedPreferences("SessionPrefs")` with key `sessionToken`.
+    subgraph TB2["Trust Boundary 2: App Process -> Local Storage"]
+      DS1["DS1\n────────────\ncredentials.txt"]
+      DS2["DS2\n────────────\nSessionPrefs: sessionToken"]
+    end
 
-Manifest structure evidence:
-- `apk-decompile_code/resources/AndroidManifest.xml` lines 28-37 (`Profile`, `Login`, `MainActivity`).
+    E1 -->|"credentials input"| P1
+    P1 -->|"write/read credentials"| DS1
+    P1 -->|"auth success"| P2
+    P2 -->|"generate + store token"| DS2
+    P2 -->|"open profile"| P3
+    P3 -->|"logout remove token"| DS2
 
-## C. Key Assets (explicit)
-Primary assets in scope:
-1. `sessionToken` unpredictability.
-2. Authentication-state integrity.
+    A1 -.->|"observe login timing"| P2
+    A1 -.->|"attempt token-state inference"| DS2
+
+    class E1,A1 entity
+    class P1,P2,P3 process
+    class DS1,DS2 datastore
+
+    style TB1 fill:#ffffff,stroke:#8a8a8a,stroke-width:1.5px,stroke-dasharray: 6 4
+    style TB2 fill:#ffffff,stroke:#8a8a8a,stroke-width:1.5px,stroke-dasharray: 6 4
+```
+
+## D. Main Components and Data Flow
+Processes:
+1. `P1 MainActivity`: collect registration input and write plaintext credentials (`saveCredentialsToFile()`).
+2. `P2 Login`: validate credentials, generate token, and persist `sessionToken`.
+3. `P3 Profile`: represent logged-in state and clear token on logout.
+
+Data stores:
+1. `DS1 credentials.txt`: local file containing credential records.
+2. `DS2 SharedPreferences(SessionPrefs)`: local session-state store.
+
+Critical security data flow:
+- `P2.generateSessionToken()` -> `P2.createSession()` -> `DS2.sessionToken`.
+
+Linear end-to-end data-flow chain (report-friendly):
+- `User input` -> `MainActivity.saveCredentialsToFile()` -> `credentials.txt` -> `Login.checkCredentials()` -> `Login.createSession()` -> `Login.generateSessionToken()` -> `SharedPreferences(SessionPrefs.sessionToken)` -> `Profile`.
+
+## E. Key Assets and Security Role
+Primary assets:
+1. `sessionToken` unpredictability (auth-state secret quality).
+2. Authentication-state integrity (who is treated as logged in).
 
 Supporting assets:
-1. Local credentials (`credentials.txt`).
-2. Session lifecycle state in `SharedPreferences("SessionPrefs")`.
+1. Stored credential data in `DS1`.
+2. Session lifecycle state in `DS2`.
+3. Token generation logic in `P2`.
 
-## D. Data Flow (aligned with C evidence)
-1. User input.
-2. `MainActivity.saveCredentialsToFile()`.
-3. `credentials.txt` (plaintext).
-4. `Login.checkCredentials()`.
-5. `Login.createSession()`.
-6. `Login.generateSessionToken()` (insecure randomness).
-7. `SharedPreferences(sessionToken)`.
-8. `Profile` (no explicit validation gate in observed flow).
+## F. Core Assumptions and Attacker Goals
+Core assumptions:
+1. Attacker can estimate login timing within a bounded window.
+2. Attacker can observe/read token state in realistic local-analysis conditions.
+3. Attacker can run offline candidate generation and attempt validation.
 
-Critical security path:
-- `Random` -> `Token` -> `SharedPreferences` -> `Session`.
+Attacker goals:
+1. Predict or reproduce valid `sessionToken` candidates.
+2. Undermine auth-state integrity through token predictability.
 
-Security interpretation:
-- The selected weak randomness is not a detached helper. It is used to create a value named and stored as session state immediately after successful login.
-- However, the observed build shows generation and persistence more clearly than downstream validation, so the model must distinguish "security-sensitive token creation" from "fully demonstrated auth bypass."
+## G. Boundaries of Claim and Risk Acceptance
+What we claim:
+1. Session token generation uses predictable PRNG in a security-sensitive path.
+2. This weakens intended unpredictability of authentication-related state.
 
-## E. Trust Boundaries
-1. User-controlled input -> registration/login logic.
-2. Credential verification -> session-creation decision.
-3. Token generation -> persistent token storage.
-4. Stored token state -> post-login session behavior.
-5. App-private storage -> any attacker who can observe, instrument, or read state on the device.
+What we do not claim:
+1. No guaranteed remote takeover claim.
+2. No server-compromise claim (no backend evidence shown in APK).
+3. No elevation of unrelated issues (e.g., plaintext credentials) to the selected core vulnerability.
 
-## F. Boundaries of What We Claim
-1. We do claim the app creates authentication-related state using a predictable PRNG.
-2. We do claim this weakens the intended unpredictability of a session token.
-3. We do not claim a guaranteed remote bypass, because the current code does not show a backend or a strong token-validation check.
-4. We do not rely on unrelated issues such as plaintext credential storage as the core vulnerability for Assignment 1.
+Risk acceptance statement:
+- For this iteration, we accept bounded impact claims when downstream token-validation evidence is incomplete, while still treating predictable token generation as a valid design flaw.
 
-## G. Why this model supports F1
-The weak random generator is not isolated utility code; it is on the exact path that creates persisted authentication state. Therefore F1 is a system-level security issue, not a cosmetic API-choice issue.
+## H. B -> E Handoff Constraints
+1. Replace `Random` with `SecureRandom` in `Login.generateSessionToken()`.
+2. Increase token entropy (length and/or encoding strategy).
+3. Keep impact language bounded unless new downstream validation evidence is added.
