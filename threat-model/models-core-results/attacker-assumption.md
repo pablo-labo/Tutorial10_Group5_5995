@@ -1,35 +1,54 @@
-# Attacker Assumptions (Core Result)
+# Attacker Assumptions (Core Result, Refined Draft)
 
-## A. Assumptions We Make
-A1. The attacker can infer approximate login time within a bounded error range.
-A2. The attacker can obtain token state or partial token signal in a realistic local-analysis scenario (for example debugging, instrumentation, or a rooted test device).
-A3. The attacker can perform offline candidate generation and attempt validation.
-A4. The attacker is targeting the app's session-state material, not unrelated UI randomness.
+## A. Attacker Profile Set
+1. External attacker:
+- Assumed capability is limited for this issue because APK evidence does not show backend token protocol.
 
-## B. Assumptions We Do Not Make
-N1. We do not assume server-side compromise.
-N2. We do not assume full device takeover by default.
-N3. We do not assume impossible perfect timing precision.
-N4. We do not rely on unrelated vulnerability classes.
-N5. We do not assume the current build already contains a proven downstream token-check gate.
+2. Internal/local attacker (primary):
+- Rooted-device user, emulator analyst, or instrumentation/debug user.
+- Can observe login timing and inspect token state or behavior.
 
-## C. Why These Assumptions Are Realistic
-1. Timing side-information is commonly inferable in interactive login flows.
-2. Local observation on a tutorial, emulated, or instrumented Android app is realistic in this assignment context and easier to defend than an internet-scale attacker story.
-3. Deterministic generator behavior allows bounded candidate enumeration when timing context is available.
-4. The token is explicitly named `sessionToken` and persisted in `SessionPrefs`, so it is reasonable to treat it as authentication-related material.
+3. MITM attacker:
+- Considered but not primary in this APK because token network transmission is not evidenced.
 
-## D. Evidence Connection to Chosen Vulnerability
-- Token generation function: `Login.generateSessionToken()` (`Login.java` lines 183-188).
-- Token persistence in auth path: `Login.createSession()` (`Login.java` lines 174-176).
-- Session lifecycle endpoint: `Profile.clearSession()` (`Profile.java` lines 50-52).
-- Login success path into profile: `Login.java` lines 52-59.
+## B. Assumptions We Make
+A1. Token generation timing can be estimated with bounded error.
+A2. Local-analysis attacker can obtain token state/signal relevant to verification.
+A3. Attacker can perform deterministic offline candidate generation and bounded validation attempts.
+A4. Threat is evaluated on auth-state token path (`P2 -> DS2`), not UI random usage.
 
-These anchors confirm that assumptions apply to authentication-state material, not UI-only randomness.
+## C. Assumptions We Do Not Make
+N1. No server-side compromise assumption.
+N2. No guaranteed remote account takeover assumption.
+N3. No perfect timestamp precision assumption.
+N4. No unrelated vulnerability class chaining as a requirement.
+N5. No assumption that downstream token-validation gate is already proven complete.
 
-## E. Bounded Claim Statement
-Under A1-A4, predictability risk is credible in realistic local-analysis contexts; without those conditions, exploit practicality decreases, but the design weakness remains because a session token should not be generated with a predictable PRNG.
+## D. DFD Threat Position Reference
+1. Process node: `P2 Login` (`generateSessionToken()`, `createSession()`).
+2. Data store node: `DS2 SharedPreferences(SessionPrefs)`.
+3. Data flow: token creation and persistence from `P2` to `DS2`.
 
-## F. Tutorial-Defense Position
-If asked "is this a guaranteed bypass in the current build?", the defensible answer is no.
-If asked "is this still a valid security issue?", the defensible answer is yes, because the app creates authentication-related state with `java.util.Random`, which is an unsuitable generator for session-token material.
+## E. Why the Assumptions Are Defensible
+1. Assignment context supports local adversary modeling on emulator/instrumented devices.
+2. Deterministic PRNG behavior supports bounded candidate reproduction once timing context is available.
+3. `sessionToken` naming and lifecycle operations show security intent, making unpredictability a valid requirement.
+
+Evidence anchors:
+- `Login.java` 174-176 (`createSession()` persistence).
+- `Login.java` 183-188 (`Random`-based token generation).
+- `Profile.java` 50-52 (`clearSession()` token removal).
+- `Login.java` 52-59 (post-login transition).
+
+## F. Assumption-to-Outcome Mapping
+1. A1 + A2 -> candidate enumeration plausibility.
+2. A1 + A2 + A3 -> bounded validation-path plausibility.
+3. Missing A2 or A3 -> keep claim at design-flaw level, avoid exploit-success over-claim.
+
+## G. Bounded Claim and Risk Acceptance
+Bounded claim:
+- Predictability risk is credible under realistic local-analysis assumptions, but impact should be bounded when enforcement evidence is incomplete.
+
+Risk acceptance:
+- Accept: bounded impact language.
+- Do not accept: predictable PRNG use for security token generation.
