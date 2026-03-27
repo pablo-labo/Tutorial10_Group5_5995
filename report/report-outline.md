@@ -12,7 +12,7 @@ Predictable Session Token Generation in an Android APK Due to `java.util.Random`
 Explain the app briefly, state the chosen issue, and keep scope strictly within randomness/crypto.
 
 ### Report-ready content
-This APK implements a simple local registration and login flow using three main activities: `MainActivity`, `Login`, and `Profile` (`decompile/apk-decompile_code/AndroidManifest.xml` lines 28-37). After successful credential verification in `Login`, the app creates a value named `sessionToken`, stores it in `SharedPreferences`, and enters the post-login `Profile` screen (`Login.java` lines 52-59, 174-176). Our selected vulnerability is the use of `java.util.Random` to generate this authentication-related token (`Login.java` lines 183-189). This issue is directly within the Assignment 1 scope because it is a misuse of randomness in a security-sensitive context rather than a UI-only random value.
+This APK implements a simple local registration and login flow using three main activities: `MainActivity`, `Login`, and `Profile` (`apk-decompile_code/resources/AndroidManifest.xml` lines 22-31). After successful credential verification in `Login`, the app creates a value named `sessionToken`, stores it in `SharedPreferences`, and enters the post-login `Profile` screen (`Login.java` lines 52-59, 174-176). Our selected vulnerability is the use of `java.util.Random` to generate this authentication-related token (`Login.java` lines 183-189). This issue is directly within the Assignment 1 scope because it is a misuse of randomness in a security-sensitive context rather than a UI-only random value.
 
 ## Section 2. System and Threat Model
 ### Goal of this section
@@ -46,7 +46,7 @@ The strongest defensible impact is weakened unpredictability of authentication-r
 State a concrete fix that addresses the actual weakness.
 
 ### Report-ready content
-The primary mitigation is to replace `java.util.Random` with `SecureRandom` when generating `sessionToken`. This change improves unpredictability for security-sensitive token creation. In addition, token handling should include explicit validation in protected flow and clear invalidation or rotation semantics, so that authentication state is both unpredictable and correctly enforced.
+The primary mitigation is to replace `java.util.Random` with `SecureRandom` when generating `sessionToken`. This directly addresses the demonstrated weakness by removing the predictable PRNG from the session-token path. To strengthen the design further, the app should also generate a higher-entropy token, preserve explicit rotation on login and invalidation on logout, and make token validation explicit before allowing access to protected flow. In our evaluation, the strongest evidence-backed claim is that this fix blocks the predictability path we identified; broader claims about complete authentication enforcement still depend on downstream validation logic that is not clearly evidenced in the current build.
 
 ## Section 6. Tooling and AI Use
 ### Goal of this section
@@ -64,3 +64,11 @@ Use at most one compact code figure in the report body:
 1. We selected the `sessionToken` path, not the UI random path, because only the token has a security-sensitive role.
 2. Our claim is bounded on purpose: we prove weak session-token generation, not a guaranteed remote bypass.
 3. The rubric rewards a defensible randomness/crypto vulnerability with clear evidence and attack reasoning, which this path provides.
+4. Our primary fix is `Random` to `SecureRandom`; validation and lifecycle controls are strengthening measures, not a new unsupported claim.
+
+## A-Side Integration Checklist
+- Keep the report title, abstract, and vulnerability statement aligned to one issue only: weak session-token generation.
+- Use code anchors that exist in the current repository path, not placeholder `decompile/...` paths.
+- Present `SecureRandom` replacement as the primary mitigation because it directly fixes the proven weakness.
+- Present validation, rotation, and invalidation as bounded design improvements that strengthen session handling.
+- Reuse the same limitation sentence in report, slides, and tutorial Q&A.

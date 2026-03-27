@@ -26,3 +26,12 @@ Our selected issue is not generic use of `Random`; it is the use of `java.util.R
 
 ## One-Line Fix Wording
 Replace `java.util.Random` with `SecureRandom` for session-token generation and enforce explicit validation and invalidation of token-based session state.
+
+## Extended Fix Wording
+Our primary fix is to replace `java.util.Random` with `SecureRandom` in `Login.generateSessionToken()`, because this directly removes the predictable PRNG from the demonstrated vulnerability path. We can then strengthen session handling further by using a higher-entropy token, rotating it on login, invalidating it on logout, and making protected-flow validation explicit.
+
+## Fix Boundary Wording
+The `SecureRandom` change addresses the proven randomness misuse. Extra checks around validation and lifecycle strengthen the overall session design, but they should be described as mitigation improvements rather than proof that the current APK already enforces token-based access correctly.
+
+## Short Version for A
+Lead with the exact weak-randomness site, then explain the primary fix, then restate the limitation boundary. Do not present optional enforcement improvements as if they were already evidenced runtime behavior.

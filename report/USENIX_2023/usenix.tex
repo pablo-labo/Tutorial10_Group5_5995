@@ -1,0 +1,93 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix,epsfig,endnotes}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\begin{document}
+
+\date{}
+
+\title{\Large \bf Predictable Session Token Generation in an Android APK Due to \texttt{java.util.Random}}
+
+% ADD YOUR NAME HERE!! 在这里把名字加上！！ :)
+\author{
+{\rm Rongbang Cheng}\\
+540506620
+\and
+{\rm Rongbang Cheng}\\
+540506620
+\and
+{\rm Rongbang Cheng}\\
+540506620
+\and
+{\rm Rongbang Cheng}\\
+540506620
+\and
+{\rm Rongbang Cheng}\\
+540506620
+}
+
+\maketitle
+\thispagestyle{empty}
+
+\subsection*{Abstract}
+We analyzed the provided Android APK and selected one vulnerability that fits the Assignment~1 randomness/cryptography scope: after successful credential verification, the app generates a value named \texttt{sessionToken} using \texttt{java.util.Random} and stores it in \texttt{SharedPreferences}. This is security-relevant because the token is created in the login flow, persisted as session state, later retrievable, and removed on logout. A session token therefore requires unpredictability, but \texttt{java.util.Random} is a deterministic non-cryptographic PRNG. Our evidence supports a bounded claim of weakened session-token unpredictability under realistic local-analysis conditions rather than a guaranteed remote takeover claim. The direct mitigation is to replace \texttt{java.util.Random} with \texttt{java.security.SecureRandom} in the token-generation path and preserve explicit token lifecycle controls.
+
+\section{Introduction}
+The provided APK is a small Android application with three main activities: \texttt{MainActivity}, \texttt{Login}, and \texttt{Profile}. In the observed flow, \texttt{MainActivity} stores credentials locally, \texttt{Login} checks those credentials, and a successful login creates session-related state before opening \texttt{Profile}. We selected exactly one issue: weak generation of the authentication-related \texttt{sessionToken} in \texttt{Login.generateSessionToken()}. This choice stays within the assignment scope because it is a misuse of randomness in a security-sensitive path rather than a cosmetic or UI-only use of randomness. The goal of this report is to present one defensible finding with code evidence, a realistic threat model, a concrete attack scenario, and a mitigation that directly addresses the demonstrated weakness.
+
+APK analysis is necessary because the installable package does not expose internal security logic directly. Decompilation and static inspection are needed to identify where security-sensitive values are generated, where they are stored, and how they are later used in application state. This is especially important for randomness issues because the security question is not only whether a value ``looks random,'' but whether the generator is appropriate for the value's security role.
+
+\section{System and Threat Model}
+The relevant components are \texttt{MainActivity}, which writes local credentials to \texttt{credentials.txt}; \texttt{Login}, which validates credentials and creates session state; and \texttt{Profile}, which represents post-login state and clears session data on logout. The protected asset in the selected path is the unpredictability of the authentication-related \texttt{sessionToken}, together with the integrity of the session state that depends on it. The relevant data flow is:
+
+\begin{quote}
+credential verification in \texttt{Login} $\rightarrow$ \texttt{createSession()} $\rightarrow$ generate \texttt{sessionToken} $\rightarrow$ store in \texttt{SharedPreferences("SessionPrefs")} $\rightarrow$ later retrieval or clearing through \texttt{getSessionToken()} and \texttt{clearSession()}.
+\end{quote}
+
+This flow matters because the token is not a decorative random value. It is created immediately after successful authentication, labeled as \texttt{sessionToken}, persisted in session storage, and later treated as part of the authenticated state lifecycle. That linkage is what makes the randomness quality security-relevant.
+
+Our attacker model is intentionally bounded. We assume a local-analysis attacker operating in an emulator, rooted device, or instrumentation/debug environment. This attacker can inspect decompiled code, estimate the victim's login time within a bounded window, and may be able to inspect local application state or test token-dependent behavior. The attacker goal is not full remote compromise by assumption; it is to reduce the uncertainty of a security-sensitive token enough to make offline reproduction or local comparison materially easier than intended. We do not assume backend compromise, remote code execution, or a proven downstream server-side token-validation sink, because the APK evidence does not justify those stronger claims.
+
+\section{How the Vulnerability Was Found}
+We decompiled the APK and searched the codebase for candidate randomness usage associated with terms such as \texttt{random}, \texttt{token}, \texttt{session}, and \texttt{login}. This yielded two visible random-generation sites. The first, \texttt{MainActivity.randomNumberGenerator()}, returns an integer for a UI-adjacent path and has no clear authentication or cryptographic role. The second, \texttt{Login.generateSessionToken()}, is invoked by \texttt{createSession()} immediately after successful credential verification.
+
+The second site is the stronger finding because its surrounding lifecycle is explicitly security-related: \texttt{createSession()} stores a value under the key \texttt{sessionToken} in \texttt{SharedPreferences}, \texttt{getSessionToken()} retrieves it, and \texttt{Profile.clearSession()} removes it on logout. This let us reject the UI-only random number as out of scope and focus on the path that affects authentication state.
+
+AI assistance was used to support the workflow rather than replace validation. It helped organize candidate findings, compare them against the rubric, sharpen the threat-model wording, and rehearse evidence-based Q\&A. The final vulnerability claim, attacker model, attack path, and mitigation were checked manually against the decompiled APK before inclusion.
+
+\section{Vulnerability Details and Exploitation Path}
+The generation logic is the core weakness. \texttt{generateSessionToken()} constructs a 16-character token from an alphanumeric alphabet, but the randomness source is \texttt{new Random()}, and the characters are chosen through repeated \texttt{nextInt(62)} calls. \texttt{java.util.Random} is a deterministic PRNG, not a cryptographically secure random generator. For an authentication-related session token, the required property is not merely a large-looking output space but unpredictability against an attacker with partial knowledge about generation conditions.
+
+The attack scenario is therefore:
+\begin{enumerate}[leftmargin=*,nosep]
+    \item The attacker observes or closely estimates when the victim logs in under a realistic local-analysis setting.
+    \item The attacker reproduces the same \texttt{generateSessionToken()} logic offline and enumerates candidate outputs for plausible seed windows around that time.
+    \item If the attacker can inspect local \texttt{SharedPreferences} state, or can test behavior that depends on the token, the candidates can be compared against observed state or behavior.
+\end{enumerate}
+
+This is a concrete exploitation path because it links attacker knowledge, generator determinism, and a comparison mechanism. At the same time, the evidentiary boundary is important: the repository shows token creation, storage, retrieval, and clearing more clearly than any downstream token-validation enforcement. For that reason, the strongest defensible impact is weakened unpredictability of authentication-related session state, not a guaranteed authentication bypass, session hijack, or remote takeover. That bounded claim is still meaningful. A value explicitly used as session state should not be credibly enumerable from a predictable PRNG in the first place.
+
+\section{Fix and Why It Works}
+The direct fix is to replace \texttt{java.util.Random} with \texttt{java.security.SecureRandom} in \texttt{Login.generateSessionToken()}. A corrected implementation should continue to generate tokens with adequate entropy, preferably from secure random bytes encoded into a suitable string representation, rather than relying on a deterministic general-purpose PRNG.
+
+This fix works because it removes the exact property the attack relies on: credible output enumeration from a predictable generator under bounded timing assumptions. In the vulnerable design, the attacker can reason from generation time to plausible seeds and then to candidate outputs. After replacing the generator with \texttt{SecureRandom}, that reasoning path is no longer technically sound in the same way.
+
+Additional controls can strengthen the overall design: explicit token rotation on login, invalidation on logout, and explicit validation before granting access to protected flow. However, these should be described as session-management hardening measures rather than as proof that the current APK already enforces token-based access correctly. Based on the present evidence, the strongest supported mitigation claim is that replacing \texttt{Random} with \texttt{SecureRandom} removes the predictability path identified in this report.
+
+\section{Conclusion}
+The APK generates an authentication-related \texttt{sessionToken} with \texttt{java.util.Random} immediately after successful login and stores it as session state. Because the token is part of the authentication lifecycle, its generation requires cryptographic unpredictability. The use of a deterministic non-CSPRNG in that role is therefore a real security design flaw. Our claim is intentionally bounded to what the APK evidence supports: weakened unpredictability of authentication-related session state under realistic local-analysis conditions. Replacing \texttt{Random} with \texttt{SecureRandom} is the direct and technically appropriate remediation.
+
+\paragraph{Evidence references.}
+(1) \texttt{AndroidManifest.xml}: manifest and activity structure.
+(2) \texttt{Login.java}: login success path.
+(3) \texttt{Login.java}: session creation and storage.
+(4) \texttt{Login.java}: session token retrieval.
+(5) \texttt{Login.java}: weak token generation.
+(6) \texttt{Profile.java}: logout token removal.
+(7) \texttt{MainActivity.java}: non-selected UI randomness for comparison.
+
+\end{document}
