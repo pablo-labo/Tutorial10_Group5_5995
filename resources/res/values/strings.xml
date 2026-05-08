@@ -530,7 +530,7 @@
     <string name="file_render_error_message">There was an error rendering the selected file.</string>
     <string name="file_select">Choose an Action</string>
     <string name="finish_button_label">Finish</string>
-    <string name="firebase_database_url">&lt;redacted-firebase-database-url&gt;</string>
+    <string name="firebase_database_url">https://indapp-153.firebaseio.com</string>
     <string name="forced_update_notification_body">Tap here or restart the app to finish your update.</string>
     <string name="forced_update_notification_title">Your download is complete!</string>
     <string name="forced_upgrade_body">Indeed Jobs is out of date. Please visit the Google Play Store to get the latest version.</string>
@@ -543,7 +543,7 @@
     <string name="fraud_flagged_profile_submit_appeal_url">https://www.indeed.com/support/contact?primaryCategory=16&amp;secondaryCategory=0&amp;zlang=%s</string>
     <string name="fraud_flagged_profile_warning_title">There’s an issue with your profile</string>
     <string name="fri">Fri</string>
-    <string name="gcm_defaultSenderId">&lt;redacted-gcm-sender-id&gt;</string>
+    <string name="gcm_defaultSenderId">1047839414793</string>
     <string name="generic_tab_login_label">Sign into your Indeed account</string>
     <string name="get_started">Get started</string>
     <string name="get_started_opt_out">Try it now</string>
@@ -618,10 +618,10 @@
     <string name="ghostwriter_state_edit_label">State</string>
     <string name="ghostwriter_submission_error">Something went wrong submitting your application. Please try again.</string>
     <string name="go_to_link">Go to link</string>
-    <string name="google_api_key">&lt;redacted-google-api-key&gt;</string>
-    <string name="google_app_id">&lt;redacted-google-app-id&gt;</string>
-    <string name="google_crash_reporting_api_key">&lt;redacted-google-crash-reporting-api-key&gt;</string>
-    <string name="google_storage_bucket">&lt;redacted-google-storage-bucket&gt;</string>
+    <string name="google_api_key">AIzaSyAiokVm9ZAfmsdJRYPWVho3fWGJtN9rL44</string>
+    <string name="google_app_id">1:1047839414793:android:d39d1e7c1e0e98d3</string>
+    <string name="google_crash_reporting_api_key">AIzaSyAiokVm9ZAfmsdJRYPWVho3fWGJtN9rL44</string>
+    <string name="google_storage_bucket">indapp-153.appspot.com</string>
     <string name="got_it">Got it</string>
     <string name="hamburger_help_jobseekers_header">Help other job seekers</string>
     <string name="hamburger_menu_help_job_seekers_header">Help other job seekers</string>
@@ -1276,7 +1276,7 @@
     <string name="profile_options_sheet_header">Profile options</string>
     <string name="profile_privacy">example profile privacy text</string>
     <string name="progressbar_description">Progress Bar</string>
-    <string name="project_id">&lt;redacted-project-id&gt;</string>
+    <string name="project_id">indapp-153</string>
     <string name="publications_title">Publications</string>
     <string name="push_primer_fomo_homepage_myjobs">Don\'t miss out on your next opportunity</string>
     <string name="push_primer_fomo_messages">Never miss an update or an employer message</string>
