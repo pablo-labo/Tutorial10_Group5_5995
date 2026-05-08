@@ -274,6 +274,51 @@ This finding is a P2 / High candidate because replay was demonstrated against a 
 The ADB step was used to validate the replayability of logged material; it is not the only plausible exposure scenario because the app's diagnostic/support-report flow can collect both cookies and logcat output.
 ```
 
+## P2 Candidate Rationale
+
+This supplement supports treating the issue as a P2 / High candidate, rather than only a generic local-log disclosure, for the following reasons:
+
+```text
+1. Replayability moved from theoretical to demonstrated.
+   The original report showed sensitive values in logcat. This supplement shows that the logged Cookie header was accepted by a clean client and produced a read-only authenticated response for the tester-controlled account.
+
+2. The baseline/replay difference is clear.
+   The no-cookie baseline returned HTTP 302 to the Indeed login flow. The replay request, using the Cookie header extracted from logcat, returned HTTP 200 from the same profile endpoint.
+
+3. The replay response included account-specific proof.
+   A redacted tester-account-specific marker was absent in the baseline response and present in the replay response. The raw marker is omitted; only redacted_marker_input_sha256_12 is included.
+
+4. The logged material includes authentication/session/token-like fields, not only analytics identifiers.
+   Observed key names include JSESSIONID, CSRF, INDEED_CSRF_TOKEN, ENC_CSRF, __Secure-PassportAuthProxy-BearerToken, and __Secure-PassportAuthProxy-RefreshToken.
+
+5. The impact is authenticated data exposure.
+   The demonstrated impact is read-only authenticated access to the tester-controlled profile context. This is stronger than passive disclosure of non-secret logs.
+
+6. ADB was the validation channel, not the only plausible exposure path.
+   The previously documented diagnostic/support-report flow can collect WebView cookies and logcat output. A non-technical user following support instructions may unintentionally package the same high-sensitivity session material into a diagnostic report or email/share attachment.
+
+7. Refresh-token-like cookie names increase sensitivity.
+   The report does not claim standalone RefreshToken replay, but the presence of RefreshToken-like cookie names in the logged Cookie header increases the risk if such material is collected by support, crash, or diagnostic workflows.
+```
+
+Why this remains a candidate rather than a stronger claim:
+
+```text
+The test was read-only.
+The test used only the researcher's own tester-controlled account.
+No cross-user access was attempted.
+No write action or account takeover was attempted.
+No standalone BearerToken or RefreshToken replay was tested.
+No silent diagnostic upload or third-party interception was proven.
+```
+
+Recommended triage framing:
+
+```text
+P2 / High candidate: Sensitive information in logs with demonstrated read-only authenticated session replay and a broader user-mediated diagnostic-report exposure path.
+Fallback: P3 if Indeed determines that the replayed profile page contains no meaningful account data, the affected cookies are very short-lived, or server-side controls materially constrain reuse.
+```
+
 Conservative caveat:
 
 ```text
