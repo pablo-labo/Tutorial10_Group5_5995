@@ -1,0 +1,182 @@
+{
+  "type" : "record",
+  "name" : "ProfileMicroContentImpression",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : "string",
+    "default" : ""
+  }, {
+    "name" : "ipCntry",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "grps",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageSrc",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cardId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cardDetails",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "locale",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "impressionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionGenerationSource",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionAttributeSources",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "relatedOccupationCategory",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isReAsk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hasSalaryRangeData",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "questionName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "taxonomyRenderedValues",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "taxonomyRenderedCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "attributeAttachRate",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "isIndeedProBranded",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "inferredMinPayAmount",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "inferredMinPayPeriod",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "inferredMinPayDataSource",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobOccupations",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobOccupationsCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "resumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionPosition",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "hostId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pagePosition",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageNumber",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "suggestionRenderDetailsRaw",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "suggestionRenderCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "mostFrequentOccupationIds",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "segmentNames",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "prefilledTaxonomyRenderedValues",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "prefilledTaxonomyRenderedValueCount",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "relatedJobTitle",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "relatedJobTitle_CrowTaxoEligible",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "occupationSUID",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isCrowtaxoAttribute",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "questionText",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionSUID",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "profileMicroContentImpression"
+}

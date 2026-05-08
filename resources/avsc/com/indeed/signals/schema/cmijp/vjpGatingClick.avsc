@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "vjpGatingClick",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "fields" : [ {
+    "name" : "mobvjtk",
+    "type" : "string"
+  }, {
+    "name" : "userEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UserEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "DESKTOP", "APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "vjpGating.clicks",
+    "tags" : [ "userEnvironment" ]
+  } ],
+  "logEntryType" : "vjpGatingClick"
+}

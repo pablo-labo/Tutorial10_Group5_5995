@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 review</item>
+        <item quantity="other">%d reviews</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minuut</item>
+        <item quantity="other">%s minuten</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Sollicitatiegesprek begint over %d uur</item>
+        <item quantity="other">Sollicitatiegesprek begint over %d uur</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Sollicitatiegesprek begint over %d minuut</item>
+        <item quantity="other">Sollicitatiegesprek begint over %d minuten</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d bestand kon niet worden geüpload en wordt niet aan je bericht toegevoegd.</item>
+        <item quantity="other">%d bestanden konden niet worden geüpload en worden niet aan je bericht toegevoegd.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d bestand kon niet worden geüpload</item>
+        <item quantity="other">%d bestanden konden niet worden geüpload</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d ongelezen bericht</item>
+        <item quantity="other">%d ongelezen berichten</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Deze werkgever reageert meestal binnen %d dag.</item>
+        <item quantity="other">Deze werkgever reageert meestal binnen %d dagen.</item>
+    </plurals>
+</resources>

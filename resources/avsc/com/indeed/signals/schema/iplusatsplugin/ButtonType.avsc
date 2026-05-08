@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ButtonType",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "STATIC", "DYNAMIC" ]
+}

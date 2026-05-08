@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "RecaptchaInvalidReason",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "symbols" : [ "UNKNOWN", "MALFORMED", "EXPIRED", "DUPE", "MISSING", "BROWSER_ERROR" ],
+  "default" : "UNKNOWN"
+}

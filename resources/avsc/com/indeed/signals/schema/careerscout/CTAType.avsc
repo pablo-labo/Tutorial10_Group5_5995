@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "CTAType",
+  "namespace" : "com.indeed.signals.schema.careerscout",
+  "symbols" : [ "EXPLORECAREERS", "INTERVIEWPREP" ],
+  "default" : "EXPLORECAREERS"
+}

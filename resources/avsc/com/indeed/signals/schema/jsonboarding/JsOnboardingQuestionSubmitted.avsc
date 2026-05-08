@@ -1,0 +1,199 @@
+{
+  "type" : "record",
+  "name" : "JsOnboardingQuestionSubmitted",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "CommonJSOnboardingDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonJSOnboardingDetails",
+      "fields" : [ {
+        "name" : "platformType",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "PlatformType",
+          "symbols" : [ "APP_ANDROID", "APP_IOS", "APP_OTHER", "MOBILE_ANDROID", "MOBILE_IOS", "MOBILE_OTHER", "DESKTOP", "OTHER" ],
+          "default" : "OTHER"
+        } ]
+      }, {
+        "name" : "proctorGroups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "accountId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "userAgent",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "country",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "language",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "onboardingFlowId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "originLogId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "page",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "client",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "Client",
+          "symbols" : [ "jsonboardingwebapp", "jsonboardingreactnative" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "countryCode",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "CountryCode",
+          "symbols" : [ "UNKNOWN", "AE", "AQ", "AR", "AT", "AU", "BE", "BH", "BR", "CA", "CH", "CL", "CN", "CO", "CR", "CZ", "DE", "DK", "EC", "EG", "ES", "FI", "FR", "GB", "GR", "HK", "HU", "ID", "IE", "IL", "IN", "IT", "JP", "KR", "KW", "LU", "MA", "MX", "MY", "NG", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PK", "PL", "PT", "QA", "RO", "RU", "SA", "SE", "SG", "TH", "TR", "TW", "UA", "US", "UY", "VE", "VN", "ZA" ],
+          "default" : "UNKNOWN"
+        } ],
+        "default" : null
+      }, {
+        "name" : "languageCode",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "LanguageCode",
+          "symbols" : [ "UNKNOWN", "ar", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "hi", "hu", "in", "it", "iw", "ja", "jp", "ko", "mr", "ms", "nl", "no", "pl", "pt", "ro", "ru", "sv", "ta", "te", "th", "tr", "uk", "us", "vi", "zh", "zz" ],
+          "default" : "UNKNOWN"
+        } ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "DynamicLookupDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "DynamicLookupDetails",
+      "fields" : [ {
+        "name" : "flowName",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "FlowName",
+          "symbols" : [ "CROWTAXO", "GENERALIST", "OTHER" ],
+          "default" : "OTHER"
+        } ]
+      }, {
+        "name" : "isFlowEligible",
+        "type" : [ "null", "boolean" ]
+      }, {
+        "name" : "foundCrowtaxoQuestions",
+        "type" : [ "null", "boolean" ],
+        "default" : null
+      }, {
+        "name" : "triggerValue",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "triggerKey",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "allDeterminantValues",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ]
+      }, {
+        "name" : "resolvedDeterminantIds",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ]
+      }, {
+        "name" : "resolvedDeterminantValues",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ]
+      }, {
+        "name" : "flowPages",
+        "type" : [ "null", "int" ]
+      }, {
+        "name" : "allMatchingOccupationIds",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ],
+        "default" : null
+      }, {
+        "name" : "allMatchingOccupationLabels",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "questionId",
+    "type" : "string"
+  }, {
+    "name" : "rank",
+    "type" : "int"
+  }, {
+    "name" : "categoryId",
+    "type" : "string"
+  }, {
+    "name" : "determinantId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "determinantValue",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "tagIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "tagLabels",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "questionText",
+    "type" : "string",
+    "default" : ""
+  }, {
+    "name" : "valueIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    },
+    "default" : [ ]
+  }, {
+    "name" : "valueLabels",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    },
+    "default" : [ ]
+  } ],
+  "logEntryType" : "onboardingQuestionSubmitted"
+}

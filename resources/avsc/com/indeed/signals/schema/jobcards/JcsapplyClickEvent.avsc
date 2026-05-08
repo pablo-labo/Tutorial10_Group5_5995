@@ -1,0 +1,37 @@
+{
+  "type" : "record",
+  "name" : "JcsapplyClickEvent",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostId",
+      "symbols" : [ "UNKNOWN", "MOBILE", "HOMEPAGE", "PASSPORT", "INDAPPLY", "SMARTAPPLY", "MYINDEED", "I2A_WEBAPP", "SJPW", "INCUBATOR", "CAREER_GUIDE_WEBAPP", "COMPANY_PAGES_WEBAPP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "jcsapplyEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "JcsapplyEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "ANDROID_APP", "IOS_APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "jobType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "JobType",
+      "symbols" : [ "UNKNOWN", "INDEED_APPLY", "THIRDPARTY_APPLY" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "jcsapply.clicks",
+    "tags" : [ "hostId", "jcsapplyEnvironment", "jobType" ]
+  } ]
+}

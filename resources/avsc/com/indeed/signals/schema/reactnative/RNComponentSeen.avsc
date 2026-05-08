@@ -1,0 +1,24 @@
+{
+  "type" : "record",
+  "name" : "RNComponentSeen",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "fields" : [ {
+    "name" : "provider",
+    "type" : "string"
+  }, {
+    "name" : "trackingKey",
+    "type" : "string"
+  }, {
+    "name" : "componentName",
+    "type" : "string"
+  }, {
+    "name" : "width",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "height",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "logEntryType" : "rnComponentSeen"
+}

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "OS",
+  "namespace" : "com.indeed.signals.schema.ipluspublisherplugin",
+  "symbols" : [ "WINDOWS", "MACOS", "IOS", "ANDROID" ]
+}

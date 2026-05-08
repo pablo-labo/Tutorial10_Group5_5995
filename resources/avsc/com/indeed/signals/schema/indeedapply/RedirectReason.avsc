@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "RedirectReason",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "symbols" : [ "MOSAIC_PROVIDER_NOT_LOADED", "PROVIDER_STATE_UPDATE_FAILED", "QUESTION_FETCH_FAILED", "SAVE_AND_CONTINUE_CLICKED", "SKIP_BUTTON_CLICKED", "NO_QUESTIONS_TO_SHOW", "YELLOW_LIGHT_ALREADY_OPENED", "MOSAIC_PROVIDER_LAZY_LOAD_FAILED", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

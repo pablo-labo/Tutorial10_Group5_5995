@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "RNPlatformsV3",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "symbols" : [ "ios", "android" ]
+}

@@ -1,0 +1,9 @@
+{
+  "type" : "record",
+  "name" : "MosaicDynamicProperty",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "property",
+    "type" : [ "null", "string" ]
+  } ]
+}

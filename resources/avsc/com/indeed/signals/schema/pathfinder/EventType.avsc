@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "EventType",
+  "namespace" : "com.indeed.signals.schema.pathfinder",
+  "symbols" : [ "INTERACTION", "VIEW" ],
+  "default" : "INTERACTION"
+}

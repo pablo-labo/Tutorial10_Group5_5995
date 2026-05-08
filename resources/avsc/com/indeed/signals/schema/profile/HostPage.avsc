@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "HostPage",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "symbols" : [ "serp", "serpGlobal", "hpClassic", "unknown" ],
+  "default" : "unknown"
+}

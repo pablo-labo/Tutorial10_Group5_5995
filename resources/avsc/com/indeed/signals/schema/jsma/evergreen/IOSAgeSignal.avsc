@@ -1,0 +1,18 @@
+{
+  "type" : "record",
+  "name" : "IOSAgeSignal",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "isEligibleForAgeFeatures",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "ageRangeDeclaration",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "IOSAgeRangeDeclaration",
+      "symbols" : [ "SELF_DECLARED", "GUARDIAN_DECLARED", "CHECKED_BY_OTHER_METHOD", "GUARDIAN_CHECKED_BY_OTHER_METHOD", "GOVERNMENT_ID_CHECKED", "PAYMENT_CHECKED", "GUARDIAN_PAYMENT_CHECKED", "UNKNOWN" ]
+    } ],
+    "default" : null
+  } ]
+}

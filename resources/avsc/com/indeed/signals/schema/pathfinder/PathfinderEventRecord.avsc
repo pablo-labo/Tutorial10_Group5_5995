@@ -1,0 +1,151 @@
+{
+  "type" : "record",
+  "name" : "PathfinderEventRecord",
+  "namespace" : "com.indeed.signals.schema.pathfinder",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "RNPlatformsV4",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "symbols" : [ "ios", "android" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "osVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "nativeAppVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "rnLibraryVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "rnAppBundleVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "variant",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "BuildVariant",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "symbols" : [ "debug", "release" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "env",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Environment",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "symbols" : [ "qa", "prod" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "manufacturer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "model",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "brand",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "systemName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "grp",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "sessionId",
+    "type" : "string"
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "lang",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "useragentraw",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pathfinderTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timeToContentLoadMS",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "eventName",
+    "type" : "string"
+  }, {
+    "name" : "screenName",
+    "type" : "string"
+  }, {
+    "name" : "elementName",
+    "type" : "string"
+  }, {
+    "name" : "eventType",
+    "type" : {
+      "type" : "enum",
+      "name" : "EventType",
+      "symbols" : [ "INTERACTION", "VIEW" ],
+      "default" : "INTERACTION"
+    }
+  } ],
+  "logEntryType" : "PathfinderEvent"
+}

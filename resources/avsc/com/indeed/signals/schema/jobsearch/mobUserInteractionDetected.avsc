@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "mobUserInteractionDetected",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "mobtk",
+    "type" : [ "null", "string" ],
+    "doc" : "Mobile tracking key",
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "doc" : "Source of the interaction",
+    "default" : null
+  }, {
+    "name" : "interactionType",
+    "type" : [ "null", "string" ],
+    "doc" : "Type of interaction",
+    "default" : null
+  }, {
+    "name" : "v",
+    "type" : [ "null", "string" ],
+    "doc" : "Version (set to \"0\")",
+    "default" : null
+  } ],
+  "logEntryType" : "mobUserInteractionDetected"
+}

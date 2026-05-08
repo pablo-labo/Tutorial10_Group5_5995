@@ -1,0 +1,31 @@
+{
+  "type" : "record",
+  "name" : "QueryLibraryBrowseAction",
+  "namespace" : "com.indeed.signals.schema.daap",
+  "fields" : [ {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "username",
+    "type" : "string"
+  }, {
+    "name" : "hostApp",
+    "type" : "string"
+  }, {
+    "name" : "museId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "userQueryHash",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "contextType",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "contextId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "actionDetails",
+    "type" : [ "null", "string" ]
+  } ],
+  "logEntryType" : "query_library_browse_actions"
+}

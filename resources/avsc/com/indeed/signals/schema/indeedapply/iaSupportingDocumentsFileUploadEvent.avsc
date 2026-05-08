@@ -1,0 +1,38 @@
+{
+  "type" : "record",
+  "name" : "iaSupportingDocumentsFileUploadEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "success",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaSupportingDocumentsFileUpload"
+  }, {
+    "name" : "fileId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "contentHash",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "contentType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaSupportingDocumentsFileUpload"
+}

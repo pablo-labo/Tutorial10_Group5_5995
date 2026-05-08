@@ -1,0 +1,10 @@
+{
+  "type" : "record",
+  "name" : "YellowLightXButtonClicked",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  } ],
+  "logEntryType" : "iaYellowLight3PXButtonClick"
+}

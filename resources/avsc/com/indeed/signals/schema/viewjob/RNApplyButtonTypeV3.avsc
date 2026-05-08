@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "RNApplyButtonTypeV3",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "symbols" : [ "indeedApply", "thirdParty" ]
+}

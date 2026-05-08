@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ActionType",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "symbols" : [ "impression", "signUp", "dismiss", "defer" ]
+}

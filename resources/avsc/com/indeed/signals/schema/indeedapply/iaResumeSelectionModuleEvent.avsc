@@ -1,0 +1,70 @@
+{
+  "type" : "record",
+  "name" : "iaResumeSelectionModuleEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumeSelectionModuleEvent"
+  }, {
+    "name" : "success",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isConverted",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "fileId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "resumeId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "contentHash",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "resumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "globalResumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "indeedResumeCard",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "buildIndeedResumeCard",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "fileResumeCard",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "noResumeCard",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isApplyWithProfile",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaResumeSelectionModuleEvent"
+}

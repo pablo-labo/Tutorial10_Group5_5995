@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "HostId",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "symbols" : [ "UNKNOWN", "MOBILE", "HOMEPAGE", "PASSPORT", "INDAPPLY", "SMARTAPPLY", "MYINDEED", "I2A_WEBAPP", "SJPW", "INCUBATOR", "CAREER_GUIDE_WEBAPP", "COMPANY_PAGES_WEBAPP", "NCWEB" ],
+  "default" : "UNKNOWN"
+}

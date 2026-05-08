@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "PreviewStatus",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "symbols" : [ "OPENED", "CLOSED" ]
+}

@@ -1,0 +1,34 @@
+{
+  "type" : "record",
+  "name" : "GnavInbox",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "err",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "inboxRequestTotTime",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "inboxIconDisplayed",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "inboxIconDisplayedWithUnread",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

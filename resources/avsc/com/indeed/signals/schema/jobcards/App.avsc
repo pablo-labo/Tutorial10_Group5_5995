@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "App",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "symbols" : [ "UNKNOWN", "ANDROID_APP", "IPHONE_APP", "IPAD_APP" ],
+  "default" : "UNKNOWN"
+}

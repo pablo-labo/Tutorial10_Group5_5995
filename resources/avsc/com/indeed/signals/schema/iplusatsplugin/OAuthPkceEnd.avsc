@@ -1,0 +1,98 @@
+{
+  "type" : "record",
+  "name" : "OAuthPkceEnd",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ]
+  }, {
+    "name" : "atsPluginCommon",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonLogEntryFields",
+      "fields" : [ {
+        "name" : "sessionId",
+        "type" : "string"
+      }, {
+        "name" : "userAgent",
+        "type" : "string"
+      }, {
+        "name" : "oauthClientId",
+        "type" : "string"
+      }, {
+        "name" : "atsKey",
+        "type" : "string"
+      }, {
+        "name" : "accountKey",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "advertiserKey",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "browser",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Browser",
+      "symbols" : [ "CHROME", "FIREFOX", "SAFARI", "EDGE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "OS",
+      "symbols" : [ "WINDOWS", "MACOS", "IOS", "ANDROID" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "deviceType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "DeviceType",
+      "symbols" : [ "MOBILE", "TABLET" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "onehost",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "BooleanTag",
+      "symbols" : [ "TRUE", "FALSE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "type",
+    "type" : "string",
+    "default" : "end"
+  }, {
+    "name" : "result",
+    "type" : {
+      "type" : "enum",
+      "name" : "Result",
+      "symbols" : [ "SUCCESS", "FAILURE" ]
+    }
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "IPlusAtsPlugin.OAuthPkce.end",
+    "type" : "count",
+    "tags" : [ "browser", "os", "deviceType", "onehost", "result" ]
+  } ],
+  "logEntryType" : "iplus_atsplugin_OAuthPkce"
+}

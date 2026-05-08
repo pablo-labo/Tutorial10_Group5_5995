@@ -1,0 +1,15 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class em6 {
+    public static final a Companion = new a();
+    public Long a;
+    public Long b;
+    public Long c;
+    public String d;
+    public Long e;
+    public Long f;
+
+    public static final class a {
+    }
+}

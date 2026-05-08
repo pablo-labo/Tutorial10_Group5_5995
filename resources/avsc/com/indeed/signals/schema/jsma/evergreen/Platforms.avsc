@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Platforms",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "symbols" : [ "IOS", "ANDROID", "WEB" ],
+  "default" : "IOS"
+}

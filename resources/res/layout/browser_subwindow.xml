@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/subwindow_container"
+    android:background="@android:drawable/dialog_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:background="@color/idl_aurora_neutral_1000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_gravity="end"
+            android:id="@+id/closeSubwindow"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="center"
+            android:contentDescription="@string/browser_subwindow_close"
+            app:srcCompat="@drawable/ic_idl_close_24"/>
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/subwindow_inner_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

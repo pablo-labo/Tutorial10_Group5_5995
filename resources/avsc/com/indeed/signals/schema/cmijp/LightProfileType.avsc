@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "LightProfileType",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "symbols" : [ "partTime", "fullTime" ]
+}

@@ -1,0 +1,10 @@
+{
+  "type" : "record",
+  "name" : "SpotLightShownToEmployer",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "candidateId",
+    "type" : "string"
+  } ],
+  "logEntryType" : "iaSpotlightShownToEmployer"
+}

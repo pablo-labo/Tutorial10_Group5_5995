@@ -1,0 +1,111 @@
+{
+  "type" : "record",
+  "name" : "ProfileMicroContentHiredSignal",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : "string"
+  }, {
+    "name" : "ipCntry",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "grps",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageSrc",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cardId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cardDetails",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "locale",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "impressionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionGenerationSource",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionAttributeSources",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "relatedOccupationCategory",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isReAsk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hasSalaryRangeData",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "questionName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "taxonomyRenderedValues",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "taxonomyRenderedCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "attributeAttachRate",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "isIndeedProBranded",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "jobTitleSubmitted",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "applyTime",
+    "type" : "string"
+  }, {
+    "name" : "clickType",
+    "type" : "string"
+  }, {
+    "name" : "hasManualChanges",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "name" : "skipped",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "name" : "jobKey",
+    "type" : "string"
+  } ],
+  "logEntryType" : "profileMicroContentHiredSignal"
+}

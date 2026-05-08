@@ -1,0 +1,144 @@
+{
+  "type" : "record",
+  "name" : "NativeAppMetrics",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "device",
+    "type" : {
+      "type" : "record",
+      "name" : "Device",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "Platforms",
+          "symbols" : [ "IOS", "ANDROID", "WEB" ],
+          "default" : "IOS"
+        }
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "advertisingId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "properties",
+    "type" : {
+      "type" : "record",
+      "name" : "EventProperties",
+      "fields" : [ {
+        "name" : "appId",
+        "type" : {
+          "type" : "enum",
+          "name" : "AppIds",
+          "symbols" : [ "TEST", "JOB_SEARCH_ANDROID", "JOB_SEARCH_IOS", "HQM_EMPLOYER_IOS", "EMPLOYER_ANDROID" ],
+          "default" : "TEST"
+        }
+      }, {
+        "name" : "appVersion",
+        "type" : "string"
+      }, {
+        "name" : "appBuildNum",
+        "type" : "long"
+      }, {
+        "name" : "appVariant",
+        "type" : "string"
+      }, {
+        "name" : "appEnvironment",
+        "type" : "string"
+      }, {
+        "name" : "appCountry",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ipCountry",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "osVersion",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "clientEventId",
+        "type" : "string"
+      }, {
+        "name" : "appInstallId",
+        "type" : "string"
+      }, {
+        "name" : "appSessionId",
+        "type" : "string"
+      }, {
+        "name" : "sessionId",
+        "type" : "string"
+      }, {
+        "name" : "clientCreatedTimestamp",
+        "type" : "long"
+      }, {
+        "name" : "groups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "accountId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "secondaryAccountId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "parentTk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "userLocale",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "indeedLocale",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceOrientation",
+        "type" : {
+          "type" : "enum",
+          "name" : "DeviceOrientations",
+          "symbols" : [ "LANDSCAPE", "PORTRAIT" ]
+        }
+      } ]
+    }
+  }, {
+    "name" : "name",
+    "type" : "string"
+  }, {
+    "name" : "durationsMs",
+    "type" : {
+      "type" : "map",
+      "values" : "long"
+    }
+  }, {
+    "name" : "extraInfo",
+    "type" : {
+      "type" : "map",
+      "values" : "string"
+    }
+  } ],
+  "logEntryType" : "jsmaNativeAppMetrics"
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="129dp"
+    android:width="297dp"
+    android:viewportWidth="297"
+    android:viewportHeight="129">
+    <group>
+        <clip-path android:pathData="M0.5,16.95h295.9v111.1h-295.9z"/>
+        <path
+            android:fillColor="#d7e5f5"
+            android:pathData="M46.7,83.5a74.8,66.55 0,1 0,149.6 0a74.8,66.55 0,1 0,-149.6 0z"/>
+        <path
+            android:fillColor="#d7e5f5"
+            android:pathData="M0.5,116.5a88.55,66.55 0,1 0,177.1 0a88.55,66.55 0,1 0,-177.1 0z"/>
+        <path
+            android:fillColor="#d7e5f5"
+            android:pathData="M84.1,122a106.15,66.55 0,1 0,212.3 0a106.15,66.55 0,1 0,-212.3 0z"/>
+    </group>
+    <group>
+        <clip-path android:pathData="M157.5,0h97v128h-97z"/>
+        <path
+            android:fillColor="@drawable/_email_sync_modal_icon__0_res_0x7f08002e"
+            android:pathData="M177.91,9C169.23,9 162.2,16.03 162.2,24.71V149.21H171.18V24.71C171.18,20.99 174.19,17.98 177.91,17.98H189.64L191.8,21.75C192.28,22.59 193.17,23.11 194.14,23.11H219.02C220.01,23.11 220.92,22.57 221.39,21.7L223.41,17.98H234.91C238.63,17.98 241.64,20.99 241.64,24.71V149.21H250.62V24.71C250.62,16.03 243.59,9 234.91,9H177.91Z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M169.66,149.21H171.18V24.71C171.18,20.99 174.19,17.98 177.91,17.98H189.64L191.8,21.75C192.28,22.59 193.17,23.11 194.14,23.11H219.03C220.01,23.11 220.92,22.57 221.39,21.7L223.41,17.98H234.91C238.63,17.98 241.65,20.99 241.65,24.71V149.21H243.36H169.66Z"/>
+        <group>
+            <clip-path android:pathData="M180.95,45h50v104h-50z"/>
+            <path
+                android:fillColor="#ebf0f6"
+                android:pathData="M180.95,45H231.38V69.2H180.95V45Z"/>
+            <path
+                android:fillColor="#ebf0f6"
+                android:pathData="M180.95,74.2H231.38V98.39H180.95V74.2Z"/>
+            <path
+                android:fillColor="#ebf0f6"
+                android:pathData="M180.95,103.39H231.38V127.59H180.95V103.39Z"/>
+        </group>
+        <path
+            android:fillColor="@drawable/_email_sync_modal_icon__1_res_0x7f08002f"
+            android:pathData="M157.95,50H254.95V91H157.95V50Z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M220.89,63H168.93V68.49H220.89V63Z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M244.93,73.51H168.93V79H244.93V73.51Z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M198.15,0L214.95,0A11.2,11.2 0,0 1,226.15 11.2L226.15,28A11.2,11.2 0,0 1,214.95 39.2L198.15,39.2A11.2,11.2 0,0 1,186.95 28L186.95,11.2A11.2,11.2 0,0 1,198.15 0z"/>
+        <path
+            android:fillColor="#003a9b"
+            android:pathData="M205.05,29.78L205.07,20.46C205.33,20.48 205.59,20.48 205.87,20.48C207.16,20.48 208.38,20.15 209.42,19.55L209.4,29.78C209.4,30.67 209.19,31.3 208.8,31.74C208.41,32.16 207.87,32.39 207.22,32.39C206.6,32.39 206.08,32.18 205.67,31.74C205.26,31.29 205.05,30.64 205.05,29.78Z"
+            android:fillType="evenOdd"/>
+        <path
+            android:fillColor="#003a9b"
+            android:pathData="M205.12,7.4C207.81,6.46 210.87,6.52 213.16,8.45C213.6,8.84 214.07,9.34 214.27,9.91C214.51,10.65 213.47,9.84 213.32,9.73C212.57,9.23 211.82,8.84 210.99,8.55C206.49,7.19 202.19,9.64 199.54,13.51C198.43,15.2 197.7,17.01 197.1,18.96C197.02,19.17 197,19.46 196.87,19.64C196.74,19.85 196.82,19.07 196.82,19.04C196.9,18.23 197.08,17.45 197.29,16.67C198.51,12.49 201.24,8.99 205.12,7.4Z"
+            android:fillType="evenOdd"/>
+        <path
+            android:fillColor="#003a9b"
+            android:pathData="M210.31,14.92C210.3,16.7 208.88,18.14 207.12,18.13C205.36,18.13 203.94,16.7 203.94,14.92C203.94,13.14 205.37,11.71 207.13,11.71C208.89,11.71 210.31,13.15 210.31,14.92Z"
+            android:fillType="evenOdd"/>
+    </group>
+    <path
+        android:fillColor="@drawable/_email_sync_modal_icon__2_res_0x7f080030"
+        android:pathData="M47.36,73.51L73.64,73.51A10.86,10.86 0,0 1,84.5 84.38L84.5,110.65A10.86,10.86 0,0 1,73.64 121.51L47.36,121.51A10.86,10.86 0,0 1,36.5 110.65L36.5,84.38A10.86,10.86 0,0 1,47.36 73.51z"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M49.33,86.34H71.68C73.21,86.34 74.47,87.6 74.47,89.13V105.89C74.47,107.43 73.21,108.69 71.68,108.69H49.33C47.8,108.69 46.54,107.43 46.54,105.89V89.13C46.54,87.6 47.8,86.34 49.33,86.34Z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M74.47,89.13L60.5,98.91L46.54,89.13"
+        android:strokeColor="@drawable/_email_sync_modal_icon__3_res_0x7f080031"
+        android:strokeWidth="3.7241"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="@drawable/_email_sync_modal_icon__4_res_0x7f080032"
+        android:pathData="M138.2,105.13C130.27,109.1 121.21,110.2 112.57,108.23C108,107.18 103.68,105.23 99.87,102.5C96.05,99.77 92.82,96.31 90.35,92.32C93.32,95.45 96.88,97.95 100.82,99.69C104.77,101.42 109.02,102.35 113.33,102.43C119.89,102.5 126.29,100.41 131.53,96.48L124.99,87.99L147.97,90.94L144.99,113.92L138.2,105.13Z"/>
+</vector>

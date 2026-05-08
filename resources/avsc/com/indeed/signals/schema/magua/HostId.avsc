@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "HostId",
+  "namespace" : "com.indeed.signals.schema.magua",
+  "symbols" : [ "unknown", "homepage", "jobsearch", "jso_ui", "career_guide_webapp", "global_nav" ],
+  "default" : "unknown"
+}

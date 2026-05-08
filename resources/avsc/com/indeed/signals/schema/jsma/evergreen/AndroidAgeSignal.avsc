@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "AndroidAgeSignal",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "ageRangeEligibility",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "AndroidAgeRangeEligibility",
+      "symbols" : [ "SUPERVISED", "SUPERVISED_APPROVAL_DENIED", "SUPERVISED_APPROVAL_PENDING", "UNKNOWN", "VERIFIED" ]
+    } ],
+    "default" : null
+  } ]
+}

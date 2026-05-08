@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "LaunchTypesV10",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "symbols" : [ "COLD", "WARM", "HOT" ]
+}

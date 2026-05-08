@@ -1,0 +1,38 @@
+{
+  "type" : "record",
+  "name" : "UserInteractionEvent",
+  "namespace" : "com.indeed.signals.resumecom",
+  "fields" : [ {
+    "name" : "userId",
+    "type" : "string"
+  }, {
+    "name" : "sessionId",
+    "type" : "string"
+  }, {
+    "name" : "browser",
+    "type" : "string"
+  }, {
+    "name" : "device",
+    "type" : "string"
+  }, {
+    "name" : "os",
+    "type" : "string"
+  }, {
+    "name" : "appVersion",
+    "type" : "string"
+  }, {
+    "name" : "interactionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "InteractionType",
+      "symbols" : [ "PAGE_VIEW", "BUTTON_CLICK" ]
+    }
+  }, {
+    "name" : "pageUrl",
+    "type" : "string"
+  }, {
+    "name" : "timestamp",
+    "type" : "long"
+  } ],
+  "logEntryType" : "resumeComEvents"
+}

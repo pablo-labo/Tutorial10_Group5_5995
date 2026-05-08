@@ -1,0 +1,13 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes2.dex */
+public interface f3f {
+    void a();
+
+    default void b() {
+        c();
+        a();
+    }
+
+    void c();
+}

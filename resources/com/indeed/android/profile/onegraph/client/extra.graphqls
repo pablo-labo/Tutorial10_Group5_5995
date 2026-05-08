@@ -1,0 +1,5 @@
+# This file is a extended definition of the Onegraph schema.
+# It is used to let the ApolloClient know how to handle the id of the cache record for each object.
+# see details here: https://www.apollographql.com/docs/kotlin/caching/declarative-ids
+extend type Conversation @typePolicy(keyFields: "id")
+extend type ConversationEvent @typePolicy(keyFields: "id")

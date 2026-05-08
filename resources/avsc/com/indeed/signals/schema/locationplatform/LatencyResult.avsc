@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "LatencyResult",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "symbols" : [ "MET", "EXCEEDED", "UNUSED" ],
+  "default" : "UNUSED"
+}

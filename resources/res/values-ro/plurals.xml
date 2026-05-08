@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 evaluare</item>
+        <item quantity="few">%d evaluări</item>
+        <item quantity="other">%d de evaluări</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Derulează rapid înainte cu %d secundă</item>
+        <item quantity="few">Derulează rapid înainte cu %d secunde</item>
+        <item quantity="other">Derulează rapid înainte cu %d de secunde</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Derulează înapoi cu %d secundă</item>
+        <item quantity="few">Derulează înapoi cu %d secunde</item>
+        <item quantity="other">Derulează înapoi cu %d de secunde</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minut</item>
+        <item quantity="few">%s minute</item>
+        <item quantity="other">%s minute</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Interviul începe în %d oră</item>
+        <item quantity="few">Interviul începe în %d ore</item>
+        <item quantity="other">Interviul începe în %d ore</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Interviul începe în %d minut</item>
+        <item quantity="few">Interviul începe în %d minute</item>
+        <item quantity="other">Interviul începe în %d minute</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d fișier nu s-a încărcat și nu va fi inclus în mesaj.</item>
+        <item quantity="few">%d fișiere nu s-au încărcat și nu vor fi incluse în mesaj.</item>
+        <item quantity="other">%d de fișiere nu s-au încărcat și nu vor fi incluse în mesaj.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d fișier nu s-a încărcat</item>
+        <item quantity="few">%d fișiere nu s-au încărcat</item>
+        <item quantity="other">%d de fișiere nu s-au încărcat</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d mesaj necitit</item>
+        <item quantity="few">%d mesaje necitite</item>
+        <item quantity="other">%d de mesaje necitite</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d notificare nouă</item>
+        <item quantity="few">%d notificări noi</item>
+        <item quantity="other">%d de notificări noi</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">De obicei, acest angajator răspunde în decurs de %d zi</item>
+        <item quantity="few">De obicei, acest angajator răspunde în decurs de %d zile</item>
+        <item quantity="other">De obicei, acest angajator răspunde în decurs de %d zile</item>
+    </plurals>
+</resources>

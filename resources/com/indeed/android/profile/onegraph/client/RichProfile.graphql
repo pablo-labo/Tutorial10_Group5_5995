@@ -1,0 +1,1057 @@
+fragment dateTypeForMobileRichProfile on JobSeekerProfileDateType {
+    isCurrent
+    month
+    year
+}
+
+fragment dateRangeForMobileRichProfile on JobSeekerProfileDateRange {
+    fromDate {
+        isCurrent
+        month
+        year
+    }
+    isCurrent
+    toDate {
+        isCurrent
+        month
+        year
+    }
+}
+
+fragment workExperiencesForMobileRichProfile on JobSeekerProfileWorkExperience {
+    id
+    title
+    company
+    location {
+        country
+        formattedLocation
+        unknownLocation
+    }
+    dateRange {
+        ... dateRangeForMobileRichProfile
+    }
+    description
+}
+
+fragment educationsForMobileRichProfile on JobSeekerProfileEducation {
+    id
+    school
+    degree {
+        degreeName
+        field
+        id
+        taxonomyConceptDegree {
+            label
+            sectionIds {
+                sectionId
+            }
+            suid
+            taxonomyConceptId
+            type
+            uuid
+        }
+        taxonomyConceptField {
+            label
+            sectionIds {
+                sectionId
+            }
+            suid
+            taxonomyConceptId
+            type
+            uuid
+        }
+    }
+    location {
+        country
+        formattedLocation
+        unknownLocation
+    }
+    dateRange {
+        ... dateRangeForMobileRichProfile
+    }
+    additionalDetails
+}
+
+fragment publicationsForMobileRichProfile on JobSeekerProfilePublication {
+    id
+    date {
+        ... dateTypeForMobileRichProfile
+    }
+    description
+    title
+    url
+}
+
+fragment militaryServiceForMobileRichProfile on JobSeekerProfileMilitary {
+    id
+    country
+    branch
+    rank
+    description
+    serviceCode
+    dateRange {
+        ... dateRangeForMobileRichProfile
+    }
+}
+
+fragment patentsForMobileRichProfile on JobSeekerProfilePatent {
+    id
+    date {
+        ... dateTypeForMobileRichProfile
+    }
+    patentNumber
+    description
+    title
+    url
+}
+
+fragment awardsForMobileRichProfile on JobSeekerProfileAward {
+    id
+    date {
+        ... dateTypeForMobileRichProfile
+    }
+    description
+    title
+}
+
+fragment associationsForMobileRichProfile on JobSeekerProfileAssociation {
+    title
+    description
+    dateRange {
+        ... dateRangeForMobileRichProfile
+    }
+    id
+}
+
+fragment certificationsForMobileRichProfile on JobSeekerProfileCertification {
+    title
+    description
+    dateRange {
+        ... dateRangeForMobileRichProfile
+    }
+    id
+}
+
+fragment licensesForMobileRichProfile on JobSeekerProfileLicense {
+    title
+    endorsements
+    metadata {
+        collectionTimestamp
+    }
+    location {
+        address
+        address2
+        admin1
+        city
+        country
+        formattedLocation
+        location
+        postalCode
+        state
+    }
+    taxonomyConceptTitle {
+        label
+        suid
+    }
+    type
+    dateRange {
+        ... dateRangeForMobileRichProfile
+    }
+    id
+
+}
+
+fragment languageSkillsForMobileRichProfile on JobSeekerProfileLanguage {
+        id
+        taxonomyConceptLanguage {
+            name
+            taxonomyConceptName {
+                label
+                sectionIds {
+                    sectionId
+                }
+                suid
+                taxonomyConceptId
+                type
+                context {
+                    suid
+                }
+            }
+        }
+        taxonomyConceptProficiency {
+            name
+            taxonomyConceptName {
+                label
+                sectionIds {
+                    sectionId
+                }
+                suid
+                taxonomyConceptId
+                type
+                context {
+                    suid
+                }
+            }
+        }
+}
+
+fragment resumeLanguage on JobSeekerProfileLanguage {
+    id
+    taxonomyConceptLanguage {
+        ...taxonomyConceptWithName
+    }
+    taxonomyConceptProficiency {
+        ...taxonomyConceptWithName
+    }
+}
+
+fragment taxonomyConceptWithName on JobSeekerProfileTaxonomyConceptWithName {
+    name
+    taxonomyConceptName {
+        ...taxonomyConcept
+    }
+}
+
+fragment taxonomyConcept on JobSeekerProfileTaxonomyConcept {
+    label
+    sectionIds {
+        sectionId
+    }
+    suid
+    taxonomyConceptId
+    type
+    context {
+        suid
+    }
+}
+
+
+fragment skillsForMobileRichProfile on JobSeekerProfileSkill {
+    id
+    text
+    experience
+    timeUnit
+    isParentCrowtaxoAttribute
+    childAchievementSkill {
+        id
+        suid
+        label
+    }
+    taxonomyConceptTitle {
+        label
+        suid
+    }
+    skillBucket {
+        suid
+        label
+    }
+}
+
+fragment workAreasSelectionConfiguration on SegmentationCrowtaxoWorkAreasSelectionConfiguration {
+    lever {
+        leverId
+    }
+    workAreaSelection {
+        label
+        selectionLimit
+        workAreas {
+            id
+            label
+        }
+    }
+}
+
+query GetRichProfileContactInfo {
+    jobSeekerProfile {
+        profile {
+            resume {
+                id
+                firstName
+                lastName
+                headline
+                phoneNumber
+                employmentEligibilities {
+                    employmentEligibility
+                    id
+                }
+                showPhoneNumber
+                location {
+                    address
+                    address2
+                    admin1
+                    city
+                    country
+                    formattedLocation
+                    location
+                    postalCode
+                    state
+                }
+            }
+
+            defaultInfo {
+                contactInformation {
+                    firstName
+                    lastName
+                    phoneNumber
+                    location {
+                        address
+                        address2
+                        admin1
+                        city
+                        country
+                        formattedLocation
+                        location
+                        postalCode
+                        state
+                    }
+                }
+                privacy {
+                    sourcingElection
+                }
+            }
+        }
+    }
+}
+
+mutation UpdateRichProfileResumeContactInfo($input: UpdateJobSeekerProfileResumeInput!) {
+    updateJobSeekerProfileResume(input: $input) {
+        resume {
+            id
+            firstName
+            lastName
+            headline
+            phoneNumber
+            showPhoneNumber
+            location {
+                address
+                address2
+                admin1
+                city
+                country
+                formattedLocation
+                location
+                postalCode
+                state
+            }
+            employmentEligibilities {
+                id
+                employmentEligibility
+            }
+        }
+    }
+}
+
+query GetRichProfileResumeData {
+    jobSeekerProfile {
+        profile {
+            resume {
+                id
+                summary
+                additionalInfo
+                links {
+                    id
+                    link
+                }
+                workExperiences {
+                    ... workExperiencesForMobileRichProfile
+                }
+                publications {
+                    ... publicationsForMobileRichProfile
+                }
+                military {
+                    ... militaryServiceForMobileRichProfile
+                }
+                patents {
+                    ... patentsForMobileRichProfile
+                }
+                awards {
+                    ... awardsForMobileRichProfile
+                }
+                associations {
+                    ... associationsForMobileRichProfile
+                }
+                certifications {
+                    ... certificationsForMobileRichProfile
+                }
+                licenses {
+                    ... licensesForMobileRichProfile
+                }
+                educations {
+                    ... educationsForMobileRichProfile
+                }
+                languages {
+                    ... languageSkillsForMobileRichProfile
+                }
+                skills {
+                    ... skillsForMobileRichProfile
+                }
+            }
+            fraudMetadata {
+                state
+            }
+        }
+    }
+}
+
+mutation CreateEmptyJobSeekerProfileResume($input: CreateEmptyJobSeekerProfileResumeInput!) {
+    createEmptyJobSeekerProfileResume(input: $input) {
+        resume {
+            accountKey
+            id
+        }
+    }
+}
+
+mutation AddJobSeekerProfileResumeLinks($input: AddJobSeekerProfileResumeLinksInput!) {
+    addJobSeekerProfileResumeLinks(input: $input) {
+        links {
+            id
+            link
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeLinks($input: UpdateJobSeekerProfileResumeLinksInput!) {
+    updateJobSeekerProfileResumeLinks(input: $input) {
+        links {
+            id
+            link
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeLinks($input: DeleteJobSeekerProfileResumeLinksInput!) {
+    deleteJobSeekerProfileResumeLinks(input: $input) {
+        linkIds
+    }
+}
+
+mutation AddJobSeekerProfileResumeWorkExperiences($input: AddJobSeekerProfileResumeWorkExperiencesInput!) {
+    addJobSeekerProfileResumeWorkExperiences(input: $input) {
+        workExperiences {
+            ... workExperiencesForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeWorkExperiences($input: UpdateJobSeekerProfileResumeWorkExperiencesInput!) {
+    updateJobSeekerProfileResumeWorkExperiences(input: $input) {
+        workExperiences {
+            ... workExperiencesForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeWorkExperiences($input: DeleteJobSeekerProfileResumeWorkExperiencesInput!) {
+    deleteJobSeekerProfileResumeWorkExperiences(input: $input) {
+        workExperienceIds
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeSummary($input: UpdateJobSeekerProfileResumeInput!) {
+    updateJobSeekerProfileResume(input: $input){
+        resume {
+            id
+            summary
+        }
+    }
+}
+
+mutation AddJobSeekerProfileResumePublications($input: AddJobSeekerProfileResumePublicationsInput!) {
+    addJobSeekerProfileResumePublications(input: $input) {
+        publications {
+            ... publicationsForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumePublications($input: UpdateJobSeekerProfileResumePublicationsInput!) {
+    updateJobSeekerProfileResumePublications(input: $input) {
+        publications {
+            ... publicationsForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumePublications($input: DeleteJobSeekerProfileResumePublicationsInput!) {
+    deleteJobSeekerProfileResumePublications(input: $input) {
+        publicationIds
+    }
+}
+
+mutation AddJobSeekerProfileResumeMilitaryService($input: AddJobSeekerProfileResumeMilitaryInput!) {
+    addJobSeekerProfileResumeMilitary(input: $input) {
+        military {
+            ... militaryServiceForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeMilitaryService($input: UpdateJobSeekerProfileResumeMilitaryInput!) {
+    updateJobSeekerProfileResumeMilitary(input: $input) {
+        military {
+            ... militaryServiceForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeMilitaryService($input: DeleteJobSeekerProfileResumeMilitaryInput!) {
+    deleteJobSeekerProfileResumeMilitary(input: $input) {
+        militaryIds
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeAdditionalInfo($input: UpdateJobSeekerProfileResumeInput!) {
+    updateJobSeekerProfileResume(input: $input) {
+        resume {
+            id
+            additionalInfo
+        }
+    }
+}
+
+mutation AddJobSeekerProfileResumePatents($input: AddJobSeekerProfileResumePatentsInput!) {
+    addJobSeekerProfileResumePatents(input: $input) {
+        patents {
+            ... patentsForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumePatents($input: UpdateJobSeekerProfileResumePatentsInput!) {
+    updateJobSeekerProfileResumePatents(input: $input) {
+        patents {
+            ... patentsForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumePatents($input: DeleteJobSeekerProfileResumePatentsInput!) {
+    deleteJobSeekerProfileResumePatents(input: $input) {
+        patentIds
+    }
+}
+
+mutation AddJobSeekerProfileResumeAwards($input: AddJobSeekerProfileResumeAwardsInput!) {
+    addJobSeekerProfileResumeAwards(input: $input) {
+        awards {
+            ... awardsForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeAwards($input: UpdateJobSeekerProfileResumeAwardsInput!) {
+    updateJobSeekerProfileResumeAwards(input: $input) {
+        awards {
+            ... awardsForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeAwards($input: DeleteJobSeekerProfileResumeAwardsInput!) {
+    deleteJobSeekerProfileResumeAwards(input: $input) {
+        awardIds
+    }
+}
+
+mutation AddJobSeekerProfileResumeAssociations($input: AddJobSeekerProfileResumeAssociationsInput!) {
+    addJobSeekerProfileResumeAssociations(input: $input) {
+        associations {
+            ... associationsForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeAssociations($input: UpdateJobSeekerProfileResumeAssociationsInput!) {
+    updateJobSeekerProfileResumeAssociations(input: $input) {
+        associations {
+            ... associationsForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeAssociations($input: DeleteJobSeekerProfileResumeAssociationsInput!) {
+    deleteJobSeekerProfileResumeAssociations(input: $input) {
+        associationIds
+    }
+}
+
+mutation AddJobSeekerProfileResumeEducation($input: AddJobSeekerProfileEducationsInput!) {
+    addJobSeekerProfileResumeEducations(input: $input) {
+        educations {
+            ... educationsForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeEducation($input: UpdateJobSeekerProfileResumeEducationsInput!) {
+    updateJobSeekerProfileResumeEducations(input: $input) {
+        educations {
+            ... educationsForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeEducation($input: DeleteJobSeekerProfileResumeEducationsInput!) {
+    deleteJobSeekerProfileResumeEducations(input: $input) {
+        educationIds
+    }
+}
+
+mutation AddJobSeekerProfileResumeCertifications($input: AddJobSeekerProfileResumeCertificationsInput!) {
+    addJobSeekerProfileResumeCertifications(input: $input) {
+        certifications {
+            ... certificationsForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeCertifications($input: UpdateJobSeekerProfileResumeCertificationsInput!) {
+    updateJobSeekerProfileResumeCertifications(input: $input) {
+        certifications {
+            ... certificationsForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeCertifications($input: DeleteJobSeekerProfileResumeCertificationsInput!) {
+    deleteJobSeekerProfileResumeCertifications(input: $input) {
+        certificationIds
+    }
+}
+
+mutation AddJobSeekerProfileResumeLicenses($input: AddJobSeekerProfileResumeLicensesInput!) {
+    addJobSeekerProfileResumeLicenses(input: $input) {
+        licenses {
+            ... licensesForMobileRichProfile
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileResumeLicenses($input: UpdateJobSeekerProfileResumeLicensesInput!) {
+    updateJobSeekerProfileResumeLicenses(input: $input) {
+        licenses {
+            ... licensesForMobileRichProfile
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeLicenses($input: DeleteJobSeekerProfileResumeLicensesInput!) {
+    deleteJobSeekerProfileResumeLicenses(input: $input) {
+        licenseIds
+    }
+}
+
+mutation AddJobSeekerProfileResumeLanguages($input: AddJobSeekerProfileResumeLanguagesInput!) {
+    addJobSeekerProfileResumeLanguages(input: $input) {
+        languages {
+            ...resumeLanguage
+        }
+    }
+}
+
+
+
+mutation UpdateProfileResumeLanguages($input: UpdateJobSeekerProfileResumeLanguagesInput!) {
+    updateJobSeekerProfileResumeLanguages(input: $input) {
+        languages {
+            ...resumeLanguage
+        }
+    }
+}
+
+mutation DeleteJobSeekerProfileResumeLanguages($input: DeleteJobSeekerProfileResumeLanguagesInput!) {
+    deleteJobSeekerProfileResumeLanguages(input: $input) {
+        languageIds
+    }
+}
+
+
+mutation AddJobSeekerProfileResumeSkills($input: AddJobSeekerProfileResumeSkillsInput!) {
+  addJobSeekerProfileResumeSkills(input: $input) {
+    skills {
+      ... skillsForMobileRichProfile
+    }
+  }
+}
+
+mutation UpdateJobSeekerProfileResumeSkills($input: UpdateJobSeekerProfileResumeSkillsInput!) {
+  updateJobSeekerProfileResumeSkills(input: $input) {
+    skills {
+      ... skillsForMobileRichProfile
+    }
+  }
+}
+
+mutation DeleteJobSeekerProfileResumeSkills($input: DeleteJobSeekerProfileResumeSkillsInput!) {
+  deleteJobSeekerProfileResumeSkills(input: $input) {
+    skillIds
+  }
+}
+
+query FindEmployerLogoImageUrlsRichProfile($input: FindEmployersInput) {
+    findEmployers(input: $input) {
+        employers {
+            employer {
+                dossier {
+                    images {
+                        squareLogoUrls {
+                            url256
+                            url128
+                            url64
+                            url96
+                        }
+                    }
+                }
+                name
+                key
+            }
+            whatType
+        }
+    }
+}
+
+query GetSdcPreferences {
+    jobSeekerProfileStructuredData(
+        input: { queryFilter: { dataCategories: [CONFIRMED_BY_USER] } }
+    ) {
+        preferences {
+            uuid
+            id
+            minimumPay {
+                id
+                amount
+                salaryType
+                currency
+                amountExists
+            }
+            jobTitles {
+                id
+                jobTitle
+                normalizedValue
+                sentiment
+            }
+            relocation {
+                ableToRelocate
+                source
+            }
+            locations {
+                id
+                formattedLocationFull
+                formattedLocationShort
+                raw
+            }
+            maximumCommute {
+                timeMinutes
+            }
+        }
+    }
+}
+
+mutation AddJobSeekerProfileStructuredDataPreference($input: AddJobSeekerProfileStructuredDataPreferenceInput!) {
+  addJobSeekerProfileStructuredDataPreference(input: $input) {
+    preference {
+      id
+      minimumPay {
+        amount
+        amountExists
+        currency
+        salaryType
+      }
+    }
+  }
+}
+
+
+mutation UpdateJobSeekerProfileMinimumPayPreference(
+    $input: UpdateJobSeekerProfileStructuredDataPreferenceInput!
+) {
+    updateJobSeekerProfileStructuredDataPreference (input: $input) {
+        preference {
+            minimumPay {
+                id
+                salaryType
+                currency
+                amount
+                amountExists
+            }
+        }
+    }
+}
+
+
+mutation UpdateJobSeekerProfileJobTitlePreference(
+    $input: UpdateJobSeekerProfileStructuredDataPreferenceInput!
+) {
+    updateJobSeekerProfileStructuredDataPreference (input: $input) {
+        preference {
+            id
+            jobTitles {
+                id
+                jobTitle
+                sentiment
+                normalizedValue
+            }
+        }
+    }
+}
+
+
+mutation AddJobSeekerProfileJobTitlePreference(
+    $input: AddJobSeekerProfileStructuredDataPreferenceInput!
+) {
+    addJobSeekerProfileStructuredDataPreference (input: $input) {
+        preference {
+            id
+            jobTitles {
+                id
+                jobTitle
+                sentiment
+                normalizedValue
+            }
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileRelocationPreference(
+    $input: UpdateJobSeekerProfileStructuredDataPreferenceInput!
+) {
+    updateJobSeekerProfileStructuredDataPreference (input: $input) {
+        preference {
+            id
+            relocation {
+                ableToRelocate
+                source
+            }
+            locations {
+                id
+                formattedLocationFull
+                formattedLocationShort
+                raw
+            }
+        }
+    }
+}
+
+mutation AddJobSeekerProfileRelocationPreference(
+    $input: AddJobSeekerProfileStructuredDataPreferenceInput!
+) {
+    addJobSeekerProfileStructuredDataPreference (input: $input) {
+        preference {
+            id
+            relocation {
+                ableToRelocate
+                source
+            }
+            locations {
+                id
+                formattedLocationFull
+                formattedLocationShort
+                raw
+            }
+        }
+    }
+}
+
+mutation UpdateJobSeekerProfileCommutePreference(
+    $input: UpdateJobSeekerProfileStructuredDataPreferenceInput!
+) {
+    updateJobSeekerProfileStructuredDataPreference(input: $input) {
+        preference {
+            id
+            maximumCommute {
+                timeMinutes
+            }
+        }
+    }
+}
+
+mutation AddJobSeekerProfileCommutePreference(
+    $input: AddJobSeekerProfileStructuredDataPreferenceInput!
+) {
+    addJobSeekerProfileStructuredDataPreference(input: $input) {
+        preference {
+            id
+            maximumCommute {
+                timeMinutes
+            }
+        }
+    }
+}
+
+query GetResumeTags {
+    jobSeekerProfile {
+        profile {
+            resume {
+                id
+                tags
+            }
+        }
+    }
+}
+
+mutation CreateJobSeekerProfileRenderedResumeDownloadTempUrls(
+    $input: CreateJobSeekerProfileRenderedResumeDownloadTempUrlsInput!
+) {
+    createJobSeekerProfileRenderedResumeDownloadTempUrls(input: $input) {
+        pdf
+    }
+}
+
+mutation ClaimJobSeekerSlug($input: ClaimJobSeekerSlugInput!) {
+    claimJobSeekerSlug(input: $input) {
+        slug
+    }
+}
+
+query FindTargetedLeverExperiments(
+    $targetedLeverExperimentsInput: SegmentationTargetedLeverExperimentsInput!
+) {
+    findSegmentationTargetedLeverExperiments(
+        input: $targetedLeverExperimentsInput
+    ) {
+        leverConfigurations {
+            ... workAreasSelectionConfiguration
+        }
+    }
+}
+
+query FindSegmentationTargetedLeverExperiments($input: SegmentationTargetedLeverExperimentsInput!) {
+  findSegmentationTargetedLeverExperiments(input: $input) {
+    leverConfigurations {
+		   ... on SegmentationWorkWellbeingConfiguration {
+            lever {
+                leverId
+            }
+            workWellbeingQuestions {
+                id
+                label
+                questionAnswerLimit
+                attributes {
+                    id
+                    label
+                    customClassIds
+                }
+            }
+          }
+       }
+  }
+}
+
+query FindCategoricalOQVTTaxonomies(
+    $taxonomyInput: FindCategoricalOQVTTaxonomiesInput!,
+    $genericAttributesInput: CategoricalOQVTGenericAttributesInput!
+) {
+    findCategoricalOQVTTaxonomies(input: $taxonomyInput) {
+        taxonomies {
+            genericAttributes (input: $genericAttributesInput){
+                id
+                label
+                question {
+                    id
+                    label
+                    values {
+                        id
+                        label
+                        # get children attributes
+                        tag {
+                            id
+                            label
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+query FindResumeFileSuggestions($input: FindResumeFileSuggestionsInput!) {
+    resumeFileSuggestionQueries {
+        findResumeFileSuggestions(input: $input) {
+            resumeFileSuggestion {
+                resumeFileId
+                clientName
+                status
+            }
+        }
+    }
+}
+
+mutation AddOrUpdateResumeFileSuggestion($input: AddOrUpdateResumeFileSuggestionInput!) {
+    resumeFileSuggestionMutations {
+        addOrUpdateResumeFileSuggestion(input: $input) {
+            resumeFileSuggestion {
+                resumeFileId
+                clientName
+                status
+            }
+        }
+    }
+}
+
+mutation RemoveResumeFileSuggestion($input: RemoveResumeFileSuggestionInput!) {
+    resumeFileSuggestionMutations {
+        removeResumeFileSuggestion(input: $input) {
+            resumeFileSuggestion {
+                resumeFileId
+                clientName
+                status
+            }
+        }
+    }
+}
+
+mutation UpdateSourcingElection($input: UpdateSourcingElectionInput!) {
+  jobSeekerProfileMutations {
+    updateSourcingElection(input: $input) {
+      sourcingElection
+    }
+  }
+}
+
+mutation MarkAutoMergeReviewed($input: MarkAutoMergeReviewedInput!) {
+    markAutoMergeReviewed(input: $input) {
+        resumeId
+        tags
+    }
+}
+
+# UDP (User Display Preferences) Interactions
+
+query GetUDPInteractions {
+    findUserDisplayPreference {
+        userDisplayPreference {
+            interactions {
+                userInteraction {
+                    userInteractionType
+                    userInteractionTarget
+                    contextKey
+                }
+                interactionCount
+                firstInteractionTimestamp
+                lastInteractionTimestamp
+            }
+        }
+    }
+}
+
+mutation AddUDPInteraction($input: AddUDPInteractionInput!) {
+    userDisplayPreferenceMutations {
+        interactionMutations {
+            addUDPInteraction(input: $input) {
+                userDisplayPreference {
+                    interactions {
+                        userInteraction {
+                            userInteractionType
+                            userInteractionTarget
+                            contextKey
+                        }
+                        interactionCount
+                        firstInteractionTimestamp
+                        lastInteractionTimestamp
+                    }
+                }
+            }
+        }
+    }
+}

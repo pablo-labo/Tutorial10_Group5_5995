@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "MessagingWebappPageEvent",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "fields" : [ {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "appinstance",
+    "type" : "string"
+  }, {
+    "name" : "application",
+    "type" : "string"
+  }, {
+    "name" : "parenttk",
+    "type" : "string"
+  } ],
+  "logEntryType" : "msgw_tAction"
+}

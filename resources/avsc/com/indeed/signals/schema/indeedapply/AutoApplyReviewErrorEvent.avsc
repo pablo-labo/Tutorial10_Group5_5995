@@ -1,0 +1,34 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyReviewErrorEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Error event for auto-apply review flow",
+  "fields" : [ {
+    "name" : "reviewLogUid",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "errorType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorStack",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "graphqlOperation",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "draftId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplyReviewErrorEvent"
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ScreenOrientation",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "symbols" : [ "PORTRAIT", "LANDSCAPE" ],
+  "default" : "PORTRAIT"
+}

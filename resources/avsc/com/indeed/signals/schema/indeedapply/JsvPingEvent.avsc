@@ -1,0 +1,41 @@
+{
+  "type" : "record",
+  "name" : "JsvPingEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "bootMs",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "envMs",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "iaMs",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "ms",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "ncfgerrors",
+    "type" : "string"
+  }, {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "doNotUse",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaJsv"
+}

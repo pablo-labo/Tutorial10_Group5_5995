@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "PlatformType",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "APP_ANDROID", "APP_IOS", "APP_OTHER", "MOBILE_ANDROID", "MOBILE_IOS", "MOBILE_OTHER", "DESKTOP", "OTHER" ],
+  "default" : "OTHER"
+}

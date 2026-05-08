@@ -1,0 +1,61 @@
+package com.indeed.android.messaging.data.conversations;
+
+import com.indeed.android.messaging.data.conversations.ConversationRecord;
+import defpackage.c1f;
+import defpackage.hva;
+import defpackage.j6g;
+import defpackage.kh0;
+import defpackage.lh0;
+import defpackage.lu2;
+import defpackage.m26;
+import defpackage.ota;
+import defpackage.r6;
+import defpackage.r7d;
+import defpackage.u63;
+import defpackage.uh3;
+import defpackage.xsa;
+import defpackage.zsa;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lkh0;", "Lm26$b;", "<anonymous>", "()Lkh0;"}, k = 3, mv = {2, 2, 0})
+@uh3(c = "com.indeed.android.messaging.data.conversations.ConversationsRemoteDataSource$getOnlineStatusForSingleEmployerAccount$2$response$1", f = "ConversationsRemoteDataSource.kt", l = {}, m = "invokeSuspend")
+public final class ConversationsRemoteDataSource$getOnlineStatusForSingleEmployerAccount$2$response$1 extends c1f implements Function1<lu2<? super kh0<m26.b>>, Object> {
+    final /* synthetic */ ConversationRecord.Participant $participant;
+    int label;
+    final /* synthetic */ ConversationsRemoteDataSource this$0;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public ConversationsRemoteDataSource$getOnlineStatusForSingleEmployerAccount$2$response$1(ConversationsRemoteDataSource conversationsRemoteDataSource, ConversationRecord.Participant participant, lu2<? super ConversationsRemoteDataSource$getOnlineStatusForSingleEmployerAccount$2$response$1> lu2Var) {
+        super(1, lu2Var);
+        this.this$0 = conversationsRemoteDataSource;
+        this.$participant = participant;
+    }
+
+    @Override // defpackage.x81
+    public final lu2<j6g> create(lu2<?> lu2Var) {
+        return new ConversationsRemoteDataSource$getOnlineStatusForSingleEmployerAccount$2$response$1(this.this$0, this.$participant, lu2Var);
+    }
+
+    @Override // kotlin.jvm.functions.Function1
+    public final Object invoke(lu2<? super kh0<m26.b>> lu2Var) {
+        return ((ConversationsRemoteDataSource$getOnlineStatusForSingleEmployerAccount$2$response$1) create(lu2Var)).invokeSuspend(j6g.a);
+    }
+
+    @Override // defpackage.x81
+    public final Object invokeSuspend(Object obj) {
+        if (this.label != 0) {
+            r6.g("call to 'resume' before 'invoke' with coroutine");
+            return null;
+        }
+        r7d.b(obj);
+        lh0 lh0Var = this.this$0.oneGraphApolloClient;
+        zsa zsaVar = zsa.JOBSEEKER;
+        String accountKey = this.$participant.getAccountKey();
+        accountKey.getClass();
+        m26 m26Var = new m26(new ota(u63.Z(new xsa(new hva.c(this.$participant.getAdvertiserKey()), accountKey))));
+        lh0Var.getClass();
+        return new kh0(lh0Var, m26Var);
+    }
+}

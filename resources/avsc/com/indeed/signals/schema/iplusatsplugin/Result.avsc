@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "Result",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "SUCCESS", "FAILURE" ]
+}

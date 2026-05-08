@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "LightProfileEntryPointEvents",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "fields" : [ {
+    "name" : "parentTk",
+    "type" : "string"
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "surface",
+    "type" : "string"
+  }, {
+    "name" : "actionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "LightProfileEntryPointEventsActionType",
+      "symbols" : [ "impression", "seen", "click" ]
+    }
+  }, {
+    "name" : "surfaceType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "LightProfileEntryPointEventsSurfaceType",
+      "symbols" : [ "hpBetweenJobcards", "hpTop", "hpTopReanswer" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "hostType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "LightProfileEntryPointEventsHostType",
+      "symbols" : [ "japan_temp_frontend", "japan_jobseeker_hp" ]
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "lightProfile.entryPoint.event",
+    "tags" : [ "actionType", "surfaceType", "hostType" ]
+  } ],
+  "logEntryType" : "LightProfileEntryPointEvents"
+}

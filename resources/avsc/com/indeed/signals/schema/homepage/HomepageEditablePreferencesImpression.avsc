@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "HomepageEditablePreferencesImpression",
+  "namespace" : "com.indeed.signals.schema.homepage",
+  "fields" : [ {
+    "name" : "userEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UserEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "DESKTOP", "APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "homepage.editablePref.impression",
+    "tags" : [ "userEnvironment" ]
+  } ],
+  "logEntryType" : "hpEditablePreferencesImpression"
+}

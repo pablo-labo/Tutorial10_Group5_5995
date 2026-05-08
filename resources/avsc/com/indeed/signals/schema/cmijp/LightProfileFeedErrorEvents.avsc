@@ -1,0 +1,36 @@
+{
+  "type" : "record",
+  "name" : "LightProfileFeedErrorEvents",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "fields" : [ {
+    "name" : "parentTk",
+    "type" : "string"
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "errorType",
+    "type" : {
+      "type" : "enum",
+      "name" : "LightProfileFeedErrorEventsErrorType",
+      "symbols" : [ "education_date_missing", "invalid_job_cards_model", "invalid_job_cards_json", "invalid_pagination", "api_error", "unexpected_api_response", "no_results" ]
+    }
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "surface",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "LightProfileFeedErrorEventsSurface",
+      "symbols" : [ "japan_temp_frontend", "japan_jobseeker_hp" ]
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "lightProfile.feed.error",
+    "tags" : [ "errorType", "surface" ]
+  } ],
+  "logEntryType" : "LightProfileFeedErrorEvents"
+}

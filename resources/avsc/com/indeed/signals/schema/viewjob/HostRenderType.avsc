@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "HostRenderType",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "symbols" : [ "UNKNOWN", "IFRAME", "FEDERATED", "PANE_WRAPPER", "STANDALONE", "SPA" ],
+  "default" : "UNKNOWN"
+}

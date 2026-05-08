@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "OnboardingStep",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "AMW", "OAUTH" ]
+}

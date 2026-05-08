@@ -1,0 +1,154 @@
+{
+  "type" : "record",
+  "name" : "NativeNonFatalErrorV6",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "device",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeDeviceV6",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "PlatformsV6",
+          "symbols" : [ "IOS", "ANDROID" ]
+        }
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "advertisingId",
+        "type" : [ "null", "string" ]
+      } ]
+    }
+  }, {
+    "name" : "properties",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeEventPropertiesV6",
+      "fields" : [ {
+        "name" : "appId",
+        "type" : {
+          "type" : "enum",
+          "name" : "NativeAppIdsV6",
+          "symbols" : [ "JOB_SEARCH_ANDROID", "JOB_SEARCH_IOS" ]
+        }
+      }, {
+        "name" : "appVersion",
+        "type" : "string"
+      }, {
+        "name" : "appBuildNum",
+        "type" : "long"
+      }, {
+        "name" : "appVariant",
+        "type" : "string"
+      }, {
+        "name" : "appEnvironment",
+        "type" : "string"
+      }, {
+        "name" : "appCountry",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "ipCountry",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "osVersion",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "clientEventId",
+        "type" : "string"
+      }, {
+        "name" : "appInstallId",
+        "type" : "string"
+      }, {
+        "name" : "appSessionId",
+        "type" : "string"
+      }, {
+        "name" : "sessionId",
+        "type" : "string"
+      }, {
+        "name" : "clientCreatedTimestamp",
+        "type" : {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      }, {
+        "name" : "groups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "accountId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "userLocale",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceOrientation",
+        "type" : {
+          "type" : "enum",
+          "name" : "DeviceOrientationsV6",
+          "symbols" : [ "LANDSCAPE", "PORTRAIT" ]
+        }
+      } ]
+    }
+  }, {
+    "name" : "message",
+    "type" : "string"
+  }, {
+    "name" : "stackTrace",
+    "type" : "string"
+  }, {
+    "name" : "breadcrumbs",
+    "type" : "string"
+  }, {
+    "name" : "errCode",
+    "type" : "long"
+  }, {
+    "name" : "errDomain",
+    "type" : "string"
+  }, {
+    "name" : "stringParams",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "stringValues",
+    "type" : {
+      "type" : "array",
+      "items" : [ "null", "string" ]
+    }
+  }, {
+    "name" : "intParams",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "intValues",
+    "type" : {
+      "type" : "array",
+      "items" : [ "null", "long" ]
+    }
+  } ],
+  "logEntryType" : "jsmaNativeNonFatalError"
+}

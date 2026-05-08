@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "Element",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "symbols" : [ "EVENT_LIST_ITEM", "EVENT_LIST_TEL_ITEM" ]
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="107dp"
+    android:width="150dp"
+    android:viewportWidth="150"
+    android:viewportHeight="107">
+    <group>
+        <clip-path android:pathData="M0,0.91h150v105.17h-150z"/>
+        <group>
+            <clip-path
+                android:pathData="M56.25,0.91C49.73,0.91 44.45,6.2 44.45,12.71V35.59L13.82,40.18L0,106.08H150L138.35,21.53L110.85,25.65V12.71C110.85,6.2 105.56,0.91 99.05,0.91H56.25Z"
+                android:fillType="evenOdd"/>
+            <path
+                android:fillColor="#f7c8b8"
+                android:pathData="M13.82,40.18L138.35,21.53L150,106.08H0L13.82,40.18Z"/>
+            <path
+                android:fillColor="#ffffff"
+                android:pathData="M99.05,7.65C101.84,7.65 104.1,9.92 104.1,12.71V105.93H51.19V12.71C51.19,9.92 53.45,7.65 56.25,7.65H65.06L66.68,10.49C67.04,11.12 67.71,11.51 68.43,11.51H87.12C87.86,11.51 88.54,11.1 88.9,10.45L90.42,7.65H99.05Z"/>
+            <path
+                android:fillColor="@drawable/_messaging_empty_state_illustration_spam__0_res_0x7f08008f"
+                android:pathData="M56.25,0.91C49.73,0.91 44.45,6.2 44.45,12.71V105.93H51.19V12.71C51.19,9.92 53.46,7.66 56.25,7.66H65.06L66.68,10.49C67.04,11.12 67.71,11.51 68.43,11.51H87.12C87.86,11.51 88.54,11.1 88.9,10.45L90.42,7.66H99.05C101.84,7.66 104.1,9.92 104.1,12.71V105.93H110.85V12.71C110.85,6.2 105.56,0.91 99.05,0.91H56.25Z"/>
+            <path
+                android:fillColor="@drawable/_messaging_empty_state_illustration_spam__1_res_0x7f080090"
+                android:pathData="M73.11,75.56L69.11,34.47C68.94,32.66 70.22,31.05 72.02,30.81L80.99,29.63C83.12,29.35 84.97,31.11 84.78,33.26L80.99,75.83C80.97,76.12 80.71,76.35 80.41,76.34L73.65,76.07C73.37,76.06 73.14,75.84 73.11,75.56Z"/>
+            <path
+                android:fillColor="@drawable/_messaging_empty_state_illustration_spam__2_res_0x7f080091"
+                android:pathData="M82.87,86.91C82.73,90.31 80.01,92.96 76.78,92.83C73.55,92.7 71.04,89.84 71.18,86.45C71.31,83.05 74.04,80.4 77.27,80.52C80.49,80.65 83,83.51 82.87,86.91Z"/>
+        </group>
+    </group>
+</vector>

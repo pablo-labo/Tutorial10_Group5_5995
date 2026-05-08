@@ -1,0 +1,46 @@
+package com.swmansion.rnscreens;
+
+import android.view.View;
+import com.datadog.android.rum.internal.domain.event.RumEventSerializer;
+import com.facebook.react.uimanager.ViewGroupManager;
+import defpackage.f70;
+import defpackage.mkf;
+import defpackage.nmc;
+import defpackage.pqd;
+import defpackage.sqg;
+import defpackage.yqg;
+import kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes3.dex */
+@nmc(name = ScreenFooterManager.REACT_CLASS)
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0007\u0018\u0000 \u00122\b\u0012\u0004\u0012\u00020\u00020\u00012\b\u0012\u0004\u0012\u00020\u00020\u0003:\u0001\u0013B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J\u000f\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u0017\u0010\u000b\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\tH\u0014¢\u0006\u0004\b\u000b\u0010\fJ\u0015\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\u00020\rH\u0014¢\u0006\u0004\b\u000e\u0010\u000fR\u001a\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0010\u0010\u0011¨\u0006\u0014"}, d2 = {"Lcom/swmansion/rnscreens/ScreenFooterManager;", "Lcom/facebook/react/uimanager/ViewGroupManager;", "Lpqd;", "", "<init>", "()V", "", "getName", "()Ljava/lang/String;", "Lmkf;", RumEventSerializer.GLOBAL_ATTRIBUTE_PREFIX, "createViewInstance", "(Lmkf;)Lpqd;", "Lsqg;", "getDelegate", "()Lsqg;", "delegate", "Lsqg;", "Companion", "a", "react-native-screens_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class ScreenFooterManager extends ViewGroupManager<pqd> implements yqg {
+    public static final String REACT_CLASS = "RNSScreenFooter";
+    private final sqg<pqd> delegate;
+
+    public ScreenFooterManager() {
+        super(null, 1, null);
+        this.delegate = new f70(this, 1);
+    }
+
+    @Override // com.facebook.react.uimanager.ViewManager
+    public pqd createViewInstance(mkf context) {
+        context.getClass();
+        return new pqd(context);
+    }
+
+    @Override // com.facebook.react.uimanager.ViewManager
+    public sqg<pqd> getDelegate() {
+        return this.delegate;
+    }
+
+    @Override // com.facebook.react.uimanager.ViewManager, com.facebook.react.bridge.NativeModule
+    public String getName() {
+        return REACT_CLASS;
+    }
+
+    @Override // com.facebook.react.uimanager.ViewGroupManager, defpackage.vo6
+    public /* bridge */ /* synthetic */ void removeAllViews(View view) {
+        super.removeAllViews(view);
+    }
+}

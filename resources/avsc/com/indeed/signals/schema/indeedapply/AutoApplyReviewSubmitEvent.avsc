@@ -1,0 +1,33 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyReviewSubmitEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Submit event for auto-apply review flow",
+  "fields" : [ {
+    "name" : "reviewLogUid",
+    "type" : "string"
+  }, {
+    "name" : "totalApplications",
+    "type" : "int"
+  }, {
+    "name" : "draftIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "successCount",
+    "type" : "int"
+  }, {
+    "name" : "failureCount",
+    "type" : "int"
+  }, {
+    "name" : "failedDraftIds",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplyReviewSubmitEvent"
+}

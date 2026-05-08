@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "SectionId",
+  "namespace" : "com.indeed.signals.schema.jobcardDiscover",
+  "symbols" : [ "UNKNOWN", "HP_JOBS_FOR_YOU", "HP_TOP_APPLICANT_FEED", "HP_LAST_RQ", "HP_OTHER_MATCHES", "HP_AUTO_SOURCE_MATCHES", "HP_RELOCATION_OPPORTUNITIES", "HP_EMPLOYER_OUTREACH" ],
+  "default" : "UNKNOWN"
+}

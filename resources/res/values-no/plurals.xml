@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 anmeldelse</item>
+        <item quantity="other">%d anmeldelser</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minutt</item>
+        <item quantity="other">%s minutter</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Intervjuet starter om %d time</item>
+        <item quantity="other">Intervjuet starter om %d timer</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Intervjuet starter om %d minutt</item>
+        <item quantity="other">Intervjuet starter om %d minutter</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d fil ble ikke lastet opp og inkluderes ikke i meldingen.</item>
+        <item quantity="other">%d filer ble ikke lastet opp og inkluderes ikke i meldingen.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d fil ble ikke lastet opp</item>
+        <item quantity="other">%d filer ble ikke lastet opp</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d ulest melding</item>
+        <item quantity="other">%d uleste meldinger</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Denne arbeidsgiveren svarer vanligvis innen %d dag</item>
+        <item quantity="other">Denne arbeidsgiveren svarer vanligvis innen %d dager</item>
+    </plurals>
+</resources>

@@ -1,0 +1,41 @@
+{
+  "type" : "record",
+  "name" : "Interaction",
+  "namespace" : "com.indeed.signals",
+  "fields" : [ {
+    "name" : "eventId",
+    "type" : "string"
+  }, {
+    "name" : "viewImpressionId",
+    "type" : "string"
+  }, {
+    "name" : "userId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "viewSessionId",
+    "type" : "string"
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "viewType",
+    "type" : {
+      "type" : "enum",
+      "name" : "ViewType",
+      "symbols" : [ "WEB" ]
+    }
+  }, {
+    "name" : "componentId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "elementSpecifier",
+    "type" : "string"
+  }, {
+    "name" : "loggerVersion",
+    "type" : "string"
+  } ],
+  "logEntryType" : "clickstreamInteraction"
+}

@@ -1,0 +1,47 @@
+{
+  "type" : "record",
+  "name" : "mobviewjobDwell",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "tk",
+    "type" : [ "null", "string" ],
+    "doc" : "The Page Tracking Key, i.e. the mobtk, such as 1hsuhpfqs0000001",
+    "default" : null
+  }, {
+    "name" : "pgtype",
+    "type" : [ "null", "string" ],
+    "doc" : "The Page that this is being sent from, such as mobserp",
+    "default" : null
+  }, {
+    "name" : "duration",
+    "type" : [ "null", "long" ],
+    "doc" : "How long in ms that the user has been using the application, e.g. 74871",
+    "default" : null
+  }, {
+    "name" : "end",
+    "type" : [ "null", "long" ],
+    "doc" : "The end time for dwell tracking which is ms from epoch time, e.g. 1714717330806",
+    "default" : null
+  }, {
+    "name" : "hasApplyStart",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Whether the user started an apply process during the dwell time",
+    "default" : null
+  }, {
+    "name" : "scrollPercentage",
+    "type" : [ "null", "long" ],
+    "doc" : "The % of viewjob the jobseeker saw during their dwell",
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "doc" : "Jobseeker accountId",
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "doc" : "Job Key of the job for which dwell time is being tracked",
+    "default" : null
+  } ],
+  "logEntryType" : "mobviewjobDwell"
+}

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ElementType",
+  "namespace" : "com.indeed.signals.schema.interviewsresponsiveness",
+  "symbols" : [ "SCHEDULE_BUTTON", "DECLINE_BUTTON", "CLOSE_BUTTON", "DISMISS_TOAST" ]
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Platform",
+  "namespace" : "com.indeed.signals.schema.magua",
+  "symbols" : [ "UNKNOWN", "IOS", "ANDROID", "DESKTOP" ],
+  "default" : "UNKNOWN"
+}

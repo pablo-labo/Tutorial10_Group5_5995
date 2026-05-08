@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "MessagingActionablePrompt",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "fields" : [ {
+    "name" : "conversationId",
+    "type" : "string"
+  }, {
+    "name" : "requireResponse",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "logEntryType" : "messagingActionablePrompt"
+}

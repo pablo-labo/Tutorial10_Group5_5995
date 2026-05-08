@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 valoración</item>
+        <item quantity="other">%d valoraciones</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minuto</item>
+        <item quantity="other">%s minutos</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">La entrevista comienza en %d hora</item>
+        <item quantity="other">La entrevista comienza en %d horas</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">La entrevista comienza en %d minuto</item>
+        <item quantity="other">La entrevista empieza en %d minutos</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d archivo no se ha subido y no se incluirá en tu mensaje.</item>
+        <item quantity="other">%d archivos no se han subido y no se incluirán en tu mensaje.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d archivo no se ha subido</item>
+        <item quantity="other">%d archivos no se han subido</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d mensaje no leído</item>
+        <item quantity="other">%d mensajes no leídos</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">En general, esta empresa responde en el plazo de %d día.</item>
+        <item quantity="other">En general, esta empresa responde en el plazo de %d días.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,282 @@
+{
+  "type" : "record",
+  "name" : "BotDetectionRecaptchaAssessment",
+  "namespace" : "com.indeed.signals.schema.bots",
+  "fields" : [ {
+    "name" : "appName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "captchaType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "CaptchaType",
+      "symbols" : [ "UNKNOWN", "TURNSTILE", "RECAPTCHA_V3" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "expectedAction",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "siteKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "score",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "tokenValid",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "invalidReason",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "action",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hostname",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "success",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "errorCode",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "httpStatus",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "durationMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "timestamp",
+    "type" : [ "null", {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ipAddress",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "requestUri",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cfRayId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "enforcementAction",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "assessmentName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "challenge",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "reasons",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "extendedVerdictReasons",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "verifiedBotNames",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "verifiedBotTypes",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "tokenCreateTime",
+    "type" : [ "null", {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    } ],
+    "default" : null
+  }, {
+    "name" : "androidPackageName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "iosBundleId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "activeDaysLowerBound",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "syntheticRisk",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "cardLabels",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountDefenderLabels",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountTakeoverRisk",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "accountTakeoverRiskReasons",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountTakeoverTrustReasons",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountVerificationResult",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountVerificationUsername",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fraudTransactionRisk",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "fraudStolenInstrumentRisk",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "fraudCardTestingRisk",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "fraudBehavioralTrust",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "fraudPreventionRiskReasons",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "smsTollFraudRisk",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "smsTollFraudReasons",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "firewallPolicyErrorCode",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "firewallPolicyErrorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "passwordLeakDetected",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "assessmentClient",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "assessmentVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "bots.recaptcha.assessments",
+    "tags" : [ "success", "tokenValid", "captchaType" ]
+  }, {
+    "name" : "bots.recaptcha.score",
+    "type" : "distribution",
+    "value" : "score",
+    "tags" : [ "success", "tokenValid", "captchaType" ]
+  }, {
+    "name" : "bots.recaptcha.duration_ms",
+    "type" : "distribution",
+    "value" : "durationMs",
+    "tags" : [ "success", "captchaType" ]
+  } ],
+  "logEntryType" : "BotDetectionRecaptchaAssessment"
+}

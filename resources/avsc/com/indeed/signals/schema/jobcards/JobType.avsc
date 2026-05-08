@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "JobType",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "symbols" : [ "UNKNOWN", "INDEED_APPLY", "THIRDPARTY_APPLY" ],
+  "default" : "UNKNOWN"
+}

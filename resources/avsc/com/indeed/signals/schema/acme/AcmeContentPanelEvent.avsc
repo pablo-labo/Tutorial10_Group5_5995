@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "AcmeContentPanelEvent",
+  "namespace" : "com.indeed.signals.schema.acme",
+  "fields" : [ {
+    "name" : "panelId",
+    "type" : "string"
+  }, {
+    "name" : "eventType",
+    "type" : "string"
+  } ],
+  "logEntryType" : "acmeContentPanelEvent"
+}

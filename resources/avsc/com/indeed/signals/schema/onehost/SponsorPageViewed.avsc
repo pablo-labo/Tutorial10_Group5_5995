@@ -1,0 +1,70 @@
+{
+  "type" : "record",
+  "name" : "SponsorPageViewed",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "fields" : [ {
+    "name" : "page",
+    "type" : "string"
+  }, {
+    "name" : "encrypted_job_id",
+    "type" : "string"
+  }, {
+    "name" : "session_tk",
+    "type" : "string"
+  }, {
+    "name" : "offer_type",
+    "type" : "string"
+  }, {
+    "name" : "logSource",
+    "type" : "string"
+  }, {
+    "name" : "clientTimestamp",
+    "type" : "long"
+  }, {
+    "name" : "entities",
+    "type" : {
+      "type" : "record",
+      "name" : "Entities",
+      "fields" : [ {
+        "name" : "encryptedJobHashes",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        },
+        "default" : [ ]
+      }, {
+        "name" : "employerJobIds",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        },
+        "default" : [ ]
+      } ]
+    }
+  }, {
+    "name" : "advertiserNumber",
+    "type" : "string"
+  }, {
+    "name" : "advertiserKey",
+    "type" : "string"
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "userTrackingAccountKey",
+    "type" : "string"
+  }, {
+    "name" : "rum_view_id",
+    "type" : "string"
+  }, {
+    "name" : "oneHostTraceId",
+    "type" : "string"
+  }, {
+    "name" : "rum_session_id",
+    "type" : "string"
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "signals.onehost.sponsorPageViews"
+  } ],
+  "logEntryType" : "sponsorPageViewed"
+}

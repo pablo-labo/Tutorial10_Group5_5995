@@ -1,0 +1,58 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class fi5 implements zh5 {
+    public final float a;
+    public final upe b;
+
+    public fi5(float f, float f2, float f3) {
+        this.a = f3;
+        upe upeVar = new upe();
+        upeVar.a = 1.0f;
+        upeVar.b = Math.sqrt(50.0d);
+        upeVar.c = 1.0f;
+        if (f < 0.0f) {
+            hib.a("Damping ratio must be non-negative");
+        }
+        upeVar.c = f;
+        double d = upeVar.b;
+        if (((float) (d * d)) <= 0.0f) {
+            hib.a("Spring stiffness constant must be positive.");
+        }
+        upeVar.b = Math.sqrt(f2);
+        this.b = upeVar;
+    }
+
+    @Override // defpackage.zh5
+    public final float c(float f, float f2, float f3) {
+        return 0.0f;
+    }
+
+    @Override // defpackage.zh5
+    public final float d(long j, float f, float f2, float f3) {
+        upe upeVar = this.b;
+        upeVar.a = f2;
+        return Float.intBitsToFloat((int) (upeVar.a(j / 1000000, f, f3) >> 32));
+    }
+
+    @Override // defpackage.zh5
+    public final float e(long j, float f, float f2, float f3) {
+        upe upeVar = this.b;
+        upeVar.a = f2;
+        return Float.intBitsToFloat((int) (upeVar.a(j / 1000000, f, f3) & 4294967295L));
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:48:0x0132  */
+    @Override // defpackage.zh5
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public final long f(float r34, float r35, float r36) {
+        /*
+            Method dump skipped, instruction units count: 581
+            To view this dump change 'Code comments level' option to 'DEBUG'
+        */
+        throw new UnsupportedOperationException("Method not decompiled: defpackage.fi5.f(float, float, float):long");
+    }
+}

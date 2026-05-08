@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "View",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "UNKNOWN", "ONBOARDING_ENTRYPOINT", "TOP_CHOICE", "TOP_AND_EARLY_APPLICANT", "APPLICANT_INSIGHTS", "PROFILE_ENGAGEMENT", "AI_MOCK_INTERVIEW", "EARLY_APPLICANT", "TOP_APPLICANT" ],
+  "default" : "UNKNOWN"
+}

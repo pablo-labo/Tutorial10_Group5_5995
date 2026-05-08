@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "FraudBannerImpression",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "pageId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "UNKNOWN", "DESKTOP_SERP", "HOMEPAGE", "JP_MOBILE_SERP", "VIEWJOB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Platform",
+      "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE", "APP_IOS", "APP_ANDROID" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "mobtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "fraudBannerImpression"
+}

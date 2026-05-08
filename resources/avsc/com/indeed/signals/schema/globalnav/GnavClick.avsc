@@ -1,0 +1,46 @@
+{
+  "type" : "record",
+  "name" : "GnavClick",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "elementName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "action",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "region",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "additionalNodeDetails",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "header",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "footer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

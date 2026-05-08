@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "NativeAppIdsV7",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "symbols" : [ "TEST", "JOB_SEARCH_ANDROID", "JOB_SEARCH_IOS", "HQM_EMPLOYER_IOS" ],
+  "default" : "TEST"
+}

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "RNAppsV1",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "symbols" : [ "jsma", "ema" ]
+}

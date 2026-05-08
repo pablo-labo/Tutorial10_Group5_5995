@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "BooleanTag",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "TRUE", "FALSE" ]
+}

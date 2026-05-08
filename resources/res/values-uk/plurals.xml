@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">%d відгук</item>
+        <item quantity="few">%d відгуки</item>
+        <item quantity="many">%d відгуків</item>
+        <item quantity="other">%d відгуку</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Перемотати вперед на %d секунду</item>
+        <item quantity="few">Перемотати вперед на %d секунди</item>
+        <item quantity="many">Перемотати вперед на %d секунд</item>
+        <item quantity="other">Перемотати вперед на %d секунди</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Перемотати назад на %d секунду</item>
+        <item quantity="few">Перемотати назад на %d секунди</item>
+        <item quantity="many">Перемотати назад на %d секунд</item>
+        <item quantity="other">Перемотати назад на %d секунди</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s хвилина</item>
+        <item quantity="few">%s хв.</item>
+        <item quantity="other">%s хв.</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Співбесіда почнеться за %d годину</item>
+        <item quantity="few">Співбесіда почнеться за %d год</item>
+        <item quantity="other">Співбесіда почнеться за %d год</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Співбесіда почнеться за %d хвилину</item>
+        <item quantity="few">Співбесіда почнеться за %d хв</item>
+        <item quantity="other">Співбесіда почнеться за %d хв</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d файл не завантажився, і його не буде вкладено в повідомлення.</item>
+        <item quantity="few">%d файли(-ів) не завантажилися, і їх не буде вкладено в повідомлення.</item>
+        <item quantity="many">%d файли(-ів) не завантажилися, і їх не буде вкладено в повідомлення.</item>
+        <item quantity="other">%d файли(-ів) не завантажилися, і їх не буде вкладено в повідомлення.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d файл не завантажився</item>
+        <item quantity="few">%d файли(-ів) не завантажилися</item>
+        <item quantity="many">%d файли(-ів) не завантажилися</item>
+        <item quantity="other">%d файли(-ів) не завантажилися</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d непрочитане повідомлення</item>
+        <item quantity="few">%d непрочитане повідомлення</item>
+        <item quantity="many">%d непрочитане повідомлення</item>
+        <item quantity="other">%d непрочитане повідомлення</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d нове сповіщення</item>
+        <item quantity="few">%d нові сповіщення</item>
+        <item quantity="many">%d нових сповіщень</item>
+        <item quantity="other">%d нового сповіщення</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Цей роботодавець зазвичай відповідає протягом %d дня</item>
+        <item quantity="few">Цей роботодавець зазвичай відповідає протягом %d днів</item>
+        <item quantity="other">Цей роботодавець зазвичай відповідає протягом %d днів</item>
+    </plurals>
+</resources>

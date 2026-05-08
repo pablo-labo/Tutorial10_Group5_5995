@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "GnavJSNewMessageRefocusActivity",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "timeToRefocus",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "unixtimeToRefocus",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "notificationHash",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "gnavJSNewMessageRefocusActivity"
+}

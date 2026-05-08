@@ -1,0 +1,30 @@
+{
+  "type" : "record",
+  "name" : "CommonDataDogTags",
+  "namespace" : "com.indeed.signals.schema.ipluspublisherplugin",
+  "fields" : [ {
+    "name" : "browser",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Browser",
+      "symbols" : [ "CHROME", "FIREFOX", "SAFARI", "EDGE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "OS",
+      "symbols" : [ "WINDOWS", "MACOS", "IOS", "ANDROID" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "deviceType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "DeviceType",
+      "symbols" : [ "MOBILE", "TABLET" ]
+    } ],
+    "default" : null
+  } ]
+}

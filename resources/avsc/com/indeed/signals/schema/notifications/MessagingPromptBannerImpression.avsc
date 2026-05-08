@@ -1,0 +1,15 @@
+{
+  "type" : "record",
+  "name" : "MessagingPromptBannerImpression",
+  "namespace" : "com.indeed.signals.schema.notifications",
+  "fields" : [ {
+    "name" : "eventType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "globalnavRequestLogUID",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "notificationsMessagingPromptBannerEvents"
+}

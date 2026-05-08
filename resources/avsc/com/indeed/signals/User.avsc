@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "User",
+  "namespace" : "com.indeed.signals",
+  "fields" : [ {
+    "name" : "eventId",
+    "type" : "string"
+  }, {
+    "name" : "viewSessionId",
+    "type" : "string"
+  }, {
+    "name" : "environmentId",
+    "type" : "string"
+  }, {
+    "name" : "userToken",
+    "type" : "string"
+  }, {
+    "name" : "loggerVersion",
+    "type" : "string"
+  } ],
+  "logEntryType" : "clickstreamUser"
+}

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ActionType",
+  "namespace" : "com.indeed.signals.schema.homepage",
+  "symbols" : [ "IMPRESSION", "SEEN", "CLICK", "ERROR" ]
+}

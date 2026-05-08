@@ -1,0 +1,62 @@
+{
+  "type" : "record",
+  "name" : "AutocompleteTestTitleMatching",
+  "namespace" : "com.indeed.signals.schema.titleautocomplete",
+  "fields" : [ {
+    "name" : "surface",
+    "type" : "string"
+  }, {
+    "name" : "clientPage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "input",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "suggestions",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "selectedText",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "autocompleteType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "tk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "grps",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timeToShowSuggestions",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "timeToSelect",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autocomplete_test_title_matching"
+}

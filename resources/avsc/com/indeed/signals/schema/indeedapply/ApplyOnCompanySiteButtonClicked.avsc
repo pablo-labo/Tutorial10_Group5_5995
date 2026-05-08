@@ -1,0 +1,24 @@
+{
+  "type" : "record",
+  "name" : "ApplyOnCompanySiteButtonClicked",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "surface",
+    "type" : "string"
+  }, {
+    "name" : "groups",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    },
+    "default" : [ ]
+  }, {
+    "name" : "yellowLightGroup",
+    "type" : "int",
+    "default" : 0
+  } ],
+  "logEntryType" : "iaYellowLight3PApplyButtonClicked"
+}

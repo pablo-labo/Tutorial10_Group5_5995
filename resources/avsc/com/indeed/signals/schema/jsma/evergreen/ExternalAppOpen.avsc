@@ -1,0 +1,204 @@
+{
+  "type" : "record",
+  "name" : "ExternalAppOpen",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "device",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "Device",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "Platforms",
+          "symbols" : [ "IOS", "ANDROID", "WEB" ],
+          "default" : "IOS"
+        }
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "advertisingId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "properties",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "EventProperties",
+      "fields" : [ {
+        "name" : "appId",
+        "type" : {
+          "type" : "enum",
+          "name" : "AppIds",
+          "symbols" : [ "TEST", "JOB_SEARCH_ANDROID", "JOB_SEARCH_IOS", "HQM_EMPLOYER_IOS", "EMPLOYER_ANDROID" ],
+          "default" : "TEST"
+        }
+      }, {
+        "name" : "appVersion",
+        "type" : "string"
+      }, {
+        "name" : "appBuildNum",
+        "type" : "long"
+      }, {
+        "name" : "appVariant",
+        "type" : "string"
+      }, {
+        "name" : "appEnvironment",
+        "type" : "string"
+      }, {
+        "name" : "appCountry",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ipCountry",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "osVersion",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "clientEventId",
+        "type" : "string"
+      }, {
+        "name" : "appInstallId",
+        "type" : "string"
+      }, {
+        "name" : "appSessionId",
+        "type" : "string"
+      }, {
+        "name" : "sessionId",
+        "type" : "string"
+      }, {
+        "name" : "clientCreatedTimestamp",
+        "type" : "long"
+      }, {
+        "name" : "groups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "accountId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "secondaryAccountId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "parentTk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "userLocale",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "indeedLocale",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceOrientation",
+        "type" : {
+          "type" : "enum",
+          "name" : "DeviceOrientations",
+          "symbols" : [ "LANDSCAPE", "PORTRAIT" ]
+        }
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "url",
+    "type" : "string"
+  }, {
+    "name" : "referralParams",
+    "type" : {
+      "type" : "record",
+      "name" : "ReferralParams",
+      "fields" : [ {
+        "name" : "affiliateKey",
+        "type" : [ "string", "null" ],
+        "doc" : "The affiliate key for the referral. (AFF in the cookie) This maps to the SID parameter in the log entries."
+      }, {
+        "name" : "keywords",
+        "type" : [ "string", "null" ],
+        "doc" : "The keywords used for attribution. (KW in the cookie)"
+      }, {
+        "name" : "newCookieValue",
+        "type" : [ "string", "null" ],
+        "doc" : "The encrypted value for the RF cookie. Mobile applications should put this value in the RF cookie\nin the device's cookie store. Note that may change from what was set in the input."
+      }, {
+        "name" : "referrer",
+        "type" : [ "string", "null" ],
+        "doc" : "The referrer URL for REF types."
+      }, {
+        "name" : "host",
+        "type" : [ "string", "null" ],
+        "doc" : "The host of the \"page\" of the request for referrals. For native apps, you should pass\nin the hostname of the Home Page url."
+      }, {
+        "name" : "refType",
+        "type" : [ "string", "null" ],
+        "doc" : "The calculated type of the referral."
+      }, {
+        "name" : "refTime",
+        "type" : [ "string", "null" ],
+        "doc" : "Timestamp of this referral calculation."
+      }, {
+        "name" : "reqAffiliateKey",
+        "type" : [ "string", "null" ],
+        "doc" : "If there was an existing cookie, the original affiliate key. (AFF)"
+      }, {
+        "name" : "reqKeywords",
+        "type" : [ "string", "null" ],
+        "doc" : "If there were existing cookie, the original keywords. (KW)"
+      }, {
+        "name" : "reqRefType",
+        "type" : [ "string", "null" ],
+        "doc" : "If there was an existing cookie, the original refType."
+      }, {
+        "name" : "from",
+        "type" : [ "string", "null" ]
+      }, {
+        "name" : "fbclid",
+        "type" : [ "string", "null" ]
+      }, {
+        "name" : "gclid",
+        "type" : [ "string", "null" ]
+      }, {
+        "name" : "utm_properties",
+        "type" : [ "null", {
+          "type" : "map",
+          "values" : {
+            "type" : "record",
+            "name" : "JsmaDynamicProperty",
+            "fields" : [ {
+              "name" : "property",
+              "type" : [ "null", "string", "long" ]
+            } ]
+          }
+        } ],
+        "default" : null
+      } ]
+    }
+  } ],
+  "logEntryType" : "externalAppOpen"
+}

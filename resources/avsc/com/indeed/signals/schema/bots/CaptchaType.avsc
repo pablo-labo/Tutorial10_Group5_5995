@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "CaptchaType",
+  "namespace" : "com.indeed.signals.schema.bots",
+  "symbols" : [ "UNKNOWN", "TURNSTILE", "RECAPTCHA_V3" ],
+  "default" : "UNKNOWN"
+}

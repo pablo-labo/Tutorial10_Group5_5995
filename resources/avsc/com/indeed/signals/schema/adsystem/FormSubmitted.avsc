@@ -1,0 +1,46 @@
+{
+  "type" : "record",
+  "name" : "FormSubmitted",
+  "namespace" : "com.indeed.signals.schema.adsystem",
+  "fields" : [ {
+    "name" : "extensionVersion",
+    "type" : "string"
+  }, {
+    "name" : "sessionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "currentUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "chromeVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "adKeyProvided",
+    "type" : "boolean"
+  }, {
+    "name" : "startDateProvided",
+    "type" : "boolean"
+  }, {
+    "name" : "endDateProvided",
+    "type" : "boolean"
+  }, {
+    "name" : "issueSelected",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "correlatedEventsEnabled",
+    "type" : "boolean"
+  } ],
+  "logEntryType" : "formSubmitted"
+}

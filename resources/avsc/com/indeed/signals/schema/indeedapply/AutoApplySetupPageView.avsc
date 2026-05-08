@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "AutoApplySetupPageView",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Page view event\nDeprecated, use AutoApplySetupPageViewEvent instead",
+  "fields" : [ {
+    "name" : "setupSessionId",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  } ],
+  "logEntryType" : "autoApplySetupPageView"
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "FlowName",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "CROWTAXO", "GENERALIST", "OTHER" ],
+  "default" : "OTHER"
+}

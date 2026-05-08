@@ -1,0 +1,39 @@
+{
+  "type" : "record",
+  "name" : "ProfileMicroContentGenerateQuestion",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "success",
+    "type" : "boolean"
+  }, {
+    "name" : "generateQuestionDurationMS",
+    "type" : "int"
+  }, {
+    "name" : "hostPage",
+    "type" : {
+      "type" : "enum",
+      "name" : "HostPage",
+      "symbols" : [ "serp", "serpGlobal", "hpClassic", "unknown" ],
+      "default" : "unknown"
+    },
+    "default" : "unknown"
+  }, {
+    "name" : "localeEnum",
+    "type" : {
+      "type" : "enum",
+      "name" : "LocaleEnum",
+      "symbols" : [ "ar_AE", "ar_BH", "ar_EG", "ar_KW", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "cs_CZ", "da_DK", "de_AT", "de_BE", "de_CH", "de_DE", "de_LU", "el_GR", "en_AE", "en_AQ", "en_AU", "en_BE", "en_BH", "en_CA", "en_CH", "en_EG", "en_GB", "en_HK", "en_ID", "en_IE", "en_IL", "en_IN", "en_KW", "en_LU", "en_MA", "en_MY", "en_NG", "en_NL", "en_NZ", "en_OM", "en_PH", "en_PK", "en_QA", "en_SA", "en_SG", "en_TH", "en_US", "en_VN", "en_ZA", "es_AR", "es_CL", "es_CO", "es_CR", "es_EC", "es_ES", "es_MA", "es_MX", "es_PA", "es_PE", "es_US", "es_UY", "es_VE", "fi_FI", "fr_BE", "fr_CA", "fr_CH", "fr_FR", "fr_LU", "fr_MA", "hi_IN", "hu_HU", "in_ID", "it_CH", "it_IT", "iw_IL", "ja_JP", "ko_KR", "nl_BE", "nl_NL", "no_NO", "pl_PL", "pt_BR", "pt_PT", "ro_RO", "ru_UA", "sv_FI", "sv_SE", "th_TH", "tr_TR", "uk_DE", "uk_PL", "uk_UA", "vi_VN", "zh_CN", "zh_HK", "zh_SG", "zh_TW", "unknown" ],
+      "default" : "unknown"
+    },
+    "default" : "unknown"
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "profile.microcontent.generateQuestion",
+    "tags" : [ "success", "hostPage", "localeEnum" ]
+  }, {
+    "name" : "profile.microcontent.generateQuestion.latency",
+    "type" : "histogram",
+    "value" : "generateQuestionDurationMS",
+    "tags" : [ "success", "hostPage", "localeEnum" ]
+  } ]
+}

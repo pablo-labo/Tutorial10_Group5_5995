@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "PageScroll",
+  "namespace" : "com.indeed.signals.schema.careerguide",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "scrollPercentage",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "scrollMarkerId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timestamp",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "logEntryType" : "careerGuidePageScroll"
+}

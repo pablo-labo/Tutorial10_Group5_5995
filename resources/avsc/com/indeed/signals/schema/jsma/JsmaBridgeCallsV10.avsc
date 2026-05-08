@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "JsmaBridgeCallsV10",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "appPlatform",
+    "type" : {
+      "type" : "enum",
+      "name" : "PlatformsV10",
+      "symbols" : [ "IOS", "ANDROID" ]
+    }
+  }, {
+    "name" : "appVersion",
+    "type" : "string"
+  }, {
+    "name" : "gnavApplicationId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "method",
+    "type" : "string"
+  }, {
+    "name" : "success",
+    "type" : "boolean"
+  }, {
+    "name" : "errMessage",
+    "type" : [ "null", "string" ]
+  } ],
+  "logEntryType" : "jsmaBridgeCalls"
+}

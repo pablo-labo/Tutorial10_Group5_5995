@@ -1,0 +1,206 @@
+{
+  "type" : "record",
+  "name" : "NativeHttpMetricsV8",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "device",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeDeviceV8",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "PlatformsV8",
+          "symbols" : [ "IOS", "ANDROID" ]
+        }
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "advertisingId",
+        "type" : [ "null", "string" ]
+      } ]
+    }
+  }, {
+    "name" : "properties",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeEventPropertiesV8",
+      "fields" : [ {
+        "name" : "appId",
+        "type" : {
+          "type" : "enum",
+          "name" : "NativeAppIdsV8",
+          "symbols" : [ "TEST", "JOB_SEARCH_ANDROID", "JOB_SEARCH_IOS", "HQM_EMPLOYER_IOS" ],
+          "default" : "TEST"
+        }
+      }, {
+        "name" : "appVersion",
+        "type" : "string"
+      }, {
+        "name" : "appBuildNum",
+        "type" : "long"
+      }, {
+        "name" : "appVariant",
+        "type" : "string"
+      }, {
+        "name" : "appEnvironment",
+        "type" : "string"
+      }, {
+        "name" : "appCountry",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "ipCountry",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "osVersion",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "clientEventId",
+        "type" : "string"
+      }, {
+        "name" : "appInstallId",
+        "type" : "string"
+      }, {
+        "name" : "appSessionId",
+        "type" : "string"
+      }, {
+        "name" : "sessionId",
+        "type" : "string"
+      }, {
+        "name" : "clientCreatedTimestamp",
+        "type" : {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      }, {
+        "name" : "groups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "accountId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "secondaryAccountId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "userLocale",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceOrientation",
+        "type" : {
+          "type" : "enum",
+          "name" : "DeviceOrientationsV8",
+          "symbols" : [ "LANDSCAPE", "PORTRAIT" ]
+        }
+      } ]
+    }
+  }, {
+    "name" : "url",
+    "type" : "string"
+  }, {
+    "name" : "method",
+    "type" : "string"
+  }, {
+    "name" : "request",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeHttpRequestDebugV8",
+      "fields" : [ {
+        "name" : "timestamp",
+        "type" : {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      }, {
+        "name" : "headerLength",
+        "type" : "long"
+      }, {
+        "name" : "cookiesLength",
+        "type" : "long"
+      }, {
+        "name" : "referrer",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "errDomain",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "errCode",
+        "type" : [ "null", "long" ]
+      }, {
+        "name" : "networkInterface",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "response",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "NativeHttpResponseDebugV8",
+      "fields" : [ {
+        "name" : "timestamp",
+        "type" : {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      }, {
+        "name" : "headerLength",
+        "type" : "long"
+      }, {
+        "name" : "contentLength",
+        "type" : "long"
+      }, {
+        "name" : "contentType",
+        "type" : "string"
+      }, {
+        "name" : "setCookiesLength",
+        "type" : "long"
+      }, {
+        "name" : "statusCode",
+        "type" : "long"
+      }, {
+        "name" : "errDomain",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "errCode",
+        "type" : [ "null", "long" ]
+      } ]
+    } ]
+  }, {
+    "name" : "responseLatencyMs",
+    "type" : "long"
+  }, {
+    "name" : "message",
+    "type" : "string"
+  }, {
+    "name" : "urlType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "graphQLOperation",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "jsmaNativeMetrics"
+}

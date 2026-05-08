@@ -1,0 +1,16 @@
+{
+  "type" : "record",
+  "name" : "YellowLightSaveAndContinueClicked",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "questionsAnsweredAsYes",
+    "type" : "int"
+  }, {
+    "name" : "questionsAnsweredAsNo",
+    "type" : "int"
+  } ],
+  "logEntryType" : "iaYellowLight3PSaveAndContinueClick"
+}

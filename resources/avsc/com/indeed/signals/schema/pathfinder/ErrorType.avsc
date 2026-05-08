@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ErrorType",
+  "namespace" : "com.indeed.signals.schema.pathfinder",
+  "symbols" : [ "NETWORK", "OTHER", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

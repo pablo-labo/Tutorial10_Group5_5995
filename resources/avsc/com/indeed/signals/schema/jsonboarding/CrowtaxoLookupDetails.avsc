@@ -1,0 +1,30 @@
+{
+  "type" : "record",
+  "name" : "CrowtaxoLookupDetails",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "isCrowtaxoEligible",
+    "type" : [ "null", "boolean" ]
+  }, {
+    "name" : "jobTitleTriggered",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "jobTitleTriggeredType",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "allJobTitles",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "occupationSUID",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "occupationText",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "occupationTotalPages",
+    "type" : [ "null", "int" ]
+  } ]
+}

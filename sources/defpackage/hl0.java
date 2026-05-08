@@ -1,0 +1,40 @@
+package defpackage;
+
+import kotlin.jvm.functions.Function2;
+import org.koin.core.error.NoBeanDefFoundException;
+
+/* JADX INFO: loaded from: classes2.dex */
+@uh3(c = "com.indeed.android.jobsearch.passport.AppInitValuesHolder$requestUnreadMessagesAndNotificationsCount$5", f = "AppInitValuesHolder.kt", l = {144}, m = "invokeSuspend")
+public final class hl0 extends c1f implements Function2<e13, lu2<? super Integer>, Object> {
+    int label;
+
+    @Override // defpackage.x81
+    public final lu2<j6g> create(Object obj, lu2<?> lu2Var) {
+        return new hl0(2, lu2Var);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(e13 e13Var, lu2<? super Integer> lu2Var) {
+        return ((hl0) create(e13Var, lu2Var)).invokeSuspend(j6g.a);
+    }
+
+    @Override // defpackage.x81
+    public final Object invokeSuspend(Object obj) throws NoBeanDefFoundException {
+        int i = this.label;
+        if (i != 0) {
+            if (i == 1) {
+                r7d.b(obj);
+                return obj;
+            }
+            r6.g("call to 'resume' before 'invoke' with coroutine");
+            return null;
+        }
+        r7d.b(obj);
+        w1g w1gVarB = il0.a.b();
+        lz lzVar = new lz(1);
+        this.label = 1;
+        Object objF = w1gVarB.f(lzVar, this);
+        g13 g13Var = g13.a;
+        return objF == g13Var ? g13Var : objF;
+    }
+}

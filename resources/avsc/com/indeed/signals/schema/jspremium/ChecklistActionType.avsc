@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ChecklistActionType",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "UNKNOWN", "CLICK", "COMPLETE" ],
+  "default" : "UNKNOWN"
+}

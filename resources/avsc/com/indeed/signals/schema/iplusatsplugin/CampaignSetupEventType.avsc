@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "CampaignSetupEventType",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "SETUP_STARTED", "BUDGET_MODIFIED", "DATE_MODIFIED", "REVIEW_CLICKED", "EDIT_ON_REVIEW_CLICKED", "SETUP_COMPLETED", "SETUP_ABANDONED", "SETUP_FAILED" ]
+}

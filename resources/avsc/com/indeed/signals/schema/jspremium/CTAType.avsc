@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "CTAType",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "PRO", "PREMIUM" ],
+  "default" : "PRO"
+}

@@ -1,0 +1,41 @@
+{
+  "type" : "record",
+  "name" : "iaResumePageLoadEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumePageLoad"
+  }, {
+    "name" : "resumeId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "indeedResumeCard",
+    "type" : "boolean"
+  }, {
+    "name" : "buildIndeedResumeCard",
+    "type" : "boolean"
+  }, {
+    "name" : "fileResumeCard",
+    "type" : "boolean"
+  }, {
+    "name" : "noResumeCard",
+    "type" : "boolean"
+  }, {
+    "name" : "isApplyWithProfile",
+    "type" : "boolean"
+  }, {
+    "name" : "profileResumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaResumePageLoad"
+}

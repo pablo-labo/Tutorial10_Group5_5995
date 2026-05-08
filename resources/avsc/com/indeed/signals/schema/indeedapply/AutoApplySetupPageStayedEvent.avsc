@@ -1,0 +1,17 @@
+{
+  "type" : "record",
+  "name" : "AutoApplySetupPageStayedEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Page stayed time event",
+  "fields" : [ {
+    "name" : "setupLogUid",
+    "type" : "string"
+  }, {
+    "name" : "stayedPage",
+    "type" : "string"
+  }, {
+    "name" : "timeStayedOnPageMs",
+    "type" : "int"
+  } ],
+  "logEntryType" : "autoApplySetupPageStayedEvent"
+}

@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "MessagePromptInterestEvent",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "fields" : [ {
+    "name" : "conversationId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "details",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "messagingPromptInterestEvents"
+}

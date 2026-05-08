@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "RNVJNavigationTriggerV1",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "symbols" : [ "deeplink" ]
+}

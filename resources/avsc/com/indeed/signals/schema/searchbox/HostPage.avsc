@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "HostPage",
+  "namespace" : "com.indeed.signals.schema.searchbox",
+  "symbols" : [ "UNKNOWN", "HP", "SERP", "SEARCH_START_PAGE" ],
+  "default" : "UNKNOWN"
+}

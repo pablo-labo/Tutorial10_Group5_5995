@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "YellowLightLazyLoadProvider",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "success",
+    "type" : "boolean"
+  } ],
+  "logEntryType" : "iaYellowLight3PLazyLoadProvider"
+}

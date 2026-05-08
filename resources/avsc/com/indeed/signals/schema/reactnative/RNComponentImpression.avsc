@@ -1,0 +1,16 @@
+{
+  "type" : "record",
+  "name" : "RNComponentImpression",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "fields" : [ {
+    "name" : "provider",
+    "type" : "string"
+  }, {
+    "name" : "trackingKey",
+    "type" : "string"
+  }, {
+    "name" : "componentName",
+    "type" : "string"
+  } ],
+  "logEntryType" : "rnComponentImpression"
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ComponentName",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "symbols" : [ "UNKNOWN", "VIEWJOB_REMOTE_MODULE" ],
+  "default" : "UNKNOWN"
+}

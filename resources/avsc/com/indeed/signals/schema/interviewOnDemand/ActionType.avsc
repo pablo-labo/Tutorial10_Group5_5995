@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ActionType",
+  "namespace" : "com.indeed.signals.schema.interviewOnDemand",
+  "symbols" : [ "UNKNOWN", "JOBCARD_CLICKED", "JOBCARD_SEEN", "PRIMARY_CTA_CLICKED", "PRIMARY_CTA_SEEN", "SECONDARY_CTA_CLICKED", "SECONDARY_CTA_SEEN" ]
+}

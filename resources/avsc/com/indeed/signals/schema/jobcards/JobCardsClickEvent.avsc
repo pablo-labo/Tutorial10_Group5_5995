@@ -1,0 +1,64 @@
+{
+  "type" : "record",
+  "name" : "JobCardsClickEvent",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostId",
+      "symbols" : [ "UNKNOWN", "MOBILE", "HOMEPAGE", "PASSPORT", "INDAPPLY", "SMARTAPPLY", "MYINDEED", "I2A_WEBAPP", "SJPW", "INCUBATOR", "CAREER_GUIDE_WEBAPP", "COMPANY_PAGES_WEBAPP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "UNKNOWN", "DESKTOP_SERP", "HOMEPAGE", "JP_MOBILE_SERP", "VIEWJOB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "deploymentGroup",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "DeploymentGroup",
+      "symbols" : [ "UNKNOWN", "CANARY", "DEFAULT", "BASELINE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "userEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UserEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "DESKTOP", "APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "app",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "App",
+      "symbols" : [ "UNKNOWN", "ANDROID_APP", "IPHONE_APP", "IPAD_APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Os",
+      "symbols" : [ "UNKNOWN", "ANDROID_APP", "IPHONE_APP", "IPAD_APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "jobCards.clicks",
+    "tags" : [ "hostId", "pageId", "deploymentGroup", "userEnvironment", "app", "os" ]
+  } ]
+}

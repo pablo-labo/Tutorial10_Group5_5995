@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "DeviceType",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "MOBILE", "TABLET" ]
+}

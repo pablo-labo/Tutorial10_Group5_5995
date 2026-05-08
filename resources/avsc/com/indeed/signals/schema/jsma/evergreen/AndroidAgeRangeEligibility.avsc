@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "AndroidAgeRangeEligibility",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "symbols" : [ "SUPERVISED", "SUPERVISED_APPROVAL_DENIED", "SUPERVISED_APPROVAL_PENDING", "UNKNOWN", "VERIFIED" ]
+}

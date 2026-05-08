@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "UserInteractionTimer",
+  "namespace" : "com.indeed.signals.schema.corporatesystems",
+  "fields" : [ {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "timestamp",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "fromAction",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timeToActionSeconds",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "imkptUserInteractionTimer"
+}

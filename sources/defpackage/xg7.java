@@ -1,0 +1,44 @@
+package defpackage;
+
+import expo.modules.kotlin.jni.JavaScriptTypedArray;
+import java.nio.ByteBuffer;
+import java.util.Iterator;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class xg7 implements pyf, lz5<Byte>, djc {
+    public final JavaScriptTypedArray a;
+
+    public xg7(JavaScriptTypedArray javaScriptTypedArray) {
+        javaScriptTypedArray.getClass();
+        this.a = javaScriptTypedArray;
+    }
+
+    @Override // defpackage.djc
+    public final JavaScriptTypedArray a() {
+        return this.a;
+    }
+
+    @Override // defpackage.lz5
+    public final Byte get(int i) {
+        if (i >= 0 && i < getLength()) {
+            return Byte.valueOf(this.a.readByte(i));
+        }
+        k20.o();
+        return null;
+    }
+
+    @Override // defpackage.pyf
+    public final int getLength() {
+        return this.a.getLength();
+    }
+
+    @Override // java.lang.Iterable
+    public final Iterator<Byte> iterator() {
+        return new g7e(this);
+    }
+
+    @Override // defpackage.pyf
+    public final ByteBuffer toDirectBuffer() {
+        return this.a.toDirectBuffer();
+    }
+}

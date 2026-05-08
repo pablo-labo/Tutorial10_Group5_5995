@@ -1,0 +1,39 @@
+{
+  "type" : "record",
+  "name" : "GnavNewMessageNotification",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "isJobseekerBrowserNewMessageTitleEnabled",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "tabTitle",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timeToTabActive",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "timeOfNotification",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "unixtimeOfNotification",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "wasTabActive",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "notificationHash",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "gnavJSNewMessageNotification"
+}

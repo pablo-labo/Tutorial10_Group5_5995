@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "WizardFlowType",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "CREATE_INTERVIEW", "EDIT_INTERVIEW", "VIEW_INTERVIEW", "CANCEL_INTERVIEW", "CANCELED_INTERVIEW", "CREATED_INTERVIEW", "EDITED_INTERVIEW", "UNAUTHORIZED_ERROR", "SERVER_ERROR", "REQUEST_COOKIE_ACCESS", "INDEED_LOGIN", "SELECT_COMPANY", "MISSING_FIELDS_ERROR" ]
+}

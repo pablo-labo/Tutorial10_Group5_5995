@@ -1,0 +1,30 @@
+{
+  "type" : "record",
+  "name" : "AutoApplySetupErrorEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Error event",
+  "fields" : [ {
+    "name" : "setupLogUid",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "errorType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorStack",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "graphqlOperation",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplySetupErrorEvent"
+}

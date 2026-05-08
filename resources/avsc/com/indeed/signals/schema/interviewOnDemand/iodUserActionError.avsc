@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "iodUserActionError",
+  "namespace" : "com.indeed.signals.schema.interviewOnDemand",
+  "fields" : [ {
+    "name" : "actionType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ActionType",
+      "symbols" : [ "UNKNOWN", "JOBCARD_CLICKED", "JOBCARD_SEEN", "PRIMARY_CTA_CLICKED", "PRIMARY_CTA_SEEN", "SECONDARY_CTA_CLICKED", "SECONDARY_CTA_SEEN" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "UNKNOWN", "SERP", "HOMEPAGE", "VIEWJOB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "From",
+      "symbols" : [ "UNKNOWN", "IOD_PUSH" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "errorType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ErrorType",
+      "symbols" : [ "UNKNOWN", "INDEED_APPLY_BUTTON_CLICK", "INDEED_APPLY_BUTTON_LOAD" ]
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "InterviewOnDemand.userActionError",
+    "tags" : [ "actionType", "pageId", "from", "errorType" ]
+  } ]
+}

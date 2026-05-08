@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "QuestionPreFetchStatus",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "symbols" : [ "FETCHED", "FETCH_FAILED", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

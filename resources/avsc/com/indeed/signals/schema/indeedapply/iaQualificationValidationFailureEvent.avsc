@@ -1,0 +1,30 @@
+{
+  "type" : "record",
+  "name" : "iaQualificationValidationFailureEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaQualificationValidationFailure"
+  }, {
+    "name" : "pageId",
+    "type" : "string"
+  }, {
+    "name" : "fieldName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "origin",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ValidationOriginEnum",
+      "symbols" : [ "PAGE_LOAD", "CONTINUE_CLICK" ]
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaQualificationValidationFailure"
+}

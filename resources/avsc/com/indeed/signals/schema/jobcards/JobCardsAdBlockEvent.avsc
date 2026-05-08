@@ -1,0 +1,36 @@
+{
+  "type" : "record",
+  "name" : "JobCardsAdBlockEvent",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "fields" : [ {
+    "name" : "jobKey",
+    "type" : "string"
+  }, {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hostId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostId",
+      "symbols" : [ "UNKNOWN", "MOBILE", "HOMEPAGE", "PASSPORT", "INDAPPLY", "SMARTAPPLY", "MYINDEED", "I2A_WEBAPP", "SJPW", "INCUBATOR", "CAREER_GUIDE_WEBAPP", "COMPANY_PAGES_WEBAPP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "UNKNOWN", "DESKTOP_SERP", "HOMEPAGE", "JP_MOBILE_SERP", "VIEWJOB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "jobCards.adBlockEvent",
+    "tags" : [ "hostId", "pageId" ]
+  } ],
+  "logEntryType" : "jobCardsAdBlockEvent"
+}

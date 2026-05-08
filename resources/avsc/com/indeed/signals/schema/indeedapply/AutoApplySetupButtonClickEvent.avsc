@@ -1,0 +1,17 @@
+{
+  "type" : "record",
+  "name" : "AutoApplySetupButtonClickEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Button click event",
+  "fields" : [ {
+    "name" : "setupLogUid",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "button",
+    "type" : "string"
+  } ],
+  "logEntryType" : "autoApplySetupButtonClickEvent"
+}

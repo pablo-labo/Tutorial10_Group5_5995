@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "LightProfileEntryPointEventsHostType",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "symbols" : [ "japan_temp_frontend", "japan_jobseeker_hp" ]
+}

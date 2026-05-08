@@ -1,0 +1,8 @@
+{
+  "type" : "enum",
+  "name" : "McpAppHost",
+  "namespace" : "com.indeed.signals.schema.aixagentplatform",
+  "doc" : "The host where the MCP App is loaded.",
+  "symbols" : [ "CHATGPT", "OTHER" ],
+  "default" : "OTHER"
+}

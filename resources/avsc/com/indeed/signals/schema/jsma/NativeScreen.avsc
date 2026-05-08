@@ -1,0 +1,96 @@
+{
+  "type" : "record",
+  "name" : "NativeScreen",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "device",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeDevice",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "Platforms",
+          "symbols" : [ "IOS", "ANDROID" ]
+        }
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "properties",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeEventProperties",
+      "fields" : [ {
+        "name" : "appId",
+        "type" : {
+          "type" : "enum",
+          "name" : "NativeAppIds",
+          "symbols" : [ "JOB_SEARCH_ANDROID", "JOB_SEARCH_IOS" ]
+        }
+      }, {
+        "name" : "appVersion",
+        "type" : "string"
+      }, {
+        "name" : "appBuildNum",
+        "type" : "int"
+      }, {
+        "name" : "appVariant",
+        "type" : "string"
+      }, {
+        "name" : "appEnvironment",
+        "type" : "string"
+      }, {
+        "name" : "osVersion",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "clientEventId",
+        "type" : "string"
+      }, {
+        "name" : "clientCreatedTimestamp",
+        "type" : {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      }, {
+        "name" : "groups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "userLocale",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceOrientation",
+        "type" : {
+          "type" : "enum",
+          "name" : "DeviceOrientations",
+          "symbols" : [ "LANDSCAPE", "PORTRAIT" ]
+        }
+      } ]
+    }
+  }, {
+    "name" : "screenName",
+    "type" : "string"
+  } ],
+  "logEntryType" : "jsmaNativeScreen"
+}

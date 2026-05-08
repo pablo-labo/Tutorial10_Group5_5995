@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "LightProfileQuestionEventsActionType",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "symbols" : [ "impression", "answer", "exit", "skip", "back" ]
+}

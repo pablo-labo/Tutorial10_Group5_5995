@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">%d отзыв</item>
+        <item quantity="few">%d отзыва</item>
+        <item quantity="many">%d отзывов</item>
+        <item quantity="other">%d отзывов</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Перемотать на %d секунду вперед</item>
+        <item quantity="few">Перемотать на %d секунды вперед</item>
+        <item quantity="many">Перемотать на %d секунд вперед</item>
+        <item quantity="other">Перемотать на %d секунды вперед</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Перемотать на %d секунду назад</item>
+        <item quantity="few">Перемотать на %d секунды назад</item>
+        <item quantity="many">Перемотать на %d секунд назад</item>
+        <item quantity="other">Перемотать на %d секунды назад</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s мин</item>
+        <item quantity="few">%s мин</item>
+        <item quantity="other">%s мин</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Собеседование начнется через %d час</item>
+        <item quantity="few">Собеседование начнется через %d час.</item>
+        <item quantity="other">Собеседование начнется через %d час.</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Собеседование начнется через %d минуту</item>
+        <item quantity="few">Собеседование начнется через %d мин</item>
+        <item quantity="other">Собеседование начнется через %d мин</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d файл не загружен, и он не будет включен в ваше сообщение.</item>
+        <item quantity="few">%d файлов не загружено, и они не будут включены в ваше сообщение.</item>
+        <item quantity="many">%d файлов не загружено, и они не будут включены в ваше сообщение.</item>
+        <item quantity="other">%d файлов не загружено, и они не будут включены в ваше сообщение.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d файл не загружен</item>
+        <item quantity="few">%d файлов не загружено</item>
+        <item quantity="many">%d файлов не загружено</item>
+        <item quantity="other">%d файлов не загружено</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">Непрочитанное сообщение: %d</item>
+        <item quantity="few">Непрочитанные сообщения: %d</item>
+        <item quantity="many">Непрочитанные сообщения: %d</item>
+        <item quantity="other">Непрочитанные сообщения: %d</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d новое уведомление</item>
+        <item quantity="few">%d новых уведомления</item>
+        <item quantity="many">%d новых уведомлений</item>
+        <item quantity="other">%d нового уведомления</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Этот работодатель обычно отвечает в течение %d дня</item>
+        <item quantity="few">Этот работодатель обычно отвечает в течение %d дней</item>
+        <item quantity="other">Этот работодатель обычно отвечает в течение %d дней</item>
+    </plurals>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "LightProfileOccupationSelectEventsSelectType",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "symbols" : [ "autoSuggest", "searchBar", "list" ]
+}

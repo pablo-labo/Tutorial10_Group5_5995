@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "CtkRateLimited",
+  "namespace" : "com.indeed.signals",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "resourceName",
+    "type" : "string"
+  }, {
+    "name" : "method",
+    "type" : "string"
+  }, {
+    "name" : "received",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  } ],
+  "logEntryType" : "clickstreamCtkRateLimited"
+}

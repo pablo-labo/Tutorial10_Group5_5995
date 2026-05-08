@@ -1,0 +1,149 @@
+{
+  "type" : "record",
+  "name" : "RNMobPageLoadInfoV3",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "fields" : [ {
+    "name" : "deviceProperties",
+    "type" : {
+      "type" : "record",
+      "name" : "RNDevicePropertiesV4",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNPlatformsV4",
+          "symbols" : [ "ios", "android" ]
+        }
+      }, {
+        "name" : "osVersion",
+        "type" : "string"
+      }, {
+        "name" : "appName",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNAppsV4",
+          "symbols" : [ "jsma", "ema" ]
+        }
+      }, {
+        "name" : "nativeAppVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnLibraryVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnAppBundleVersion",
+        "type" : "string"
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "brand",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "systemName",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "buildVariant",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "environment",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "variant",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "BuildVariant",
+          "symbols" : [ "debug", "release" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "env",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "Environment",
+          "symbols" : [ "qa", "prod" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "isIpad",
+        "type" : "boolean"
+      } ]
+    }
+  }, {
+    "name" : "jsvPage",
+    "type" : [ "null", "string" ],
+    "doc" : "The key of jsv for a given pageId, see https://link.indeed.tech/GLYAX3DG3 for the mappings",
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "doc" : "The actual pageid",
+    "default" : null
+  }, {
+    "name" : "mobtk",
+    "type" : [ "null", "string" ],
+    "doc" : "The tracking key for SERP and Homepage",
+    "default" : null
+  }, {
+    "name" : "mobvjtk",
+    "type" : [ "null", "string" ],
+    "doc" : "The tracking key for ViewJob",
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "doc" : "ctk of the user",
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "doc" : "country code",
+    "default" : null
+  }, {
+    "name" : "scrWidth",
+    "type" : [ "null", "long" ],
+    "doc" : "screen width",
+    "default" : null
+  }, {
+    "name" : "scrHeight",
+    "type" : [ "null", "long" ],
+    "doc" : "screen height",
+    "default" : null
+  }, {
+    "name" : "pixelRatio",
+    "type" : [ "null", "float" ],
+    "doc" : "pixel density",
+    "default" : null
+  }, {
+    "name" : "scrRes",
+    "type" : [ "null", "string" ],
+    "doc" : "screen resolution, eg. 1920x1080",
+    "default" : null
+  }, {
+    "name" : "scrOrientation",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ScreenOrientationV3",
+      "symbols" : [ "PORTRAIT", "LANDSCAPE" ],
+      "default" : "PORTRAIT"
+    } ],
+    "doc" : "screen orientation",
+    "default" : null
+  }, {
+    "name" : "rnAppBundleVersion",
+    "type" : [ "null", "string" ],
+    "doc" : "bundle versions",
+    "default" : null
+  } ],
+  "logEntryType" : "mobPageLoadInfo"
+}

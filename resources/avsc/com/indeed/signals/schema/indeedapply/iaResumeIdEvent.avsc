@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "iaResumeIdEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumeId"
+  }, {
+    "name" : "resumeType",
+    "type" : "string"
+  }, {
+    "name" : "resumeId",
+    "type" : "string"
+  }, {
+    "name" : "globalResumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaResumeId"
+}

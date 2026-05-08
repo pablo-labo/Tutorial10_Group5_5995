@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "OAuthTokensRequestType",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "AUTHORIZATION_CODE", "REFRESH_TOKEN" ]
+}

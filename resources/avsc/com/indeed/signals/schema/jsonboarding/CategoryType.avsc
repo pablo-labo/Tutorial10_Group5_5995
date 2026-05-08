@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "CategoryType",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "UNKNOWN", "SKILLS", "CREDENTIALS" ],
+  "default" : "UNKNOWN"
+}

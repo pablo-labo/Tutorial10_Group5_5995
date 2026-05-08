@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Action",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "symbols" : [ "jsProPremiumAccess", "clickWVMPButton" ],
+  "default" : "jsProPremiumAccess"
+}

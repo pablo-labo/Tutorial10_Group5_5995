@@ -1,0 +1,109 @@
+{
+  "type" : "record",
+  "name" : "AixAutomationWorkflowEvent",
+  "namespace" : "com.indeed.signals.schema.postapply",
+  "fields" : [ {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "source",
+    "type" : "string"
+  }, {
+    "name" : "ia_application_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "application_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "advertiser_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "locale",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country_code",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "proctor_groups",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "job_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "job_key",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "job_country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "dc",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "render_session_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "render_session_status_code",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "render_session_error",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "request_trace_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "request_duration",
+    "type" : [ "null", {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    } ],
+    "default" : null
+  }, {
+    "name" : "workflow_execution_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "workflow_type",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timestamp",
+    "type" : [ "null", {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    } ],
+    "default" : null
+  }, {
+    "name" : "action_timestamp",
+    "type" : [ "null", {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ms_since_start",
+    "type" : [ "null", {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    } ],
+    "default" : null
+  }, {
+    "name" : "account_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "aix_automation_workflow"
+}

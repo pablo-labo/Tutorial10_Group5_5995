@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "PerformanceAnalysisContext",
+  "namespace" : "com.indeed.signals.common",
+  "fields" : [ {
+    "name" : "measuredProctors",
+    "type" : [ "null", {
+      "type" : "map",
+      "values" : "string"
+    } ],
+    "default" : null
+  } ]
+}

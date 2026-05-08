@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "InterviewTodayBannerInteractionEvent",
+  "namespace" : "com.indeed.signals.schema.jobseekerinterviews",
+  "fields" : [ {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "action",
+    "type" : "string"
+  } ],
+  "logEntryType" : "jsinInterviewTodayInteraction"
+}

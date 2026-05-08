@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "HomePageNavigationBackEvent",
+  "namespace" : "com.indeed.signals.schema.homepage",
+  "fields" : [ {
+    "name" : "userEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UserEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "DESKTOP", "APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "usedBfCache",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UsedBFCache",
+      "symbols" : [ "UNKNOWN", "YES", "NO" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "homepage.bfcache",
+    "tags" : [ "userEnvironment", "usedBfCache" ]
+  } ]
+}

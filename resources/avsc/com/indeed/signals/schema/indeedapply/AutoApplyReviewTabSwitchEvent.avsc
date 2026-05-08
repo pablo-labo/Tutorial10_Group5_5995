@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyReviewTabSwitchEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Tab switch event for auto-apply review flow",
+  "fields" : [ {
+    "name" : "reviewLogUid",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "draftId",
+    "type" : "string"
+  }, {
+    "name" : "fromTab",
+    "type" : "string"
+  }, {
+    "name" : "toTab",
+    "type" : "string"
+  } ],
+  "logEntryType" : "autoApplyReviewTabSwitchEvent"
+}

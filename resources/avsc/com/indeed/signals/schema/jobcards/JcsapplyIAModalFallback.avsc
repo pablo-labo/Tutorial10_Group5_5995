@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "JcsapplyIAModalFallback",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "fields" : [ {
+    "name" : "jcsapplyEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "JcsapplyEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "ANDROID_APP", "IOS_APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "jcsapply.iaAppModalFallback",
+    "tags" : [ "jcsapplyEnvironment" ]
+  } ]
+}

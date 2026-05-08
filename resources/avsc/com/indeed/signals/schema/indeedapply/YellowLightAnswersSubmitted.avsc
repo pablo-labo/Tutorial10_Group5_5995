@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "YellowLightAnswersSubmitted",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "success",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "logEntryType" : "iaYellowLight3PAnswersSubmitted"
+}

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "LightProfileEntryPointEventsActionType",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "symbols" : [ "impression", "seen", "click" ]
+}

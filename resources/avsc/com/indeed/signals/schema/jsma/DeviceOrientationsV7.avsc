@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "DeviceOrientationsV7",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "symbols" : [ "LANDSCAPE", "PORTRAIT" ]
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "DeploymentGroup",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "symbols" : [ "UNKNOWN", "CANARY", "DEFAULT", "BASELINE" ],
+  "default" : "UNKNOWN"
+}

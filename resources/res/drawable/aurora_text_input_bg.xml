@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/ijs_aurora_primary_text"/>
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+            <item
+                android:gravity="bottom"
+                android:height="18dp">
+                <shape android:shape="rectangle">
+                    <size android:height="8dp"/>
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/ijs_aurora_primary_text"/>
+                    <solid android:color="@color/ijs_aurora_primary_text"/>
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+            <item>
+                <inset
+                    android:layout_width="match_parent"
+                    android:insetLeft="1dp"
+                    android:insetRight="1dp"
+                    android:insetTop="1dp"
+                    android:insetBottom="4dp">
+                    <shape android:shape="rectangle">
+                        <solid android:color="@color/ijs_aurora_neutral_background"/>
+                        <corners android:radius="8dp"/>
+                    </shape>
+                </inset>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="@color/ijs_aurora_border"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</selector>

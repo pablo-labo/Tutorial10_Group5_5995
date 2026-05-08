@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ElementName",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "BACK_BUTTON", "BACK_OR_CLOSE_BUTTON", "CLOSE_BUTTON", "DELETE_BUTTON", "DETECT_LOCATION_BUTTON", "EDIT_JOBTITLE_BUTTON", "EDIT_JOBTYPE_BUTTON", "EDIT_LOCATION_BUTTON", "EDIT_PAY_BUTTON", "EXIT_BUTTON", "NOT_NOW_BUTTON", "OPEN_TO_ANYTHING_BUTTON", "REVIEW_RESUME_BUTTON", "SAVE_NEXT_BUTTON", "SKIP_BUTTON", "UPLOAD_BUTTON", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

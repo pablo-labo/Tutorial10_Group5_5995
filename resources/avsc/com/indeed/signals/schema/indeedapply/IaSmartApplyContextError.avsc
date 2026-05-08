@@ -1,0 +1,39 @@
+{
+  "type" : "record",
+  "name" : "IaSmartApplyContextError",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "SmartApplyContext query error event\nLogs errors when smartApplyContext GraphQL query fails during migration\nerrorType is required to ensure metric tags are always populated\nfield is optional - populated when error is specific to a particular field",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "moduleName",
+    "type" : {
+      "type" : "enum",
+      "name" : "ModuleName",
+      "symbols" : [ "UNKNOWN", "CONTACT_INFO", "INTERVIEW_SCHEDULING", "RESUME_SELECTION", "PREVIEW", "RESUME", "QUESTIONS", "QUALIFICATION_QUESTIONS", "DEMOGRAPHIC_QUESTIONS", "SOURCING_OPT_IN" ],
+      "default" : "UNKNOWN"
+    }
+  }, {
+    "name" : "errorType",
+    "type" : {
+      "type" : "enum",
+      "name" : "SmartApplyContextErrorType",
+      "symbols" : [ "UNKNOWN_ERROR", "NETWORK_ERROR", "GRAPHQL_ERROR", "NULL_RESPONSE", "TIMEOUT_ERROR" ],
+      "default" : "UNKNOWN_ERROR"
+    }
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "field",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "ia.smartApply.smartApplyContextError",
+    "tags" : [ "moduleName", "errorType" ]
+  } ],
+  "logEntryType" : "iaSmartApplyContextError"
+}

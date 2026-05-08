@@ -1,0 +1,47 @@
+{
+  "type" : "record",
+  "name" : "EmployerOutreachInteractionNew",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "fields" : [ {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "employerOutreachAction",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "EmployerOutreachAction",
+      "symbols" : [ "UNKNOWN", "APPLY", "FAST_APPLY", "COMPLETE_APPLY", "DECLINE", "SUBMIT_DECLINE_REASON" ],
+      "default" : "UNKNOWN"
+    } ]
+  }, {
+    "name" : "employerOutreachSource",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "EmployerOutreachSource",
+      "symbols" : [ "UNKNOWN", "AUTOSOURCER", "PREMIUM_MATCH_CANDIDATES", "SMART_SOURCING" ],
+      "default" : "UNKNOWN"
+    } ]
+  }, {
+    "name" : "isError",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "jobkKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "mobtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "employerOutreach.interactions",
+    "tags" : [ "employerOutreachSource", "employerOutreachAction" ]
+  } ],
+  "logEntryType" : "employerOutreachInteraction"
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Category",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "JOB", "MATCHING", "APPLY", "OTHER" ],
+  "default" : "OTHER"
+}

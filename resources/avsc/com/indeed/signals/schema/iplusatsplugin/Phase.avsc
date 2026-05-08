@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "Phase",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "START", "END" ]
+}

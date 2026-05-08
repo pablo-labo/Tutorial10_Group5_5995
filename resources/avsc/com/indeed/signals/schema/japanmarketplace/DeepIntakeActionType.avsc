@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "DeepIntakeActionType",
+  "namespace" : "com.indeed.signals.schema.japanmarketplace",
+  "symbols" : [ "CLICK", "ANSWER" ]
+}

@@ -1,0 +1,8 @@
+{
+  "type" : "enum",
+  "name" : "RoughCount",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "doc" : "Needed in order to have cookieCount be a tag; must be boolean or enum, not int.",
+  "symbols" : [ "ZERO", "ONE", "TWO", "MANY" ],
+  "default" : "ZERO"
+}

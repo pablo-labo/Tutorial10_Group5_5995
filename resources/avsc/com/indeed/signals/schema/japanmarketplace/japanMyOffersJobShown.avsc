@@ -1,0 +1,46 @@
+{
+  "type" : "record",
+  "name" : "japanMyOffersJobShown",
+  "namespace" : "com.indeed.signals.schema.japanmarketplace",
+  "fields" : [ {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "grps",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "sessionKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "requestTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageNumber",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "japanMyOffersJobShown"
+}

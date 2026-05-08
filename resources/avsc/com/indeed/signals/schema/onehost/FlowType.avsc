@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "FlowType",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "symbols" : [ "FROM_SCRATCH", "REPOST", "REUSE" ]
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Action",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "UNKNOWN", "BUTTON_CLICK", "RESULT" ],
+  "default" : "UNKNOWN"
+}

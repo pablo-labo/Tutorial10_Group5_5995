@@ -1,0 +1,90 @@
+{
+  "type" : "record",
+  "name" : "Fingerprint",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "appName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "canonicalPageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "useragent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "vendor",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "webdriver",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "hardwareconcurrency",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "cookieenabled",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "platform",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timezoneoffset",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "availheight",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "availwidth",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "height",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "width",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "orientationtype",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "devicepixelratio",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "maxtouchpoints",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "languages",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "gnavFingerprint"
+}

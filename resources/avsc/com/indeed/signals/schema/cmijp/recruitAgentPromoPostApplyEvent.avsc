@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "recruitAgentPromoPostApplyEvent",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "actionType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ActionType",
+      "symbols" : [ "impression", "signUp", "dismiss", "defer" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "appliedJobKey",
+    "type" : "string"
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "postApply.recruitAgentPromo.event",
+    "tags" : [ "actionType" ]
+  } ],
+  "logEntryType" : "recruitAgentPromoPostApplyEvent"
+}

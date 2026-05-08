@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "UsedBFCache",
+  "namespace" : "com.indeed.signals.schema.homepage",
+  "symbols" : [ "UNKNOWN", "YES", "NO" ],
+  "default" : "UNKNOWN"
+}

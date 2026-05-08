@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "reportJobButtonClick",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "source",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Source",
+      "symbols" : [ "UNKNOWN", "JOBCARD", "TWO_PANE", "STANDALONE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "UNKNOWN", "DESKTOP_SERP", "HOMEPAGE", "JP_MOBILE_SERP", "VIEWJOB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "reportjob.button.clicks",
+    "tags" : [ "source", "pageId" ]
+  } ]
+}

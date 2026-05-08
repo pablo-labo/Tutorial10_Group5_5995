@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ScreenOrientationV3",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "symbols" : [ "PORTRAIT", "LANDSCAPE" ],
+  "default" : "PORTRAIT"
+}

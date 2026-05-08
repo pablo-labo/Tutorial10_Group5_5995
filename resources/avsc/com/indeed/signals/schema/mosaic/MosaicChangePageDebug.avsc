@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "MosaicChangePageDebug",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "initializationModel",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "providerList",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "mosaicChangePageDebug"
+}

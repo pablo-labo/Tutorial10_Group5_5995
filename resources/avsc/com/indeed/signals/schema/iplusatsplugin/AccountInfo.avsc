@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "AccountInfo",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "ADVERTISER", "BILLING" ]
+}

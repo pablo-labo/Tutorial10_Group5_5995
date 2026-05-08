@@ -1,0 +1,39 @@
+{
+  "type" : "record",
+  "name" : "IsTrustedInteraction",
+  "namespace" : "com.indeed.signals.schema.bots",
+  "fields" : [ {
+    "name" : "interactionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "InteractionType",
+      "symbols" : [ "UNKNOWN", "SEARCH_BUTTON_CLICK", "JOB_CARD_CLICK", "PAGINATION_CLICK" ],
+      "default" : "UNKNOWN"
+    }
+  }, {
+    "name" : "isTrusted",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "mobtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "position",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "page",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "bots.istrusted.interactions",
+    "tags" : [ "interactionType" ]
+  } ],
+  "logEntryType" : "isTrustedInteraction"
+}

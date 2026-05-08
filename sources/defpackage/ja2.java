@@ -1,0 +1,80 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class ja2 {
+    public static final long A;
+    public static final long B;
+    public static final long C;
+    public static final long D;
+    public static final long E;
+    public static final long F;
+    public static final long G;
+    public static final long H;
+    public static final long I;
+    public static final long a;
+    public static final long b;
+    public static final long c;
+    public static final long d;
+    public static final long e;
+    public static final long f;
+    public static final long g;
+    public static final long h;
+    public static final long i;
+    public static final long j;
+    public static final long k;
+    public static final long l;
+    public static final long m;
+    public static final long n;
+    public static final long o;
+    public static final long p;
+    public static final long q;
+    public static final long r;
+    public static final long s;
+    public static final long t;
+    public static final long u;
+    public static final long v;
+    public static final long w;
+    public static final long x;
+    public static final long y;
+    public static final long z;
+
+    static {
+        long j2 = d3b.o;
+        a = j2;
+        b = d3b.c;
+        c = d3b.d;
+        d = d3b.m;
+        e = d3b.w;
+        f = d3b.h;
+        long j3 = d3b.f;
+        g = j3;
+        h = d3b.b;
+        i = d3b.a;
+        j = d3b.u;
+        k = d3b.t;
+        l = d3b.z;
+        m = d3b.y;
+        n = j3;
+        o = d3b.p;
+        p = d3b.D;
+        q = d3b.C;
+        r = d3b.q;
+        s = d3b.r;
+        t = d3b.v;
+        u = d3b.x;
+        v = d3b.e;
+        w = d3b.A;
+        x = d3b.B;
+        y = j2;
+        z = j2;
+        A = d3b.l;
+        B = d3b.k;
+        C = d3b.j;
+        D = d3b.n;
+        E = d3b.g;
+        F = d3b.i;
+        G = d3b.s;
+        H = d3b.E;
+        I = d3b.F;
+    }
+}

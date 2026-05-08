@@ -1,0 +1,60 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 400 >>
+stream
+BT
+/F2 18 Tf
+72 720 Td
+(Jane Doe) Tj
+/F1 12 Tf
+0 -20 Td
+(Software Engineer) Tj
+0 -20 Td
+(jane.doe@example.com) Tj
+/F2 14 Tf
+0 -30 Td
+(Experience) Tj
+/F1 10 Tf
+0 -18 Td
+(Senior Software Engineer - Example Corp \(2020-Present\)) Tj
+0 -16 Td
+(Software Engineer - Startup Inc \(2017-2020\)) Tj
+/F2 14 Tf
+0 -28 Td
+(Education) Tj
+/F1 10 Tf
+0 -18 Td
+(B.S. Computer Science - State University \(2017\)) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000708 00000 n 
+0000000778 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+853
+%%EOF

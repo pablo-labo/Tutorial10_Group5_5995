@@ -1,0 +1,61 @@
+{
+  "type" : "record",
+  "name" : "NativeAgeSignal",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "appInstallId",
+    "type" : "string"
+  }, {
+    "name" : "ageRange",
+    "type" : {
+      "type" : "record",
+      "name" : "AgeRange",
+      "fields" : [ {
+        "name" : "lowerBound",
+        "type" : [ "null", "int" ],
+        "default" : null
+      }, {
+        "name" : "upperBound",
+        "type" : [ "null", "int" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "androidAgeSignal",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "AndroidAgeSignal",
+      "fields" : [ {
+        "name" : "ageRangeEligibility",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "AndroidAgeRangeEligibility",
+          "symbols" : [ "SUPERVISED", "SUPERVISED_APPROVAL_DENIED", "SUPERVISED_APPROVAL_PENDING", "UNKNOWN", "VERIFIED" ]
+        } ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "iosAgeSignal",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "IOSAgeSignal",
+      "fields" : [ {
+        "name" : "isEligibleForAgeFeatures",
+        "type" : [ "null", "boolean" ],
+        "default" : null
+      }, {
+        "name" : "ageRangeDeclaration",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "IOSAgeRangeDeclaration",
+          "symbols" : [ "SELF_DECLARED", "GUARDIAN_DECLARED", "CHECKED_BY_OTHER_METHOD", "GUARDIAN_CHECKED_BY_OTHER_METHOD", "GOVERNMENT_ID_CHECKED", "PAYMENT_CHECKED", "GUARDIAN_PAYMENT_CHECKED", "UNKNOWN" ]
+        } ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "nativeAgeSignal"
+}

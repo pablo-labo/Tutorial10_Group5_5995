@@ -1,0 +1,98 @@
+{
+  "type" : "record",
+  "name" : "RNVJHttpErrorV2",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "doc" : "An error type logged by the react native platform when a network request fails.",
+  "fields" : [ {
+    "name" : "deviceProperties",
+    "type" : {
+      "type" : "record",
+      "name" : "RNDevicePropertiesV3",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNPlatformsV3",
+          "symbols" : [ "ios", "android" ]
+        }
+      }, {
+        "name" : "osVersion",
+        "type" : "string"
+      }, {
+        "name" : "appName",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNAppsV3",
+          "symbols" : [ "jsma", "ema" ]
+        }
+      }, {
+        "name" : "nativeAppVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnLibraryVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnAppBundleVersion",
+        "type" : "string"
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "brand",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "systemName",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "isIpad",
+        "type" : "boolean"
+      } ]
+    }
+  }, {
+    "name" : "url",
+    "type" : "string"
+  }, {
+    "name" : "message",
+    "type" : "string"
+  }, {
+    "name" : "statusCode",
+    "type" : "int"
+  }, {
+    "name" : "urlNavigationEvent",
+    "type" : {
+      "type" : "record",
+      "name" : "RNVJNavigationEventV2",
+      "fields" : [ {
+        "name" : "url",
+        "type" : "string"
+      }, {
+        "name" : "trigger",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNVJNavigationTriggerV2",
+          "symbols" : [ "deeplink", "unknown" ]
+        }
+      }, {
+        "name" : "from",
+        "type" : "string"
+      } ]
+    }
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "rnvjHttpError"
+}

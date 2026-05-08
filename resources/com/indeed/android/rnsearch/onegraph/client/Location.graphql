@@ -1,0 +1,15 @@
+query LocationAutocomplete($input: LocationAutocompleteInput!) {
+    locationAutocomplete(input: $input) {
+        formattedName
+        location {
+            code
+            locationType
+            canonicalName
+            ancestors {
+                code
+                canonicalName
+                locationType
+            }
+        }
+    }
+}

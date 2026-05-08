@@ -1,0 +1,66 @@
+{
+  "type" : "record",
+  "name" : "RemoteModuleRenderError",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "hostId",
+    "type" : "string"
+  }, {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hostUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "componentName",
+    "type" : {
+      "type" : "enum",
+      "name" : "ComponentName",
+      "symbols" : [ "UNKNOWN", "VIEWJOB_REMOTE_MODULE" ],
+      "default" : "UNKNOWN"
+    }
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorStack",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "schemaVersion",
+    "type" : "string"
+  }, {
+    "name" : "clientTs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "logEntryType" : "viewJobRemoteModuleRenderError"
+}

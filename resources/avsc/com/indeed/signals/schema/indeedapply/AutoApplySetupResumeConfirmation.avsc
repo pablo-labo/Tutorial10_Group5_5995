@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "AutoApplySetupResumeConfirmation",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Resume confirmation event\nDeprecated, use AutoApplySetupResumeConfirmationEvent instead",
+  "fields" : [ {
+    "name" : "setupSessionId",
+    "type" : "string"
+  }, {
+    "name" : "resumeType",
+    "type" : "string"
+  } ],
+  "logEntryType" : "autoApplySetupResumeConfirmation"
+}

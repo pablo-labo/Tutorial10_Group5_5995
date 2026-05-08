@@ -1,0 +1,31 @@
+{
+  "type" : "record",
+  "name" : "segPhoneUpdateNudgeImpression",
+  "namespace" : "com.indeed.signals.schema.segind",
+  "fields" : [ {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "nudgeShown",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "lastFetchedActiveTime",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "nudgeShownTime",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "segPhoneUpdateNudgeImpression"
+}

@@ -1,0 +1,54 @@
+{
+  "type" : "record",
+  "name" : "mismatchAltReqsClick",
+  "namespace" : "com.indeed.signals.schema.mismatchAltReqs",
+  "fields" : [ {
+    "name" : "jcsapplyEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "JcsapplyEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "ANDROID_APP", "IOS_APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "hostId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostId",
+      "symbols" : [ "UNKNOWN", "MOBILE", "HOMEPAGE", "PASSPORT", "INDAPPLY", "SMARTAPPLY", "MYINDEED", "I2A_WEBAPP", "SJPW", "INCUBATOR", "CAREER_GUIDE_WEBAPP", "COMPANY_PAGES_WEBAPP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "UNKNOWN", "DESKTOP_SERP", "HOMEPAGE", "JP_MOBILE_SERP", "VIEWJOB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "mismatchAltReqs.clicks",
+    "tags" : [ "jcsapplyEnvironment", "hostId", "pageId" ]
+  } ],
+  "logEntryType" : "mismatchAltReqsClick"
+}

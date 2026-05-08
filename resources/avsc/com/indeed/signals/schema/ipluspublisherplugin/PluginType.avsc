@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "PluginType",
+  "namespace" : "com.indeed.signals.schema.ipluspublisherplugin",
+  "symbols" : [ "JOB_SEARCH" ]
+}

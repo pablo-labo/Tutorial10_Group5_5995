@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "InteractionType",
+  "namespace" : "com.indeed.signals.schema.bots",
+  "symbols" : [ "UNKNOWN", "SEARCH_BUTTON_CLICK", "JOB_CARD_CLICK", "PAGINATION_CLICK" ],
+  "default" : "UNKNOWN"
+}

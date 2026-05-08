@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "JcsapplyEnvironment",
+  "namespace" : "com.indeed.signals.schema.mismatchAltReqs",
+  "symbols" : [ "UNKNOWN", "MOBILEWEB", "ANDROID_APP", "IOS_APP" ],
+  "default" : "UNKNOWN"
+}

@@ -1,0 +1,33 @@
+{
+  "type" : "record",
+  "name" : "NativeHttpResponseDebugV6",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "headerLength",
+    "type" : "long"
+  }, {
+    "name" : "contentLength",
+    "type" : "long"
+  }, {
+    "name" : "contentType",
+    "type" : "string"
+  }, {
+    "name" : "setCookiesLength",
+    "type" : "long"
+  }, {
+    "name" : "statusCode",
+    "type" : "long"
+  }, {
+    "name" : "errDomain",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "errCode",
+    "type" : [ "null", "long" ]
+  } ]
+}

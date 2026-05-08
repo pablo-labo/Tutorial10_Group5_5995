@@ -1,0 +1,20 @@
+{
+  "type" : "record",
+  "name" : "Entities",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "fields" : [ {
+    "name" : "encryptedJobHashes",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    },
+    "default" : [ ]
+  }, {
+    "name" : "employerJobIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    },
+    "default" : [ ]
+  } ]
+}

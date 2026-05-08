@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:tag="layout/activity_debug_proctor_0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/debugProctorFilterEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search proctor test names"
+        android:layout_weight="0"
+        android:inputType="text"
+        android:importantForAutofill="no"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        style="?attr/buttonBarStyle">
+        <Button
+            android:id="@+id/debugProctorCloseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close without saving"
+            android:layout_weight="1"
+            style="?attr/buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/debugProctorSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            style="?attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/debugProctorComposeView"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

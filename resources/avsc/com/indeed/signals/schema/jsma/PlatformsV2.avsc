@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "PlatformsV2",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "symbols" : [ "IOS", "ANDROID" ]
+}

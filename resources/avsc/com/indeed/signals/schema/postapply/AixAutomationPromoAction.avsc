@@ -1,0 +1,84 @@
+{
+  "type" : "record",
+  "name" : "AixAutomationPromoAction",
+  "namespace" : "com.indeed.signals.schema.postapply",
+  "fields" : [ {
+    "name" : "name",
+    "type" : "string"
+  }, {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "redirect_url",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "application_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "advertiser_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "locale",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country_code",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "proctor_groups",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "job_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "job_key",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "job_country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "render_session_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timestamp",
+    "type" : [ "null", {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    } ],
+    "default" : null
+  }, {
+    "name" : "account_id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "user_agent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "device",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "browser",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "browser_version",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "aix_automation_promo_performance"
+}

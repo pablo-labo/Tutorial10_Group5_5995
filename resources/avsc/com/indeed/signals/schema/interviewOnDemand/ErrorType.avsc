@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ErrorType",
+  "namespace" : "com.indeed.signals.schema.interviewOnDemand",
+  "symbols" : [ "UNKNOWN", "INDEED_APPLY_BUTTON_CLICK", "INDEED_APPLY_BUTTON_LOAD" ]
+}

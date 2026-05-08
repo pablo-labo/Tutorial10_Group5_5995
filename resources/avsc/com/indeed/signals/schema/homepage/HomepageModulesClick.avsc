@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "HomepageModulesClick",
+  "namespace" : "com.indeed.signals.schema.homepage",
+  "fields" : [ {
+    "name" : "userEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UserEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "DESKTOP", "APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "moduleName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "hpModulesClick"
+}

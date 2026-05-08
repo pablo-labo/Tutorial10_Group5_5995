@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="75dp"
+    android:width="105dp"
+    android:viewportWidth="105"
+    android:viewportHeight="75">
+    <group>
+        <clip-path android:pathData="M47.54 0.717c-9.17 0 -16.606 7.243 -16.606 15.784 0 1.348 0.238 2.665 0.562 3.82l-21.4 3.321L0.81 74.282h103.372l-6.659 -64.211 -33.373 5.18C63.663 7.275 56.26 0.717 47.54 0.717z"/>
+        <path
+            android:fillColor="#f5cb9d"
+            android:pathData="M104.182 74.282l-6.659 -64.211 -87.427 13.571L0.81 74.282h103.372z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M22.53 21.712v45.504l25.019 -3.539 19.28 5.532 24.352 -5.429 -2.369 -44.12 -22.116 3.815 -17.62 -5.884 -26.546 4.121z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M47.485 17.06l0.162 46.645 -0.098 -0.028 -0.036 0.005 -0.161 -46.619 0.097 -0.016 0.036 0.012z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M66.708 23.473v45.701l0.115 0.033V23.454l-0.115 0.02z"/>
+        <path
+            android:fillColor="@drawable/_onboarding_spot_location_or_commute_5__0_res_0x7f080097"
+            android:pathData="M47.54 0.717c-9.171 0 -16.606 7.243 -16.606 15.784 0 3.139 1.29 6.112 1.947 7.254 4.386 9.051 14.67 23.892 14.67 23.892s10.285 -14.841 14.67 -23.892c0.657 -1.142 1.837 -4.115 1.948 -7.254C64.425 7.971 56.712 0.717 47.54 0.717z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M54.447 16.137A7 7 0 0 1 40.447 16.137A7 7 0 0 1 54.447 16.137Z"/>
+    </group>
+</vector>

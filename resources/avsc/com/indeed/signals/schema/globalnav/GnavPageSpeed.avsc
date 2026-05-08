@@ -1,0 +1,166 @@
+{
+  "type" : "record",
+  "name" : "GnavPageSpeed",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "canonicalPageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "appName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "connectionType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isSuspicious",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "connectEnd",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "connectStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "connectionTime",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "dnsTime",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domComplete",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domContentLoadEnd",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domContentLoadStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domI2C",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domInteractive",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domL2I",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domLoading",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domainLookupEnd",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "domainLookupStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "fetchStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "latency",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "loadEnd",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "loadStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "onload",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "redirectEnd",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "redirectStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "requestStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "requestTime",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "responseEnd",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "responseStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "responseTime",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "secureConnectionStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "unloadEnd",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "unloadStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "navigationStart",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "navTimeIsNotSupported",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "firstPaint",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "firstContentfulPaint",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "paintTimingIsNotSupported",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ]
+}

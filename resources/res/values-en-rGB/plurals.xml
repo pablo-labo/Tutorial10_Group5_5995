@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 review</item>
+        <item quantity="other">%d reviews</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Fast-forward %d second</item>
+        <item quantity="other">Fast-forward %d seconds</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Rewind %d second</item>
+        <item quantity="other">Rewind %d seconds</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minute</item>
+        <item quantity="other">%s minutes</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Interview starts in %d hour</item>
+        <item quantity="other">Interview starts in %d hours</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Interview starts in %d minute</item>
+        <item quantity="other">Interview starts in %d minutes</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d file didn’t upload and will not be included in your message.</item>
+        <item quantity="other">%d files didn’t upload and will not be included in your message.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d file didn’t upload</item>
+        <item quantity="other">%d files didn’t upload</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d unread message</item>
+        <item quantity="other">%d unread messages</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">This employer typically responds within %d day</item>
+        <item quantity="other">This employer typically responds within %d days</item>
+    </plurals>
+</resources>

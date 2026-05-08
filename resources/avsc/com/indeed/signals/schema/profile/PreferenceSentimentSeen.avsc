@@ -1,0 +1,46 @@
+{
+  "type" : "record",
+  "name" : "PreferenceSentimentSeen",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "v",
+    "type" : "string",
+    "default" : "0"
+  }, {
+    "name" : "mobtk",
+    "type" : "string"
+  }, {
+    "name" : "attributeIds",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "customClassLabels",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "customClassSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "suid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "label",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "sentiment",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "section",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "preferenceSentimentSeen"
+}

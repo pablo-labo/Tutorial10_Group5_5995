@@ -1,0 +1,54 @@
+package defpackage;
+
+import defpackage.hmb;
+import kotlin.jvm.functions.Function2;
+
+/* JADX INFO: loaded from: classes.dex */
+@uh3(c = "androidx.compose.foundation.AbstractClickableNode$onFocusChange$1$1", f = "Clickable.kt", l = {1506}, m = "invokeSuspend")
+public final class j1 extends c1f implements Function2<e13, lu2<? super j6g>, Object> {
+    final /* synthetic */ hmb.b $it;
+    int label;
+    final /* synthetic */ b1 this$0;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public j1(b1 b1Var, hmb.b bVar, lu2<? super j1> lu2Var) {
+        super(2, lu2Var);
+        this.this$0 = b1Var;
+        this.$it = bVar;
+    }
+
+    @Override // defpackage.x81
+    public final lu2<j6g> create(Object obj, lu2<?> lu2Var) {
+        return new j1(this.this$0, this.$it, lu2Var);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(e13 e13Var, lu2<? super j6g> lu2Var) {
+        return ((j1) create(e13Var, lu2Var)).invokeSuspend(j6g.a);
+    }
+
+    @Override // defpackage.x81
+    public final Object invokeSuspend(Object obj) {
+        int i = this.label;
+        if (i == 0) {
+            r7d.b(obj);
+            d3a d3aVar = this.this$0.f0;
+            if (d3aVar != null) {
+                hmb.a aVar = new hmb.a(this.$it);
+                this.label = 1;
+                Object objA = d3aVar.a(aVar, this);
+                g13 g13Var = g13.a;
+                if (objA == g13Var) {
+                    return g13Var;
+                }
+            }
+        } else {
+            if (i != 1) {
+                r6.g("call to 'resume' before 'invoke' with coroutine");
+                return null;
+            }
+            r7d.b(obj);
+        }
+        return j6g.a;
+    }
+}

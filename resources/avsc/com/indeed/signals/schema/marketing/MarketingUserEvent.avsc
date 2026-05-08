@@ -1,0 +1,42 @@
+{
+  "type" : "record",
+  "name" : "MarketingUserEvent",
+  "namespace" : "com.indeed.signals.schema.marketing",
+  "fields" : [ {
+    "name" : "parenttk",
+    "type" : "string"
+  }, {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "element",
+    "type" : "string"
+  }, {
+    "name" : "section",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "component",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "additionalContext",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "destinationUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "destinationPage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "page",
+    "type" : "string"
+  }, {
+    "name" : "sourceApp",
+    "type" : "string"
+  } ],
+  "logEntryType" : "marketingUserEvent"
+}

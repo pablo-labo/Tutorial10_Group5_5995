@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Result",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "symbols" : [ "SUCCESS", "FAILURE" ],
+  "default" : "SUCCESS"
+}

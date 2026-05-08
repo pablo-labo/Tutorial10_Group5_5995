@@ -1,0 +1,33 @@
+{
+  "type" : "record",
+  "name" : "AcmeContentPromo",
+  "namespace" : "com.indeed.signals.schema.acme",
+  "fields" : [ {
+    "name" : "surface",
+    "type" : "string"
+  }, {
+    "name" : "promoType",
+    "type" : "string"
+  }, {
+    "name" : "rendered",
+    "type" : "boolean"
+  }, {
+    "name" : "ua",
+    "type" : "string"
+  }, {
+    "name" : "isLoggedIn",
+    "type" : "boolean"
+  }, {
+    "name" : "accountId",
+    "type" : "long"
+  }, {
+    "name" : "grp",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "acmeContentPromo"
+}

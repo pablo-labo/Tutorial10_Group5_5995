@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "QualificationScreen",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "LICENSES", "CERTIFICATIONS", "SKILLS" ]
+}

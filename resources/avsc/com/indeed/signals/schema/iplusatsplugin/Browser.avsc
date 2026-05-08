@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "Browser",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "CHROME", "FIREFOX", "SAFARI", "EDGE" ]
+}

@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyRBSCarouselCardEvents",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "fields" : [ {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "applicationDraftId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "iaUid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "actionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "AutoApplyRBSCarouselCardEventsActionType",
+      "doc" : "Action types for individual card events:\n- SEEN: Logged when a job card enters the viewport (impression)\n- CLICK: Logged when the user clicks on a job card\n- DELETE: Logged when the user deletes/removes a draft from the carousel",
+      "symbols" : [ "SEEN", "CLICK", "DELETE" ]
+    }
+  }, {
+    "name" : "eventError",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplyRBSCarouselCardEvents"
+}

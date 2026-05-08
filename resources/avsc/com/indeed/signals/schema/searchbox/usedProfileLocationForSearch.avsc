@@ -1,0 +1,49 @@
+{
+  "type" : "record",
+  "name" : "usedProfileLocationForSearch",
+  "namespace" : "com.indeed.signals.schema.searchbox",
+  "fields" : [ {
+    "name" : "hostPage",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostPage",
+      "symbols" : [ "UNKNOWN", "HP", "SERP", "SEARCH_START_PAGE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Platform",
+      "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "location",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "searchBox.usedProfileLocation",
+    "tags" : [ "hostPage", "platform" ]
+  } ],
+  "logEntryType" : "usedProfileLocationForSearch"
+}

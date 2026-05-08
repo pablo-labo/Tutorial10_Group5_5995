@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "WebVitalSegmentLanguage",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "symbols" : [ "EN" ]
+}

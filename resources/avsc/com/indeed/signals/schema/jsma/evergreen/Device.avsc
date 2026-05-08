@@ -1,0 +1,26 @@
+{
+  "type" : "record",
+  "name" : "Device",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "platform",
+    "type" : {
+      "type" : "enum",
+      "name" : "Platforms",
+      "symbols" : [ "IOS", "ANDROID", "WEB" ],
+      "default" : "IOS"
+    }
+  }, {
+    "name" : "manufacturer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "model",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "advertisingId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "MonitoringEventType",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "CLICK", "CROWTAXO_START_PRELOAD_DATA", "IMPRESSION", "ON_COMPLETE_ONBOARDING", "ON_EXIT", "TRIGGER_PUSH_PRIMER", "ZERO_MAX_EXPECTED_PAGE_ROUTES", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

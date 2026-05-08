@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ChecklistView",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "UNKNOWN", "PROMO", "CHECKLIST_DIALOG", "CHECKLIST_COMPLETE" ],
+  "default" : "UNKNOWN"
+}

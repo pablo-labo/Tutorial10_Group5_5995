@@ -1,0 +1,25 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyReviewButtonClickEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Button click event for auto-apply review flow",
+  "fields" : [ {
+    "name" : "reviewLogUid",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "button",
+    "type" : "string"
+  }, {
+    "name" : "draftId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "metadata",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplyReviewButtonClickEvent"
+}

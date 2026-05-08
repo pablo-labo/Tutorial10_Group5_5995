@@ -1,0 +1,62 @@
+{
+  "type" : "record",
+  "name" : "DynamicLookupDetails",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "flowName",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "FlowName",
+      "symbols" : [ "CROWTAXO", "GENERALIST", "OTHER" ],
+      "default" : "OTHER"
+    } ]
+  }, {
+    "name" : "isFlowEligible",
+    "type" : [ "null", "boolean" ]
+  }, {
+    "name" : "foundCrowtaxoQuestions",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "triggerValue",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "triggerKey",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "allDeterminantValues",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "resolvedDeterminantIds",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "resolvedDeterminantValues",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ]
+  }, {
+    "name" : "flowPages",
+    "type" : [ "null", "int" ]
+  }, {
+    "name" : "allMatchingOccupationIds",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "allMatchingOccupationLabels",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  } ]
+}

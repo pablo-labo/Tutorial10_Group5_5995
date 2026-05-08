@@ -1,0 +1,295 @@
+{
+  "type" : "record",
+  "name" : "JobcardDisplay",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "fields" : [ {
+    "name" : "jobKey",
+    "type" : "string"
+  }, {
+    "name" : "mobtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "feedtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "sectionId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "SectionId",
+      "symbols" : [ "UNKNOWN", "HP_JOBS_FOR_YOU", "HP_TOP_APPLICANT_FEED", "HP_LAST_RQ", "HP_OTHER_MATCHES", "HP_AUTO_SOURCE_MATCHES", "HP_RELOCATION_OPPORTUNITIES", "HP_EMPLOYER_OUTREACH" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "providerId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ProviderId",
+      "symbols" : [ "UNKNOWN", "MOSAIC_PROVIDER_JOBCARDS", "MOSAIC_PROVIDER_JOBCARDS_1", "MOSAIC_PROVIDER_JOBCARDS_2", "MOSAIC_PROVIDER_JOBCARDS_3", "MOSAIC_PROVIDER_JOBCARDS_4", "MOSAIC_PROVIDER_JOBCARDS_5", "MOSAIC_PROVIDER_JOBCARDS_6", "MOSAIC_PROVIDER_JOBCARDS_7", "MOSAIC_PROVIDER_JOBCARDS_8", "MOSAIC_PROVIDER_JOBCARDS_9", "MOSAIC_PROVIDER_JOBCARDS_10" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "hostId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostId",
+      "symbols" : [ "UNKNOWN", "MOBILE", "HOMEPAGE", "PASSPORT", "INDAPPLY", "SMARTAPPLY", "MYINDEED", "I2A_WEBAPP", "SJPW", "INCUBATOR", "CAREER_GUIDE_WEBAPP", "COMPANY_PAGES_WEBAPP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "UNKNOWN", "DESKTOP_SERP", "HOMEPAGE", "JP_MOBILE_SERP", "VIEWJOB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "newJobTagYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "responsiveEmployerTagYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "salaryYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "payNotProvidedYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "estimatedPayYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "jobTypeYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "workHoursYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "shiftYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "commuteYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "transitYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "easyApplyBadgeYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "hiringEventBadgeYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "openInterviewsBadgeYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "responsiveEmployerBadgeYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "smbD2iBadgeYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "redLightBannerYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "greenLightBannerYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "companyLogoYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "companyBannerYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "sponsored",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "jobcardPostedDateYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "brandedJobYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "brandedJobPackageYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "is_urgently_hiring_eligible",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "locationRollupYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isCarousel",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "flair",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timestampActivity",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timestampXDaysAgo",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "salary",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "workHours",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "shift",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "commute",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "commuteEstimate",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "trafficLight",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "eQualScore",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "segmentAttributes",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "benefits",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "preferenceMatch",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "qualificationsMatch",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "qualificationsMiss",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "isInterviewNowEnticerShownYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "earlyApplicantTagYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "brandedJobPaidBrandingYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "brandedJobFeaturedEmployerYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isAssistedApply",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "brandingDealIds",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "long"
+    } ],
+    "default" : null
+  }, {
+    "name" : "isTopRatedEmployerYN",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "numApplies",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "enticersShown",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "trueJobLocation",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "jobcardDisplay"
+}

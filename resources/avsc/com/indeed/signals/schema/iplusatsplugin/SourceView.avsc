@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "SourceView",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "CAMPAIGN_DETAIL", "SPONSORED_JOBS_LIST", "GLOBAL_HEADER_MENU" ]
+}

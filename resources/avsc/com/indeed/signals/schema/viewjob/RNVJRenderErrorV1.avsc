@@ -1,0 +1,96 @@
+{
+  "type" : "record",
+  "name" : "RNVJRenderErrorV1",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "doc" : "An error type logged by the react native platform when the app fails to render.",
+  "fields" : [ {
+    "name" : "deviceProperties",
+    "type" : {
+      "type" : "record",
+      "name" : "RNDevicePropertiesV1",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNPlatformsV1",
+          "symbols" : [ "ios", "android" ]
+        }
+      }, {
+        "name" : "osVersion",
+        "type" : "string"
+      }, {
+        "name" : "appName",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNAppsV1",
+          "symbols" : [ "jsma", "ema" ]
+        }
+      }, {
+        "name" : "nativeAppVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnLibraryVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnAppBundleVersion",
+        "type" : "string"
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "brand",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "systemName",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "isIpad",
+        "type" : "boolean"
+      } ]
+    }
+  }, {
+    "name" : "message",
+    "type" : "string"
+  }, {
+    "name" : "name",
+    "type" : "string"
+  }, {
+    "name" : "stack",
+    "type" : "string"
+  }, {
+    "name" : "componentStack",
+    "type" : "string"
+  }, {
+    "name" : "product",
+    "type" : "string"
+  }, {
+    "name" : "urlNavigationEvent",
+    "type" : {
+      "type" : "record",
+      "name" : "RNVJNavigationEventV1",
+      "fields" : [ {
+        "name" : "url",
+        "type" : "string"
+      }, {
+        "name" : "trigger",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNVJNavigationTriggerV1",
+          "symbols" : [ "deeplink" ]
+        }
+      }, {
+        "name" : "from",
+        "type" : "string"
+      } ]
+    }
+  } ],
+  "logEntryType" : "rnvjRenderError"
+}

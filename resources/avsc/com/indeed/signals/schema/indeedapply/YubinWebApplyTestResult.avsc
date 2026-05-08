@@ -1,0 +1,54 @@
+{
+  "type" : "record",
+  "name" : "YubinWebApplyTestResult",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "ms",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "testName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "expectedStatusCode",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "actualStatusCode",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isSuccess",
+    "type" : "boolean"
+  }, {
+    "name" : "postUrl",
+    "type" : "string"
+  }, {
+    "name" : "apply_id",
+    "type" : "string"
+  }, {
+    "name" : "signature",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "runId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "apiToken",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaYubinWebApplyTestResult"
+}

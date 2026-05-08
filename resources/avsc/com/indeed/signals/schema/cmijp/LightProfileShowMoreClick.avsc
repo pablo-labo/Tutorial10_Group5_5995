@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "LightProfileShowMoreClick",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "fields" : [ {
+    "name" : "parentTk",
+    "type" : "string"
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "pageNumber",
+    "type" : "int"
+  }, {
+    "name" : "page",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "LightProfileShowMorePage",
+      "symbols" : [ "page0", "page1", "page2", "page3", "page4", "page5", "moreThanFive" ]
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "lightProfile.showMore.click",
+    "tags" : [ "page" ]
+  } ],
+  "logEntryType" : "LightProfileShowMoreClick"
+}

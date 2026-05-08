@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "AppAvQ",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "accountId",
+    "type" : "string"
+  }, {
+    "name" : "group",
+    "type" : [ "int", "null" ],
+    "default" : -1
+  } ],
+  "logEntryType" : "appAvQ"
+}

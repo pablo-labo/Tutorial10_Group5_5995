@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "RecaptchaClassificationReason",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "symbols" : [ "UNKNOWN", "AUTOMATION", "UNEXPECTED_ENVIRONMENT", "TOO_MUCH_TRAFFIC", "UNEXPECTED_USAGE_PATTERNS", "LOW_CONFIDENCE_SCORE" ],
+  "default" : "UNKNOWN"
+}

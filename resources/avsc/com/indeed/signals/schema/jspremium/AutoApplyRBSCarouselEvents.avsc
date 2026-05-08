@@ -1,0 +1,52 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyRBSCarouselEvents",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "fields" : [ {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKeys",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "applicationDraftIds",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "iaUids",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "actionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "AutoApplyRBSCarouselEventsActionType",
+      "doc" : "Action types for carousel-level events:\n- RENDER: Logged when the RBS carousel is rendered/displayed to the user\n- SUBMIT: Logged when the user click the \"Submit x applications\" button in the carousel",
+      "symbols" : [ "RENDER", "SUBMIT" ]
+    }
+  }, {
+    "name" : "eventError",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplyRBSCarouselEvents"
+}

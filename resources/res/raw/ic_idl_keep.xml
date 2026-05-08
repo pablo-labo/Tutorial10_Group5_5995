@@ -1,0 +1,6 @@
+<!--
+Keep all IDL icons because consumers must be able to look up icons by name
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_idl*" />
+

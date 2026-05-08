@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "ReferralParamsV10",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "from",
+    "type" : [ "string", "null" ]
+  }, {
+    "name" : "SID",
+    "type" : [ "string", "null" ]
+  }, {
+    "name" : "KW",
+    "type" : [ "string", "null" ]
+  }, {
+    "name" : "PUB",
+    "type" : [ "string", "null" ]
+  }, {
+    "name" : "REF",
+    "type" : [ "string", "null" ]
+  }, {
+    "name" : "REFTYPE",
+    "type" : [ "string", "null" ]
+  }, {
+    "name" : "REFTIME",
+    "type" : [ "string", "null" ]
+  } ]
+}

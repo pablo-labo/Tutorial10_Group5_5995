@@ -1,0 +1,52 @@
+{
+  "type" : "record",
+  "name" : "ButtonClickEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ]
+  }, {
+    "name" : "co",
+    "type" : "string"
+  }, {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "partnerToken",
+    "type" : "string"
+  }, {
+    "name" : "src",
+    "type" : "string"
+  }, {
+    "name" : "tk",
+    "type" : "string"
+  }, {
+    "name" : "ms",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "isTrusted",
+    "type" : "string",
+    "default" : ""
+  }, {
+    "name" : "buttonIsLazy",
+    "type" : "string",
+    "default" : ""
+  } ],
+  "logEntryType" : "iaJsvButtonClick"
+}

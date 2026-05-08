@@ -1,0 +1,149 @@
+{
+  "type" : "record",
+  "name" : "JsOnboardingSegmentLookup",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "CommonOnboardingDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonOnboardingDetails",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "Platform",
+          "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE" ],
+          "default" : "UNKNOWN"
+        } ]
+      }, {
+        "name" : "proctorGroups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "accountId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "userAgent",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "country",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "language",
+        "type" : [ "null", "string" ]
+      } ]
+    }
+  }, {
+    "name" : "jobTitle",
+    "type" : "string"
+  }, {
+    "name" : "allJobTitles",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "allJobTitlesConcatenated",
+    "type" : "string"
+  }, {
+    "name" : "numberOfJobTitles",
+    "type" : "int"
+  }, {
+    "name" : "occupationId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "occupationRootNames",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "occupationRootIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "certificationIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "certificationIdsConcatenated",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "certificationNames",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "certificationNamesConcatenated",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "numberOfCertifications",
+    "type" : "int"
+  }, {
+    "name" : "licenseIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "licenseIdsConcatenated",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "licenseNames",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "licenseNamesConcatenated",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "numberOfLicenses",
+    "type" : "int"
+  }, {
+    "name" : "skillIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "skillIdsConcatenated",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "skillNames",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "skillNamesConcatenated",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "numberOfSkills",
+    "type" : "int"
+  } ],
+  "logEntryType" : "onboardingSegmentLookup"
+}

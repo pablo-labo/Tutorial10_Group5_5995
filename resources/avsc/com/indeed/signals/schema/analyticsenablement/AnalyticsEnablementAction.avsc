@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "AnalyticsEnablementAction",
+  "namespace" : "com.indeed.signals.schema.analyticsenablement",
+  "fields" : [ {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "username",
+    "type" : "string"
+  }, {
+    "name" : "hostApp",
+    "type" : "string"
+  }, {
+    "name" : "hostUrl",
+    "type" : "string"
+  }, {
+    "name" : "targetPath",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "targetApp",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "analytics_enablement_actions"
+}

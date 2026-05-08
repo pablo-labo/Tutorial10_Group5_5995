@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 αξιολόγηση</item>
+        <item quantity="other">%d αξιολογήσεις</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Γρήγορη προώθηση κατά %d δευτερόλεπτο</item>
+        <item quantity="other">Γρήγορη προώθηση κατά %d δευτερόλεπτα</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Μετάβαση προς τα πίσω κατά %d δευτερόλεπτο</item>
+        <item quantity="other">Μετάβαση προς τα πίσω κατά %d δευτερόλεπτα</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s λεπτό</item>
+        <item quantity="other">%s λεπτά</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Η συνέντευξη ξεκινά σε %d ώρα</item>
+        <item quantity="other">Η συνέντευξη ξεκινά σε %d ώρες</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Η συνέντευξη ξεκινά σε %d λεπτό</item>
+        <item quantity="other">Η συνέντευξη ξεκινά σε %d λεπτά</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d αρχείο δεν ανέβηκε και δεν θα συμπεριληφθεί στο μήνυμά σας.</item>
+        <item quantity="other">%d αρχεία δεν ανέβηκαν και δεν θα συμπεριληφθούν στο μήνυμά σας.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d αρχείο δεν ανέβηκε</item>
+        <item quantity="other">%d αρχεία δεν ανέβηκαν</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d μη αναγνωσμένο μήνυμα</item>
+        <item quantity="other">%d μη αναγνωσμένα μηνύματα</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d νέα ειδοποίηση</item>
+        <item quantity="other">%d νέες ειδοποιήσεις</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Αυτός ο εργοδότης συνήθως απαντά εντός %d ημέρας</item>
+        <item quantity="other">Αυτός ο εργοδότης συνήθως απαντά εντός %d ημερών</item>
+    </plurals>
+</resources>

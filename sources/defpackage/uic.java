@@ -1,0 +1,25 @@
+package defpackage;
+
+import com.google.android.gms.dynamite.descriptors.com.google.android.gms.measurement.dynamite.ModuleDescriptor;
+
+/* JADX INFO: loaded from: classes3.dex */
+@uh3(c = "expo.modules.imagepicker.exporters.RawImageExporter", f = "RawImageExporter.kt", l = {ModuleDescriptor.MODULE_VERSION}, m = "exportAsync")
+public final class uic extends pu2 {
+    Object L$0;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ vic this$0;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public uic(vic vicVar, pu2 pu2Var) {
+        super(pu2Var);
+        this.this$0 = vicVar;
+    }
+
+    @Override // defpackage.x81
+    public final Object invokeSuspend(Object obj) {
+        this.result = obj;
+        this.label |= Integer.MIN_VALUE;
+        return this.this$0.a(null, null, null, this);
+    }
+}

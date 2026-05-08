@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "Impression",
+  "namespace" : "com.indeed.signals.schema.jobseekerinterviews",
+  "fields" : [ {
+    "name" : "logTk",
+    "type" : "string"
+  }, {
+    "name" : "interviewKey",
+    "type" : "string"
+  }, {
+    "name" : "appName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  } ],
+  "logEntryType" : "jsinGnavStoImpression"
+}

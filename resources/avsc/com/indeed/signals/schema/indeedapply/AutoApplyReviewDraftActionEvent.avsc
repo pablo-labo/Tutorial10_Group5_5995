@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyReviewDraftActionEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Draft action event for auto-apply review flow",
+  "fields" : [ {
+    "name" : "reviewLogUid",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "draftId",
+    "type" : "string"
+  }, {
+    "name" : "editSection",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "remainingDraftCount",
+    "type" : "int"
+  } ],
+  "logEntryType" : "autoApplyReviewDraftActionEvent"
+}

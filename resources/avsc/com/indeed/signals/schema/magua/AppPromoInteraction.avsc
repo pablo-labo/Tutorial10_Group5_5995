@@ -1,0 +1,79 @@
+{
+  "type" : "record",
+  "name" : "AppPromoInteraction",
+  "namespace" : "com.indeed.signals.schema.magua",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "mobtk",
+    "type" : "string"
+  }, {
+    "name" : "isLoggedIn",
+    "type" : "boolean"
+  }, {
+    "name" : "platform",
+    "type" : {
+      "type" : "enum",
+      "name" : "Platform",
+      "symbols" : [ "UNKNOWN", "IOS", "ANDROID", "DESKTOP" ],
+      "default" : "UNKNOWN"
+    },
+    "default" : "UNKNOWN"
+  }, {
+    "name" : "interactionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "InteractionType",
+      "symbols" : [ "UNKNOWN", "IMPRESSION", "CLICK", "DISMISS", "EMP_CLICK", "EMP_DISMISS", "EMP_GO_EMPLOYER_WEB", "EMP_IMPRESSION", "EMP_OPEN_APP", "EMP_OPEN_PROMO" ],
+      "default" : "UNKNOWN"
+    },
+    "default" : "UNKNOWN"
+  }, {
+    "name" : "hostId",
+    "type" : {
+      "type" : "enum",
+      "name" : "HostId",
+      "symbols" : [ "unknown", "homepage", "jobsearch", "jso_ui", "career_guide_webapp", "global_nav" ],
+      "default" : "unknown"
+    },
+    "default" : "unknown"
+  }, {
+    "name" : "pageId",
+    "type" : {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "unknown", "serp", "viewjob", "hpClassic", "dev_sandbox", "onboarding", "onboarding_location", "onboarding_intro", "onboarding_intent", "onboarding_desired_job", "onboarding_job_types", "article_page", "savedjoblist" ],
+      "default" : "unknown"
+    },
+    "default" : "unknown"
+  }, {
+    "name" : "campaign",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "experiments",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "promoInstanceInSession",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "promoInstanceInMonth",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "maguaapppromointeraction"
+}

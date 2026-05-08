@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ClientApp",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "symbols" : [ "JOB_POSTING", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

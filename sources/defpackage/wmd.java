@@ -1,0 +1,12 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+@fd8
+public final class wmd {
+    public static final /* synthetic */ int a = 0;
+
+    static {
+        Float.floatToRawIntBits(Float.NaN);
+        Float.floatToRawIntBits(Float.NaN);
+    }
+}

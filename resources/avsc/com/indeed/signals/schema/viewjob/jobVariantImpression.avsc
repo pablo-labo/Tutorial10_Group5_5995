@@ -1,0 +1,30 @@
+{
+  "type" : "record",
+  "name" : "jobVariantImpression",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "fields" : [ {
+    "name" : "mobtk",
+    "type" : [ "null", "string" ],
+    "doc" : "The mobile tracking key, i.e. the mobtk, such as 1hsuhpfqs0000001",
+    "default" : null
+  }, {
+    "name" : "mobvjtk",
+    "type" : [ "null", "string" ],
+    "doc" : "The mobile view job tracking key for connecting to main mobviewjob log",
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "doc" : "The job key (jk) of the job currently opened in VJ where variants were rendered",
+    "default" : null
+  }, {
+    "name" : "jobVariantJobKeys",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "doc" : "Array of job variant identifiers that were rendered",
+    "default" : null
+  } ],
+  "logEntryType" : "jobVariantImpression"
+}

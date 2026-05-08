@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "CommonEventDetails",
+  "namespace" : "com.indeed.signals.common",
+  "fields" : [ {
+    "name" : "ipAddress",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

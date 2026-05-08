@@ -1,0 +1,9 @@
+{
+  "type" : "record",
+  "name" : "ClickstreamPartitionKey",
+  "namespace" : "com.indeed.signals",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : "string"
+  } ]
+}

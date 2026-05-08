@@ -1,0 +1,170 @@
+{
+  "type" : "record",
+  "name" : "NativeHttpErrorV2",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "device",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeDeviceV2",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "PlatformsV2",
+          "symbols" : [ "IOS", "ANDROID" ]
+        }
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "properties",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeEventPropertiesV2",
+      "fields" : [ {
+        "name" : "appId",
+        "type" : {
+          "type" : "enum",
+          "name" : "NativeAppIdsV2",
+          "symbols" : [ "JOB_SEARCH_ANDROID", "JOB_SEARCH_IOS" ]
+        }
+      }, {
+        "name" : "appVersion",
+        "type" : "string"
+      }, {
+        "name" : "appBuildNum",
+        "type" : "int"
+      }, {
+        "name" : "appVariant",
+        "type" : "string"
+      }, {
+        "name" : "appEnvironment",
+        "type" : "string"
+      }, {
+        "name" : "osVersion",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "clientEventId",
+        "type" : "string"
+      }, {
+        "name" : "appInstallId",
+        "type" : "string"
+      }, {
+        "name" : "sessionId",
+        "type" : "string"
+      }, {
+        "name" : "clientCreatedTimestamp",
+        "type" : {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      }, {
+        "name" : "groups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "userLocale",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "deviceOrientation",
+        "type" : {
+          "type" : "enum",
+          "name" : "DeviceOrientationsV2",
+          "symbols" : [ "LANDSCAPE", "PORTRAIT" ]
+        }
+      } ]
+    }
+  }, {
+    "name" : "url",
+    "type" : "string"
+  }, {
+    "name" : "method",
+    "type" : "string"
+  }, {
+    "name" : "requestDebug",
+    "type" : {
+      "type" : "record",
+      "name" : "NativeHttpRequestDebugV2",
+      "fields" : [ {
+        "name" : "timestamp",
+        "type" : {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      }, {
+        "name" : "headerLength",
+        "type" : "long"
+      }, {
+        "name" : "cookiesLength",
+        "type" : "long"
+      }, {
+        "name" : "referrer",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "errDomain",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "errCode",
+        "type" : [ "null", "int" ]
+      } ]
+    }
+  }, {
+    "name" : "responseDebug",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "NativeHttpResponseDebugV2",
+      "fields" : [ {
+        "name" : "timestamp",
+        "type" : {
+          "type" : "long",
+          "logicalType" : "timestamp-millis"
+        }
+      }, {
+        "name" : "headerLength",
+        "type" : "long"
+      }, {
+        "name" : "contentLength",
+        "type" : "long"
+      }, {
+        "name" : "contentType",
+        "type" : "string"
+      }, {
+        "name" : "setCookiesLength",
+        "type" : "long"
+      }, {
+        "name" : "statusCode",
+        "type" : "int"
+      }, {
+        "name" : "errDomain",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "errCode",
+        "type" : [ "null", "int" ]
+      } ]
+    } ]
+  }, {
+    "name" : "message",
+    "type" : "string"
+  } ],
+  "logEntryType" : "jsmaNativeHttpError"
+}

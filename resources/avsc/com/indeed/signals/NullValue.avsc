@@ -1,0 +1,6 @@
+{
+  "type" : "record",
+  "name" : "NullValue",
+  "namespace" : "com.indeed.signals",
+  "fields" : [ ]
+}

@@ -1,0 +1,68 @@
+{
+  "type" : "record",
+  "name" : "DPQueryEditorAction",
+  "namespace" : "com.indeed.signals.schema.dpqueryeditoractions",
+  "doc" : "Query Editor autocomplete metrics and user actions\nTracks autocomplete performance across IQL, Trino, Snowflake, and DuckDB",
+  "fields" : [ {
+    "name" : "action",
+    "type" : "string",
+    "doc" : "The action being logged (e.g., 'autocomplete_complete', 'autocomplete_cancel')"
+  }, {
+    "name" : "username",
+    "type" : "string",
+    "doc" : "Indeed username of the user (or 'unknown' if not available)"
+  }, {
+    "name" : "hostApp",
+    "type" : "string",
+    "doc" : "Host application name (e.g., 'idash', 'employer-home', or 'unknown' if not set)"
+  }, {
+    "name" : "datasets",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    },
+    "doc" : "List of dataset IRNs referenced in the query",
+    "default" : [ ]
+  }, {
+    "name" : "queryText",
+    "type" : [ "null", "string" ],
+    "doc" : "The full query text at the time of the action",
+    "default" : null
+  }, {
+    "name" : "parametersHash",
+    "type" : [ "null", "string" ],
+    "doc" : "MD5 hash of query parameters for privacy",
+    "default" : null
+  }, {
+    "name" : "description",
+    "type" : [ "null", "string" ],
+    "doc" : "Human-readable description of the event",
+    "default" : null
+  }, {
+    "name" : "engine",
+    "type" : [ "null", "string" ],
+    "doc" : "Query language engine (iql, trino, snowflake, duckdb)",
+    "default" : null
+  }, {
+    "name" : "suggestionsCnt",
+    "type" : [ "null", "int" ],
+    "doc" : "Number of autocomplete suggestions returned",
+    "default" : null
+  }, {
+    "name" : "requestsCnt",
+    "type" : [ "null", "int" ],
+    "doc" : "Number of API requests made during autocomplete",
+    "default" : null
+  }, {
+    "name" : "completeTime",
+    "type" : [ "null", "long" ],
+    "doc" : "Time in milliseconds from trigger to completion",
+    "default" : null
+  }, {
+    "name" : "cursorPosition",
+    "type" : [ "null", "string" ],
+    "doc" : "Cursor position in format \"line:column\"",
+    "default" : null
+  } ],
+  "logEntryType" : "dp_query_editor_actions"
+}

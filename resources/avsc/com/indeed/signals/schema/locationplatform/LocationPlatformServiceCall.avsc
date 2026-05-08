@@ -1,0 +1,54 @@
+{
+  "type" : "record",
+  "name" : "LocationPlatformServiceCall",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "fields" : [ {
+    "name" : "service",
+    "type" : "string"
+  }, {
+    "name" : "method",
+    "type" : "string"
+  }, {
+    "name" : "transport",
+    "type" : {
+      "type" : "enum",
+      "name" : "TransportType",
+      "symbols" : [ "GRPC", "GRAPHQL", "HTTP" ],
+      "default" : "GRAPHQL"
+    }
+  }, {
+    "name" : "success",
+    "type" : {
+      "type" : "enum",
+      "name" : "MethodCallResult",
+      "symbols" : [ "TRUE", "FALSE", "OTHER_FAILURE" ],
+      "default" : "OTHER_FAILURE"
+    }
+  }, {
+    "name" : "status_code",
+    "type" : "string"
+  }, {
+    "name" : "duration_milliseconds",
+    "type" : "float"
+  }, {
+    "name" : "latency_threshold",
+    "type" : {
+      "type" : "enum",
+      "name" : "LatencyResult",
+      "symbols" : [ "MET", "EXCEEDED", "UNUSED" ],
+      "default" : "UNUSED"
+    }
+  }, {
+    "name" : "client_app",
+    "type" : "string"
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "location.client.response",
+    "tags" : [ "service", "method", "transport", "success", "status_code", "latency_threshold", "client_app" ]
+  }, {
+    "name" : "location.client.latency",
+    "type" : "histogram",
+    "value" : "duration_milliseconds",
+    "tags" : [ "service", "method", "transport", "success", "status_code", "client_app" ]
+  } ]
+}

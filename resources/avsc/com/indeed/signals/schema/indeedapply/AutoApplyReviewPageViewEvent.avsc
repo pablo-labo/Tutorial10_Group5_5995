@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyReviewPageViewEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Page view event for auto-apply review flow",
+  "fields" : [ {
+    "name" : "reviewLogUid",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "draftId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "initialTab",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplyReviewPageViewEvent"
+}

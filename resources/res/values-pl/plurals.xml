@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 opinia</item>
+        <item quantity="few">%d opinie</item>
+        <item quantity="many">%d opinii</item>
+        <item quantity="other">%d opinii</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Przewiń do przodu o %d sekundę</item>
+        <item quantity="few">Przewiń do przodu o %d sekundy</item>
+        <item quantity="many">Przewiń do przodu o %d sekund</item>
+        <item quantity="other">Przewiń do przodu o %d sekundy</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Przewiń do tyłu o %d sekundę</item>
+        <item quantity="few">Przewiń do tyłu o %d sekundy</item>
+        <item quantity="many">Przewiń do tyłu o %d sekund</item>
+        <item quantity="other">Przewiń do tyłu o %d sekundy</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s min</item>
+        <item quantity="few">%s min</item>
+        <item quantity="other">%s min</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Rozmowa kwalifikacyjna rozpocznie się za %d godz.</item>
+        <item quantity="few">Rozmowa kwalifikacyjna rozpocznie się za %d godz.</item>
+        <item quantity="other">Rozmowa kwalifikacyjna rozpocznie się za %d godz.</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Rozmowa kwalifikacyjna rozpocznie się za %d min</item>
+        <item quantity="few">Rozmowa kwalifikacyjna rozpocznie się za %d min</item>
+        <item quantity="other">Rozmowa kwalifikacyjna rozpocznie się za %d min</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">Nie udało się przekazać %d pliku. Nie zostanie on dołączony do Twojej wiadomości.</item>
+        <item quantity="few">Nie udało się przekazać %d plików. Nie zostaną one dołączone do Twojej wiadomości.</item>
+        <item quantity="many">Nie udało się przekazać %d plików. Nie zostaną one dołączone do Twojej wiadomości.</item>
+        <item quantity="other">Nie udało się przekazać %d plików. Nie zostaną one dołączone do Twojej wiadomości.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">Nie udało się przekazać %d pliku</item>
+        <item quantity="few">Nie udało się przekazać %d plików</item>
+        <item quantity="many">Nie udało się przekazać %d plików</item>
+        <item quantity="other">Nie udało się przekazać %d plików</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d nieprzeczytana wiadomość</item>
+        <item quantity="few">Nieprzeczytane wiadomości: %d</item>
+        <item quantity="many">Nieprzeczytane wiadomości: %d</item>
+        <item quantity="other">Nieprzeczytane wiadomości: %d</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nowe powiadomienie</item>
+        <item quantity="few">%d nowe powiadomienia</item>
+        <item quantity="many">%d nowych powiadomień</item>
+        <item quantity="other">%d nowego powiadomienia</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Ten pracodawca zwykle odpowiada w ciągu %d dnia</item>
+        <item quantity="few">Ten pracodawca zwykle odpowiada w ciągu %d dni</item>
+        <item quantity="other">Ten pracodawca zwykle odpowiada w ciągu %d dni</item>
+    </plurals>
+</resources>

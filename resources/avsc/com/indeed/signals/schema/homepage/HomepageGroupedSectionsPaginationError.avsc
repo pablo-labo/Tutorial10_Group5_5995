@@ -1,0 +1,41 @@
+{
+  "type" : "record",
+  "name" : "HomepageGroupedSectionsPaginationError",
+  "namespace" : "com.indeed.signals.schema.homepage",
+  "fields" : [ {
+    "name" : "userEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UserEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "DESKTOP", "APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "groupName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ErrorType",
+      "symbols" : [ "UNKNOWN", "DUPE_PAGE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "homepage.groupedSectionsPagination.error",
+    "tags" : [ "userEnvironment", "errorType" ]
+  } ],
+  "logEntryType" : "hpGroupedSectionsPaginationError"
+}

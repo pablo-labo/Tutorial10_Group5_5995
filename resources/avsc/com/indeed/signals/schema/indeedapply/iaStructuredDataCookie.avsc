@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "iaStructuredDataCookie",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaStructuredDataCookie"
+  }, {
+    "name" : "cookieValue",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaStructuredDataCookie"
+}

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "LinkType",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "VIEW_CAMPAIGN_ANALYTICS", "VIEW_JOB_ANALYTICS", "VIEW_ANALYTICS_DASHBOARD" ]
+}

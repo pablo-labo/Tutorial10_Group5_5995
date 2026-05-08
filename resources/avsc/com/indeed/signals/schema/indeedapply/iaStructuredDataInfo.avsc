@@ -1,0 +1,18 @@
+{
+  "type" : "record",
+  "name" : "iaStructuredDataInfo",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaStructuredDataIntroReached"
+  }, {
+    "name" : "profileRezType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaStructuredDataIntroReached"
+}

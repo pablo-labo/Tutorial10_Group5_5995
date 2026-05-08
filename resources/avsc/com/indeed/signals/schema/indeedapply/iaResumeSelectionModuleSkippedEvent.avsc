@@ -1,0 +1,33 @@
+{
+  "type" : "record",
+  "name" : "iaResumeSelectionModuleSkippedEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumeSelectionModuleSkipped"
+  }, {
+    "name" : "reason",
+    "type" : "string"
+  }, {
+    "name" : "resumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "contentHash",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaResumeSelectionModuleSkipped"
+}

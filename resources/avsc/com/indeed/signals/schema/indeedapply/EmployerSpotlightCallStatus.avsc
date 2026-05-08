@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "EmployerSpotlightCallStatus",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "candidateId",
+    "type" : "string"
+  }, {
+    "name" : "spotlightCallSuccess",
+    "type" : "boolean"
+  } ],
+  "logEntryType" : "iaSpotlightCheckMetaLinkCallStatus"
+}

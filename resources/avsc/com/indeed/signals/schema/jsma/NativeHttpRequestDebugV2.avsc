@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "NativeHttpRequestDebugV2",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "headerLength",
+    "type" : "long"
+  }, {
+    "name" : "cookiesLength",
+    "type" : "long"
+  }, {
+    "name" : "referrer",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "errDomain",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "errCode",
+    "type" : [ "null", "int" ]
+  } ]
+}

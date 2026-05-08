@@ -1,0 +1,51 @@
+{
+  "type" : "record",
+  "name" : "RNDevicePropertiesV3",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "fields" : [ {
+    "name" : "platform",
+    "type" : {
+      "type" : "enum",
+      "name" : "RNPlatformsV3",
+      "symbols" : [ "ios", "android" ]
+    }
+  }, {
+    "name" : "osVersion",
+    "type" : "string"
+  }, {
+    "name" : "appName",
+    "type" : {
+      "type" : "enum",
+      "name" : "RNAppsV3",
+      "symbols" : [ "jsma", "ema" ]
+    }
+  }, {
+    "name" : "nativeAppVersion",
+    "type" : "string"
+  }, {
+    "name" : "rnLibraryVersion",
+    "type" : "string"
+  }, {
+    "name" : "rnAppBundleVersion",
+    "type" : "string"
+  }, {
+    "name" : "manufacturer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "model",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "brand",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "systemName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isIpad",
+    "type" : "boolean"
+  } ]
+}

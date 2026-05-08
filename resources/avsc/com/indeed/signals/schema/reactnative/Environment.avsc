@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "Environment",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "symbols" : [ "qa", "prod" ]
+}

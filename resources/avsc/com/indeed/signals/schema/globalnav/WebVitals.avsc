@@ -1,0 +1,209 @@
+{
+  "type" : "record",
+  "name" : "WebVitals",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "appName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "canonicalPageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "clsElement",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "clsHadRecentInput",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "clsSource",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "largestContentfulPaint",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "firstInputDelay",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "cumulativeLayoutShift",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "lcpElement",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "firstContentfulPaint",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "timeToFirstByte",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "timeToInteractive",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "totalBlockingTime",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "allTotalBlockingTime",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "firstUserInteractionTime",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "interactionToNextPaint",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "longtaskDuration",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "longTaskCount",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "viewportHeight",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "viewportWidth",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "lighthouseScore",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "lighthouseScoreV10",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "totalBlockingTimeScore",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "firstContentfulPaintScore",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "largestContentfulPaintScore",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "timeToInteractiveScore",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "cumulativeLayoutShiftScore",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "performanceContext",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "PerformanceAnalysisContext",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "measuredProctors",
+        "type" : [ "null", {
+          "type" : "map",
+          "values" : "string"
+        } ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "requestContext",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "RequestContext",
+      "fields" : [ {
+        "name" : "headers",
+        "type" : [ "null", {
+          "type" : "map",
+          "values" : "string"
+        } ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "prefersDarkMode",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "additionalTags",
+    "type" : [ "null", {
+      "type" : "map",
+      "values" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "segment",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "WebVitalSegment",
+      "fields" : [ {
+        "name" : "loggedIn",
+        "type" : [ "null", "boolean" ],
+        "default" : null
+      }, {
+        "name" : "deviceType",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "WebVitalSegmentDeviceType",
+          "symbols" : [ "DESKTOP", "MOBILEWEB", "ANDROIDAPP", "IOSAPP" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "country",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "WebVitalSegmentCountry",
+          "symbols" : [ "US", "JP", "ROW" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "language",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "WebVitalSegmentLanguage",
+          "symbols" : [ "EN" ]
+        } ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "usingAdBlocker",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "deploymentGroup",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "gnavWebVitals"
+}

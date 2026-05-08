@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ValidationOriginEnum",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "symbols" : [ "PAGE_LOAD", "CONTINUE_CLICK" ]
+}

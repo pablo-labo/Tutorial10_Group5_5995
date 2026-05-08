@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "RequestContext",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "headers",
+    "type" : [ "null", {
+      "type" : "map",
+      "values" : "string"
+    } ],
+    "default" : null
+  } ]
+}

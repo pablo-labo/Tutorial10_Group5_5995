@@ -1,0 +1,50 @@
+{
+  "type" : "record",
+  "name" : "MessagingWebappJsError",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "fields" : [ {
+    "name" : "columnNumber",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "errorMessage",
+    "type" : "string"
+  }, {
+    "name" : "lineNumber",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "parenttk",
+    "type" : "string"
+  }, {
+    "name" : "url",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "environment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Env",
+      "symbols" : [ "QA", "PROD", "UNKNOWN" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "app",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Application",
+      "symbols" : [ "MESSAGING_WEBAPP" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "element",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Element",
+      "symbols" : [ "EVENT_LIST_ITEM", "EVENT_LIST_TEL_ITEM" ]
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "msgw_tJsError",
+  "unstable_metrics" : [ {
+    "name" : "messagingwebapp.jserrors",
+    "tags" : [ "app", "environment", "element" ]
+  } ]
+}

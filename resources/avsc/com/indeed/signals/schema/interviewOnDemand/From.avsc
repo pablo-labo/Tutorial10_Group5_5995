@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "From",
+  "namespace" : "com.indeed.signals.schema.interviewOnDemand",
+  "symbols" : [ "UNKNOWN", "IOD_PUSH" ]
+}

@@ -1,0 +1,35 @@
+{
+  "type" : "record",
+  "name" : "VideoInteraction",
+  "namespace" : "com.indeed.signals.schema.careerguide",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "eventType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "videoId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "videoUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "progressPercentage",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "videoDuration",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "currentTime",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "logEntryType" : "careerGuideVideoInteraction"
+}

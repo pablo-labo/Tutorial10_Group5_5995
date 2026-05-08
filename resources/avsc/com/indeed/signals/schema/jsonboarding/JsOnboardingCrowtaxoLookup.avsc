@@ -1,0 +1,141 @@
+{
+  "type" : "record",
+  "name" : "JsOnboardingCrowtaxoLookup",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "CommonJSOnboardingDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonJSOnboardingDetails",
+      "fields" : [ {
+        "name" : "platformType",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "PlatformType",
+          "symbols" : [ "APP_ANDROID", "APP_IOS", "APP_OTHER", "MOBILE_ANDROID", "MOBILE_IOS", "MOBILE_OTHER", "DESKTOP", "OTHER" ],
+          "default" : "OTHER"
+        } ]
+      }, {
+        "name" : "proctorGroups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "accountId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "userAgent",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "country",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "language",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "onboardingFlowId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "originLogId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "page",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "client",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "Client",
+          "symbols" : [ "jsonboardingwebapp", "jsonboardingreactnative" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "countryCode",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "CountryCode",
+          "symbols" : [ "UNKNOWN", "AE", "AQ", "AR", "AT", "AU", "BE", "BH", "BR", "CA", "CH", "CL", "CN", "CO", "CR", "CZ", "DE", "DK", "EC", "EG", "ES", "FI", "FR", "GB", "GR", "HK", "HU", "ID", "IE", "IL", "IN", "IT", "JP", "KR", "KW", "LU", "MA", "MX", "MY", "NG", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PK", "PL", "PT", "QA", "RO", "RU", "SA", "SE", "SG", "TH", "TR", "TW", "UA", "US", "UY", "VE", "VN", "ZA" ],
+          "default" : "UNKNOWN"
+        } ],
+        "default" : null
+      }, {
+        "name" : "languageCode",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "LanguageCode",
+          "symbols" : [ "UNKNOWN", "ar", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "hi", "hu", "in", "it", "iw", "ja", "jp", "ko", "mr", "ms", "nl", "no", "pl", "pt", "ro", "ru", "sv", "ta", "te", "th", "tr", "uk", "us", "vi", "zh", "zz" ],
+          "default" : "UNKNOWN"
+        } ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "CrowtaxoLookupDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CrowtaxoLookupDetails",
+      "fields" : [ {
+        "name" : "isCrowtaxoEligible",
+        "type" : [ "null", "boolean" ]
+      }, {
+        "name" : "jobTitleTriggered",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "jobTitleTriggeredType",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "allJobTitles",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ]
+      }, {
+        "name" : "occupationSUID",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "occupationText",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "occupationTotalPages",
+        "type" : [ "null", "int" ]
+      } ]
+    }
+  }, {
+    "name" : "questions",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "questionCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "onboarding.onboardingCrowtaxoLookup",
+    "tags" : [ "CommonJSOnboardingDetails.platformType", "CommonJSOnboardingDetails.client", "CommonJSOnboardingDetails.countryCode", "CommonJSOnboardingDetails.languageCode", "CrowtaxoLookupDetails.isCrowtaxoEligible" ]
+  }, {
+    "name" : "onboarding.onboardingCrowtaxoLookup.questionCount",
+    "type" : "distribution",
+    "value" : "questionCount",
+    "tags" : [ "CommonJSOnboardingDetails.platformType", "CommonJSOnboardingDetails.client", "CommonJSOnboardingDetails.countryCode", "CommonJSOnboardingDetails.languageCode", "CrowtaxoLookupDetails.isCrowtaxoEligible" ]
+  } ],
+  "logEntryType" : "onboardingCrowtaxoLookup"
+}

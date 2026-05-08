@@ -1,0 +1,150 @@
+{
+  "type" : "record",
+  "name" : "CampaignLifecycleEvent",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ]
+  }, {
+    "name" : "atsPluginCommon",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonLogEntryFields",
+      "fields" : [ {
+        "name" : "sessionId",
+        "type" : "string"
+      }, {
+        "name" : "userAgent",
+        "type" : "string"
+      }, {
+        "name" : "oauthClientId",
+        "type" : "string"
+      }, {
+        "name" : "atsKey",
+        "type" : "string"
+      }, {
+        "name" : "accountKey",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "advertiserKey",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "browser",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Browser",
+      "symbols" : [ "CHROME", "FIREFOX", "SAFARI", "EDGE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "OS",
+      "symbols" : [ "WINDOWS", "MACOS", "IOS", "ANDROID" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "deviceType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "DeviceType",
+      "symbols" : [ "MOBILE", "TABLET" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "onehost",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "BooleanTag",
+      "symbols" : [ "TRUE", "FALSE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "eventType",
+    "type" : {
+      "type" : "enum",
+      "name" : "CampaignLifecycleEventType",
+      "symbols" : [ "EDIT_CAMPAIGN_STARTED", "BUDGET_MODIFIED", "DATE_MODIFIED", "CAMPAIGN_PAUSED", "CAMPAIGN_RESUMED", "CAMPAIGN_DELETED", "REVIEW_CLICKED", "EDIT_ON_REVIEW_CLICKED", "EDIT_CAMPAIGN_COMPLETED", "EDIT_CAMPAIGN_ABANDONED", "EDIT_CAMPAIGN_FAILED" ]
+    }
+  }, {
+    "name" : "campaignId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "refNum",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "sourceName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobTitle",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "previousBudget",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "newBudget",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "suggestedBudget",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "budgetDelta",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "monthlySponsorship",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "startDate",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "endDate",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "result",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Result",
+      "symbols" : [ "SUCCESS", "FAILURE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "failureDetails",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "IPlusAtsPlugin.SponsoredJobs.campaignLifecycle",
+    "type" : "count",
+    "tags" : [ "browser", "os", "deviceType", "onehost", "eventType", "result" ]
+  } ],
+  "logEntryType" : "iplus_atsplugin_CampaignLifecycleEvent"
+}

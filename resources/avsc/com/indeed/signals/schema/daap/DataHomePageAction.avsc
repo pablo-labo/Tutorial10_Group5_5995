@@ -1,0 +1,53 @@
+{
+  "type" : "record",
+  "name" : "DataHomePageAction",
+  "namespace" : "com.indeed.signals.schema.daap",
+  "fields" : [ {
+    "name" : "event_type",
+    "type" : "string"
+  }, {
+    "name" : "name",
+    "type" : "string"
+  }, {
+    "name" : "username",
+    "type" : "string"
+  }, {
+    "name" : "provider_url",
+    "type" : "string"
+  }, {
+    "name" : "nanosecond",
+    "type" : "long"
+  }, {
+    "name" : "nanosecond_source",
+    "type" : "string"
+  }, {
+    "name" : "provider_id",
+    "type" : "string"
+  }, {
+    "name" : "provider_name",
+    "type" : "string"
+  }, {
+    "name" : "source",
+    "type" : "string"
+  }, {
+    "name" : "action_details",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "before",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "after",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "provider_version",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "proctor_groups",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "data_home_page_events"
+}

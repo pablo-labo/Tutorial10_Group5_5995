@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "QuestionType",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "UNKNOWN", "SINGLE_CHOICE", "MULTI_CHOICE" ],
+  "default" : "UNKNOWN"
+}

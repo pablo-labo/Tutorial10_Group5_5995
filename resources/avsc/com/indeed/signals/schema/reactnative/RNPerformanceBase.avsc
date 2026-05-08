@@ -1,0 +1,11 @@
+{
+  "type" : "record",
+  "name" : "RNPerformanceBase",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "doc" : "Base performance metrics shared by all providers",
+  "fields" : [ {
+    "name" : "timeToInteractiveMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ]
+}

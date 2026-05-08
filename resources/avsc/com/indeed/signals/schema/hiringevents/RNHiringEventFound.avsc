@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "RNHiringEventFound",
+  "namespace" : "com.indeed.signals.schema.hiringevents",
+  "fields" : [ {
+    "name" : "hiringEventUuid",
+    "type" : "string"
+  }, {
+    "name" : "jobkey",
+    "type" : [ "null", "string" ]
+  } ],
+  "logEntryType" : "rnHiringEventFound"
+}

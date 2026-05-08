@@ -1,0 +1,52 @@
+{
+  "type" : "record",
+  "name" : "MosaicUserInteraction",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "provider",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isEvergreenBrowser",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "loadMethod",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "width",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "height",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "extraProperties",
+    "type" : {
+      "type" : "map",
+      "values" : {
+        "type" : "record",
+        "name" : "MosaicDynamicProperty",
+        "fields" : [ {
+          "name" : "property",
+          "type" : [ "null", "string" ]
+        } ]
+      }
+    },
+    "default" : { }
+  } ]
+}

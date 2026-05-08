@@ -1,0 +1,42 @@
+{
+  "type" : "record",
+  "name" : "UserInteraction",
+  "namespace" : "com.indeed.signals.schema.careerguide",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "eventType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "linkUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "linkText",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "elementId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "additionalData",
+    "type" : [ "null", {
+      "type" : "map",
+      "values" : "string"
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "careerGuideInteraction"
+}

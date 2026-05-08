@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ViewType",
+  "namespace" : "com.indeed.signals",
+  "symbols" : [ "WEB" ]
+}

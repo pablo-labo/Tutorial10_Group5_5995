@@ -1,0 +1,140 @@
+{
+  "type" : "record",
+  "name" : "RNViewJobPerformance",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "doc" : "Performance metrics specific to viewjob provider",
+  "fields" : [ {
+    "name" : "deviceProperties",
+    "type" : {
+      "type" : "record",
+      "name" : "RNDevicePropertiesV4",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNPlatformsV4",
+          "symbols" : [ "ios", "android" ]
+        }
+      }, {
+        "name" : "osVersion",
+        "type" : "string"
+      }, {
+        "name" : "appName",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNAppsV4",
+          "symbols" : [ "jsma", "ema" ]
+        }
+      }, {
+        "name" : "nativeAppVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnLibraryVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnAppBundleVersion",
+        "type" : "string"
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "brand",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "systemName",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "buildVariant",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "environment",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "variant",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "BuildVariant",
+          "symbols" : [ "debug", "release" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "env",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "Environment",
+          "symbols" : [ "qa", "prod" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "isIpad",
+        "type" : "boolean"
+      } ]
+    }
+  }, {
+    "name" : "baseMetrics",
+    "type" : {
+      "type" : "record",
+      "name" : "RNPerformanceBase",
+      "doc" : "Base performance metrics shared by all providers",
+      "fields" : [ {
+        "name" : "timeToInteractiveMs",
+        "type" : [ "null", "long" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "fetchStartMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "fetchEndMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "timeToFirstFrameMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "mountStartMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "firstInputDelayMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "firstInputType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "provider",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "componentName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "grps",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "payloadSize",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "logEntryType" : "rnViewJobPerformance"
+}

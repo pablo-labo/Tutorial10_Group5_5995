@@ -1,0 +1,26 @@
+{
+  "type" : "record",
+  "name" : "iaResumeSnippetUpdateEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumeSnippetUpdate"
+  }, {
+    "name" : "previousResumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "updatedResumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "globalResumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaResumeSnippetUpdate"
+}

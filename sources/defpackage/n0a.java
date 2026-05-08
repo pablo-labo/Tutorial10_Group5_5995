@@ -1,0 +1,51 @@
+package defpackage;
+
+import kotlin.jvm.functions.Function2;
+
+/* JADX INFO: loaded from: classes.dex */
+@uh3(c = "androidx.compose.foundation.gestures.MouseWheelScrollingLogic$userScroll$2", f = "MouseWheelScrollable.kt", l = {122}, m = "invokeSuspend")
+public final class n0a extends c1f implements Function2<e13, lu2<? super j6g>, Object> {
+    final /* synthetic */ Function2<afa, lu2<? super j6g>, Object> $block;
+    final /* synthetic */ xsd $this_userScroll;
+    int label;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public n0a(lu2 lu2Var, xsd xsdVar, Function2 function2) {
+        super(2, lu2Var);
+        this.$this_userScroll = xsdVar;
+        this.$block = function2;
+    }
+
+    @Override // defpackage.x81
+    public final lu2<j6g> create(Object obj, lu2<?> lu2Var) {
+        return new n0a(lu2Var, this.$this_userScroll, this.$block);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(e13 e13Var, lu2<? super j6g> lu2Var) {
+        return ((n0a) create(e13Var, lu2Var)).invokeSuspend(j6g.a);
+    }
+
+    @Override // defpackage.x81
+    public final Object invokeSuspend(Object obj) {
+        int i = this.label;
+        if (i == 0) {
+            r7d.b(obj);
+            xsd xsdVar = this.$this_userScroll;
+            Function2<afa, lu2<? super j6g>, Object> function2 = this.$block;
+            this.label = 1;
+            Object objF = xsdVar.f(n4a.b, function2, this);
+            g13 g13Var = g13.a;
+            if (objF == g13Var) {
+                return g13Var;
+            }
+        } else {
+            if (i != 1) {
+                r6.g("call to 'resume' before 'invoke' with coroutine");
+                return null;
+            }
+            r7d.b(obj);
+        }
+        return j6g.a;
+    }
+}

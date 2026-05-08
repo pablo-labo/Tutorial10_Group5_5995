@@ -1,0 +1,31 @@
+{
+  "type" : "record",
+  "name" : "DwellTime",
+  "namespace" : "com.indeed.signals.schema.careerguide",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "startTime",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "endTime",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "duration",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "isVisible",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "logEntryType" : "careerGuideDwellTime"
+}

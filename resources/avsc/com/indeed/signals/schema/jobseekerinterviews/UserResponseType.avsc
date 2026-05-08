@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "UserResponseType",
+  "namespace" : "com.indeed.signals.schema.jobseekerinterviews",
+  "symbols" : [ "CONFIRM", "RESCHEDULE", "CANCEL", "DISMISS", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

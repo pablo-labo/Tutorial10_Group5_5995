@@ -1,0 +1,11 @@
+{
+  "type" : "record",
+  "name" : "MosaicSignalsTest",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "testField",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "mosaicSignalsTests"
+}

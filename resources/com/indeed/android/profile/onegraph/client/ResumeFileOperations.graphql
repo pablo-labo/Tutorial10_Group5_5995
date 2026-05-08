@@ -1,0 +1,47 @@
+query GetJobSeekerProfileDualResumesEnabled {
+    jobSeekerProfileDualResumesEnabled {
+        enabled
+    }
+}
+
+query GetJobSeekerResumes {
+    jobSeekerResumes {
+        resumes {
+            resumeId
+            pdfResumeFile {
+                url
+                metadata {
+                    id
+                    clientApp
+                    fileName
+                    fileType
+                    mediaType
+                    fileDescription
+                    extension
+                    standardHashCode
+                    uploadTimestamp
+                }
+            }
+            originalUploadedFile {
+                url
+                metadata {
+                    id
+                    clientApp
+                    fileName
+                    fileType
+                    mediaType
+                    fileDescription
+                    extension
+                    standardHashCode
+                    uploadTimestamp
+                }
+            }
+        }
+    }
+}
+
+mutation DeleteResumeBundle($input: DeleteResumeBundleInput!) {
+    deleteResumeBundle(input: $input) {
+        resumeId
+    }
+}

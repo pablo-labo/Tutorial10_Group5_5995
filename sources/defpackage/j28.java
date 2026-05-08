@@ -1,0 +1,297 @@
+package defpackage;
+
+import com.datadog.android.core.internal.data.upload.DataOkHttpUploader;
+import com.datadog.android.rum.internal.debug.UiRumDebugListener;
+import com.facebook.react.fabric.mounting.mountitems.IntBufferBatchMountItem;
+
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+/* JADX INFO: loaded from: classes3.dex */
+public final class j28 {
+    public static final /* synthetic */ j28[] H4;
+    public static final /* synthetic */ wv4 I4;
+    public static final a a;
+    private final String rawValue;
+    public static final j28 b = new j28("US", 0, "US");
+    public static final j28 c = new j28("AF", 1, "AF");
+    public static final j28 d = new j28("AL", 2, "AL");
+    public static final j28 e = new j28("DZ", 3, "DZ");
+    public static final j28 f = new j28("AS", 4, "AS");
+    public static final j28 V = new j28("AD", 5, "AD");
+    public static final j28 W = new j28("AO", 6, "AO");
+    public static final j28 X = new j28("AI", 7, "AI");
+    public static final j28 Y = new j28("AQ", 8, "AQ");
+    public static final j28 Z = new j28("AG", 9, "AG");
+    public static final j28 a0 = new j28("AR", 10, "AR");
+    public static final j28 b0 = new j28("AM", 11, "AM");
+    public static final j28 c0 = new j28("AW", 12, "AW");
+    public static final j28 d0 = new j28("AU", 13, "AU");
+    public static final j28 e0 = new j28("AT", 14, "AT");
+    public static final j28 f0 = new j28("AZ", 15, "AZ");
+    public static final j28 g0 = new j28("BS", 16, "BS");
+    public static final j28 h0 = new j28("BH", 17, "BH");
+    public static final j28 i0 = new j28("BD", 18, "BD");
+    public static final j28 j0 = new j28("BB", 19, "BB");
+    public static final j28 k0 = new j28("BY", 20, "BY");
+    public static final j28 l0 = new j28("BE", 21, "BE");
+    public static final j28 m0 = new j28("BZ", 22, "BZ");
+    public static final j28 n0 = new j28("BJ", 23, "BJ");
+    public static final j28 o0 = new j28("BM", 24, "BM");
+    public static final j28 p0 = new j28("BT", 25, "BT");
+    public static final j28 q0 = new j28("BO", 26, "BO");
+    public static final j28 r0 = new j28("BQ", 27, "BQ");
+    public static final j28 s0 = new j28("BA", 28, "BA");
+    public static final j28 t0 = new j28("BW", 29, "BW");
+    public static final j28 u0 = new j28("BV", 30, "BV");
+    public static final j28 v0 = new j28("BR", 31, "BR");
+    public static final j28 w0 = new j28("IO", 32, "IO");
+    public static final j28 x0 = new j28("VG", 33, "VG");
+    public static final j28 y0 = new j28("BN", 34, "BN");
+    public static final j28 z0 = new j28("BG", 35, "BG");
+    public static final j28 A0 = new j28("BF", 36, "BF");
+    public static final j28 B0 = new j28("BI", 37, "BI");
+    public static final j28 C0 = new j28("KH", 38, "KH");
+    public static final j28 D0 = new j28("CM", 39, "CM");
+    public static final j28 E0 = new j28("CA", 40, "CA");
+    public static final j28 F0 = new j28("CV", 41, "CV");
+    public static final j28 G0 = new j28("KY", 42, "KY");
+    public static final j28 H0 = new j28("CF", 43, "CF");
+    public static final j28 I0 = new j28("TD", 44, "TD");
+    public static final j28 J0 = new j28("CL", 45, "CL");
+    public static final j28 K0 = new j28("CN", 46, "CN");
+    public static final j28 L0 = new j28("CX", 47, "CX");
+    public static final j28 M0 = new j28("CC", 48, "CC");
+    public static final j28 N0 = new j28("CO", 49, "CO");
+    public static final j28 O0 = new j28("KM", 50, "KM");
+    public static final j28 P0 = new j28("CG", 51, "CG");
+    public static final j28 Q0 = new j28("CK", 52, "CK");
+    public static final j28 R0 = new j28("CR", 53, "CR");
+    public static final j28 S0 = new j28("HR", 54, "HR");
+    public static final j28 T0 = new j28("CU", 55, "CU");
+    public static final j28 U0 = new j28("CW", 56, "CW");
+    public static final j28 V0 = new j28("CY", 57, "CY");
+    public static final j28 W0 = new j28("CZ", 58, "CZ");
+    public static final j28 X0 = new j28("CI", 59, "CI");
+    public static final j28 Y0 = new j28("DK", 60, "DK");
+    public static final j28 Z0 = new j28("DJ", 61, "DJ");
+    public static final j28 a1 = new j28("DM", 62, "DM");
+    public static final j28 b1 = new j28("DO", 63, "DO");
+    public static final j28 c1 = new j28("EC", 64, "EC");
+    public static final j28 d1 = new j28("EG", 65, "EG");
+    public static final j28 e1 = new j28("SV", 66, "SV");
+    public static final j28 f1 = new j28("GQ", 67, "GQ");
+    public static final j28 g1 = new j28("ER", 68, "ER");
+    public static final j28 h1 = new j28("EE", 69, "EE");
+    public static final j28 i1 = new j28("ET", 70, "ET");
+    public static final j28 j1 = new j28("FK", 71, "FK");
+    public static final j28 k1 = new j28("FO", 72, "FO");
+    public static final j28 l1 = new j28("FJ", 73, "FJ");
+    public static final j28 m1 = new j28("FI", 74, "FI");
+    public static final j28 n1 = new j28("FR", 75, "FR");
+    public static final j28 o1 = new j28("GF", 76, "GF");
+    public static final j28 p1 = new j28("PF", 77, "PF");
+    public static final j28 q1 = new j28("TF", 78, "TF");
+    public static final j28 r1 = new j28("GA", 79, "GA");
+    public static final j28 s1 = new j28("GM", 80, "GM");
+    public static final j28 t1 = new j28("GE", 81, "GE");
+    public static final j28 u1 = new j28("DE", 82, "DE");
+    public static final j28 v1 = new j28("GH", 83, "GH");
+    public static final j28 w1 = new j28("GI", 84, "GI");
+    public static final j28 x1 = new j28("GR", 85, "GR");
+    public static final j28 y1 = new j28("GL", 86, "GL");
+    public static final j28 z1 = new j28("GD", 87, "GD");
+    public static final j28 A1 = new j28("GP", 88, "GP");
+    public static final j28 B1 = new j28("GU", 89, "GU");
+    public static final j28 C1 = new j28("GT", 90, "GT");
+    public static final j28 D1 = new j28("GG", 91, "GG");
+    public static final j28 E1 = new j28("GN", 92, "GN");
+    public static final j28 F1 = new j28("GW", 93, "GW");
+    public static final j28 G1 = new j28("GY", 94, "GY");
+    public static final j28 H1 = new j28("HT", 95, "HT");
+    public static final j28 I1 = new j28("HM", 96, "HM");
+    public static final j28 J1 = new j28("HN", 97, "HN");
+    public static final j28 K1 = new j28("HK", 98, "HK");
+    public static final j28 L1 = new j28("HU", 99, "HU");
+    public static final j28 M1 = new j28("IS", 100, "IS");
+    public static final j28 N1 = new j28("IN", 101, "IN");
+    public static final j28 O1 = new j28("ID", 102, "ID");
+    public static final j28 P1 = new j28("IR", 103, "IR");
+    public static final j28 Q1 = new j28("IQ", 104, "IQ");
+    public static final j28 R1 = new j28("IE", 105, "IE");
+    public static final j28 S1 = new j28("IM", 106, "IM");
+    public static final j28 T1 = new j28("IL", 107, "IL");
+    public static final j28 U1 = new j28("IT", 108, "IT");
+    public static final j28 V1 = new j28("JM", 109, "JM");
+    public static final j28 W1 = new j28("JP", 110, "JP");
+    public static final j28 X1 = new j28("JE", 111, "JE");
+    public static final j28 Y1 = new j28("JO", 112, "JO");
+    public static final j28 Z1 = new j28("KZ", 113, "KZ");
+    public static final j28 a2 = new j28("KE", 114, "KE");
+    public static final j28 b2 = new j28("KI", 115, "KI");
+    public static final j28 c2 = new j28("KW", 116, "KW");
+    public static final j28 d2 = new j28("KG", 117, "KG");
+    public static final j28 e2 = new j28("LA", 118, "LA");
+    public static final j28 f2 = new j28("LV", 119, "LV");
+    public static final j28 g2 = new j28("LB", 120, "LB");
+    public static final j28 h2 = new j28("LS", 121, "LS");
+    public static final j28 i2 = new j28("LR", 122, "LR");
+    public static final j28 j2 = new j28("LY", 123, "LY");
+    public static final j28 k2 = new j28("LI", 124, "LI");
+    public static final j28 l2 = new j28("LT", 125, "LT");
+    public static final j28 m2 = new j28("LU", 126, "LU");
+    public static final j28 n2 = new j28("MO", 127, "MO");
+    public static final j28 o2 = new j28("MK", IntBufferBatchMountItem.INSTRUCTION_UPDATE_LAYOUT, "MK");
+    public static final j28 p2 = new j28("MG", 129, "MG");
+    public static final j28 q2 = new j28("MW", 130, "MW");
+    public static final j28 r2 = new j28("MY", 131, "MY");
+    public static final j28 s2 = new j28("MV", 132, "MV");
+    public static final j28 t2 = new j28("ML", 133, "ML");
+    public static final j28 u2 = new j28("MT", 134, "MT");
+    public static final j28 v2 = new j28("MH", 135, "MH");
+    public static final j28 w2 = new j28("MQ", 136, "MQ");
+    public static final j28 x2 = new j28("MR", 137, "MR");
+    public static final j28 y2 = new j28("MU", 138, "MU");
+    public static final j28 z2 = new j28("YT", 139, "YT");
+    public static final j28 A2 = new j28("MX", 140, "MX");
+    public static final j28 B2 = new j28("FM", 141, "FM");
+    public static final j28 C2 = new j28("MD", 142, "MD");
+    public static final j28 D2 = new j28("MC", 143, "MC");
+    public static final j28 E2 = new j28("MN", 144, "MN");
+    public static final j28 F2 = new j28("ME", 145, "ME");
+    public static final j28 G2 = new j28("MS", 146, "MS");
+    public static final j28 H2 = new j28("MA", 147, "MA");
+    public static final j28 I2 = new j28("MZ", 148, "MZ");
+    public static final j28 J2 = new j28("MM", 149, "MM");
+    public static final j28 K2 = new j28("NA", 150, "NA");
+    public static final j28 L2 = new j28("NR", 151, "NR");
+    public static final j28 M2 = new j28("NP", 152, "NP");
+    public static final j28 N2 = new j28("NL", 153, "NL");
+    public static final j28 O2 = new j28("AN", 154, "AN");
+    public static final j28 P2 = new j28("NC", 155, "NC");
+    public static final j28 Q2 = new j28("NZ", 156, "NZ");
+    public static final j28 R2 = new j28("NI", 157, "NI");
+    public static final j28 S2 = new j28("NE", 158, "NE");
+    public static final j28 T2 = new j28("NG", 159, "NG");
+    public static final j28 U2 = new j28("NU", 160, "NU");
+    public static final j28 V2 = new j28("NF", 161, "NF");
+    public static final j28 W2 = new j28("KP", 162, "KP");
+    public static final j28 X2 = new j28("MP", 163, "MP");
+    public static final j28 Y2 = new j28("NO", 164, "NO");
+    public static final j28 Z2 = new j28("OM", 165, "OM");
+    public static final j28 a3 = new j28("PK", 166, "PK");
+    public static final j28 b3 = new j28("PW", 167, "PW");
+    public static final j28 c3 = new j28("PS", 168, "PS");
+    public static final j28 d3 = new j28("PA", 169, "PA");
+    public static final j28 e3 = new j28("PG", 170, "PG");
+    public static final j28 f3 = new j28("PY", 171, "PY");
+    public static final j28 g3 = new j28("PE", 172, "PE");
+    public static final j28 h3 = new j28("PH", 173, "PH");
+    public static final j28 i3 = new j28("PN", 174, "PN");
+    public static final j28 j3 = new j28("PL", 175, "PL");
+    public static final j28 k3 = new j28("PT", 176, "PT");
+    public static final j28 l3 = new j28("PR", 177, "PR");
+    public static final j28 m3 = new j28("QA", 178, "QA");
+    public static final j28 n3 = new j28("RE", 179, "RE");
+    public static final j28 o3 = new j28("RO", 180, "RO");
+    public static final j28 p3 = new j28("RU", 181, "RU");
+    public static final j28 q3 = new j28("RW", 182, "RW");
+    public static final j28 r3 = new j28("BL", 183, "BL");
+    public static final j28 s3 = new j28("SH", 184, "SH");
+    public static final j28 t3 = new j28("KN", 185, "KN");
+    public static final j28 u3 = new j28("LC", 186, "LC");
+    public static final j28 v3 = new j28("MF", 187, "MF");
+    public static final j28 w3 = new j28("PM", 188, "PM");
+    public static final j28 x3 = new j28("VC", 189, "VC");
+    public static final j28 y3 = new j28("WS", 190, "WS");
+    public static final j28 z3 = new j28("SM", 191, "SM");
+    public static final j28 A3 = new j28("ST", 192, "ST");
+    public static final j28 B3 = new j28("SA", 193, "SA");
+    public static final j28 C3 = new j28("SN", 194, "SN");
+    public static final j28 D3 = new j28("RS", 195, "RS");
+    public static final j28 E3 = new j28("SC", 196, "SC");
+    public static final j28 F3 = new j28("SL", 197, "SL");
+    public static final j28 G3 = new j28("SG", 198, "SG");
+    public static final j28 H3 = new j28("SX", 199, "SX");
+    public static final j28 I3 = new j28("SK", UiRumDebugListener.DEFAULT_ALPHA, "SK");
+    public static final j28 J3 = new j28("SI", 201, "SI");
+    public static final j28 K3 = new j28("SB", DataOkHttpUploader.HTTP_ACCEPTED, "SB");
+    public static final j28 L3 = new j28("SO", 203, "SO");
+    public static final j28 M3 = new j28("ZA", 204, "ZA");
+    public static final j28 N3 = new j28("GS", 205, "GS");
+    public static final j28 O3 = new j28("KR", 206, "KR");
+    public static final j28 P3 = new j28("SS", 207, "SS");
+    public static final j28 Q3 = new j28("ES", 208, "ES");
+    public static final j28 R3 = new j28("LK", 209, "LK");
+    public static final j28 S3 = new j28("SD", 210, "SD");
+    public static final j28 T3 = new j28("SR", 211, "SR");
+    public static final j28 U3 = new j28("SJ", 212, "SJ");
+    public static final j28 V3 = new j28("SZ", 213, "SZ");
+    public static final j28 W3 = new j28("SE", 214, "SE");
+    public static final j28 X3 = new j28("CH", 215, "CH");
+    public static final j28 Y3 = new j28("SY", 216, "SY");
+    public static final j28 Z3 = new j28("TW", 217, "TW");
+    public static final j28 a4 = new j28("TJ", 218, "TJ");
+    public static final j28 b4 = new j28("TZ", 219, "TZ");
+    public static final j28 c4 = new j28("TH", 220, "TH");
+    public static final j28 d4 = new j28("CD", 221, "CD");
+    public static final j28 e4 = new j28("TL", 222, "TL");
+    public static final j28 f4 = new j28("TG", 223, "TG");
+    public static final j28 g4 = new j28("TK", 224, "TK");
+    public static final j28 h4 = new j28("TO", 225, "TO");
+    public static final j28 i4 = new j28("TT", 226, "TT");
+    public static final j28 j4 = new j28("TN", 227, "TN");
+    public static final j28 k4 = new j28("TR", 228, "TR");
+    public static final j28 l4 = new j28("TM", 229, "TM");
+    public static final j28 m4 = new j28("TC", 230, "TC");
+    public static final j28 n4 = new j28("TV", 231, "TV");
+    public static final j28 o4 = new j28("VI", 232, "VI");
+    public static final j28 p4 = new j28("UG", 233, "UG");
+    public static final j28 q4 = new j28("UA", 234, "UA");
+    public static final j28 r4 = new j28("AE", 235, "AE");
+    public static final j28 s4 = new j28("GB", 236, "GB");
+    public static final j28 t4 = new j28("UM", 237, "UM");
+    public static final j28 u4 = new j28("UY", 238, "UY");
+    public static final j28 v4 = new j28("UZ", 239, "UZ");
+    public static final j28 w4 = new j28("VU", 240, "VU");
+    public static final j28 x4 = new j28("VA", 241, "VA");
+    public static final j28 y4 = new j28("VE", 242, "VE");
+    public static final j28 z4 = new j28("VN", 243, "VN");
+    public static final j28 A4 = new j28("WF", 244, "WF");
+    public static final j28 B4 = new j28("EH", 245, "EH");
+    public static final j28 C4 = new j28("YE", 246, "YE");
+    public static final j28 D4 = new j28("ZM", 247, "ZM");
+    public static final j28 E4 = new j28("ZW", 248, "ZW");
+    public static final j28 F4 = new j28("AX", 249, "AX");
+    public static final j28 G4 = new j28("UNKNOWN__", 250, "UNKNOWN__");
+
+    public static final class a {
+    }
+
+    static {
+        j28[] j28VarArrA = a();
+        H4 = j28VarArrA;
+        I4 = ojh.k(j28VarArrA);
+        a = new a();
+        new bw4("JobSeekerProfileInternationalEmploymentEligibilityMultiCountries", u63.a0("US", "AF", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR", "AM", "AW", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CA", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "CI", "DK", "DJ", "DM", "DO", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "AN", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "KP", "MP", "NO", "OM", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "KR", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "CD", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "VI", "UG", "UA", "AE", "GB", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "WF", "EH", "YE", "ZM", "ZW", "AX"));
+    }
+
+    public j28(String str, int i, String str2) {
+        this.rawValue = str2;
+    }
+
+    public static final /* synthetic */ j28[] a() {
+        return new j28[]{b, c, d, e, f, V, W, X, Y, Z, a0, b0, c0, d0, e0, f0, g0, h0, i0, j0, k0, l0, m0, n0, o0, p0, q0, r0, s0, t0, u0, v0, w0, x0, y0, z0, A0, B0, C0, D0, E0, F0, G0, H0, I0, J0, K0, L0, M0, N0, O0, P0, Q0, R0, S0, T0, U0, V0, W0, X0, Y0, Z0, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, k1, l1, m1, n1, o1, p1, q1, r1, s1, t1, u1, v1, w1, x1, y1, z1, A1, B1, C1, D1, E1, F1, G1, H1, I1, J1, K1, L1, M1, N1, O1, P1, Q1, R1, S1, T1, U1, V1, W1, X1, Y1, Z1, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, k2, l2, m2, n2, o2, p2, q2, r2, s2, t2, u2, v2, w2, x2, y2, z2, A2, B2, C2, D2, E2, F2, G2, H2, I2, J2, K2, L2, M2, N2, O2, P2, Q2, R2, S2, T2, U2, V2, W2, X2, Y2, Z2, a3, b3, c3, d3, e3, f3, g3, h3, i3, j3, k3, l3, m3, n3, o3, p3, q3, r3, s3, t3, u3, v3, w3, x3, y3, z3, A3, B3, C3, D3, E3, F3, G3, H3, I3, J3, K3, L3, M3, N3, O3, P3, Q3, R3, S3, T3, U3, V3, W3, X3, Y3, Z3, a4, b4, c4, d4, e4, f4, g4, h4, i4, j4, k4, l4, m4, n4, o4, p4, q4, r4, s4, t4, u4, v4, w4, x4, y4, z4, A4, B4, C4, D4, E4, F4, G4};
+    }
+
+    public static j28 valueOf(String str) {
+        return (j28) Enum.valueOf(j28.class, str);
+    }
+
+    public static j28[] values() {
+        return (j28[]) H4.clone();
+    }
+
+    public final String c() {
+        return this.rawValue;
+    }
+}

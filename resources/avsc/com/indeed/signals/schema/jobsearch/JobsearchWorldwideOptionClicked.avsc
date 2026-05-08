@@ -1,0 +1,36 @@
+{
+  "type" : "record",
+  "name" : "JobsearchWorldwideOptionClicked",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "userEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UserEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "DESKTOP", "APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "countryCode",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "languageCode",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "targetUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "jobsearch.worldwide.optionClicked",
+    "tags" : [ "userEnvironment" ]
+  } ],
+  "logEntryType" : "jsWorldwideOptionClicked"
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ChecklistItemType",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "UNKNOWN", "TOP_CHOICE", "TOP_EARLY_APPLICANT", "AI_INTERVIEW", "PROFILE_ENGAGEMENT" ],
+  "default" : "UNKNOWN"
+}

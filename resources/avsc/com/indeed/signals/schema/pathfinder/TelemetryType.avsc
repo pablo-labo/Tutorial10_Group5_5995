@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "TelemetryType",
+  "namespace" : "com.indeed.signals.schema.pathfinder",
+  "symbols" : [ "VIEW", "ERROR", "SESSION_START", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

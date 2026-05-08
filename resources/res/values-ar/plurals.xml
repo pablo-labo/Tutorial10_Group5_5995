@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="zero">%d من الآراء</item>
+        <item quantity="one">رأي واحد</item>
+        <item quantity="two">%d من الآراء</item>
+        <item quantity="few">%d من الآراء</item>
+        <item quantity="many">%d من الآراء</item>
+        <item quantity="other">%d من الآراء</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="zero">تقديم سريع للفيديو بمقدار %d ثانية</item>
+        <item quantity="one">تقديم سريع للفيديو بمقدار ثانية واحدة (%d)</item>
+        <item quantity="two">تقديم سريع للفيديو بمقدار ثانيتَين (%d)</item>
+        <item quantity="few">تقديم سريع للفيديو بمقدار %d ثوانٍ</item>
+        <item quantity="many">تقديم سريع للفيديو بمقدار %d ثانية</item>
+        <item quantity="other">تقديم سريع للفيديو بمقدار %d ثانية</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="zero">ترجيع الفيديو بمقدار %d ثانية</item>
+        <item quantity="one">ترجيع الفيديو بمقدار ثانية واحدة (%d)</item>
+        <item quantity="two">ترجيع الفيديو بمقدار ثانيتَين (%d)</item>
+        <item quantity="few">ترجيع الفيديو بمقدار %d ثوانٍ</item>
+        <item quantity="many">ترجيع الفيديو بمقدار %d ثانية</item>
+        <item quantity="other">ترجيع الفيديو بمقدار %d ثانية</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="zero">%s من الدقائق</item>
+        <item quantity="one">%s من الدقائق</item>
+        <item quantity="two">%s من الدقائق</item>
+        <item quantity="few">%s من الدقائق</item>
+        <item quantity="many">%s من الدقائق</item>
+        <item quantity="other">%s من الدقائق</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="zero">تبدأ المقابلة في غضون %d من الساعات</item>
+        <item quantity="one">تبدأ المقابلة في غضون %d من الساعات</item>
+        <item quantity="two">تبدأ المقابلة في غضون %d من الساعات</item>
+        <item quantity="few">تبدأ المقابلة في غضون %d من الساعات</item>
+        <item quantity="many">تبدأ المقابلة في غضون %d من الساعات</item>
+        <item quantity="other">تبدأ المقابلة في غضون %d من الساعات</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="zero">تبدأ المقابلة في غضون %d من الدقائق</item>
+        <item quantity="one">تبدأ المقابلة في غضون %d من الدقائق</item>
+        <item quantity="two">تبدأ المقابلة في غضون %d من الدقائق</item>
+        <item quantity="few">تبدأ المقابلة في غضون %d من الدقائق</item>
+        <item quantity="many">تبدأ المقابلة في غضون %d من الدقائق</item>
+        <item quantity="other">تبدأ المقابلة في غضون %d من الدقائق</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="zero">لم يتم تحميل %d ملفات ولن يتم تضمينها في رسالتك.</item>
+        <item quantity="one">لم يتم تحميل %d ملفاً ولن يتم تضمينها في رسالتك.</item>
+        <item quantity="two">لم يتم تحميل %d ملفات ولن يتم تضمينها في رسالتك.</item>
+        <item quantity="few">لم يتم تحميل %d ملفات ولن يتم تضمينها في رسالتك.</item>
+        <item quantity="many">لم يتم تحميل %d ملفات ولن يتم تضمينها في رسالتك.</item>
+        <item quantity="other">لم يتم تحميل %d من الملفات ولن يتم تضمينها في رسالتك.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="zero">لم يتم تحميل %d ملفات</item>
+        <item quantity="one">لم يتم تحميل %d ملفاً</item>
+        <item quantity="two">لم يتم تحميل %d ملفات</item>
+        <item quantity="few">لم يتم تحميل %d ملفات</item>
+        <item quantity="many">لم يتم تحميل %d ملفات</item>
+        <item quantity="other">لم يتم تحميل %d ملفات</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="zero">%d من الرسائل غير مقروءة</item>
+        <item quantity="one">%d من الرسائل غير مقروءة</item>
+        <item quantity="two">%d من الرسائل غير مقروءة</item>
+        <item quantity="few">%d من الرسائل غير مقروءة</item>
+        <item quantity="many">%d من الرسائل غير مقروءة</item>
+        <item quantity="other">%d من الرسائل غير مقروءة</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="zero">%d إشعار جديد</item>
+        <item quantity="one">إشعار جديد واحد (%d)</item>
+        <item quantity="two">إشعاران جديدان (%d)</item>
+        <item quantity="few">%d إشعارات جديدة</item>
+        <item quantity="many">%d إشعارًا جديدًا</item>
+        <item quantity="other">%d إشعار جديد</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="zero">عادةً ما يرد صاحب العمل هذا في غضون %d من الأيام</item>
+        <item quantity="one">عادةً ما يرد صاحب العمل هذا في غضون %d يومًا</item>
+        <item quantity="two">عادةً ما يرد صاحب العمل هذا في غضون %d من الأيام</item>
+        <item quantity="few">عادةً ما يرد صاحب العمل هذا في غضون %d من الأيام</item>
+        <item quantity="many">عادةً ما يرد صاحب العمل هذا في غضون %d من الأيام</item>
+        <item quantity="other">عادةً ما يرد صاحب العمل هذا في غضون %d من الأيام</item>
+    </plurals>
+</resources>

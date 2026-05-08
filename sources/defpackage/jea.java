@@ -1,0 +1,78 @@
+package defpackage;
+
+import defpackage.ha;
+import defpackage.yda;
+import java.util.Iterator;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class jea implements ga<yda.j> {
+    public static final jea a = new jea();
+    public static final List<String> b = u63.a0("id", "destinationUrl", "label");
+
+    @Override // defpackage.ga
+    public final yda.j a(mb8 mb8Var, lb3 lb3Var) {
+        Object next;
+        mb8Var.getClass();
+        lb3Var.getClass();
+        vca vcaVar = null;
+        Object objA = null;
+        String str = null;
+        while (true) {
+            int iD1 = mb8Var.D1(b);
+            if (iD1 == 0) {
+                String strI0 = mb8Var.I0();
+                strI0.getClass();
+                vca.a.getClass();
+                Iterator<T> it = vca.e.iterator();
+                while (true) {
+                    if (!it.hasNext()) {
+                        next = null;
+                        break;
+                    }
+                    next = it.next();
+                    if (wl7.b(((vca) next).a(), strI0)) {
+                        break;
+                    }
+                }
+                vca vcaVar2 = (vca) next;
+                vcaVar = vcaVar2 == null ? vca.c : vcaVar2;
+            } else if (iD1 == 1) {
+                objA = ha.g.a(mb8Var, lb3Var);
+            } else {
+                if (iD1 != 2) {
+                    break;
+                }
+                str = (String) ha.a.a(mb8Var, lb3Var);
+            }
+        }
+        if (vcaVar == null) {
+            mh2.q(mb8Var, "id");
+            throw null;
+        }
+        if (objA == null) {
+            mh2.q(mb8Var, "destinationUrl");
+            throw null;
+        }
+        if (str != null) {
+            return new yda.j(vcaVar, objA, str);
+        }
+        mh2.q(mb8Var, "label");
+        throw null;
+    }
+
+    @Override // defpackage.ga
+    public final void b(hc8 hc8Var, lb3 lb3Var, yda.j jVar) {
+        yda.j jVar2 = jVar;
+        hc8Var.getClass();
+        lb3Var.getClass();
+        jVar2.getClass();
+        hc8Var.u0("id");
+        hc8Var.T0(jVar2.a.a());
+        hc8Var.u0("destinationUrl");
+        ha.g gVar = ha.a;
+        f.a(hc8Var, jVar2.b);
+        hc8Var.u0("label");
+        ha.a.b(hc8Var, lb3Var, jVar2.c);
+    }
+}

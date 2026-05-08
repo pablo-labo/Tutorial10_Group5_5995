@@ -1,0 +1,18 @@
+{
+  "type" : "record",
+  "name" : "UserResponse",
+  "namespace" : "com.indeed.signals.schema.jobseekerinterviews",
+  "fields" : [ {
+    "name" : "logTk",
+    "type" : "string"
+  }, {
+    "name" : "userResponse",
+    "type" : {
+      "type" : "enum",
+      "name" : "UserResponseType",
+      "symbols" : [ "CONFIRM", "RESCHEDULE", "CANCEL", "DISMISS", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    }
+  } ],
+  "logEntryType" : "jsinGnavStoUserResponse"
+}

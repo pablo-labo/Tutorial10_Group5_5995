@@ -1,0 +1,40 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class er implements gu5 {
+    public final /* synthetic */ int a;
+    public final /* synthetic */ iba b;
+
+    public /* synthetic */ er(iba ibaVar, int i) {
+        this.a = i;
+        this.b = ibaVar;
+    }
+
+    @Override // defpackage.gu5
+    public final Object invoke() {
+        int i = this.a;
+        iba ibaVar = this.b;
+        switch (i) {
+            case 0:
+                ibaVar.r();
+                break;
+            case 1:
+                ibaVar.p("DESCRIPTION");
+                break;
+            case 2:
+                ibaVar.r();
+                break;
+            case 3:
+                ibaVar.r();
+                mx.b(nx.b);
+                break;
+            case 4:
+                ibaVar.r();
+                break;
+            default:
+                ibaVar.p("LANGUAGE_NAME");
+                break;
+        }
+        return j6g.a;
+    }
+}

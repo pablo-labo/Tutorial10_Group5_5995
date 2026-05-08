@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 vélemény</item>
+        <item quantity="other">%d vélemény</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Előretekerés %d másodperccel</item>
+        <item quantity="other">Előretekerés %d másodperccel</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Visszatekerés %d másodperccel</item>
+        <item quantity="other">Visszatekerés %d másodperccel</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s perc</item>
+        <item quantity="other">%s perc</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Az interjú %d óra múlva kezdődik</item>
+        <item quantity="other">Az interjú %d óra múlva kezdődik</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Az interjú %d perc múlva kezdődik</item>
+        <item quantity="other">Az interjú %d perc múlva kezdődik</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d fájl feltöltése sikertelen, és nem lesz az üzenethez csatolva.</item>
+        <item quantity="other">%d fájl feltöltése sikertelen, és nem lesznek az üzenethez csatolva.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d fájl feltöltése sikertelen</item>
+        <item quantity="other">%d fájl feltöltése sikertelen</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d olvasatlan üzenet</item>
+        <item quantity="other">%d olvasatlan üzenet</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d új értesítés</item>
+        <item quantity="other">%d új értesítés</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Ez a munkáltató általában %d napon belül válaszol</item>
+        <item quantity="other">Ez a munkáltató általában %d napon belül válaszol</item>
+    </plurals>
+</resources>

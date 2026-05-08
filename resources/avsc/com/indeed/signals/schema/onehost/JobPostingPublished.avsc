@@ -1,0 +1,74 @@
+{
+  "type" : "record",
+  "name" : "JobPostingPublished",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "fields" : [ {
+    "name" : "jobId",
+    "type" : "string"
+  }, {
+    "name" : "employerJobId",
+    "type" : "string"
+  }, {
+    "name" : "clientPublishTimestamp",
+    "type" : "long"
+  }, {
+    "name" : "hasHostedJobs",
+    "type" : "boolean"
+  }, {
+    "name" : "isFirstJob",
+    "type" : "boolean"
+  }, {
+    "name" : "eventSource",
+    "type" : {
+      "type" : "enum",
+      "name" : "EventSource",
+      "symbols" : [ "FAR", "LEGACY" ]
+    }
+  }, {
+    "name" : "jobposting_session_id",
+    "type" : "string"
+  }, {
+    "name" : "advertiserNumber",
+    "type" : "string"
+  }, {
+    "name" : "advertiserKey",
+    "type" : "string"
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "publishedId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "occupationUuid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobCountry",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobLanguage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "funnelTiming",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "FunnelTiming",
+      "symbols" : [ "NO_MEASUREMENT", "UNDER_5_MINUTES", "OVER_5_MINUTES" ],
+      "default" : "NO_MEASUREMENT"
+    } ],
+    "default" : null
+  }, {
+    "name" : "totalFunnelTimingMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "signals.onehost.jobposting.published",
+    "tags" : [ "isFirstJob", "funnelTiming" ]
+  } ],
+  "logEntryType" : "jobPostingPublished"
+}

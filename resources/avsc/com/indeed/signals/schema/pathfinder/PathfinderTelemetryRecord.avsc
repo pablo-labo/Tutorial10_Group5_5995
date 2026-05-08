@@ -1,0 +1,139 @@
+{
+  "type" : "record",
+  "name" : "PathfinderTelemetryRecord",
+  "namespace" : "com.indeed.signals.schema.pathfinder",
+  "fields" : [ {
+    "name" : "platform",
+    "type" : {
+      "type" : "enum",
+      "name" : "RNPlatformsV4",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "symbols" : [ "ios", "android" ]
+    }
+  }, {
+    "name" : "osVersion",
+    "type" : "string"
+  }, {
+    "name" : "nativeAppVersion",
+    "type" : "string"
+  }, {
+    "name" : "rnLibraryVersion",
+    "type" : "string"
+  }, {
+    "name" : "rnAppBundleVersion",
+    "type" : "string"
+  }, {
+    "name" : "variant",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "BuildVariant",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "symbols" : [ "debug", "release" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "env",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Environment",
+      "namespace" : "com.indeed.signals.schema.reactnative",
+      "symbols" : [ "qa", "prod" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "manufacturer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "model",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "brand",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "systemName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "sessionId",
+    "type" : "string"
+  }, {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "telemetryType",
+    "type" : {
+      "type" : "enum",
+      "name" : "TelemetryType",
+      "symbols" : [ "VIEW", "ERROR", "SESSION_START", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    }
+  }, {
+    "name" : "from",
+    "type" : {
+      "type" : "enum",
+      "name" : "From",
+      "symbols" : [ "CHAT", "GNAV", "PUSH", "OTHER", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    }
+  }, {
+    "name" : "grp",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "pathfinderTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "lang",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "viewName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ErrorType",
+      "symbols" : [ "NETWORK", "OTHER", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "errorName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hasError",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "logEntryType" : "PathfinderTelemetry",
+  "unstable_metrics" : [ {
+    "name" : "PathfinderTelemetry",
+    "tags" : [ "telemetryType", "from", "platform", "variant", "env" ]
+  } ]
+}

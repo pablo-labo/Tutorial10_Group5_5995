@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "InteractionType",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "IMPRESSION", "CLICK", "SET_PRIVACY_FLAG", "SUBMITTED_CALIBRATION_ELIGIBLE_TITLE", "COMPLETED_ONBOARDING", "COMPLETED_CROWTAXO_ONBOARDING", "SESSION_BACKGROUNDED" ],
+  "default" : "IMPRESSION"
+}

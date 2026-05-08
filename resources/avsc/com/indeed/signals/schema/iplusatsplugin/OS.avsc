@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "OS",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "WINDOWS", "MACOS", "IOS", "ANDROID" ]
+}

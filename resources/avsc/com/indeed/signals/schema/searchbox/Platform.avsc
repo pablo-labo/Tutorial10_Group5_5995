@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Platform",
+  "namespace" : "com.indeed.signals.schema.searchbox",
+  "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE" ],
+  "default" : "UNKNOWN"
+}

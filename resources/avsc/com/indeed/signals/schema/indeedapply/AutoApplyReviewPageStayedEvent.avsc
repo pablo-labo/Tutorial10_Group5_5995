@@ -1,0 +1,17 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyReviewPageStayedEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Page stayed time event for auto-apply review flow",
+  "fields" : [ {
+    "name" : "reviewLogUid",
+    "type" : "string"
+  }, {
+    "name" : "stayedPage",
+    "type" : "string"
+  }, {
+    "name" : "timeStayedOnPageMs",
+    "type" : "int"
+  } ],
+  "logEntryType" : "autoApplyReviewPageStayedEvent"
+}

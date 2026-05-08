@@ -1,0 +1,34 @@
+{
+  "type" : "record",
+  "name" : "InterviewToastImpression",
+  "namespace" : "com.indeed.signals.schema.interviewsresponsiveness",
+  "fields" : [ {
+    "name" : "elementName",
+    "type" : "string"
+  }, {
+    "name" : "elementType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ElementType",
+      "symbols" : [ "SCHEDULE_BUTTON", "DECLINE_BUTTON", "CLOSE_BUTTON", "DISMISS_TOAST" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "interviewKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "impressionNumber",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "interviewToastImpression",
+  "unstable_metrics" : [ {
+    "name" : "interviewToastImpression",
+    "tags" : [ "elementType" ]
+  } ]
+}

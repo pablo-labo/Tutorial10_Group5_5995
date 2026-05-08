@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "InteractionType",
+  "namespace" : "com.indeed.signals.resumecom",
+  "symbols" : [ "PAGE_VIEW", "BUTTON_CLICK" ]
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 recension</item>
+        <item quantity="other">%d recensioner</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Spola framåt %d sekund</item>
+        <item quantity="other">Spola framåt %d sekunder</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Spola tillbaka %d sekund</item>
+        <item quantity="other">Spola tillbaka %d sekunder</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minut</item>
+        <item quantity="other">%s minuter</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Intervjun börjar om %d timme</item>
+        <item quantity="other">Intervjun börjar om %d timmar</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Intervjun börjar om %d minut</item>
+        <item quantity="other">Intervjun börjar om %d minuter</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d fil laddades inte upp och inkluderas inte i ditt meddelande.</item>
+        <item quantity="other">%d filer laddades inte upp och inkluderas inte i ditt meddelande.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d fil laddades inte upp</item>
+        <item quantity="other">%d filer laddades inte upp</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d oläst meddelande</item>
+        <item quantity="other">%d olästa meddelanden</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ny avisering</item>
+        <item quantity="other">%d nya aviseringar</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Den här arbetsgivaren svarar vanligtvis inom %d dag</item>
+        <item quantity="other">Den här arbetsgivaren svarar vanligtvis inom %d dagar</item>
+    </plurals>
+</resources>

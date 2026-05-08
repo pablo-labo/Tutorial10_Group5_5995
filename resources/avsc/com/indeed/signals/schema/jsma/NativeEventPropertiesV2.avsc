@@ -1,0 +1,69 @@
+{
+  "type" : "record",
+  "name" : "NativeEventPropertiesV2",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "appId",
+    "type" : {
+      "type" : "enum",
+      "name" : "NativeAppIdsV2",
+      "symbols" : [ "JOB_SEARCH_ANDROID", "JOB_SEARCH_IOS" ]
+    }
+  }, {
+    "name" : "appVersion",
+    "type" : "string"
+  }, {
+    "name" : "appBuildNum",
+    "type" : "int"
+  }, {
+    "name" : "appVariant",
+    "type" : "string"
+  }, {
+    "name" : "appEnvironment",
+    "type" : "string"
+  }, {
+    "name" : "osVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "clientEventId",
+    "type" : "string"
+  }, {
+    "name" : "appInstallId",
+    "type" : "string"
+  }, {
+    "name" : "sessionId",
+    "type" : "string"
+  }, {
+    "name" : "clientCreatedTimestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "groups",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "deviceId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userLocale",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "deviceOrientation",
+    "type" : {
+      "type" : "enum",
+      "name" : "DeviceOrientationsV2",
+      "symbols" : [ "LANDSCAPE", "PORTRAIT" ]
+    }
+  } ]
+}

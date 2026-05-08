@@ -1,0 +1,17 @@
+query CurrentJobSeekerResponsivenessQuery($input: CurrentJobSeekerResponsivenessQueryInput!) {
+    currentJobSeekerResponsiveness(input: $input) {
+        responsiveness {
+            messagingResponseRate
+            outreachesReceivedCount
+            outreachesRespondedCount
+        }
+    }
+}
+
+query GetOnlineStatusPreference {
+    onlineActivityPreferences {
+        onlineStatusPreference {
+            isEnabled
+        }
+    }
+}

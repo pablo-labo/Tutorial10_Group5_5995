@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "Application",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "symbols" : [ "MESSAGING_WEBAPP" ]
+}

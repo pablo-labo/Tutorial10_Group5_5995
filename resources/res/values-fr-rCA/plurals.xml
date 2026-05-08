@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">%d avis</item>
+        <item quantity="many">%d avis</item>
+        <item quantity="other">%d avis</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Avancer rapidement de %d seconde</item>
+        <item quantity="other">Avancer rapidement de %d secondes</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Reculer de %d seconde</item>
+        <item quantity="other">Reculer de %d secondes</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minute</item>
+        <item quantity="other">%s minutes</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">L&apos;entrevue commence dans %d heure</item>
+        <item quantity="other">L&apos;entrevue commence dans %d heures</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">L&apos;entrevue commence dans %d minute</item>
+        <item quantity="other">L&apos;entrevue commence dans %d minutes</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d fichier n&apos;a pas été téléversé et ne sera pas inclus dans votre message.</item>
+        <item quantity="many">%d fichiers n&apos;ont pas été téléversés et ne seront pas inclus dans votre message.</item>
+        <item quantity="other">%d fichiers n&apos;ont pas été téléversés et ne seront pas inclus dans votre message.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d fichier n&apos;a pas été téléversé.</item>
+        <item quantity="many">%d fichiers n&apos;ont pas été téléversés.</item>
+        <item quantity="other">%d fichiers n&apos;ont pas été téléversés.</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d message non lu</item>
+        <item quantity="many">%d messages non lus</item>
+        <item quantity="other">%d messages non lus</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nouvelle notification</item>
+        <item quantity="other">%d nouvelles notifications</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Cet employeur répond généralement dans un délai de %d jour.</item>
+        <item quantity="other">Cet employeur répond généralement dans un délai de %d jours.</item>
+    </plurals>
+</resources>

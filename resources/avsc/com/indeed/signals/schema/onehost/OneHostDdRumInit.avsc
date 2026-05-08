@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "OneHostDdRumInit",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "fields" : [ {
+    "name" : "advertiserNumber",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "advertiserKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "enabled",
+    "type" : [ "null", "boolean" ]
+  }, {
+    "name" : "expired",
+    "type" : [ "null", "boolean" ]
+  }, {
+    "name" : "details",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cookieCount",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "RoughCount",
+      "doc" : "Needed in order to have cookieCount be a tag; must be boolean or enum, not int.",
+      "symbols" : [ "ZERO", "ONE", "TWO", "MANY" ],
+      "default" : "ZERO"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "signals.onehost.bootstrap.ddruminit",
+    "tags" : [ "enabled", "expired", "cookieCount" ]
+  } ],
+  "logEntryType" : "oneHostDdRumInit"
+}

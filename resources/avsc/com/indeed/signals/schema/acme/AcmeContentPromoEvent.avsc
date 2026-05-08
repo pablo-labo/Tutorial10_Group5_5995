@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "AcmeContentPromoEvent",
+  "namespace" : "com.indeed.signals.schema.acme",
+  "fields" : [ {
+    "name" : "promoId",
+    "type" : "string"
+  }, {
+    "name" : "eventType",
+    "type" : "string"
+  } ],
+  "logEntryType" : "acmeContentPromoEvent"
+}

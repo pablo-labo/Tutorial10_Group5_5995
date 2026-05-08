@@ -1,0 +1,10 @@
+{
+  "type" : "record",
+  "name" : "MosaicNestedSubObject",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "testBoolean",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ]
+}

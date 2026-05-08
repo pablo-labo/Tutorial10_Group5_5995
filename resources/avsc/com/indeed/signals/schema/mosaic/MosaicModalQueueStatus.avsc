@@ -1,0 +1,15 @@
+{
+  "type" : "record",
+  "name" : "MosaicModalQueueStatus",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "modalId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "modalQueueSize",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "mosaicModalQueueStatus"
+}

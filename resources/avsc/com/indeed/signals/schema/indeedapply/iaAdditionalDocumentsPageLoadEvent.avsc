@@ -1,0 +1,20 @@
+{
+  "type" : "record",
+  "name" : "iaAdditionalDocumentsPageLoadEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaAdditionalDocumentsPageLoad"
+  }, {
+    "name" : "coverLetterVisibility",
+    "type" : "string"
+  }, {
+    "name" : "showSupportingDocuments",
+    "type" : "boolean"
+  } ],
+  "logEntryType" : "iaAdditionalDocumentsPageLoad"
+}

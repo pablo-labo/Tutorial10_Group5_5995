@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 recenze</item>
+        <item quantity="few">%d recenze</item>
+        <item quantity="many">%d recenzí</item>
+        <item quantity="other">%d recenzí</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Posunout vpřed o %d sekundu</item>
+        <item quantity="few">Posunout vpřed o %d sekundy</item>
+        <item quantity="many">Posunout vpřed o %d sekundy</item>
+        <item quantity="other">Posunout vpřed o %d sekund</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Přetočit zpět o %d sekundu</item>
+        <item quantity="few">Přetočit zpět o %d sekundy</item>
+        <item quantity="many">Přetočit zpět o %d sekundy</item>
+        <item quantity="other">Přetočit zpět o %d sekund</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s min</item>
+        <item quantity="few">%s min</item>
+        <item quantity="other">%s min</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Pohovor začíná za %d h</item>
+        <item quantity="few">Pohovor začíná za %d h</item>
+        <item quantity="other">Pohovor začíná za %d h</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Pohovor začíná za %d min</item>
+        <item quantity="few">Pohovor začíná za %d min</item>
+        <item quantity="other">Pohovor začíná za %d min</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d soubor se nenahrál a nebude přidán do zprávy.</item>
+        <item quantity="few">%d soubory se nenahrály a nebudou přidány do zprávy.</item>
+        <item quantity="many">%d souborů se nenahrálo a nebudou přidány do zprávy.</item>
+        <item quantity="other">%d souborů se nenahrálo a nebudou přidány do zprávy.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d soubor se nenahrál</item>
+        <item quantity="few">%d soubory se nenahrály</item>
+        <item quantity="many">%d souborů se nenahrálo</item>
+        <item quantity="other">%d souborů se nenahrálo</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d nepřečtená zpráva</item>
+        <item quantity="few">%d nepřečtené zprávy</item>
+        <item quantity="many">%d nepřečtených zpráv</item>
+        <item quantity="other">%d nepřečtených zpráv</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nové oznámení</item>
+        <item quantity="few">%d nová oznámení</item>
+        <item quantity="many">%d nového oznámení</item>
+        <item quantity="other">%d nových oznámení</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Tento zaměstnavatel obvykle odpovídá do %d dne</item>
+        <item quantity="few">Tento zaměstnavatel obvykle odpovídá do %d dnů</item>
+        <item quantity="other">Tento zaměstnavatel obvykle odpovídá do %d dnů</item>
+    </plurals>
+</resources>

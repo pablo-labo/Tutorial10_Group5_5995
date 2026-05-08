@@ -1,0 +1,95 @@
+{
+  "type" : "record",
+  "name" : "ResourceTiming",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "initiatorType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "nextHopProtocol",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "transferSize",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "decodedBodySize",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "encodedBodySize",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "duration",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "redirectStart",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "redirectEnd",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "domainLookupStart",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "domainLookupEnd",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "connectStart",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "connectEnd",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "responseStart",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "responseEnd",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "secureConnectionStart",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "fetchStart",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "requestStart",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "startTime",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "manifestUlid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "gnavResourceTiming"
+}

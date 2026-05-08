@@ -1,0 +1,165 @@
+{
+  "type" : "record",
+  "name" : "JmProviderRequestRN",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "accountKey",
+    "type" : "string"
+  }, {
+    "name" : "jobKey",
+    "type" : "string"
+  }, {
+    "name" : "candEvalId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "candEvalModel",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "candEvalRawScore",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "candEvalScaledScore",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "candEvalTrafficLightSignal",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "clientApp",
+    "type" : "string"
+  }, {
+    "name" : "clientContext",
+    "type" : "string"
+  }, {
+    "name" : "clientTk",
+    "type" : "string"
+  }, {
+    "name" : "displayableDeducedJobseekerQualsSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableDeducedJobseekerQualsSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableExtractedJobseekerQualsSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableExtractedJobseekerQualsSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableJobQualificationSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableJobQualificationSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableMetJobQualificationSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableMetJobQualificationSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableMetSegmentJobQualificationSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableMetSegmentJobQualificationSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableRequiredJobQualsSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableRequiredJobQualsSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableSegmentJobQualificationSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableSegmentJobQualificationSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableUnknownJobQualificationSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableUnknownJobQualificationSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableUnknownSegmentJobQualificationSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableUnknownSegmentJobQualificationSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableUnmetJobQualificationSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableUnmetJobQualificationSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "displayableUnmetSegmentJobQualificationSuidCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayableUnmetSegmentJobQualificationSuids",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isJobExpired",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "groups",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobCountry",
+    "type" : "string"
+  }, {
+    "name" : "jobLanguage",
+    "type" : "string"
+  }, {
+    "name" : "mobile",
+    "type" : "boolean"
+  }, {
+    "name" : "occupationIds",
+    "type" : "string"
+  }, {
+    "name" : "requestCountry",
+    "type" : "string"
+  }, {
+    "name" : "requestLanguage",
+    "type" : "string"
+  }, {
+    "name" : "resumeType",
+    "type" : "string"
+  }, {
+    "name" : "shouldShowInsightsComponent",
+    "type" : "int"
+  }, {
+    "name" : "taxonomyEntitiesCount",
+    "type" : "int"
+  } ],
+  "logEntryType" : "jmProviderRequest"
+}

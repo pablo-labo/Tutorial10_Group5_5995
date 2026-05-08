@@ -1,0 +1,322 @@
+[
+  {
+    "cc": "US",
+    "hl": "en",
+    "host": "www.indeed.com"
+  },
+  {
+    "cc": "AR",
+    "hl": "es",
+    "host": "ar.indeed.com"
+  },
+  {
+    "cc": "AQ",
+    "hl": "en",
+    "host": "aq.indeed.com"
+  },
+  {
+    "cc": "AU",
+    "hl": "en",
+    "host": "au.indeed.com"
+  },
+  {
+    "cc": "AT",
+    "hl": "de",
+    "host": "at.indeed.com"
+  },
+  {
+    "cc": "BH",
+    "hl": "en",
+    "host": "bh.indeed.com"
+  },
+  {
+    "cc": "BE",
+    "hl": "nl",
+    "host": "be.indeed.com"
+  },
+  {
+    "cc": "BR",
+    "hl": "pt",
+    "host": "br.indeed.com"
+  },
+  {
+    "cc": "CA",
+    "hl": "en",
+    "host": "ca.indeed.com"
+  },
+  {
+    "cc": "CL",
+    "hl": "es",
+    "host": "cl.indeed.com"
+  },
+  {
+    "cc": "CN",
+    "hl": "zh",
+    "host": "cn.indeed.com"
+  },
+  {
+    "cc": "CO",
+    "hl": "es",
+    "host": "co.indeed.com"
+  },
+  {
+    "cc": "CR",
+    "hl": "es",
+    "host": "cr.indeed.com"
+  },
+  {
+    "cc": "CZ",
+    "hl": "cs",
+    "host": "cz.indeed.com"
+  },
+  {
+    "cc": "DK",
+    "hl": "da",
+    "host": "dk.indeed.com"
+  },
+  {
+    "cc": "EC",
+    "hl": "es",
+    "host": "ec.indeed.com"
+  },
+  {
+    "cc": "EG",
+    "hl": "ar",
+    "host": "eg.indeed.com"
+  },
+  {
+    "cc": "FI",
+    "hl": "fi",
+    "host": "fi.indeed.com"
+  },
+  {
+    "cc": "FR",
+    "hl": "fr",
+    "host": "fr.indeed.com"
+  },
+  {
+    "cc": "DE",
+    "hl": "de",
+    "host": "de.indeed.com"
+  },
+  {
+    "cc": "GR",
+    "hl": "el",
+    "host": "gr.indeed.com"
+  },
+  {
+    "cc": "HK",
+    "hl": "en",
+    "host": "hk.indeed.com"
+  },
+  {
+    "cc": "HU",
+    "hl": "hu",
+    "host": "hu.indeed.com"
+  },
+  {
+    "cc": "IN",
+    "hl": "en",
+    "host": "in.indeed.com"
+  },
+  {
+    "cc": "ID",
+    "hl": "in",
+    "host": "id.indeed.com"
+  },
+  {
+    "cc": "IE",
+    "hl": "en",
+    "host": "ie.indeed.com"
+  },
+  {
+    "cc": "IL",
+    "hl": "iw",
+    "host": "il.indeed.com"
+  },
+  {
+    "cc": "IT",
+    "hl": "it",
+    "host": "it.indeed.com"
+  },
+  {
+    "cc": "JP",
+    "hl": "ja",
+    "host": "jp.indeed.com"
+  },
+  {
+    "cc": "KW",
+    "hl": "en",
+    "host": "kw.indeed.com"
+  },
+  {
+    "cc": "LU",
+    "hl": "fr",
+    "host": "lu.indeed.com"
+  },
+  {
+    "cc": "MY",
+    "hl": "en",
+    "host": "malaysia.indeed.com"
+  },
+  {
+    "cc": "MX",
+    "hl": "es",
+    "host": "mx.indeed.com"
+  },
+  {
+    "cc": "MA",
+    "hl": "fr",
+    "host": "ma.indeed.com"
+  },
+  {
+    "cc": "NL",
+    "hl": "nl",
+    "host": "nl.indeed.com"
+  },
+  {
+    "cc": "NZ",
+    "hl": "en",
+    "host": "nz.indeed.com"
+  },
+  {
+    "cc": "NG",
+    "hl": "en",
+    "host": "ng.indeed.com"
+  },
+  {
+    "cc": "NO",
+    "hl": "no",
+    "host": "no.indeed.com"
+  },
+  {
+    "cc": "OM",
+    "hl": "en",
+    "host": "om.indeed.com"
+  },
+  {
+    "cc": "PK",
+    "hl": "en",
+    "host": "pk.indeed.com"
+  },
+  {
+    "cc": "PA",
+    "hl": "es",
+    "host": "pa.indeed.com"
+  },
+  {
+    "cc": "PE",
+    "hl": "es",
+    "host": "pe.indeed.com"
+  },
+  {
+    "cc": "PH",
+    "hl": "en",
+    "host": "ph.indeed.com"
+  },
+  {
+    "cc": "PL",
+    "hl": "pl",
+    "host": "pl.indeed.com"
+  },
+  {
+    "cc": "PT",
+    "hl": "pt",
+    "host": "pt.indeed.com"
+  },
+  {
+    "cc": "QA",
+    "hl": "en",
+    "host": "qa.indeed.com"
+  },
+  {
+    "cc": "RO",
+    "hl": "ro",
+    "host": "ro.indeed.com"
+  },
+  {
+    "cc": "SA",
+    "hl": "ar",
+    "host": "sa.indeed.com"
+  },
+  {
+    "cc": "SG",
+    "hl": "en",
+    "host": "sg.indeed.com"
+  },
+  {
+    "cc": "ZA",
+    "hl": "en",
+    "host": "za.indeed.com"
+  },
+  {
+    "cc": "KR",
+    "hl": "ko",
+    "host": "kr.indeed.com"
+  },
+  {
+    "cc": "ES",
+    "hl": "es",
+    "host": "es.indeed.com"
+  },
+  {
+    "cc": "SE",
+    "hl": "sv",
+    "host": "se.indeed.com"
+  },
+  {
+    "cc": "CH",
+    "hl": "de",
+    "host": "ch.indeed.com"
+  },
+  {
+    "cc": "CH",
+    "hl": "fr",
+    "host": "ch-fr.indeed.com"
+  },
+  {
+    "cc": "TW",
+    "hl": "zh",
+    "host": "tw.indeed.com"
+  },
+  {
+    "cc": "TH",
+    "hl": "th",
+    "host": "th.indeed.com"
+  },
+  {
+    "cc": "TR",
+    "hl": "tr",
+    "host": "tr.indeed.com"
+  },
+  {
+    "cc": "UA",
+    "hl": "ru",
+    "host": "ua.indeed.com"
+  },
+  {
+    "cc": "AE",
+    "hl": "en",
+    "host": "ae.indeed.com"
+  },
+  {
+    "cc": "GB",
+    "hl": "en",
+    "host": "uk.indeed.com"
+  },
+  {
+    "cc": "UY",
+    "hl": "es",
+    "host": "uy.indeed.com"
+  },
+  {
+    "cc": "VE",
+    "hl": "es",
+    "host": "ve.indeed.com"
+  },
+  {
+    "cc": "VN",
+    "hl": "vi",
+    "host": "vn.indeed.com"
+  }
+]

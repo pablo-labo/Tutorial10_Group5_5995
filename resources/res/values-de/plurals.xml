@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 Bewertung</item>
+        <item quantity="other">%d Bewertungen</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d Sekunde vorspulen</item>
+        <item quantity="other">%d Sekunden vorspulen</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d Sekunde zurückspulen</item>
+        <item quantity="other">%d Sekunden zurückspulen</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s Minute</item>
+        <item quantity="other">%s Minuten</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Das Vorstellungsgespräch beginnt in %d Stunde</item>
+        <item quantity="other">Das Vorstellungsgespräch beginnt in %d Stunden</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Das Vorstellungsgespräch beginnt in %d Minute</item>
+        <item quantity="other">Das Vorstellungsgespräch beginnt in %d Minuten</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d Datei konnte nicht hochgeladen werden und wird nicht in Ihre Nachricht eingefügt.</item>
+        <item quantity="other">%d Dateien konnten nicht hochgeladen werden und werden nicht in Ihre Nachricht eingefügt.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d Datei konnte nicht hochgeladen werden</item>
+        <item quantity="other">%d Dateien konnten nicht hochgeladen werden</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d ungelesene Nachricht</item>
+        <item quantity="other">%d ungelesene Nachrichten</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d neue Benachrichtigung</item>
+        <item quantity="other">%d neue Benachrichtigungen</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Dieser Arbeitgeber antwortet in der Regel innerhalb von %d Tag</item>
+        <item quantity="other">Dieser Arbeitgeber antwortet in der Regel innerhalb von %d Tagen</item>
+    </plurals>
+</resources>

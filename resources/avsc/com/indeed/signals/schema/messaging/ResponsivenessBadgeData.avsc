@@ -1,0 +1,37 @@
+{
+  "type" : "record",
+  "name" : "ResponsivenessBadgeData",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "fields" : [ {
+    "name" : "accountId",
+    "type" : "string"
+  }, {
+    "name" : "dataType",
+    "type" : "string"
+  }, {
+    "name" : "hasBadge",
+    "type" : "boolean"
+  }, {
+    "name" : "employerOutreaches",
+    "type" : "int"
+  }, {
+    "name" : "jobseekerResponses",
+    "type" : "int"
+  }, {
+    "name" : "responsivenessRate",
+    "type" : "float"
+  }, {
+    "name" : "numMessagesRequiringResponse",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "js_elig",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "grp",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "ResponsivenessBadgeData"
+}

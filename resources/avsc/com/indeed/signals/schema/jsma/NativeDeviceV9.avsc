@@ -1,0 +1,24 @@
+{
+  "type" : "record",
+  "name" : "NativeDeviceV9",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "platform",
+    "type" : {
+      "type" : "enum",
+      "name" : "PlatformsV9",
+      "symbols" : [ "IOS", "ANDROID" ]
+    }
+  }, {
+    "name" : "manufacturer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "model",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "advertisingId",
+    "type" : [ "null", "string" ]
+  } ]
+}

@@ -1,0 +1,20 @@
+{
+  "type" : "record",
+  "name" : "JobDetailsImpression",
+  "namespace" : "com.indeed.signals.schema.jobevents",
+  "fields" : [ {
+    "name" : "id",
+    "type" : "string"
+  }, {
+    "name" : "username",
+    "type" : {
+      "type" : "string",
+      "logEntryField" : "user_name"
+    }
+  }, {
+    "name" : "jobId",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "jobDetailsImpression"
+}

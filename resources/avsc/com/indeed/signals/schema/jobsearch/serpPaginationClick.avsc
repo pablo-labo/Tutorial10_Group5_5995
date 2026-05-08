@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "serpPaginationClick",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Platform",
+      "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE", "APP_IOS", "APP_ANDROID" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "serp.pagination.clicks",
+    "tags" : [ "platform" ]
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "DeepIntakePhase",
+  "namespace" : "com.indeed.signals.schema.japanmarketplace",
+  "symbols" : [ "ENTRYPOINT", "WELCOME1", "WELCOME2", "QUESTION", "ANALYZING", "SUMMARY" ]
+}

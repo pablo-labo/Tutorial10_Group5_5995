@@ -1,0 +1,38 @@
+{
+  "type" : "record",
+  "name" : "iaResumeFileUploadEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumeFileUpload"
+  }, {
+    "name" : "success",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "name" : "isConverted",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "name" : "fileId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "contentHash",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaResumeFileUpload"
+}

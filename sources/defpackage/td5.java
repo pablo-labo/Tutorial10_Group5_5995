@@ -1,0 +1,93 @@
+package defpackage;
+
+import com.datadog.android.rum.internal.domain.event.RumEventSerializer;
+import defpackage.hva;
+import java.util.List;
+import kotlin.Pair;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class td5 {
+    public static final List<vd2> a;
+    public static final List<vd2> b;
+    public static final List<vd2> c;
+    public static final List<vd2> d;
+    public static final List<vd2> e;
+    public static final List<vd2> f;
+    public static final List<vd2> g;
+    public static final List<vd2> h;
+    public static final List<vd2> i;
+    public static final List<vd2> j;
+    public static final List<vd2> k;
+    public static final List<vd2> l;
+    public static final List<vd2> m;
+    public static final List<vd2> n;
+    public static final List<vd2> o;
+    public static final List<vd2> p;
+    public static final List<vd2> q;
+
+    static {
+        mb3 mb3Var = oc6.a;
+        ud2 ud2VarA = rd2.a(mb3Var);
+        zr4 zr4Var = zr4.a;
+        List<vd2> listM = k20.m("reason", ud2VarA, zr4Var, zr4Var, zr4Var);
+        a = listM;
+        List<vd2> listA0 = u63.a0(new pd2("query", mb3Var, zr4Var, zr4Var, zr4Var), new pd2("location", mb3Var, zr4Var, zr4Var, zr4Var), new pd2("reason", new ud2(mb3Var), zr4Var, zr4Var, zr4Var));
+        b = listA0;
+        List<vd2> listA02 = u63.a0(new pd2("__typename", new ud2(mb3Var), zr4Var, zr4Var, zr4Var), new qd2("DefaultRelevantJobsMatchInfo", u63.Z("DefaultRelevantJobsMatchInfo"), listM), new qd2("RecentQueryRelevantJobsMatchInfo", u63.Z("RecentQueryRelevantJobsMatchInfo"), listA0));
+        c = listA02;
+        mb3 mb3Var2 = cc6.a;
+        mb3Var2.getClass();
+        List<vd2> listG = u40.g("value", mb3Var2, zr4Var, zr4Var, zr4Var);
+        d = listG;
+        sna snaVar = y51.a;
+        snaVar.getClass();
+        List<vd2> listI = v40.i("overallRating", snaVar, zr4Var, zr4Var, listG);
+        e = listI;
+        sna snaVar2 = ric.a;
+        snaVar2.getClass();
+        List<vd2> listI2 = v40.i("ratings", snaVar2, zr4Var, zr4Var, listI);
+        f = listI2;
+        mb3 mb3Var3 = gc6.a;
+        pd2 pd2Var = new pd2("key", rd2.a(mb3Var3), zr4Var, zr4Var, zr4Var);
+        sna snaVar3 = t88.a;
+        snaVar3.getClass();
+        List<vd2> listA03 = u63.a0(pd2Var, new pd2("ugcStats", snaVar3, zr4Var, zr4Var, listI2));
+        g = listA03;
+        List<vd2> listM2 = k20.m("short", new ud2(mb3Var), zr4Var, zr4Var, zr4Var);
+        h = listM2;
+        List<vd2> listL = w20.l("formatted", rd2.a(op5.a), zr4Var, zr4Var, listM2);
+        i = listL;
+        List<vd2> listA04 = u63.a0(new pd2("key", new ud2(mb3Var3), zr4Var, zr4Var, zr4Var), new pd2("formattedText", mb3Var, zr4Var, zr4Var, zr4Var));
+        j = listA04;
+        ty7.a.getClass();
+        List<vd2> listM3 = k20.m("scopes", new ud2(new sd2(rd2.a(ty7.b))), zr4Var, zr4Var, zr4Var);
+        k = listM3;
+        List<vd2> listM4 = k20.m("text", new ud2(mb3Var), zr4Var, zr4Var, zr4Var);
+        l = listM4;
+        pd2 pd2Var2 = new pd2("title", new ud2(mb3Var), zr4Var, zr4Var, zr4Var);
+        pd2 pd2Var3 = new pd2("sourceEmployerName", new ud2(mb3Var), zr4Var, zr4Var, zr4Var);
+        sna snaVar4 = cr4.a;
+        snaVar4.getClass();
+        pd2 pd2Var4 = new pd2("employer", snaVar4, zr4Var, zr4Var, listA03);
+        pd2 pd2Var5 = new pd2("location", rd2.a(zy7.a), zr4Var, zr4Var, listL);
+        sna snaVar5 = px7.a;
+        snaVar5.getClass();
+        List<vd2> listA05 = u63.a0(pd2Var2, pd2Var3, pd2Var4, pd2Var5, new pd2("compensation", snaVar5, zr4Var, zr4Var, listA04), new pd2("indeedApply", rd2.a(ry7.a), zr4Var, zr4Var, listM3), new pd2("dateOnIndeed", rd2.a(omf.a), zr4Var, zr4Var, zr4Var), new pd2("description", rd2.a(my7.a), zr4Var, zr4Var, listM4));
+        m = listA05;
+        List<vd2> listM5 = k20.m("viewJobRedirectClickUrl", rd2.a(pwg.a), zr4Var, zr4Var, zr4Var);
+        n = listM5;
+        pd2 pd2Var6 = new pd2("matchReason", rd2.a(dzc.a), zr4Var, zr4Var, listA02);
+        pd2 pd2Var7 = new pd2("job", rd2.a(dx7.a), zr4Var, zr4Var, listA05);
+        sna snaVar6 = g97.a;
+        snaVar6.getClass();
+        List<vd2> listA06 = u63.a0(pd2Var6, pd2Var7, new pd2("indeedJobData", snaVar6, zr4Var, zr4Var, listM5));
+        o = listA06;
+        List<vd2> listA07 = u63.a0(new pd2("trackingKey", new ud2(mb3Var), zr4Var, zr4Var, zr4Var), new pd2("results", new ud2(new sd2(rd2.a(ezc.a))), zr4Var, zr4Var, listA06));
+        p = listA07;
+        sna snaVar7 = rd5.a;
+        snaVar7.getClass();
+        md2 md2Var = h9c.d;
+        hva.a aVar = hva.a.a;
+        q = ia.n("findRelevantJobs", snaVar7, zr4Var, bg.f(md2Var, new hva.c(lc9.a0(new Pair("lastVisitTime", 0), new Pair(RumEventSerializer.GLOBAL_ATTRIBUTE_PREFIX, "androidWidget"), new Pair("limit", 5), new Pair("surfaceFactors", zr4Var)))), listA07);
+    }
+}

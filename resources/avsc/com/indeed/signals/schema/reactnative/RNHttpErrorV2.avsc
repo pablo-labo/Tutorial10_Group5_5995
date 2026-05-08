@@ -1,0 +1,72 @@
+{
+  "type" : "record",
+  "name" : "RNHttpErrorV2",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "doc" : "An error type logged by the react native platform when a network request fails.",
+  "fields" : [ {
+    "name" : "deviceProperties",
+    "type" : {
+      "type" : "record",
+      "name" : "RNDevicePropertiesV2",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNPlatformsV2",
+          "symbols" : [ "ios", "android" ]
+        }
+      }, {
+        "name" : "osVersion",
+        "type" : "string"
+      }, {
+        "name" : "appName",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNAppsV2",
+          "symbols" : [ "jsma", "ema" ]
+        }
+      }, {
+        "name" : "nativeAppVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnLibraryVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnAppBundleVersion",
+        "type" : "string"
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "brand",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "systemName",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "isIpad",
+        "type" : "boolean"
+      } ]
+    }
+  }, {
+    "name" : "url",
+    "type" : "string"
+  }, {
+    "name" : "message",
+    "type" : "string"
+  }, {
+    "name" : "statusCode",
+    "type" : "int"
+  }, {
+    "name" : "provider",
+    "type" : "string"
+  } ],
+  "logEntryType" : "rnHttpError"
+}

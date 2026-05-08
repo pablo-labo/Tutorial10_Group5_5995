@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "AccountGateInteraction",
+  "namespace" : "com.indeed.signals.schema.careerguide",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "eventType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "gateType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "downloadUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "videoId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "careerGuideAccountGate"
+}

@@ -1,0 +1,114 @@
+{
+  "type" : "record",
+  "name" : "JsOnboardingSegmentSaveEvent",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "CommonOnboardingDetails",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonOnboardingDetails",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "Platform",
+          "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE" ],
+          "default" : "UNKNOWN"
+        } ]
+      }, {
+        "name" : "proctorGroups",
+        "type" : {
+          "type" : "array",
+          "items" : "string"
+        }
+      }, {
+        "name" : "accountId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "userAgent",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "country",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "language",
+        "type" : [ "null", "string" ]
+      } ]
+    }
+  }, {
+    "name" : "parentLogId",
+    "type" : "string"
+  }, {
+    "name" : "jobTitle",
+    "type" : "string"
+  }, {
+    "name" : "occupationId",
+    "type" : "string"
+  }, {
+    "name" : "qualificationScreen",
+    "type" : {
+      "type" : "enum",
+      "name" : "QualificationScreen",
+      "symbols" : [ "LICENSES", "CERTIFICATIONS", "SKILLS" ]
+    }
+  }, {
+    "name" : "savedIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "savedIdsConcatenated",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "savedNames",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "savedNamesConcatenated",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "numberOfSavedQualifications",
+    "type" : "int"
+  }, {
+    "name" : "shownIds",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "shownIdsConcatenated",
+    "type" : "string"
+  }, {
+    "name" : "shownNames",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "shownNamesConcatenated",
+    "type" : "string"
+  }, {
+    "name" : "numberOfShownQualifications",
+    "type" : "int"
+  } ],
+  "logEntryType" : "onboardingSegmentSaveEvent"
+}

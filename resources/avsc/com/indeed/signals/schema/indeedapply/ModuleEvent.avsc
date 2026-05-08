@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ModuleEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "symbols" : [ "ENTER", "COMPLETE", "SKIP" ]
+}

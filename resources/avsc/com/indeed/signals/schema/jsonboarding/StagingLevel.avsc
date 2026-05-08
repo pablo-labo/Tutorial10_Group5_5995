@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "StagingLevel",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "DEV_PROVISIONING", "DEV", "QA", "PROD", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

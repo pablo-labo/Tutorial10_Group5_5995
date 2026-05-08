@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 recensione</item>
+        <item quantity="other">%d recensioni</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Avanti di %d secondo</item>
+        <item quantity="other">Avanti di %d secondi</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Indietro di %d secondo</item>
+        <item quantity="other">Indietro di %d secondi</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minute</item>
+        <item quantity="other">minuti</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Il colloquio inizia tra %d ora</item>
+        <item quantity="other">Il colloquio inizia tra %d ore</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Il colloquio inizia tra %d minuto</item>
+        <item quantity="other">Il colloquio inizia tra %d minuti</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d file non è stato caricato e non verrà incluso nel tuo messaggio.</item>
+        <item quantity="other">%d file non sono stati caricati e non verranno inclusi nel tuo messaggio.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d file non è stato caricato</item>
+        <item quantity="other">%d file non sono stati caricati</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d messaggio non letto</item>
+        <item quantity="other">%d messaggi non letti</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nuova notifica</item>
+        <item quantity="other">%d nuove notifiche</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Questo datore di lavoro solitamente risponde entro %d giorno</item>
+        <item quantity="other">Questo datore di lavoro solitamente risponde entro %d giorni</item>
+    </plurals>
+</resources>

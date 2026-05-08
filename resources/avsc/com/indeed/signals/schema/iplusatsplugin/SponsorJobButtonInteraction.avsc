@@ -1,0 +1,118 @@
+{
+  "type" : "record",
+  "name" : "SponsorJobButtonInteraction",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ]
+  }, {
+    "name" : "atsPluginCommon",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonLogEntryFields",
+      "fields" : [ {
+        "name" : "sessionId",
+        "type" : "string"
+      }, {
+        "name" : "userAgent",
+        "type" : "string"
+      }, {
+        "name" : "oauthClientId",
+        "type" : "string"
+      }, {
+        "name" : "atsKey",
+        "type" : "string"
+      }, {
+        "name" : "accountKey",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "advertiserKey",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "browser",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Browser",
+      "symbols" : [ "CHROME", "FIREFOX", "SAFARI", "EDGE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "OS",
+      "symbols" : [ "WINDOWS", "MACOS", "IOS", "ANDROID" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "deviceType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "DeviceType",
+      "symbols" : [ "MOBILE", "TABLET" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "onehost",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "BooleanTag",
+      "symbols" : [ "TRUE", "FALSE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "eventType",
+    "type" : {
+      "type" : "enum",
+      "name" : "SponsorButtonEventType",
+      "symbols" : [ "SPONSOR_BUTTON_VIEWED", "SPONSOR_BUTTON_CLICKED" ]
+    }
+  }, {
+    "name" : "refNum",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "sourceName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobTitle",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "sponsorStatus",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "SponsorButtonStatus",
+      "symbols" : [ "PAUSED", "UNAVAILABLE", "SPENDING", "NOT_SPENDING", "SCHEDULED", "NOT_SPONSORED", "ERROR" ]
+    } ]
+  }, {
+    "name" : "isEligible",
+    "type" : [ "null", "boolean" ]
+  }, {
+    "name" : "alreadySponsored",
+    "type" : [ "null", "boolean" ]
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "IPlusAtsPlugin.SponsoredJobs.buttonInteraction",
+    "type" : "count",
+    "tags" : [ "browser", "os", "deviceType", "onehost", "eventType", "sponsorStatus", "isEligible", "alreadySponsored" ]
+  } ],
+  "logEntryType" : "iplus_atsplugin_SponsorJobButtonInteraction"
+}

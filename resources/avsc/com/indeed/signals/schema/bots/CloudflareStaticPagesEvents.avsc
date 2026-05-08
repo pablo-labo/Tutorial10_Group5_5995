@@ -1,0 +1,16 @@
+{
+  "type" : "record",
+  "name" : "CloudflareStaticPagesEvents",
+  "namespace" : "com.indeed.signals.schema.bots",
+  "fields" : [ {
+    "name" : "pageType",
+    "type" : "string"
+  }, {
+    "name" : "actionType",
+    "type" : "string"
+  }, {
+    "name" : "rayId",
+    "type" : "string"
+  } ],
+  "logEntryType" : "cloudflareStaticPagesEvents"
+}

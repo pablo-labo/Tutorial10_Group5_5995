@@ -1,0 +1,37 @@
+{
+  "type" : "record",
+  "name" : "SubmitEvent",
+  "namespace" : "com.indeed.signals.schema.searchbox",
+  "fields" : [ {
+    "name" : "hostPage",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostPage",
+      "symbols" : [ "UNKNOWN", "HP", "SERP", "SEARCH_START_PAGE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Platform",
+      "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "deviceType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "DeviceType",
+      "symbols" : [ "UNKNOWN", "ANDROID_APP", "IOS_APP", "MOBILEWEB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "searchBox.submits",
+    "tags" : [ "hostPage", "platform", "deviceType" ]
+  } ]
+}

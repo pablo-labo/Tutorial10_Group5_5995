@@ -1,0 +1,49 @@
+{
+  "type" : "record",
+  "name" : "InterviewPromptAction",
+  "namespace" : "com.indeed.signals.schema.interviewsresponsiveness",
+  "fields" : [ {
+    "name" : "action",
+    "type" : "string"
+  }, {
+    "name" : "elementName",
+    "type" : "string"
+  }, {
+    "name" : "actionType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ActionType",
+      "symbols" : [ "CLICK", "IMPRESSION", "ERROR" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "elementType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ElementType",
+      "symbols" : [ "SCHEDULE_BUTTON", "DECLINE_BUTTON", "CLOSE_BUTTON", "DISMISS_TOAST" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "interviewKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMsg",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "uiProctorBucket",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "interviewPromptAction",
+  "unstable_metrics" : [ {
+    "name" : "interviewPromptAction",
+    "tags" : [ "actionType", "elementType" ]
+  } ]
+}

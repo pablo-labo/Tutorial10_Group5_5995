@@ -1,0 +1,36 @@
+{
+  "type" : "record",
+  "name" : "JpSalaryPageEvents",
+  "namespace" : "com.indeed.signals.schema.japanmarketplace",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "currentUrl",
+    "type" : "string"
+  }, {
+    "name" : "pageType",
+    "type" : "string"
+  }, {
+    "name" : "referer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "privileged",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "logEntryType" : "JpSalaryPageEvents"
+}

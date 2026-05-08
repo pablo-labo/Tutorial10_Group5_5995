@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "simCompShowMoreUrlButtonClick",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "source",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Source",
+      "symbols" : [ "UNKNOWN", "JOBCARD", "TWO_PANE", "STANDALONE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Platform",
+      "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE", "APP_IOS", "APP_ANDROID" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "simCompShowMoreUrl.button.clicks",
+    "tags" : [ "source", "platform" ]
+  } ],
+  "logEntryType" : "simCompShowMoreUrlButtonClick"
+}

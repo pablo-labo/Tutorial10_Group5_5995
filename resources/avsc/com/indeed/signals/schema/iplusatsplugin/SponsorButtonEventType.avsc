@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "SponsorButtonEventType",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "SPONSOR_BUTTON_VIEWED", "SPONSOR_BUTTON_CLICKED" ]
+}

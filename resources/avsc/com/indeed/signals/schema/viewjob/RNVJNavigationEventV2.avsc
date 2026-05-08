@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "RNVJNavigationEventV2",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "fields" : [ {
+    "name" : "url",
+    "type" : "string"
+  }, {
+    "name" : "trigger",
+    "type" : {
+      "type" : "enum",
+      "name" : "RNVJNavigationTriggerV2",
+      "symbols" : [ "deeplink", "unknown" ]
+    }
+  }, {
+    "name" : "from",
+    "type" : "string"
+  } ]
+}

@@ -1,0 +1,17 @@
+{
+  "type" : "record",
+  "name" : "AutoApplySetupButtonClick",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Button click event\nDeprecated, use AutoApplySetupButtonClickEvent instead",
+  "fields" : [ {
+    "name" : "setupSessionId",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "button",
+    "type" : "string"
+  } ],
+  "logEntryType" : "autoApplySetupButtonClick"
+}

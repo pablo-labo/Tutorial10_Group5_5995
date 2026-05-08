@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "PageId",
+  "namespace" : "com.indeed.signals.schema.magua",
+  "symbols" : [ "unknown", "serp", "viewjob", "hpClassic", "dev_sandbox", "onboarding", "onboarding_location", "onboarding_intro", "onboarding_intent", "onboarding_desired_job", "onboarding_job_types", "article_page", "savedjoblist" ],
+  "default" : "unknown"
+}

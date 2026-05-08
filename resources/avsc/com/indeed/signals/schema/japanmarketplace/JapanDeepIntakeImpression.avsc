@@ -1,0 +1,42 @@
+{
+  "type" : "record",
+  "name" : "JapanDeepIntakeImpression",
+  "namespace" : "com.indeed.signals.schema.japanmarketplace",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "mobtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "grps",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "phase",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "DeepIntakePhase",
+      "symbols" : [ "ENTRYPOINT", "WELCOME1", "WELCOME2", "QUESTION", "ANALYZING", "SUMMARY" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "questionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "conceptualQuestionPosition",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "totalConceptualQuestions",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ],
+  "logEntryType" : "japanDeepIntakeImpression"
+}

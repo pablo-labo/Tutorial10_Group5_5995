@@ -1,0 +1,47 @@
+{
+  "type" : "record",
+  "name" : "MessagingJSResponsivenessProviderErrors",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "fields" : [ {
+    "name" : "errorName",
+    "type" : "string"
+  }, {
+    "name" : "errorDetails",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "conversationId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "messagingJSResponsivenessProviderErrors",
+  "unstable_metrics" : [ {
+    "name" : "ResponsivenessProvider.errorCount",
+    "tags" : [ "errorName" ]
+  } ]
+}

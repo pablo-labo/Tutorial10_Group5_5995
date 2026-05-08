@@ -1,0 +1,32 @@
+{
+  "type" : "record",
+  "name" : "HttpResponseDebug",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : "long"
+  }, {
+    "name" : "headerLength",
+    "type" : "long"
+  }, {
+    "name" : "contentLength",
+    "type" : "long"
+  }, {
+    "name" : "contentType",
+    "type" : "string"
+  }, {
+    "name" : "setCookiesLength",
+    "type" : "long"
+  }, {
+    "name" : "statusCode",
+    "type" : "long"
+  }, {
+    "name" : "errDomain",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errCode",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ]
+}

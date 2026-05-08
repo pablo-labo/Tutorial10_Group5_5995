@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "DeviceType",
+  "namespace" : "com.indeed.signals.schema.searchbox",
+  "symbols" : [ "UNKNOWN", "ANDROID_APP", "IOS_APP", "MOBILEWEB" ],
+  "default" : "UNKNOWN"
+}

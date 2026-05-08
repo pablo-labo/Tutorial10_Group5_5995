@@ -1,0 +1,59 @@
+{
+  "type" : "record",
+  "name" : "AutoApplyFeedback",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "fields" : [ {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "encryptedApplyId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "jobId",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "applyId",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "category",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Category",
+      "symbols" : [ "JOB", "MATCHING", "APPLY", "OTHER" ],
+      "default" : "OTHER"
+    } ],
+    "default" : null
+  }, {
+    "name" : "answerFields",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "details",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplyFeedback"
+}

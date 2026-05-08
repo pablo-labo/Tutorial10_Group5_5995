@@ -1,0 +1,25 @@
+{
+  "type" : "record",
+  "name" : "LightProfileSnapshot",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "fields" : [ {
+    "name" : "tk",
+    "type" : "string"
+  }, {
+    "name" : "parentTk",
+    "type" : "string"
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "data",
+    "type" : "string"
+  }, {
+    "name" : "creationTimestamp",
+    "type" : "long"
+  }, {
+    "name" : "lastUpdateTimestamp",
+    "type" : "long"
+  } ],
+  "logEntryType" : "LightProfileSnapshot"
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "SmartApplyContextErrorType",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "symbols" : [ "UNKNOWN_ERROR", "NETWORK_ERROR", "GRAPHQL_ERROR", "NULL_RESPONSE", "TIMEOUT_ERROR" ],
+  "default" : "UNKNOWN_ERROR"
+}

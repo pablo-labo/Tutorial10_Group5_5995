@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "EmployerOutreachAction",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "symbols" : [ "UNKNOWN", "APPLY", "FAST_APPLY", "COMPLETE_APPLY", "DECLINE", "SUBMIT_DECLINE_REASON" ],
+  "default" : "UNKNOWN"
+}

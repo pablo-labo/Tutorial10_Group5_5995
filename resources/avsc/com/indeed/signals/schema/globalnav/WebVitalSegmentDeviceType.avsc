@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "WebVitalSegmentDeviceType",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "symbols" : [ "DESKTOP", "MOBILEWEB", "ANDROIDAPP", "IOSAPP" ]
+}

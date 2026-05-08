@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "AssistedApplyJsmabridgeCall",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "fields" : [ {
+    "name" : "environment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "JcsapplyEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "ANDROID_APP", "IOS_APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "outcome",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Outcome",
+      "symbols" : [ "UNKNOWN", "SUCCESS", "FAIL" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "assistedApply.jsmabridgeCall",
+    "tags" : [ "environment", "outcome" ]
+  } ]
+}

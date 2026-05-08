@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "FunnelTiming",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "symbols" : [ "NO_MEASUREMENT", "UNDER_5_MINUTES", "OVER_5_MINUTES" ],
+  "default" : "NO_MEASUREMENT"
+}

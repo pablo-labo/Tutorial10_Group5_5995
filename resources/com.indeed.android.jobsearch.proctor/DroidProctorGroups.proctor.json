@@ -1,0 +1,1973 @@
+{
+  "tests": {
+    "cmi_jp_app_ui_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1,
+        "aurora": 2
+      },
+      "payload": {
+        "type": "map",
+        "schema": {
+          "statusBarColor": "stringValue",
+          "paths": "stringArray"
+        }
+      },
+      "description": "MOBILE-25268: Add cmi_jp_app_ui_tst"
+    },
+    "jpmp_jsig_onboarding_redirect_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "CHALLENGET-3622: create jpmp_jsig_onboarding_redirect_tst for gating redirection to JSO in JP App"
+    },
+    "droid_fake_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "DROID-2174: Add dummy droid_fake_tst"
+    },
+    "droid_fake_alternative_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "DROID-7213: Add alternative dummy droid_fake_alternative_tst"
+    },
+    "droid_ip_country_prompt_v3_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-5904: IP Country Prompt Test"
+    },
+    "droid_datadog_monitoring_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-3776 Create a new proctor test to gate datadog monitoring"
+    },
+    "droid_datadog_rum_parent": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "TODO"
+    },
+    "jsj_crowtaxo_holdout_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "holdout": 1,
+        "active_crowtaxo": 2
+      },
+      "isHotLoadSafe": true,
+      "description": "DISCO-2779: Holdout test for crowtaxo"
+    },
+    "jsj_crowtaxo_frontend_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "first": 1,
+        "second": 2,
+        "third": 3,
+        "fourth": 4,
+        "fifth": 5,
+        "sixth": 6,
+        "seventh": 7,
+        "eighth": 8,
+        "ninth": 9
+      },
+      "payload": {
+        "type": "json",
+        "allowForce": false,
+        "schema": {
+          "android_crowtaxo_onboarding": "booleanValue"
+        }
+      },
+      "isHotLoadSafe": true,
+      "description": "DISCO-2780: shared test for crowtaxo frontend"
+    },
+    "jso_jobtype_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "JSO-417: Add employment type question to onboarding flow"
+    },
+    "jso_rn_onboarding_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active_except_for_crowtaxo_m3": 2,
+        "active": 3
+      },
+      "isHotLoadSafe": true,
+      "description": "JSO-2076: Proctor for gating the react native for both iOS and Android"
+    },
+    "jso_remove_recent_job_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "noRecentJob": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "JSO-2564: Tests removing the recent_job page altogether"
+    },
+    "jso_crowtaxo_m3_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "payload": {
+        "type": "json",
+        "allowForce": false,
+        "schema": {
+          "maxWorkAreas": "longValue"
+        }
+      },
+      "isHotLoadSafe": true,
+      "description": "JSO-1977: payload-based test to control functionality of milestone 3 onboarding functionality"
+    },
+    "jso_crowtaxo_questions_per_page_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "limitQuestions": 1,
+        "limitQuestionsA": 2,
+        "limitQuestionsB": 3,
+        "limitQuestionsC": 4,
+        "limitQuestionsD": 5
+      },
+      "payload": {
+        "type": "doubleValue",
+        "allowForce": false
+      },
+      "description": "JSO-2499: Limit number of OQVT questions per onboarding page",
+      "isHotLoadSafe": true
+    },
+    "jso_separate_remote_screen_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "split_remote_flow": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "DROID-9447: Add jso_separate_remote_screen_tst to Droid Proctor groups"
+    },
+    "jso_skip_flow_udp_timestamp_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "skipYear": 1
+      },
+      "description": "JSO-2352: Proctor test for JS onboarding making users skip onboarding per udp timestamp",
+      "isHotLoadSafe": true
+    },
+    "jso_generalist_by_default_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test1": 1,
+        "test2": 2
+      },
+      "isHotLoadSafe": true,
+      "description": "JSO-2869: Test making the flow generalist by default"
+    },
+    "droid_af_preload_attribution_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-4868: Add tst to enable preload campaign attribution in Appsflyer"
+    },
+    "droid_appupgrade_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "nudge_a": 2,
+        "forced_a": 5,
+        "block_a": 8,
+        "reserved_a": 11,
+        "reserved_b": 12
+      },
+      "description": "DROID-4859: Create droid_appupgrade_tst"
+    },
+    "droid_tos_updated_banner_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "payload": {
+        "type": "longValue"
+      },
+      "description": "DROID-5577: Long running proctor group for annual 'Terms of Service' updates"
+    },
+    "droid_native_myjobs": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1,
+        "active_v2": 2
+      },
+      "description": "DROID-5496: Create proctor android native my jobs"
+    },
+    "droid_native_myjobs_nonia": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_grp1": 1,
+        "active_grp2": 2,
+        "active_grp3": 3
+      },
+      "description": "MAGUA-956: Create proctor android native my jobs"
+    },
+    "droid_rn_myjobs_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "phase_a_active": 1,
+        "phase_b_control": 2,
+        "phase_b_active": 3,
+        "reserved_c": 4
+      },
+      "description": "DROID-10436: Create proctor for React Native MyJobs"
+    },
+    "rn_myjobs_invitations_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_grp1": 1,
+        "active_grp2": 2,
+        "phase_b_control": 3,
+        "phase_b_active": 4,
+        "phase_b_debug": 5
+      },
+      "description": "MYJOBS-825: Mj1.2 employer Invitations"
+    },
+    "droid_native_messaging": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "MAGE-885: [DROID] Native Messaging"
+    },
+    "droid_native_messaging_sse": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "MAGE-1340: Experiment of SSE"
+    },
+    "droid_native_messaging_pajim": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "MAGE-1794: Add toggle for PAJIM in native messaging"
+    },
+    "droid_rn_messaging": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "MEGA-75: RN Messaging Migration"
+    },
+    "droid_rich_profile_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active_phase_a": 2,
+        "control_phase_b": 3,
+        "active_phase_b": 4,
+        "reserved_c_control": 5,
+        "active_phase_c": 6,
+        "reserved_d_control": 7,
+        "active_phase_d": 8
+      },
+      "description": "JSMA-2094: Android native profile"
+    },
+    "droid_rn_viewjob": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2,
+        "active_95_modal": 3
+      },
+      "description": "WENG-470: [RNVJ] (Android) Replace VJ webview with RN view"
+    },
+    "mob_vj_secondary_actions_prominence": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "DISCO-1394: Decrease prominence of secondary actions on View Job"
+    },
+    "droid_googlesignin_migration_test": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-6098: New proctor test for Google SignIn using CredentialManager API"
+    },
+    "droid_native_myjobs_suggest_hires": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "MAGUA-1212: Create proctor for suggest hires in native my jobs"
+    },
+    "droid_uip_messaging_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-0000: No-harm test for the Account Status Migration"
+    },
+    "droid_indeed_cookies_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-9108: No-harm test for Indeed Cookies migration"
+    },
+    "droid_recaptcha_logging_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-11059: Obtain and log recaptcha token before Indeed Apply",
+      "isHotLoadSafe": true
+    },
+    "droid_web_serp_url_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-9374: Test for treating web SERP urls properly"
+    },
+    "droid_app_version_details_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_a": 1,
+        "active": 2
+      },
+      "description": "DROID-6299: Create app version details on hamburger menu"
+    },
+    "droid_save_continue_btn_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-6120: Create proctor for save and continue in native my jobs"
+    },
+    "droid_native_myjobs_primary_subtab_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "grp1": 1
+      },
+      "description": "DROID-6865: Create proctor for primary tab view in native my jobs"
+    },
+    "jsj_ifl7_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1,
+        "dark_mode_beta": 2
+      },
+      "description": "DROID-8154: Create proctor for migration to IFL 7 Theme / MADS 7"
+    },
+    "droid_sync_refresh_proctor": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-7075: Controls whether or not we synchronously refresh proctor results after login from RegPromo or not."
+    },
+    "droid_urlregistry_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2,
+        "reserved_a": 3,
+        "reserved_b": 4,
+        "reserved_c": 5
+      },
+      "description": "DROID-6784: No-harm test for URLRegistry API integration"
+    },
+    "droid_native_myjobs_for_pro": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2,
+        "reserved": 3
+      },
+      "description": "DROID-7070: Create droid_native_myjobs_for_pro"
+    },
+    "droid_native_myjobs_top_choice_features": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "phase_a_active": 1
+      },
+      "description": "PSUB-1381: Creating android native proctor to control top choice features on my jobs"
+    },
+    "app_population_allocations_droid": {
+      "fallbackValue": 1,
+      "buckets": {
+        "max_nav_allocation_droid": 1,
+        "stable_app_allocation_droid": 2,
+        "shared_experimental_allocation_droid": 3,
+        "companion_allocation_droid": 4
+      },
+      "description": "JSMA-2586: Droid parent test for navigation. Handles distribution of the app population."
+    },
+    "max_nav_logic_droid": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "phase_a_active": 1,
+        "phase_b_only_match_subdomains_control": 2,
+        "phase_b_only_match_subdomains": 3,
+        "phase_b_only_tab_back_stack_control": 4,
+        "phase_b_only_tab_back_stack": 5,
+        "phase_b_inline_overlay_control": 6,
+        "phase_b_inline_overlay": 7,
+        "phase_b_control": 8,
+        "phase_b_active": 9,
+        "phase_c_hide_badge_names_control": 10,
+        "phase_c_hide_badge_names": 11,
+        "phase_c_control": 12,
+        "phase_c_active": 13,
+        "phase_c_hamburger": 14,
+        "phase_c_hamburger_control": 15,
+        "phase_c_scroll_up": 16,
+        "phase_c_scroll_up_control": 17,
+        "phase_c_hide_top_nav": 18,
+        "phase_c_hide_both_nav": 19,
+        "phase_c_hide_nav_control": 20,
+        "tare_nav_api_active": 21,
+        "tare_nav_api_control": 22
+      },
+      "description": "JSMA-2586: Child test for max nav allocation"
+    },
+    "max_tab_config_droid": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "ian_base_config": 1,
+        "depricated": 2,
+        "depricated_control": 3,
+        "ace_fifth_tab": 4,
+        "ace_fifth_tab_control": 5,
+        "search_fifth_tab_control": 6,
+        "search_fifth_tab": 7
+      },
+      "description": "JSMA-2586: Child test for max allocation"
+    },
+    "stable_app_nav_logic_droid": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "phase_a_active": 1,
+        "phase_b_only_match_subdomains_control": 2,
+        "phase_b_only_match_subdomains": 3,
+        "phase_b_only_tab_back_stack_control": 4,
+        "phase_b_only_tab_back_stack": 5,
+        "phase_b_inline_overlay_control": 6,
+        "phase_b_inline_overlay": 7,
+        "phase_b_control": 8,
+        "phase_b_active": 9,
+        "phase_c_hide_badge_names_control": 10,
+        "phase_c_hide_badge_names": 11,
+        "phase_c_control": 12,
+        "phase_c_active": 13,
+        "phase_c_hamburger": 14,
+        "phase_c_hamburger_control": 15,
+        "phase_c_scroll_up": 16,
+        "phase_c_scroll_up_control": 17,
+        "phase_c_hide_top_nav": 18,
+        "phase_c_hide_both_nav": 19,
+        "phase_c_hide_nav_control": 20,
+        "tare_nav_api_active": 21,
+        "tare_nav_api_control": 22
+      },
+      "description": "JSMA-2586: Child test for stable nav allocation"
+    },
+    "stable_app_tab_config_droid": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "ian_base_config": 1,
+        "depricated": 2,
+        "depricated_control": 3,
+        "ace_fifth_tab": 4,
+        "ace_fifth_tab_control": 5,
+        "japan_control": 6,
+        "japan_remove_spa": 7,
+        "japan_native_bottom_nav": 8,
+        "japan_msg_tab_control": 9,
+        "japan_msg_tab_active": 10,
+        "search_fifth_tab": 11,
+        "search_fifth_tab_control": 12
+      },
+      "description": " JSMA-2586: Child test for stable app allocation"
+    },
+    "shared_experimental_nav_logic_droid": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "phase_a_active": 1,
+        "phase_b_only_match_subdomains_control": 2,
+        "phase_b_only_match_subdomains": 3,
+        "phase_b_only_tab_back_stack_control": 4,
+        "phase_b_only_tab_back_stack": 5,
+        "phase_b_inline_overlay_control": 6,
+        "phase_b_inline_overlay": 7,
+        "phase_b_control": 8,
+        "phase_b_active": 9,
+        "phase_c_hide_badge_names_control": 10,
+        "phase_c_hide_badge_names": 11,
+        "phase_c_control": 12,
+        "phase_c_active": 13,
+        "phase_c_hamburger": 14,
+        "phase_c_hamburger_control": 15,
+        "phase_c_scroll_up": 16,
+        "phase_c_scroll_up_control": 17,
+        "phase_c_hide_top_nav": 18,
+        "phase_c_hide_both_nav": 19,
+        "phase_c_hide_nav_control": 20,
+        "tare_nav_api_active": 21,
+        "tare_nav_api_control": 22
+      },
+      "description": "JSMA-2586: Child test for shared experimental allocation"
+    },
+    "shared_experimental_tab_config_droid": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "ian_base_config": 1,
+        "depricated": 2,
+        "depricated_control": 3,
+        "ace_fifth_tab": 4,
+        "ace_fifth_tab_control": 5,
+        "search_fifth_tab": 6,
+        "search_fifth_tab_control": 7
+      },
+      "description": "JSMA-2586: Child test for shared experimental app allocation"
+    },
+    "companion_nav_logic_droid": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "phase_a_active": 1,
+        "phase_b_only_match_subdomains_control": 2,
+        "phase_b_only_match_subdomains": 3,
+        "phase_b_only_tab_back_stack_control": 4,
+        "phase_b_only_tab_back_stack": 5,
+        "phase_b_inline_overlay_control": 6,
+        "phase_b_inline_overlay": 7,
+        "phase_b_control": 8,
+        "phase_b_active": 9,
+        "phase_c_hide_badge_names_control": 10,
+        "phase_c_hide_badge_names": 11,
+        "phase_c_control": 12,
+        "phase_c_active": 13,
+        "phase_c_hamburger": 14,
+        "phase_c_hamburger_control": 15,
+        "phase_c_scroll_up": 16,
+        "phase_c_scroll_up_control": 17,
+        "phase_c_hide_top_nav": 18,
+        "phase_c_hide_both_nav": 19,
+        "phase_c_hide_nav_control": 20,
+        "tare_nav_api_active": 21,
+        "tare_nav_api_control": 22
+      },
+      "description": "JSMA-2586: Child test for companion nav allocation"
+    },
+    "companion_tab_config_droid": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "ian_base_config": 1,
+        "depricated": 2,
+        "depricated_control": 3,
+        "ace_fifth_tab": 4,
+        "ace_fifth_tab_control": 5,
+        "search_fifth_tab": 6,
+        "search_fifth_tab_control": 7
+      },
+      "description": " JSMA-2586: Child test for companion allocation"
+    },
+    "jpmjse_app_login_explainer_android_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9362: New JP initial login screen (RegPromo) experiment"
+    },
+    "droid_native_myjobs_mads": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "MAGUA-1773: Create proctor for Android my jobs MADS"
+    },
+    "droid_search_overlay_native_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "phase_a_profile_location": 1,
+        "phase_b_control": 2,
+        "phase_b_combined_search": 3,
+        "reserved_b": 4,
+        "reserved_c": 5
+      },
+      "description": "DROID-7125: Add Proctor test for controlling native experience of Droid search overlay"
+    },
+    "droid_native_coworker": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-7587: Create proctor test for Ace Android"
+    },
+    "droid_keyboard_visibility_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-6749: Hide bottom tabs when keyboard is visible"
+    },
+    "droid_myjobs_shared_hire_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      }
+    },
+    "droid_mag_ftue_new_logged_out_experience_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "full_gate": 1
+      },
+      "description": "DROID-10698: Enable new logged out experience"
+    },
+    "droid_native_magua_screenshot_share_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "MAGUA-1908: Android: Adding a “Share” option when a user taking screenshots on VJP in the app"
+    },
+    "droid_magua_share_tooltip_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "MAGUA-1934: Android: VJ Sharing Improvement (tooltip)"
+    },
+    "rn_magua_share_tooltip_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "MAGUA-1934: Android: VJ Sharing Improvement (tooltip)"
+    },
+    "magua_job_feedback_prompt_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "MAGUA-2103: Collecting feedback from users coming to Indeed from a shared job link"
+    },
+    "droid_rich_profile_datadog_rum_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2,
+        "reserved_a": 3,
+        "reserved_b": 4,
+        "reserved_c": 5
+      },
+      "payload": {
+        "type": "map",
+        "schema": {
+          "samplingRate": "longValue"
+        },
+        "allowForce": false
+      },
+      "description": "DROID-8350 Proctor test for Datadog RUM(Real User Monitoring) in Native Profile feature"
+    },
+    "droid_snowplow_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "phase_a_active": 2
+      },
+      "description": "DROID-7262: Snowplow"
+    },
+    "droid_native_myjobs_buttons_api_migration": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-8423:  Proctor test for button rest api graphql migration"
+    },
+    "droid_native_profile_work_areas_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-8442: Android Native Toggle for Work Areas"
+    },
+    "droid_onboarding_title_match_autocomplete_dataset_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "enableJobTypeAutoComplete": 1,
+        "enableJobTypeAutoCompleteCanonOnly": 2,
+        "enableJobTypeAutoCompleteCanonAltLabels": 3
+      },
+      "payload": {
+        "type": "json",
+        "schema": {
+          "autocompleteType": "stringValue"
+        },
+        "allowForce": false
+      },
+      "isHotLoadSafe": true,
+      "description": "TITLE-948: Create droid_onboarding_title_match_autocomplete_dataset_tst"
+    },
+    "droid_native_profile_work_wellbeing_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-8562: Create Proctor for Work Wellbeing"
+    },
+    "rnhp_parent_test": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "web_allocation": 0,
+        "control": 1,
+        "control_aa": 2,
+        "active": 3,
+        "reserve_a": 4,
+        "reserve_b": 5,
+        "reserve_c": 6,
+        "reserve_d": 7,
+        "reserve_e": 8,
+        "reserve_f": 9,
+        "reserve_g": 10
+      },
+      "description": "RNHP-128: React Native Homepage Parent Test"
+    },
+    "rnhp_expanded_location_modal_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "DISCO-4455: Create rnhp_expanded_location_modal_tst"
+    },
+    "rnhp_vj": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "grp2": 2,
+        "grp3": 3,
+        "grp4": 4,
+        "grp5": 5
+      },
+      "description": "RNHP-809: Create proctor rnhp_vj"
+    },
+    "hp_job_sections_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "mobile_MVP": 1,
+        "desktop": 2,
+        "reloVertSecond": 3,
+        "JP_autoSourcer": 4,
+        "controlRelo": 5,
+        "reloCaroSecond": 6,
+        "no_GroupedHP": 7,
+        "grp8": 8,
+        "grp9": 9,
+        "grp10": 10,
+        "grp11": 11,
+        "grp12": 12,
+        "grp13": 13,
+        "JP_only_JobsForYou": 14,
+        "grp15": 15,
+        "longCommuteThird": 16,
+        "control17": 17,
+        "test18": 18,
+        "control19": 19,
+        "test20": 20,
+        "test21": 21,
+        "test22": 22,
+        "test23": 23,
+        "control24": 24,
+        "test25": 25,
+        "test26": 26,
+        "test27": 27,
+        "test28": 28,
+        "test29": 29,
+        "test30": 30,
+        "test31": 31,
+        "test32": 32,
+        "test33": 33,
+        "test34": 34,
+        "test35": 35,
+        "control36": 36,
+        "control_copy21": 37,
+        "lastApply": 38,
+        "control_desktop": 39,
+        "desktop_lastApply": 40,
+        "mobile41": 41,
+        "desktop42": 42,
+        "control_copy41": 43,
+        "test_carousel1": 44,
+        "test_carousel2": 45,
+        "test_carousel3": 46,
+        "test_carouselScroll1": 47,
+        "test_carouselScroll2": 48,
+        "mobile49": 49,
+        "desktop50": 50,
+        "desktop51": 51,
+        "mobile_crowtaxo_m3_control52": 52,
+        "mobile_crowtaxo_m3_test53": 53,
+        "desktop_crowtaxo_m3_control54": 54,
+        "desktop_crowtaxo_m3_test55": 55,
+        "ios_control56": 56,
+        "ios_crowtaxo_m3_control57": 57,
+        "ios_crowtaxo_m3_test58": 58,
+        "test_carouselScroll3": 59,
+        "mobile_crowtaxo_p3_iteration2_ctrl_60": 60,
+        "mobile_crowtaxo_p3_iteration2_test_61": 61,
+        "mobile_crowtaxo_p3_iteration2_test_62": 62,
+        "desktop_crowtaxo_p3_iteration2_ctrl_63": 63,
+        "desktop_crowtaxo_p3_iteration2_test_64": 64,
+        "desktop_crowtaxo_p3_iteration2_test_65": 65,
+        "control_mobile": 66,
+        "test_carousel_v2_1": 67,
+        "test_carousel_v2_2": 68,
+        "test_carousel_v2_3": 69,
+        "US_employerOutreach": 70,
+        "JP_mobile_jobsForYou_autoSourcerBlended": 71,
+        "test_carousel_v2_4": 72,
+        "test_carousel_v2_5": 73,
+        "test_carousel_v2_6": 74,
+        "test_carousel_v2_7": 75,
+        "test_carousel_v2_8": 76,
+        "test_carousel_v2_9": 77,
+        "extended_us_hp_fifteen_aa_plus": 78,
+        "extended_us_hpd_fifteen_aa_plus": 79,
+        "CA_mobile": 80,
+        "CA_desktop": 81,
+        "CA_mobile_with_assistedApply": 82,
+        "mobile_remove_pagination_control": 83,
+        "mobile_remove_pagination_limit10": 84,
+        "mobile_remove_pagination_limit100": 85,
+        "desktop_remove_pagination_control": 86,
+        "desktop_remove_pagination_limit10": 87,
+        "desktop_remove_pagination_limit100": 88,
+        "control_employerOutreach": 89,
+        "employerOutreach_AS_PMC": 90,
+        "employerOutreach_AS_PMC_SS": 91
+      },
+      "payload": {
+        "type": "json",
+        "allowForce": false,
+        "schema": {}
+      },
+      "description": "DISCO-2180: Create hp_job_sections_tst for sectioned jobfeed experience"
+    },
+    "rnhp_nav_refresh_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "RNHP-366: RNHP Navigation Refresh"
+    },
+    "droid_ace_interview_prep": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-8741: ACE Interview Prep Feature (Android)"
+    },
+    "ace_interview_prep_career_scout_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "AICE-277: ACE Interview Prep integration with Career Scout"
+    },
+    "cs_interview_prep_text_mode_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "AICE-2523: Allow jobseekers to start a text version of mock interview"
+    },
+    "cs_interview_prep_kill_switch_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "Degraded": 1,
+        "Unavailable": 2
+      },
+      "payload": {
+        "type": "json",
+        "allowForce": false,
+        "schema": {
+          "text": "stringValue"
+        }
+      },
+      "description": "AICE-3008: Maintenance mode/kill switch to be used when the feature is degraded or unavailable"
+    },
+    "flash_feedback_interview_prep_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "AICE-1349: Collect Flash Feedback Between Interview and Summary Page"
+    },
+    "interview_prep_feedback_priority_tag_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "AICE-2561: Optimize Visibility of Question-by-Question Feedback"
+    },
+    "droid_native_myjobs_ghosted_application_signals_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_grp1": 1,
+        "active_grp2": 2,
+        "active_grp3": 3,
+        "active_grp4": 4,
+        "active_grp5": 5,
+        "active_grp6": 6
+      },
+      "description": "MAGUA-2191: Create proctor for ghosted application signals "
+    },
+    "eba_myjobs_android_toggle": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-8058: Integrate proctor for Android EBA my jobs"
+    },
+    "droid_native_myjobs_red_dot_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_grp1": 1,
+        "active_grp2": 2
+      },
+      "description": "DROID-8672: create a new proctor for red dot status label in native myjobs"
+    },
+    "droid_native_messaging_responsiveness": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "MAGE-1847"
+    },
+    "droid_ace_education_experience": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9440: Create career scout education experience proctor toggle"
+    },
+    "droid_ace_interview_scheduling": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "JSMA-3147: Show Interview Cards in CS chat"
+    },
+    "droid_avro_logging_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-8895: Create Proctor toggle for Avro logging implementation"
+    },
+    "ace_interview_prep_payload_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "payload": {
+        "type": "json",
+        "allowForce": false,
+        "schema": {
+          "targetOccupationSUIDs": "stringArray"
+        }
+      },
+      "description": "AICE-1159: Create ace_interview_prep_payload_tog proctor to control the payload for interview prep screens"
+    },
+    "droid_native_myjobs_better_sorting_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_grp1": 1,
+        "active_grp2": 2,
+        "active_grp3": 3
+      },
+      "description": "MAGUA-2371: Create proctor for Better sorting of applications in myjobs"
+    },
+    "droid_homepage_ready_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9111: move emitting homePageReady metric to JSMA Bridge event"
+    },
+    "droid_rn_profile": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "PROFEXP-785: Toggle All Profile React Native Features "
+    },
+    "droid_rn_profile_resume": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "RN-801: Create separate proctor tests to toggle native versions of preferences and resume tabs"
+    },
+    "droid_rn_profile_photos": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "RN-265: Create Android and iOS RN Photos Proctor tests"
+    },
+    "droid_rn_profile_form_summary_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-10878: [DROID] Summary Form - Proctor Flag & Native Routing"
+    },
+    "droid_rn_profile_additional_information_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-10970: Additional Information Form - Proctor Flag & Native Routing"
+    },
+    "droid_rn_profile_form_patent_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-10962: [DROID] Patents - Proctor Flag & Native Routing"
+    },
+    "droid_rn_profile_form_award_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-10971: [DROID] Awards - Proctor Flag & Native Routing "
+    },
+    "myjobs_include_gd_applications_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9290: Create proctor for apply time format"
+    },
+    "myjobs_nexus_ai_recruiter_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "Gates the Nexus (AI Recruiter) workflow feature in MyJobs applied tab."
+    },
+    "droid_native_messaging_ai_assistant": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1,
+        "active_phase_b": 2
+      },
+      "description": "DROID-9233: AI-assisted messaging Android test"
+    },
+    "prof_tabbed_exp_resume_data_import": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "PROFEXP-503: Proctor to enable Resume Data Import functionality in POW for merged profile"
+    },
+    "droid_rich_profile_resume_data_import": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9264: Add resume data import Android proctor"
+    },
+    "droid_rich_profile_skillsets": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "DROID-9364: Add Skill Sets Proctor"
+    },
+    "rdp_pdf_resume_facelift": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "POW-5995: RDP Resume PDF Facelift"
+    },
+    "droid_expMj1_invited_in_myjobs": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_grp1": 1,
+        "active_grp2": 2,
+        "active_grp3": 3
+      },
+      "description": "DROID-9327: Create a proctor for invitation tab in native my jobs"
+    },
+    "droid_native_profile_online_status_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-9087: create droid_native_profile_online_status_tst"
+    },
+    "droid_ace_resume_creation_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9426: Add proctor for Ace Resume Creation"
+    },
+    "droid_native_career_scout_interstitial_promo": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9355: Display interstitial about Career Scout (Ace) on app start-up"
+    },
+    "droid_native_myjobs_application_insights_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_grp1": 1,
+        "active_grp2": 2,
+        "active_grp3": 3
+      },
+      "description": "MAGUA-2525: Create proctor for application insights in myjobs"
+    },
+    "droid_native_myjobs_event_logging": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1,
+        "active_grp2": 2,
+        "active_grp3": 3,
+        "active_grp4": 4,
+        "active_grp5": 5
+      },
+      "description": "MAGUA-2011: Create proctor for logging in native myjobs"
+    },
+    "droidnative_myjobs_next_steps_dashboard": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_grp1": 1,
+        "phase_b_control": 2,
+        "phase_b_active": 3
+      },
+      "description": "MAGUA-2641: MyJobs next steps dashboard: applications progress recap and actions reminder"
+    },
+    "droid_rn_myjobs_next_steps_profile_actions_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "RN-2098: Show resume glow up as NBA on MyJobs (Android)"
+    },
+    "droid_rn_myjobs_nba_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "phase_a_active": 1,
+        "phase_b_control": 2,
+        "phase_b_active": 3
+      },
+      "description": "MYJOBS-1078: NBA Recommendation Dashboard UI revamp (Android). Depends on droid_rn_myjobs_tst >= phase_b_active (3)."
+    },
+    "droid_rich_profile_special_licenses": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9406: Display special license sections (Nursing, Accounting, Driving)"
+    },
+    "jso_trigger_onboarding_serp_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "serpPrompt": 1,
+        "disableMicrocontent": 2
+      },
+      "description": "JSO-2969: trigger onboarding prompt from occupation-intent search"
+    },
+    "jsj_pathfinder_retake_quiz_ux_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "AICE-1365 Pathfinder retake quiz UX test"
+    },
+    "droid_rn_serp_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "JSMA-3349: JSMA React Native Serp"
+    },
+    "career_scout_fab": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "JSMA-3278: Career Scout FAB"
+    },
+    "js_mobile_coworker_async_suggestions": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "JSCHAT-2263 Make suggestions async"
+    },
+    "ace_career_scout_api_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "JSMA-3623: A/B test GraphQL vs Mastra backend",
+      "isHotLoadSafe": true
+    },
+    "ace_enable_last_chat_on_hub": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "RN-1990: Enable last chat session on Career Scout hub",
+      "isHotLoadSafe": true
+    },
+    "career_scout_always_aware": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "matchSection": 1,
+        "separate": 2,
+        "scroll": 3,
+        "ask": 4
+      },
+      "description": "AICE-2844: Investigate options for getting a view's context"
+    },
+    "droid_regpromo_employer_link_out_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "DROID-9702: Employer Link on Mobile Login"
+    },
+    "jso_location_v2_collection_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "autoPromptWithStreet": 1,
+        "autoPromptNoStreet": 2,
+        "manualPromptWithStreet": 3,
+        "manualPromptNoStreet": 4
+      },
+      "isHotLoadSafe": true,
+      "description": "DROID-9338: Configure jso_location_v2_collection_tst proctor test"
+    },
+    "profile_yoe_removal_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "PROFEXP-935: Toggle for YOE removal "
+    },
+    "pcs_qualifications_disclaimer": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "isHotLoadSafe": true,
+      "description": "POW-6462 - adding sourceability disclaimer to qualifications page in Profile"
+    },
+    "meg_offsite_inline_push_primer": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "OFFSITE-8: Inline push primer banner for notification center"
+    },
+    "droid_ghostwriter_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-9934: Create Ghostwriter Proctor"
+    },
+    "meg_accel_droid_push_opt_in_optim_experiments": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "optin_benefit": 1,
+        "fomo": 2
+      },
+      "description": "MEGA-39: [Android] Add proctor meg_accel_droid_push_opt_in_optim_experiments"
+    },
+    "meg_accel_droid_post_indeed_apply_primer": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "MEGA-166: Proctor to show push primer for post-indeed-apply"
+    },
+    "ace_interview_prep_bannar_myjobs_applied_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_ca": 1,
+        "active_us": 2,
+        "reserved_a": 3,
+        "reserved_b": 4,
+        "reserved_c": 5,
+        "reserved_d": 6
+      },
+      "payload": {
+        "type": "json",
+        "allowForce": false,
+        "schema": {}
+      },
+      "description": "PSUB-3474: Mock Interview promo on My Jobs Applied tab"
+    },
+    "ace_interview_prep_bannar_myjobs_interviews_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active_ca": 1,
+        "active_us": 2,
+        "reserved_a": 3,
+        "reserved_b": 4,
+        "reserved_c": 5,
+        "reserved_d": 6
+      },
+      "payload": {
+        "type": "json",
+        "allowForce": false,
+        "schema": {}
+      },
+      "description": "PSUB-3474: Mock Interview promo on My Jobs Interviews tab"
+    },
+    "ace_interview_prep_empty_state_cta_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1,
+        "reserved_a": 2,
+        "reserved_b": 3,
+        "reserved_c": 4,
+        "reserved_d": 5
+      },
+      "description": "PSUB-3393: Set up Proctor toggle for empty state entry point"
+    },
+    "cs_interview_prep_applied_jobcard_cta_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "AICE-2543: Create proctor test for Interview Prep CTA on Applied job cards"
+    },
+    "interview_prep_interruption_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "AICE-2874: Test impact of user interruptions"
+    },
+    "droid_ace_update_version_page": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "payload": {
+        "type": "json",
+        "allowForce": false,
+        "schema": {
+          "versionList": "longArray"
+        }
+      },
+      "description": "JSMA-3924: Block users that are on unsupported app versions"
+    },
+    "prof_rdi_auto_merge_alert_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "PROFEXP-1096: Add new proctor to handle the auto-merge RDI alert display"
+    },
+    "prof_rn_profile_form_certifications_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-44: Certifications Form - Profile Tab Entry Point"
+    },
+    "prof_rn_profile_form_education_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-42: Education Form - React Native Implementation"
+    },
+    "droid_enable_link_text_guard": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "active": 1
+      },
+      "description": "DROID-7626: [Feature] Messaging link handling"
+    },
+    "meg_accel_push_primer_bottom_sheet_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1,
+        "no_skip_btn": 2
+      },
+      "description": "MEGA-14: Push primer bottom sheet test"
+    },
+    "ai_messaging_mobile_version_two_improvements": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "phase_a_active": 2,
+        "phase_b_control": 3,
+        "phase_b_active": 4,
+        "phase_c_control": 5,
+        "phase_c_active": 6,
+        "reserved_f": 7,
+        "reserved_g": 8
+      },
+      "description": "IOS-21049: Test new AI messaging UX iterations"
+    },
+    "cs_interview_prep_flashcards_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "AICE-2209: Interview prep flashcards test"
+    },
+    "pass_newwebview_post_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "PASS-22643: Create USER type proctor for Android mobile: pass_newwebview_post_tst"
+    },
+    "droid_rn_profile_form_contact_info_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-10939: [DROID] Contact Information - NPUIP"
+    },
+    "rn_ghostwriter_test": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "RN-1218 Create a new Proctor rn_ghostwriter_test"
+    },
+    "droid_rn_profile_form_publications_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-10965: [DROID] Publications - Proctor Flag & Native Routing"
+    },
+    "jpm_updated_communication_policy_tog": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "active": 1
+      },
+      "description": "JSMA-4336: Toggle for showing secrecy of communications link in JP registration promo"
+    },
+    "prof_rn_profile_form_groups_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-442: Groups Form - Profile Tab Entry Point"
+    },
+    "prof_rn_profile_form_languages_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-51: Language Form - Profile tab entry point"
+    },
+    "prof_rn_profile_form_links_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-2222: Links Form - Profile Tab Entry Point"
+    },
+    "prof_rn_profile_form_military_service_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-452: Military Service Form - Profile Tab Entry Point"
+    },
+    "prof_rn_profile_form_minimum_base_pay_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-449: Minimum Base Pay Form - React Native Implementation"
+    },
+    "prof_rn_profile_form_relocation_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-458: Relocation Preferences Form - React Native Implementation"
+    },
+    "prof_rn_profile_form_skills_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-43: Skills Form - Profile Tab Entry Point"
+    },
+    "prof_rn_profile_form_work_experience_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-1637: Work Experience Form - Profile Tab Entry Point"
+    },
+    "prof_rn_profile_form_work_schedule_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-446: Work Schedule Form - React Native Implementation"
+    },
+    "prof_rn_sourcing_opt_in": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "RN-1484: Create a proctor test for reusable sourcing opt-in component integration with profile"
+    },
+    "droid_rn_profile_form_links_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "active": 2
+      },
+      "description": "DROID-11189: [DROID] Links - Proctor Flag & Native Routing"
+    },
+    "prof_rn_profile_form_preferred_commute_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-461: Commute Form - React Native Implementation"
+    },
+    "prof_rn_profile_form_preferred_job_types_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-443: Preferred Job Types Form - React Native Implementation"
+    },
+    "prof_rn_profile_form_work_areas_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-464: Work Areas Form - React Native Implementation"
+    },
+    "prof_rn_profile_form_preferred_job_titles_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-455: Preferred Job Titles Form - React Native Implementation"
+    },
+    "prof_rn_profile_form_work_setting_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "control_aa": 1,
+        "tst": 2
+      },
+      "description": "RN-1942: Work Setting Form - React Native Implementation"
+    },
+    "droid_age_signals_tst": {
+      "fallbackValue": -1,
+      "buckets": {
+        "inactive": -1,
+        "control": 0,
+        "test": 1
+      },
+      "description": "DROID-11195: Introduce default off proctor test for age restriction logic"
+    }
+  }
+}

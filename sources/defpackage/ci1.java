@@ -1,0 +1,9 @@
+package defpackage;
+
+import com.airbnb.lottie.parser.moshi.a;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class ci1 {
+    public static final a.C0108a a = a.C0108a.a("ef");
+    public static final a.C0108a b = a.C0108a.a("ty", "v");
+}

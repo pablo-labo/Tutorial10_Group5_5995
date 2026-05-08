@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "Result",
+  "namespace" : "com.indeed.signals.schema.ipluspublisherplugin",
+  "symbols" : [ "SUCCESS", "FAILURE" ]
+}

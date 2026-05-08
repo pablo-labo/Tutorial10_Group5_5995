@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ActionTypeEnum",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "symbols" : [ "deferPromo", "dismissButton", "dismissPromo", "noResponse", "showMore", "skipQuestion", "submitButton", "viewProfileChangesLink", "unknown" ],
+  "default" : "unknown"
+}

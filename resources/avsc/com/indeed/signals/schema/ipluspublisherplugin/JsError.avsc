@@ -1,0 +1,86 @@
+{
+  "type" : "record",
+  "name" : "JsError",
+  "namespace" : "com.indeed.signals.schema.ipluspublisherplugin",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ]
+  }, {
+    "name" : "publisherPluginCommon",
+    "type" : {
+      "type" : "record",
+      "name" : "CommonLogEntryFields",
+      "fields" : [ {
+        "name" : "sessionId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "userAgent",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "partnerAppId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "placementId",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "proctorGroups",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "browser",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Browser",
+      "symbols" : [ "CHROME", "FIREFOX", "SAFARI", "EDGE" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "OS",
+      "symbols" : [ "WINDOWS", "MACOS", "IOS", "ANDROID" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "deviceType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "DeviceType",
+      "symbols" : [ "MOBILE", "TABLET" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "errorDetails",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "IPlusPublisherPlugin.JobSearch.jsError",
+    "type" : "count",
+    "tags" : [ "browser", "os", "deviceType" ]
+  } ],
+  "logEntryType" : "iplus_publisherplugin_jobsearch_jserror"
+}

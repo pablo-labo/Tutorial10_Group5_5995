@@ -1,0 +1,60 @@
+{
+  "type" : "record",
+  "name" : "carouselJcsImpressionEvent",
+  "namespace" : "com.indeed.signals.schema.jobcardDiscover",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostId",
+      "symbols" : [ "UNKNOWN", "MOBILE", "HOMEPAGE", "PASSPORT", "INDAPPLY", "SMARTAPPLY", "MYINDEED", "I2A_WEBAPP", "SJPW", "INCUBATOR", "CAREER_GUIDE_WEBAPP", "COMPANY_PAGES_WEBAPP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageId",
+      "symbols" : [ "UNKNOWN", "DESKTOP_SERP", "HOMEPAGE", "JP_MOBILE_SERP", "VIEWJOB" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "JcsapplyEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "ANDROID_APP", "IOS_APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "sectionId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "SectionId",
+      "symbols" : [ "UNKNOWN", "HP_JOBS_FOR_YOU", "HP_TOP_APPLICANT_FEED", "HP_LAST_RQ", "HP_OTHER_MATCHES", "HP_AUTO_SOURCE_MATCHES", "HP_RELOCATION_OPPORTUNITIES", "HP_EMPLOYER_OUTREACH" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "providerId",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ProviderId",
+      "symbols" : [ "UNKNOWN", "MOSAIC_PROVIDER_JOBCARDS", "MOSAIC_PROVIDER_JOBCARDS_1", "MOSAIC_PROVIDER_JOBCARDS_2", "MOSAIC_PROVIDER_JOBCARDS_3", "MOSAIC_PROVIDER_JOBCARDS_4", "MOSAIC_PROVIDER_JOBCARDS_5", "MOSAIC_PROVIDER_JOBCARDS_6", "MOSAIC_PROVIDER_JOBCARDS_7", "MOSAIC_PROVIDER_JOBCARDS_8", "MOSAIC_PROVIDER_JOBCARDS_9", "MOSAIC_PROVIDER_JOBCARDS_10" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "numOfCards",
+    "type" : "int",
+    "default" : 0
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "carouselJobCards.impression",
+    "tags" : [ "hostId", "pageId", "sectionId", "providerId", "platform" ],
+    "value" : "numOfCards"
+  } ]
+}

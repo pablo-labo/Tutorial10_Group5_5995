@@ -1,0 +1,34 @@
+{
+  "type" : "record",
+  "name" : "GnavNotification",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "notificationRequestTotTime",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "notificationIconDisplayedWithUnseen",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "notificationIconDisplayed",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "err",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

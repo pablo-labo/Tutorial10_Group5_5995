@@ -1,0 +1,6 @@
+package androidx.media3.datasource;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class HttpDataSource$InvalidContentTypeException extends HttpDataSource$HttpDataSourceException {
+    public final String contentType;
+}

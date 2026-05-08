@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "PageId",
+  "namespace" : "com.indeed.signals.schema.jobcardDiscover",
+  "symbols" : [ "UNKNOWN", "DESKTOP_SERP", "HOMEPAGE", "JP_MOBILE_SERP", "VIEWJOB" ],
+  "default" : "UNKNOWN"
+}

@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "PerformanceMarks",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "renderBlockingCSSHeader",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "renderBlockingCSSFooter",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "renderBlockingCSSLeftNav",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "gnavPerformanceMarks"
+}

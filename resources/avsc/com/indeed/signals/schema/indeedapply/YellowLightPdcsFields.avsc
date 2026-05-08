@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "YellowLightPdcsFields",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "questionId",
+    "type" : "string"
+  }, {
+    "name" : "suid",
+    "type" : "string"
+  }, {
+    "name" : "sentiment",
+    "type" : "string"
+  }, {
+    "name" : "skipped",
+    "type" : "boolean"
+  } ],
+  "logEntryType" : "iaYellowLightPdcsFields"
+}

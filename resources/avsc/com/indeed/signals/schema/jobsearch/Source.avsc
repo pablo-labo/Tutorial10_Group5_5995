@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Source",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "symbols" : [ "UNKNOWN", "JOBCARD", "TWO_PANE", "STANDALONE" ],
+  "default" : "UNKNOWN"
+}

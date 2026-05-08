@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "CampaignLifecycleEventType",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "EDIT_CAMPAIGN_STARTED", "BUDGET_MODIFIED", "DATE_MODIFIED", "CAMPAIGN_PAUSED", "CAMPAIGN_RESUMED", "CAMPAIGN_DELETED", "REVIEW_CLICKED", "EDIT_ON_REVIEW_CLICKED", "EDIT_CAMPAIGN_COMPLETED", "EDIT_CAMPAIGN_ABANDONED", "EDIT_CAMPAIGN_FAILED" ]
+}

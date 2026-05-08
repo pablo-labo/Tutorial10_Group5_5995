@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "RequestError",
+  "namespace" : "com.indeed.signals",
+  "fields" : [ {
+    "name" : "payload",
+    "type" : "string"
+  }, {
+    "name" : "ipAddress",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "resourceName",
+    "type" : "string"
+  }, {
+    "name" : "reason",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "received",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  } ],
+  "logEntryType" : "clickstreamRequestError"
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Outcome",
+  "namespace" : "com.indeed.signals.schema.jobcards",
+  "symbols" : [ "UNKNOWN", "SUCCESS", "FAIL" ],
+  "default" : "UNKNOWN"
+}

@@ -1,0 +1,16 @@
+{
+  "type" : "record",
+  "name" : "RNHiringEventRequestError",
+  "namespace" : "com.indeed.signals.schema.hiringevents",
+  "fields" : [ {
+    "name" : "message",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "name",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "stack",
+    "type" : [ "null", "string" ]
+  } ],
+  "logEntryType" : "rnHiringEventRequestError"
+}

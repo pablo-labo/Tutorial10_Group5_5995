@@ -1,0 +1,8 @@
+{
+  "type" : "enum",
+  "name" : "McpAppName",
+  "namespace" : "com.indeed.signals.schema.aixagentplatform",
+  "doc" : "The name of the MCP App that is loaded.",
+  "symbols" : [ "JOBSEARCH_MCP", "JOBSEEKER_PROFILE_MCP", "JS_COWORKER_MCP", "OTHER" ],
+  "default" : "OTHER"
+}

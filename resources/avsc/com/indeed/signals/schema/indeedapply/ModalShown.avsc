@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "ModalShown",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "logTk",
+    "type" : "string"
+  }, {
+    "name" : "questionsShown",
+    "type" : "int"
+  } ],
+  "logEntryType" : "iaYellowLight3PModalShown"
+}

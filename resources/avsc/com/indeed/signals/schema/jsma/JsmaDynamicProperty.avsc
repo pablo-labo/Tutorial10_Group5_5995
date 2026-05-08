@@ -1,0 +1,9 @@
+{
+  "type" : "record",
+  "name" : "JsmaDynamicProperty",
+  "namespace" : "com.indeed.signals.schema.jsma",
+  "fields" : [ {
+    "name" : "property",
+    "type" : [ "null", "string", "long" ]
+  } ]
+}

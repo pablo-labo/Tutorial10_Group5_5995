@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "LightProfileEntryPointEventsSurfaceType",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "symbols" : [ "hpBetweenJobcards", "hpTop", "hpTopReanswer" ]
+}

@@ -1,0 +1,135 @@
+{
+  "type" : "record",
+  "name" : "JsOnboardingWebApp",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "accountId",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "datacenter",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "requestPath",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountAge",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "minimallyCompleteAtStart",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "tags",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "onboardingFlowId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ref",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "refKw",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "refTyp",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "client",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Client",
+      "symbols" : [ "jsonboardingwebapp", "jsonboardingreactnative" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "originLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "countryCode",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "CountryCode",
+      "symbols" : [ "UNKNOWN", "AE", "AQ", "AR", "AT", "AU", "BE", "BH", "BR", "CA", "CH", "CL", "CN", "CO", "CR", "CZ", "DE", "DK", "EC", "EG", "ES", "FI", "FR", "GB", "GR", "HK", "HU", "ID", "IE", "IL", "IN", "IT", "JP", "KR", "KW", "LU", "MA", "MX", "MY", "NG", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PK", "PL", "PT", "QA", "RO", "RU", "SA", "SE", "SG", "TH", "TR", "TW", "UA", "US", "UY", "VE", "VN", "ZA" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "languageCode",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "LanguageCode",
+      "symbols" : [ "UNKNOWN", "ar", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "hi", "hu", "in", "it", "iw", "ja", "jp", "ko", "mr", "ms", "nl", "no", "pl", "pt", "ro", "ru", "sv", "ta", "te", "th", "tr", "uk", "us", "vi", "zh", "zz" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "platformType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PlatformType",
+      "symbols" : [ "APP_ANDROID", "APP_IOS", "APP_OTHER", "MOBILE_ANDROID", "MOBILE_IOS", "MOBILE_OTHER", "DESKTOP", "OTHER" ],
+      "default" : "OTHER"
+    } ],
+    "default" : null
+  }, {
+    "name" : "experienceKey",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ExperienceKey",
+      "symbols" : [ "CROWTAXO_START", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "isNewUser",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "appVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "osVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "onboarding.jsOnboardingWebApp",
+    "tags" : [ "client", "countryCode", "languageCode", "platformType", "minimallyCompleteAtStart", "experienceKey", "isNewUser" ]
+  } ],
+  "logEntryType" : "jsOnboardingWebApp"
+}

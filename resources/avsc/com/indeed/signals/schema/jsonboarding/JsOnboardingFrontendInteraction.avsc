@@ -1,0 +1,211 @@
+{
+  "type" : "record",
+  "name" : "JsOnboardingFrontendInteraction",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "interactionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "InteractionType",
+      "symbols" : [ "IMPRESSION", "CLICK", "SET_PRIVACY_FLAG", "SUBMITTED_CALIBRATION_ELIGIBLE_TITLE", "COMPLETED_ONBOARDING", "COMPLETED_CROWTAXO_ONBOARDING", "SESSION_BACKGROUNDED" ],
+      "default" : "IMPRESSION"
+    }
+  }, {
+    "name" : "page",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "section",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "component",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "element",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "variant",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Variant",
+      "symbols" : [ "page", "section", "component", "element" ],
+      "default" : "element"
+    } ],
+    "default" : null
+  }, {
+    "name" : "originLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "originUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "entityData",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isFirstPage",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isLastPage",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "dataActions",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "jobId",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "jobTitle",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobCompany",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobLocation",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobPay",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobsRetrieved",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "completedOnboardingYYYYMMDD",
+    "type" : "int",
+    "default" : -1
+  }, {
+    "name" : "destinationUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "stagingLevel",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "StagingLevel",
+      "symbols" : [ "DEV_PROVISIONING", "DEV", "QA", "PROD", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "onboardingFlowId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "tags",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "client",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Client",
+      "symbols" : [ "jsonboardingwebapp", "jsonboardingreactnative" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageName",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PageName",
+      "symbols" : [ "UNKNOWN", "LOCATION", "MINIMUM_PAY", "DESIRED_JOB", "RECENT_JOB", "CROWTAXO_SKILLS", "CROWTAXO_CREDENTIALS", "JOB_TYPES", "GENERALIST_CREDENTIALS", "GENERALIST_EDUCATION", "GENERALIST_SKILLS", "GENERALIST_WORK_AREAS", "PUSH_PROMO", "WORK_WELL_BEING", "REMOTE_WORK_PREFERENCE", "SOURCING_OPT_IN", "RESUME_GLOWUP_OPT_IN", "RESUME_GLOWUP_REVIEW_SUGGESTIONS", "RESUME_UPLOAD", "RESUME_GLOWUP_CS_CHAT", "RESUME_GLOWUP_CS_REVIEW", "SUMMARY" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "countryCode",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "CountryCode",
+      "symbols" : [ "UNKNOWN", "AE", "AQ", "AR", "AT", "AU", "BE", "BH", "BR", "CA", "CH", "CL", "CN", "CO", "CR", "CZ", "DE", "DK", "EC", "EG", "ES", "FI", "FR", "GB", "GR", "HK", "HU", "ID", "IE", "IL", "IN", "IT", "JP", "KR", "KW", "LU", "MA", "MX", "MY", "NG", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PK", "PL", "PT", "QA", "RO", "RU", "SA", "SE", "SG", "TH", "TR", "TW", "UA", "US", "UY", "VE", "VN", "ZA" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "languageCode",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "LanguageCode",
+      "symbols" : [ "UNKNOWN", "ar", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "hi", "hu", "in", "it", "iw", "ja", "jp", "ko", "mr", "ms", "nl", "no", "pl", "pt", "ro", "ru", "sv", "ta", "te", "th", "tr", "uk", "us", "vi", "zh", "zz" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "platformType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PlatformType",
+      "symbols" : [ "APP_ANDROID", "APP_IOS", "APP_OTHER", "MOBILE_ANDROID", "MOBILE_IOS", "MOBILE_OTHER", "DESKTOP", "OTHER" ],
+      "default" : "OTHER"
+    } ],
+    "default" : null
+  }, {
+    "name" : "elementName",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ElementName",
+      "symbols" : [ "BACK_BUTTON", "BACK_OR_CLOSE_BUTTON", "CLOSE_BUTTON", "DELETE_BUTTON", "DETECT_LOCATION_BUTTON", "EDIT_JOBTITLE_BUTTON", "EDIT_JOBTYPE_BUTTON", "EDIT_LOCATION_BUTTON", "EDIT_PAY_BUTTON", "EXIT_BUTTON", "NOT_NOW_BUTTON", "OPEN_TO_ANYTHING_BUTTON", "REVIEW_RESUME_BUTTON", "SAVE_NEXT_BUTTON", "SKIP_BUTTON", "UPLOAD_BUTTON", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "timeSinceFlowEntryMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "timeSincePageLoadMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "onboarding.jsonboardingfrontendinteraction",
+    "tags" : [ "interactionType", "pageName", "client", "variant", "countryCode", "languageCode", "platformType", "stagingLevel", "elementName" ]
+  }, {
+    "name" : "onboarding.jsonboardingfrontendinteraction.timeSinceFlowEntryMs",
+    "type" : "distribution",
+    "value" : "timeSinceFlowEntryMs",
+    "tags" : [ "interactionType", "pageName", "client", "countryCode", "languageCode", "platformType", "elementName" ]
+  }, {
+    "name" : "onboarding.jsonboardingfrontendinteraction.timeSincePageLoadMs",
+    "type" : "distribution",
+    "value" : "timeSincePageLoadMs",
+    "tags" : [ "interactionType", "pageName", "client", "countryCode", "languageCode", "platformType", "elementName" ]
+  } ],
+  "logEntryType" : "jsonboardingfrontendinteraction"
+}

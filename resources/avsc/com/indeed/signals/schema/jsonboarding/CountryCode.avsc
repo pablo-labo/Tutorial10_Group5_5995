@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "CountryCode",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "UNKNOWN", "AE", "AQ", "AR", "AT", "AU", "BE", "BH", "BR", "CA", "CH", "CL", "CN", "CO", "CR", "CZ", "DE", "DK", "EC", "EG", "ES", "FI", "FR", "GB", "GR", "HK", "HU", "ID", "IE", "IL", "IN", "IT", "JP", "KR", "KW", "LU", "MA", "MX", "MY", "NG", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PK", "PL", "PT", "QA", "RO", "RU", "SA", "SE", "SG", "TH", "TR", "TW", "UA", "US", "UY", "VE", "VN", "ZA" ],
+  "default" : "UNKNOWN"
+}

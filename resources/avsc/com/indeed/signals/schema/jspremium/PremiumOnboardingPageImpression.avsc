@@ -1,0 +1,56 @@
+{
+  "type" : "record",
+  "name" : "PremiumOnboardingPageImpression",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : "string"
+  }, {
+    "name" : "provider",
+    "type" : "string"
+  }, {
+    "name" : "accountId",
+    "type" : "long"
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "tourId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "view",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "View",
+      "symbols" : [ "UNKNOWN", "ONBOARDING_ENTRYPOINT", "TOP_CHOICE", "TOP_AND_EARLY_APPLICANT", "APPLICANT_INSIGHTS", "PROFILE_ENGAGEMENT", "AI_MOCK_INTERVIEW", "EARLY_APPLICANT", "TOP_APPLICANT" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "isPrivileged",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "jsPremiumOnboardingPageImpression"
+}

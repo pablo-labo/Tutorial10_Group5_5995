@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "AutoApplySetupResumeConfirmationEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Resume confirmation event",
+  "fields" : [ {
+    "name" : "setupLogUid",
+    "type" : "string"
+  }, {
+    "name" : "resumeType",
+    "type" : "string"
+  } ],
+  "logEntryType" : "autoApplySetupResumeConfirmationEvent"
+}

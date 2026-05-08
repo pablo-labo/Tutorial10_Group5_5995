@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="other">%d รีวิว</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">กรอไปข้างหน้า %d วินาที</item>
+        <item quantity="other">กรอไปข้างหน้า %d วินาที</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">กรอกลับ %d วินาที</item>
+        <item quantity="other">กรอกลับ %d วินาที</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="other">%s นาที</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="other">การสัมภาษณ์จะเริ่มภายใน %d ชั่วโมง</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="other">การสัมภาษณ์จะเริ่มภายใน %d นาที</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="other">%d ไฟล์ไม่ได้อัปโหลดและจะไม่รวมอยู่ในข้อความของคุณ</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="other">%d ไฟล์ไม่ได้อัปโหลด</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="other">%d ข้อความที่ยังไม่ได้อ่าน</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">การแจ้งเตือนใหม่ %d รายการ</item>
+        <item quantity="other">การแจ้งเตือนใหม่ %d รายการ</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="other">ตามปกติแล้วผู้ว่าจ้างรายนี้จะตอบกลับภายใน %d วัน</item>
+    </plurals>
+</resources>

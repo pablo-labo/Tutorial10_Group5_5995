@@ -1,0 +1,86 @@
+{
+  "type" : "record",
+  "name" : "RNProviderRenderedV1",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "fields" : [ {
+    "name" : "deviceProperties",
+    "type" : {
+      "type" : "record",
+      "name" : "RNDevicePropertiesV4",
+      "fields" : [ {
+        "name" : "platform",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNPlatformsV4",
+          "symbols" : [ "ios", "android" ]
+        }
+      }, {
+        "name" : "osVersion",
+        "type" : "string"
+      }, {
+        "name" : "appName",
+        "type" : {
+          "type" : "enum",
+          "name" : "RNAppsV4",
+          "symbols" : [ "jsma", "ema" ]
+        }
+      }, {
+        "name" : "nativeAppVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnLibraryVersion",
+        "type" : "string"
+      }, {
+        "name" : "rnAppBundleVersion",
+        "type" : "string"
+      }, {
+        "name" : "manufacturer",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "model",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "brand",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "systemName",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "buildVariant",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "environment",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "variant",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "BuildVariant",
+          "symbols" : [ "debug", "release" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "env",
+        "type" : [ "null", {
+          "type" : "enum",
+          "name" : "Environment",
+          "symbols" : [ "qa", "prod" ]
+        } ],
+        "default" : null
+      }, {
+        "name" : "isIpad",
+        "type" : "boolean"
+      } ]
+    }
+  }, {
+    "name" : "provider",
+    "type" : "string"
+  } ],
+  "logEntryType" : "rnProviderRendered"
+}

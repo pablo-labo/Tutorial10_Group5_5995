@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "YellowLightQuestionsPrefetched",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "status",
+    "type" : {
+      "type" : "enum",
+      "name" : "QuestionPreFetchStatus",
+      "symbols" : [ "FETCHED", "FETCH_FAILED", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    }
+  }, {
+    "name" : "prefetchedQuestionCount",
+    "type" : "int",
+    "default" : -1
+  } ],
+  "logEntryType" : "iaYellowLight3PQuestionsPrefetched"
+}

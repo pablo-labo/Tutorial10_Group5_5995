@@ -1,0 +1,38 @@
+{
+  "type" : "record",
+  "name" : "IaInitialDataMismatch",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "moduleName",
+    "type" : "string"
+  }, {
+    "name" : "field",
+    "type" : "string"
+  }, {
+    "name" : "originalValue",
+    "type" : "string"
+  }, {
+    "name" : "newValue",
+    "type" : "string"
+  }, {
+    "name" : "diff",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "moduleNameEnum",
+    "type" : {
+      "type" : "enum",
+      "name" : "ModuleName",
+      "symbols" : [ "UNKNOWN", "CONTACT_INFO", "INTERVIEW_SCHEDULING", "RESUME_SELECTION", "PREVIEW", "RESUME", "QUESTIONS", "QUALIFICATION_QUESTIONS", "DEMOGRAPHIC_QUESTIONS", "SOURCING_OPT_IN" ],
+      "default" : "UNKNOWN"
+    },
+    "default" : "UNKNOWN"
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "ia.smartApply.initialDataMismatch",
+    "tags" : [ "moduleNameEnum" ]
+  } ],
+  "logEntryType" : "iaInitialDataMismatch"
+}

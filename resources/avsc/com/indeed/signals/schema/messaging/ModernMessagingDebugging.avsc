@@ -1,0 +1,46 @@
+{
+  "type" : "record",
+  "name" : "ModernMessagingDebugging",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "appName",
+    "type" : "string"
+  }, {
+    "name" : "logMessage",
+    "type" : "string"
+  }, {
+    "name" : "logDetails",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "conversationId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "modernMessagingDebugging",
+  "unstable_metrics" : [ {
+    "name" : "ModernMessaging.debugging",
+    "tags" : [ "logMessage", "appName" ]
+  } ]
+}

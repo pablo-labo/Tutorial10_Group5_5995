@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "MosaicSignalsDDMetricTest",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "testString",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "testBoolean",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "mosaicSignalsDDTest.boolean",
+    "tags" : [ "testBoolean" ]
+  } ],
+  "logEntryType" : "mosaicSignalsTestsMetrics"
+}

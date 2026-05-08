@@ -1,0 +1,15 @@
+{
+  "type" : "record",
+  "name" : "npsOther",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "otherAnswer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "npsFeedbackOther"
+}

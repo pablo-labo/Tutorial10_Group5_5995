@@ -1,0 +1,73 @@
+{
+  "type" : "record",
+  "name" : "POWSentimentSeen",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "interactionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "InteractionType",
+      "symbols" : [ "IMPRESSION", "CLICK", "SET_PRIVACY_FLAG" ],
+      "default" : "IMPRESSION"
+    }
+  }, {
+    "name" : "page",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "section",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "component",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "element",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "variant",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Variant",
+      "symbols" : [ "page", "section", "component", "element" ],
+      "default" : "element"
+    } ],
+    "default" : null
+  }, {
+    "name" : "originLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "originUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "entityData",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "draftId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "profileOneFrontendInteraction"
+}

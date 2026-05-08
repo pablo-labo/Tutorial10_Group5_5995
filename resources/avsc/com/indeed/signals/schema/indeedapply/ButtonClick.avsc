@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "ButtonClick",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "logTk",
+    "type" : "string"
+  }, {
+    "name" : "clickType",
+    "type" : "string"
+  }, {
+    "name" : "questionsAnsweredAsYes",
+    "type" : "int"
+  }, {
+    "name" : "questionsAnsweredAsNo",
+    "type" : "int"
+  } ],
+  "logEntryType" : "iaYellowLight3PButtonClick"
+}

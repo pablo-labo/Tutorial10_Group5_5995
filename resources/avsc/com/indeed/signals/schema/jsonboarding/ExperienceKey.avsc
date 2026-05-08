@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ExperienceKey",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "CROWTAXO_START", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

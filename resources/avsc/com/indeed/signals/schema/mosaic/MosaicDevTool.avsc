@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "MosaicDevTool",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "operation",
+    "type" : "string"
+  }, {
+    "name" : "hostId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "providerId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "mosaicDevTool"
+}

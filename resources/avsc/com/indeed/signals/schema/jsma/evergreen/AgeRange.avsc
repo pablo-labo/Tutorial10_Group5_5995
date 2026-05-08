@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "AgeRange",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "lowerBound",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "upperBound",
+    "type" : [ "null", "int" ],
+    "default" : null
+  } ]
+}

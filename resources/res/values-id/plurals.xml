@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="other">%d ulasan</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="other">%s menit</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="other">Wawancara dimulai dalam %d jam</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="other">Wawancara dimulai dalam %d menit</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="other">%d file tidak diunggah dan tidak akan disertakan dalam pesan Anda.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="other">%d file tidak dapat diunggah</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="other">%d pesan belum dibaca</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="other">Perusahaan ini biasanya memberikan tanggapan dalam %d hari</item>
+    </plurals>
+</resources>

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ModuleName",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "symbols" : [ "UNKNOWN", "CONTACT_INFO", "INTERVIEW_SCHEDULING", "RESUME_SELECTION", "PREVIEW", "RESUME", "QUESTIONS", "QUALIFICATION_QUESTIONS", "DEMOGRAPHIC_QUESTIONS", "SOURCING_OPT_IN" ],
+  "default" : "UNKNOWN"
+}

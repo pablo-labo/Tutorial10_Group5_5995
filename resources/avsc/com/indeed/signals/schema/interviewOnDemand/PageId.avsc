@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "PageId",
+  "namespace" : "com.indeed.signals.schema.interviewOnDemand",
+  "symbols" : [ "UNKNOWN", "SERP", "HOMEPAGE", "VIEWJOB" ],
+  "default" : "UNKNOWN"
+}

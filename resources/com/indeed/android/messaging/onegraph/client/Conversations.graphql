@@ -1,0 +1,285 @@
+fragment LastEvent on ConversationEvent {
+    id
+    type
+    subType
+    messagePreview
+    publicationDateTime
+    author {
+        role
+    }
+    attachments {
+        contentHash
+        fileName
+        fileExtension
+    }
+}
+
+fragment JobData on Job {
+    key
+    url
+    title
+    location {
+        formatted {
+            short
+            long
+        }
+    }
+    sourceEmployerName
+    employer {
+        dossier {
+            images {
+                squareLogoUrls {
+                    url64
+                    url128
+                }
+            }
+        }
+        ugcStats {
+            ratings {
+                overallRating {
+                    value
+                }
+            }
+        }
+    }
+    compensation {
+        formattedText
+    }
+    attributes {
+        key
+        label
+    }
+}
+
+mutation addConversationLabels($input: AddConversationLabelsInput!) {
+    addConversationLabels(input: $input) {
+        conversation {
+            id
+        }
+    }
+}
+
+fragment ConversationDetails on Conversation {
+    id
+    context
+    userContext {
+#        TODO: move to a separate call to avoid failing the whole request if applyTime subgraph is not available
+#        jobApplication {
+#            applyTime
+#        }
+        requireResponse @include(if: $includeRequireResponse) {
+            required
+            timestamp
+        }
+    }
+    userReadsInfo {
+        lastVisited
+        readCursor
+        unreadCount
+    }
+    userLabelInfo {
+        labels
+    }
+    participants {
+        role
+        accountKey
+        participantName
+        removed
+    }
+    job {
+        ...JobData
+    }
+    lastEvent {
+        ...LastEvent
+    }
+    locks {
+        primary
+        reason
+        timestamp
+    }
+    scope {
+        key
+        value
+    }
+}
+
+query FindConversations($input: FindConversationsInput!, $first: Int!, $last: Int!, $before: String, $after: String, $includeRequireResponse: Boolean! = true) {
+    findConversations(input: $input, first: $first, after: $after, last: $last, before: $before) {
+        conversations {
+            ...ConversationDetails
+        }
+        pageInfo {
+            endCursor
+            startCursor
+            hasPreviousPage
+            hasNextPage
+        }
+    }
+}
+
+query FetchConversationMessages(
+    $input: ConversationInput!,
+    $first: Int!,
+    $last: Int!,
+    $before: String,
+    $after: String,
+    $timelineModuleResultInput: TimelineModuleInput!,
+    $includeRequireResponse: Boolean! = true
+) {
+    conversation(input: $input) {
+        ...ConversationDetails
+        eventsConnection(first: $first, after: $after, last: $last, before: $before) {
+            events {
+                id
+                author {
+                    accountKey
+                    role
+                }
+                type
+                subType
+                messageBody
+                messageContentFormat
+                cleanedMessageBody
+                publicationDateTime
+                attachments {
+                    contentHash
+                    fileName
+                    fileExtension
+                }
+                timelineModuleResult(input: $timelineModuleResultInput) {
+                    ... on TimelineModule {
+                        telContent
+                        timelineModuleType
+                        overrides {
+                            message
+                            sender
+                            icon {
+                                iflColorReference
+                                iflIconName
+                            }
+                        }
+                        data
+                    }
+                }
+            }
+            pageInfo {
+                hasNextPage
+                hasPreviousPage
+                endCursor
+                startCursor
+            }
+        }
+    }
+}
+
+mutation updateConversationReadCursor($input: UpdateConversationReadCursorInput!) {
+    updateConversationReadCursor(input: $input) {
+        readCursor
+    }
+}
+
+mutation sendConversationEvent($input: SendConversationEventInput!) {
+    sendConversationEvent(input: $input) {
+        conversationId
+        event {
+            ...LastEvent
+        }
+    }
+}
+
+mutation registerOnlineStatusListeners($input: RegisterListenersOnlineStatusInput!) {
+    onlineStatus {
+        registerListeners(input: $input) {
+            accounts {
+                ... on EmployerUser {
+                    onlineStatus {
+                        offlineSeconds
+                        status
+                    }
+                }
+                ... on JobSeekerOnlineStatusAccount {
+                    onlineStatus {
+                        offlineSeconds
+                        status
+                    }
+                }
+            }
+        }
+    }
+}
+
+query getOnlineStatuses($input: OnlineStatusesInput!) {
+    onlineStatuses(input: $input) {
+        accounts {
+            ... on EmployerUser {
+                onlineStatus {
+                    offlineSeconds
+                    status
+                }
+            }
+            ... on JobSeekerOnlineStatusAccount {
+                onlineStatus {
+                    offlineSeconds
+                    status
+                }
+            }
+        }
+    }
+}
+
+mutation setOnlineStatusPreference($input: SetOnlineStatusPreferenceInput!) {
+    onlineStatusPreference {
+        setOnlineStatusPreference(input: $input) {
+            onlineStatusPreference {
+                isEnabled
+            }
+        }
+    }
+}
+
+query getJobsData($jobDataInput: JobDataInput) {
+    jobData(input: $jobDataInput) {
+        results {
+            job {
+                ...JobData
+            }
+        }
+    }
+}
+
+query getSuggestedMessages($input: SuggestedMessageInput) {
+    AiMessaging {
+        suggestedMessages(input: $input) {
+            suggestedMessages {
+                messageBody
+                label
+            }
+            trackingKey
+        }
+    }
+}
+
+query GetInboundEmailDataByConversationIdAndEventId($conversationId: ID!, $eventId: ID!) {
+    conversation(input: { conversationId: $conversationId }) {
+        id
+        eventsConnection(input: { filter: { eventIds: [$eventId]  } }) {
+            edges {
+                node {
+                    inboundEmailData {
+                        strippedHtml
+                        subject
+                    }
+                }
+            }
+        }
+    }
+}
+
+mutation CreateApplyUrlFullParams($input: CreateApplyUrlFullParamsInput!) {
+    applyUrl {
+        createApplyUrlFullParams(input: $input) {
+            url
+            iaUid
+        }
+    }
+}

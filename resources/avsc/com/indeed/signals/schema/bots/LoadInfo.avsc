@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "LoadInfo",
+  "namespace" : "com.indeed.signals.schema.bots",
+  "fields" : [ {
+    "name" : "parentTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "application",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "message",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "captchaLoadInfo"
+}

@@ -1,0 +1,26 @@
+{
+  "type" : "record",
+  "name" : "CommonLogEntryFields",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "fields" : [ {
+    "name" : "sessionId",
+    "type" : "string"
+  }, {
+    "name" : "userAgent",
+    "type" : "string"
+  }, {
+    "name" : "oauthClientId",
+    "type" : "string"
+  }, {
+    "name" : "atsKey",
+    "type" : "string"
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "advertiserKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

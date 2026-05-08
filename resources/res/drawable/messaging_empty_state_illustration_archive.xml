@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="97dp"
+    android:width="150dp"
+    android:viewportWidth="150"
+    android:viewportHeight="97">
+    <group>
+        <clip-path android:pathData="M0,0.19h150v96.61h-150z"/>
+        <group>
+            <clip-path android:pathData="M17.2,40.09L36.59,32.95V19.36H73.53L124.81,0.48L149.71,96.44H116.51V96.52H36.55V96.44H0.29L17.2,40.09Z"/>
+            <path
+                android:fillColor="#f7c8b8"
+                android:pathData="M17.2,40.09L124.81,0.48L149.71,96.44H75H0.29L17.2,40.09Z"/>
+            <path
+                android:fillColor="#2c2071"
+                android:pathData="M116.5,19.36H36.59V45.86H116.5V19.36Z"/>
+            <path
+                android:fillColor="#5644bf"
+                android:pathData="M116.51,74.37H36.55V96.52H116.51V74.37Z"/>
+            <path
+                android:fillColor="#ffffff"
+                android:pathData="M85.5,88.39H67.63C66.02,88.39 64.69,87.08 64.69,85.45C64.69,83.84 66,82.52 67.63,82.52H85.5C87.11,82.52 88.42,83.83 88.42,85.45C88.42,87.07 87.11,88.39 85.5,88.39Z"/>
+            <path
+                android:fillColor="#ffffff"
+                android:pathData="M85.5,33.33H67.63C66.02,33.33 64.69,32.02 64.69,30.39C64.69,28.78 66,27.45 67.63,27.45H85.5C87.11,27.45 88.42,28.76 88.42,30.39C88.42,32.02 87.11,33.33 85.5,33.33Z"/>
+            <path
+                android:fillColor="@drawable/_messaging_empty_state_illustration_archive__0_res_0x7f08008b"
+                android:pathData="M92.76,41.19C92.76,41.25 92.76,41.32 92.76,41.39C92.76,43.59 90.96,45.39 88.76,45.39H64.35C62.15,45.39 60.35,43.59 60.35,41.39C60.35,41.32 60.35,41.25 60.35,41.19H28.58V74.39H124.55V41.19H92.76Z"/>
+            <path
+                android:fillColor="#5644bf"
+                android:pathData="M85.51,63.67H67.65C66.04,63.67 64.71,62.36 64.71,60.73C64.71,59.12 66.02,57.79 67.65,57.79H85.51C87.13,57.79 88.44,59.1 88.44,60.73C88.44,62.34 87.13,63.67 85.51,63.67Z"/>
+        </group>
+    </group>
+</vector>

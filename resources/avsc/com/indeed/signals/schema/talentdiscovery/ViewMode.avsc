@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ViewMode",
+  "namespace" : "com.indeed.signals.schema.talentdiscovery",
+  "symbols" : [ "UNKNOWN", "LIST", "GRID" ],
+  "default" : "UNKNOWN"
+}

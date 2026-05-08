@@ -1,0 +1,35 @@
+{
+  "type" : "record",
+  "name" : "ExperimentalPageNavigationMetrics",
+  "namespace" : "com.indeed.signals.schema.pagenavigation",
+  "fields" : [ {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "externalLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isSoftNavigation",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "originPageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "destinationPageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "firstSignificantRender",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "interrupted",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "logEntryType" : "experimentalPageNavigationMetrics"
+}

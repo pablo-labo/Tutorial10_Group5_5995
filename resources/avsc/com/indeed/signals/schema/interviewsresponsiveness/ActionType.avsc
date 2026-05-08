@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ActionType",
+  "namespace" : "com.indeed.signals.schema.interviewsresponsiveness",
+  "symbols" : [ "CLICK", "IMPRESSION", "ERROR" ]
+}

@@ -1,0 +1,51 @@
+{
+  "type" : "record",
+  "name" : "npsRating",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "score",
+    "type" : "int",
+    "default" : -1
+  }, {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "co",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "lang",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "acctId",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "acctIdLong",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "ua",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "uiversion",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "trigger",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "npsFeedbackRating"
+}

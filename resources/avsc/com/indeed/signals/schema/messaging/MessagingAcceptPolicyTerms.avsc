@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "MessagingAcceptPolicyTerms",
+  "namespace" : "com.indeed.signals.schema.messaging",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "localeLanguage",
+    "type" : "string"
+  }, {
+    "name" : "localeCountry",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "stagingLevel",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isMasquerading",
+    "type" : "boolean"
+  }, {
+    "name" : "isPrivileged",
+    "type" : "boolean"
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "ipCountry",
+    "type" : "string"
+  }, {
+    "name" : "userTrackingAccountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "messagingAcceptPolicyTerms",
+  "unstable_metrics" : [ {
+    "name" : "MessagingAcceptPolicyTerms.click"
+  } ]
+}

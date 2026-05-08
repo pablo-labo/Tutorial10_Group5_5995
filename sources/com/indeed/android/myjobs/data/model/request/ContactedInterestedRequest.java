@@ -1,0 +1,227 @@
+package com.indeed.android.myjobs.data.model.request;
+
+import com.facebook.react.fabric.mounting.mountitems.IntBufferBatchMountItem;
+import defpackage.akb;
+import defpackage.ia;
+import defpackage.u40;
+import defpackage.w20;
+import defpackage.wl7;
+import defpackage.z3;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\"\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u0001Bk\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0003\u0012\u0006\u0010\u0007\u001a\u00020\u0003\u0012\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u0003\u0012\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u0003¢\u0006\u0004\b\r\u0010\u000eJ\t\u0010\u001a\u001a\u00020\u0003HÆ\u0003J\t\u0010\u001b\u001a\u00020\u0003HÆ\u0003J\t\u0010\u001c\u001a\u00020\u0003HÆ\u0003J\t\u0010\u001d\u001a\u00020\u0003HÆ\u0003J\t\u0010\u001e\u001a\u00020\u0003HÆ\u0003J\u000b\u0010\u001f\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010 \u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010!\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010\"\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010#\u001a\u0004\u0018\u00010\u0003HÆ\u0003Jw\u0010$\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00032\b\b\u0002\u0010\u0005\u001a\u00020\u00032\b\b\u0002\u0010\u0006\u001a\u00020\u00032\b\b\u0002\u0010\u0007\u001a\u00020\u00032\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u0003HÆ\u0001J\u0013\u0010%\u001a\u00020&2\b\u0010'\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010(\u001a\u00020)HÖ\u0001J\t\u0010*\u001a\u00020\u0003HÖ\u0001R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0010R\u0011\u0010\u0005\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0010R\u0011\u0010\u0006\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0010R\u0011\u0010\u0007\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\u0010R\u0013\u0010\b\u001a\u0004\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0010R\u0013\u0010\t\u001a\u0004\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0010R\u0013\u0010\n\u001a\u0004\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0017\u0010\u0010R\u0013\u0010\u000b\u001a\u0004\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0018\u0010\u0010R\u0013\u0010\f\u001a\u0004\u0018\u00010\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0019\u0010\u0010¨\u0006+"}, d2 = {"Lcom/indeed/android/myjobs/data/model/request/ContactedInterestedRequest;", "", "rAKey", "", "sAKey", "uid", "h", "ecmi", "jt", "company", "employerName", "jobId", "source", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "getRAKey", "()Ljava/lang/String;", "getSAKey", "getUid", "getH", "getEcmi", "getJt", "getCompany", "getEmployerName", "getJobId", "getSource", "component1", "component2", "component3", "component4", "component5", "component6", "component7", "component8", "component9", "component10", "copy", "equals", "", "other", "hashCode", "", "toString", "myjobs_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final /* data */ class ContactedInterestedRequest {
+    public static final int $stable = 0;
+    private final String company;
+    private final String ecmi;
+    private final String employerName;
+    private final String h;
+    private final String jobId;
+    private final String jt;
+    private final String rAKey;
+    private final String sAKey;
+    private final String source;
+    private final String uid;
+
+    public /* synthetic */ ContactedInterestedRequest(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, int i, DefaultConstructorMarker defaultConstructorMarker) {
+        this(str, str2, str3, str4, str5, (i & 32) != 0 ? null : str6, (i & 64) != 0 ? null : str7, (i & IntBufferBatchMountItem.INSTRUCTION_UPDATE_LAYOUT) != 0 ? null : str8, (i & IntBufferBatchMountItem.INSTRUCTION_UPDATE_EVENT_EMITTER) != 0 ? null : str9, (i & IntBufferBatchMountItem.INSTRUCTION_UPDATE_PADDING) != 0 ? null : str10);
+    }
+
+    public static /* synthetic */ ContactedInterestedRequest copy$default(ContactedInterestedRequest contactedInterestedRequest, String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, int i, Object obj) {
+        if ((i & 1) != 0) {
+            str = contactedInterestedRequest.rAKey;
+        }
+        if ((i & 2) != 0) {
+            str2 = contactedInterestedRequest.sAKey;
+        }
+        if ((i & 4) != 0) {
+            str3 = contactedInterestedRequest.uid;
+        }
+        if ((i & 8) != 0) {
+            str4 = contactedInterestedRequest.h;
+        }
+        if ((i & 16) != 0) {
+            str5 = contactedInterestedRequest.ecmi;
+        }
+        if ((i & 32) != 0) {
+            str6 = contactedInterestedRequest.jt;
+        }
+        if ((i & 64) != 0) {
+            str7 = contactedInterestedRequest.company;
+        }
+        if ((i & IntBufferBatchMountItem.INSTRUCTION_UPDATE_LAYOUT) != 0) {
+            str8 = contactedInterestedRequest.employerName;
+        }
+        if ((i & IntBufferBatchMountItem.INSTRUCTION_UPDATE_EVENT_EMITTER) != 0) {
+            str9 = contactedInterestedRequest.jobId;
+        }
+        if ((i & IntBufferBatchMountItem.INSTRUCTION_UPDATE_PADDING) != 0) {
+            str10 = contactedInterestedRequest.source;
+        }
+        String str11 = str9;
+        String str12 = str10;
+        String str13 = str7;
+        String str14 = str8;
+        String str15 = str5;
+        String str16 = str6;
+        return contactedInterestedRequest.copy(str, str2, str3, str4, str15, str16, str13, str14, str11, str12);
+    }
+
+    /* JADX INFO: renamed from: component1, reason: from getter */
+    public final String getRAKey() {
+        return this.rAKey;
+    }
+
+    /* JADX INFO: renamed from: component10, reason: from getter */
+    public final String getSource() {
+        return this.source;
+    }
+
+    /* JADX INFO: renamed from: component2, reason: from getter */
+    public final String getSAKey() {
+        return this.sAKey;
+    }
+
+    /* JADX INFO: renamed from: component3, reason: from getter */
+    public final String getUid() {
+        return this.uid;
+    }
+
+    /* JADX INFO: renamed from: component4, reason: from getter */
+    public final String getH() {
+        return this.h;
+    }
+
+    /* JADX INFO: renamed from: component5, reason: from getter */
+    public final String getEcmi() {
+        return this.ecmi;
+    }
+
+    /* JADX INFO: renamed from: component6, reason: from getter */
+    public final String getJt() {
+        return this.jt;
+    }
+
+    /* JADX INFO: renamed from: component7, reason: from getter */
+    public final String getCompany() {
+        return this.company;
+    }
+
+    /* JADX INFO: renamed from: component8, reason: from getter */
+    public final String getEmployerName() {
+        return this.employerName;
+    }
+
+    /* JADX INFO: renamed from: component9, reason: from getter */
+    public final String getJobId() {
+        return this.jobId;
+    }
+
+    public final ContactedInterestedRequest copy(String rAKey, String sAKey, String uid, String h, String ecmi, String jt, String company, String employerName, String jobId, String source) {
+        rAKey.getClass();
+        sAKey.getClass();
+        uid.getClass();
+        h.getClass();
+        ecmi.getClass();
+        return new ContactedInterestedRequest(rAKey, sAKey, uid, h, ecmi, jt, company, employerName, jobId, source);
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof ContactedInterestedRequest)) {
+            return false;
+        }
+        ContactedInterestedRequest contactedInterestedRequest = (ContactedInterestedRequest) other;
+        return wl7.b(this.rAKey, contactedInterestedRequest.rAKey) && wl7.b(this.sAKey, contactedInterestedRequest.sAKey) && wl7.b(this.uid, contactedInterestedRequest.uid) && wl7.b(this.h, contactedInterestedRequest.h) && wl7.b(this.ecmi, contactedInterestedRequest.ecmi) && wl7.b(this.jt, contactedInterestedRequest.jt) && wl7.b(this.company, contactedInterestedRequest.company) && wl7.b(this.employerName, contactedInterestedRequest.employerName) && wl7.b(this.jobId, contactedInterestedRequest.jobId) && wl7.b(this.source, contactedInterestedRequest.source);
+    }
+
+    public final String getCompany() {
+        return this.company;
+    }
+
+    public final String getEcmi() {
+        return this.ecmi;
+    }
+
+    public final String getEmployerName() {
+        return this.employerName;
+    }
+
+    public final String getH() {
+        return this.h;
+    }
+
+    public final String getJobId() {
+        return this.jobId;
+    }
+
+    public final String getJt() {
+        return this.jt;
+    }
+
+    public final String getRAKey() {
+        return this.rAKey;
+    }
+
+    public final String getSAKey() {
+        return this.sAKey;
+    }
+
+    public final String getSource() {
+        return this.source;
+    }
+
+    public final String getUid() {
+        return this.uid;
+    }
+
+    public int hashCode() {
+        int iD = akb.d(akb.d(akb.d(akb.d(this.rAKey.hashCode() * 31, 31, this.sAKey), 31, this.uid), 31, this.h), 31, this.ecmi);
+        String str = this.jt;
+        int iHashCode = (iD + (str == null ? 0 : str.hashCode())) * 31;
+        String str2 = this.company;
+        int iHashCode2 = (iHashCode + (str2 == null ? 0 : str2.hashCode())) * 31;
+        String str3 = this.employerName;
+        int iHashCode3 = (iHashCode2 + (str3 == null ? 0 : str3.hashCode())) * 31;
+        String str4 = this.jobId;
+        int iHashCode4 = (iHashCode3 + (str4 == null ? 0 : str4.hashCode())) * 31;
+        String str5 = this.source;
+        return iHashCode4 + (str5 != null ? str5.hashCode() : 0);
+    }
+
+    public String toString() {
+        String str = this.rAKey;
+        String str2 = this.sAKey;
+        String str3 = this.uid;
+        String str4 = this.h;
+        String str5 = this.ecmi;
+        String str6 = this.jt;
+        String str7 = this.company;
+        String str8 = this.employerName;
+        String str9 = this.jobId;
+        String str10 = this.source;
+        StringBuilder sbF = u40.f("ContactedInterestedRequest(rAKey=", str, ", sAKey=", str2, ", uid=");
+        ia.r(sbF, str3, ", h=", str4, ", ecmi=");
+        ia.r(sbF, str5, ", jt=", str6, ", company=");
+        ia.r(sbF, str7, ", employerName=", str8, ", jobId=");
+        return z3.n(sbF, str9, ", source=", str10, ")");
+    }
+
+    public ContactedInterestedRequest(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10) {
+        w20.p(str, str2, str3, str4, str5);
+        this.rAKey = str;
+        this.sAKey = str2;
+        this.uid = str3;
+        this.h = str4;
+        this.ecmi = str5;
+        this.jt = str6;
+        this.company = str7;
+        this.employerName = str8;
+        this.jobId = str9;
+        this.source = str10;
+    }
+}

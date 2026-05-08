@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="other">%d đánh giá</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Tua nhanh %d giây</item>
+        <item quantity="other">Tua nhanh %d giây</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Tua lại %d giây</item>
+        <item quantity="other">Tua lại %d giây</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="other">%s phút</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="other">Phỏng vấn bắt đầu sau %d giờ nữa</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="other">Phỏng vấn bắt đầu sau %d phút nữa</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="other">%d tập tin không được tải lên và sẽ không được đưa vào tin nhắn của bạn.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="other">%d tập tin không được tải lên</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="other">%d tin nhắn chưa đọc</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d thông báo mới</item>
+        <item quantity="other">%d thông báo mới</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="other">Nhà tuyển dụng này thường phản hồi trong vòng %d ngày</item>
+    </plurals>
+</resources>

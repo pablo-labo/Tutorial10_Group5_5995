@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "EmployerOutreachSource",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "symbols" : [ "UNKNOWN", "AUTOSOURCER", "PREMIUM_MATCH_CANDIDATES", "SMART_SOURCING" ],
+  "default" : "UNKNOWN"
+}

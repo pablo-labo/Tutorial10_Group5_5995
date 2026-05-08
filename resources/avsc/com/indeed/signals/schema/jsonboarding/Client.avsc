@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "Client",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "jsonboardingwebapp", "jsonboardingreactnative" ]
+}

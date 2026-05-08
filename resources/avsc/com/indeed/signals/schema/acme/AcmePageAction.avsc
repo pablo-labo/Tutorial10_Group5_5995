@@ -1,0 +1,47 @@
+{
+  "type" : "record",
+  "name" : "AcmePageAction",
+  "namespace" : "com.indeed.signals.schema.acme",
+  "fields" : [ {
+    "name" : "action",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "application",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "page",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "section",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "component",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "element",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "entityData",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "destinationPage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "destinationType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "parenttk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "acmePage_signalsAction"
+}

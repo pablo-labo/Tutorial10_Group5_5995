@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">חוות דעת אחת</item>
+        <item quantity="two">%d חוות דעת</item>
+        <item quantity="many">%d חוות דעת</item>
+        <item quantity="other">%d חוות דעת</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">דקה %s</item>
+        <item quantity="other">%s דקות</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">ראיון עבודה מתחיל בעוד שעה %s</item>
+        <item quantity="other">ראיון עבודה מתחיל בעוד %s שעות</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">ראיון עבודה מתחיל בעוד דקה %s</item>
+        <item quantity="other">ראיון עבודה מתחיל בעוד %s דקות</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">קובץ %d לא הועלה ולא ייכלל בהודעה שלך.</item>
+        <item quantity="two">%d קבצים לא הועלו ולא ייכללו בהודעה שלך.</item>
+        <item quantity="many">%d קבצים לא הועלו ולא ייכללו בהודעה שלך.</item>
+        <item quantity="other">%d קבצים לא הועלו ולא ייכללו בהודעה שלך.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">קובץ %d לא הועלה</item>
+        <item quantity="two">%d קבצים לא הועלו</item>
+        <item quantity="many">%d קבצים לא הועלו</item>
+        <item quantity="other">%d קבצים לא הועלו</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d הודעה שלא נקראה</item>
+        <item quantity="two">%d הודעות שלא נקראו</item>
+        <item quantity="many">%d הודעות שלא נקראו</item>
+        <item quantity="other">%d הודעות שלא נקראו</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">מעסיק זה מגיב בדרך כלל תוך יום %d</item>
+        <item quantity="other">מעסיק זה בדרך כלל מגיב תוך %d ימים</item>
+    </plurals>
+</resources>

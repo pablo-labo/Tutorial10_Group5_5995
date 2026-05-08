@@ -1,0 +1,11 @@
+{
+  "type" : "record",
+  "name" : "SignInPromptBannerImpression",
+  "namespace" : "com.indeed.signals.schema.jsactivationt4",
+  "fields" : [ {
+    "name" : "bannerType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "jsactt4SignInPromptBannerImpression"
+}

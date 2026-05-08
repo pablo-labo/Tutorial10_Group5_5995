@@ -1,0 +1,25 @@
+{
+  "type" : "record",
+  "name" : "iaResumePageContinueClickEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumePageContinueClick"
+  }, {
+    "name" : "resumeType",
+    "type" : "string"
+  }, {
+    "name" : "globalResumeType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "fileId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaResumePageContinueClick"
+}

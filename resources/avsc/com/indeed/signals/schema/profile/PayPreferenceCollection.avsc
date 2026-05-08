@@ -1,0 +1,54 @@
+{
+  "type" : "record",
+  "name" : "PayPreferenceCollection",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "v",
+    "type" : "string",
+    "default" : "0"
+  }, {
+    "name" : "section",
+    "type" : "string",
+    "default" : "salary"
+  }, {
+    "name" : "mobtk",
+    "type" : "string"
+  }, {
+    "name" : "userInputPayAmount",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "jobDetailsPayAmount",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "currency",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userInputPayFormatLabel",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userInputPayFormatValue",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "jobDetailsPayFormatLabel",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobDetailsPayFormatValue",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "originalSentiment",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "sentiment",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "payPreferenceCollection"
+}

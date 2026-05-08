@@ -1,0 +1,62 @@
+{
+  "type" : "record",
+  "name" : "WVMPButtonAvailability",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "result",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Result",
+      "symbols" : [ "SUCCESS", "FAILURE" ],
+      "default" : "SUCCESS"
+    } ],
+    "default" : null
+  }, {
+    "name" : "action",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Action",
+      "symbols" : [ "jsProPremiumAccess", "clickWVMPButton" ],
+      "default" : "jsProPremiumAccess"
+    } ],
+    "default" : null
+  }, {
+    "name" : "title",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "elapsedTime",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "originLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "WVMPButtonAvailability",
+    "tags" : [ "result", "action" ]
+  }, {
+    "name" : "WVMPButtonPerformance",
+    "type" : "distribution",
+    "value" : "elapsedTime",
+    "tags" : [ "result", "action" ]
+  } ],
+  "logEntryType" : "WVMPButtonAvailability"
+}

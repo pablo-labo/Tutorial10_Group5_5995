@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "JsvRender",
+  "namespace" : "com.indeed.signals.schema.careerguide",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "renderTime",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "logEntryType" : "careerGuideJsv"
+}

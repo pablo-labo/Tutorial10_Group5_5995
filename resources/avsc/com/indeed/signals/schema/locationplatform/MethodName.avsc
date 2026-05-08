@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "MethodName",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "symbols" : [ "LOCATIONAUTOCOMPLETE", "VALIDATELOCATION", "LOCATIONINPUTCOMPONENTSTRINGPREFILL", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

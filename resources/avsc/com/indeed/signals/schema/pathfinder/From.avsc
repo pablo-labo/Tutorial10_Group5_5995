@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "From",
+  "namespace" : "com.indeed.signals.schema.pathfinder",
+  "symbols" : [ "CHAT", "GNAV", "PUSH", "OTHER", "UNKNOWN" ],
+  "default" : "UNKNOWN"
+}

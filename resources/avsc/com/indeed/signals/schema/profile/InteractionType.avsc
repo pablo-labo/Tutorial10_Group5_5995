@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "InteractionType",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "symbols" : [ "IMPRESSION", "CLICK", "SET_PRIVACY_FLAG" ],
+  "default" : "IMPRESSION"
+}

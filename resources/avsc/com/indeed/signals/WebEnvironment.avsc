@@ -1,0 +1,31 @@
+{
+  "type" : "record",
+  "name" : "WebEnvironment",
+  "namespace" : "com.indeed.signals",
+  "fields" : [ {
+    "name" : "eventId",
+    "type" : "string"
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userIpAddress",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "indeedLocale",
+    "type" : "string"
+  }, {
+    "name" : "brLocale",
+    "type" : "string"
+  }, {
+    "name" : "loggerVersion",
+    "type" : "string"
+  } ],
+  "logEntryType" : "clickstreamWebEnvironment"
+}

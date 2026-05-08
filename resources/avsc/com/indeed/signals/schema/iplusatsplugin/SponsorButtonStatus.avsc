@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "SponsorButtonStatus",
+  "namespace" : "com.indeed.signals.schema.iplusatsplugin",
+  "symbols" : [ "PAUSED", "UNAVAILABLE", "SPENDING", "NOT_SPENDING", "SCHEDULED", "NOT_SPONSORED", "ERROR" ]
+}

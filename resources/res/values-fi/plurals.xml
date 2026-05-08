@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 arvostelu</item>
+        <item quantity="other">%d arvostelua</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Siirry eteenpäin %d sekunti</item>
+        <item quantity="other">Siirry eteenpäin %d sekuntia</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Siirry taaksepäin %d sekunti</item>
+        <item quantity="other">Siirry taaksepäin %d sekuntia</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minuutti</item>
+        <item quantity="other">%s minuuttia</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Haastattelu alkaa %d tunnin kuluttua</item>
+        <item quantity="other">Haastattelu alkaa %d tunnin kuluttua</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Haastattelu alkaa %d minuutin kuluttua</item>
+        <item quantity="other">Haastattelu alkaa %d minuutin kuluttua</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d tiedostoa ei voitu ladata eikä sitä liitetä viestiin.</item>
+        <item quantity="other">%d tiedostoa ei voitu ladata eikä niitä liitetä viestiin.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d tiedostoa ei voitu ladata</item>
+        <item quantity="other">%d tiedostoa ei voitu ladata</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d lukematon viesti</item>
+        <item quantity="other">%d lukematonta viestiä</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d uusi ilmoitus</item>
+        <item quantity="other">%d uutta ilmoitusta</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Tämä työnantaja vastaa yleensä %d päivän kuluessa.</item>
+        <item quantity="other">Tämä työnantaja vastaa yleensä %d päivän kuluessa.</item>
+    </plurals>
+</resources>

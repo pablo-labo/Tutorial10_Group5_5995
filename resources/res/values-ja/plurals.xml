@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="other">%d件のクチコミ</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d 秒早送り</item>
+        <item quantity="other">%d 秒早送り</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d 秒巻き戻し</item>
+        <item quantity="other">%d 秒巻き戻し</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="other">%s分</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="other">面接開始まであと%d時間です</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="other">面接開始まであと%d分です</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="other">%d個のファイルがアップロードされませんでした。メッセージには添付されません。</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="other">%d個のファイルがアップロードされませんでした</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="other">%d件の未読メッセージ</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d 件の新しい通知</item>
+        <item quantity="other">%d 件の新しい通知</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="other">この採用企業は通常、%d日以内に返信します</item>
+    </plurals>
+</resources>

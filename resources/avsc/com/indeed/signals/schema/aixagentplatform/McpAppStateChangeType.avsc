@@ -1,0 +1,8 @@
+{
+  "type" : "enum",
+  "name" : "McpAppStateChangeType",
+  "namespace" : "com.indeed.signals.schema.aixagentplatform",
+  "doc" : "The type of state change that occurred in the MCP App.",
+  "symbols" : [ "PAGE_CHANGED", "TOOL_RESPONSE_RECEIVED", "OTHER" ],
+  "default" : "OTHER"
+}

@@ -1,0 +1,30 @@
+{
+  "type" : "record",
+  "name" : "StartDateSelected",
+  "namespace" : "com.indeed.signals.schema.adsystem",
+  "fields" : [ {
+    "name" : "extensionVersion",
+    "type" : "string"
+  }, {
+    "name" : "sessionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "os",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "currentUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "chromeVersion",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "startDateSelected"
+}

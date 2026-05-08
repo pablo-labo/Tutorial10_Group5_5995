@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Maju cepat %d detik</item>
+        <item quantity="other">Maju cepat %d detik</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Mundur %d detik</item>
+        <item quantity="other">Mundur %d detik</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="other">%d file tidak diunggah dan tidak akan disertakan dalam pesan Anda.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="other">%d file tidak dapat diunggah</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="other">%d pesan belum dibaca</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d notifikasi baru</item>
+        <item quantity="other">%d notifikasi baru</item>
+    </plurals>
+</resources>

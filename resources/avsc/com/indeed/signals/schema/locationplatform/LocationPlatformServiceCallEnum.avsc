@@ -1,0 +1,74 @@
+{
+  "type" : "record",
+  "name" : "LocationPlatformServiceCallEnum",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "fields" : [ {
+    "name" : "service",
+    "type" : {
+      "type" : "enum",
+      "name" : "ServiceName",
+      "symbols" : [ "URITHIRU", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    }
+  }, {
+    "name" : "method",
+    "type" : {
+      "type" : "enum",
+      "name" : "MethodName",
+      "symbols" : [ "LOCATIONAUTOCOMPLETE", "VALIDATELOCATION", "LOCATIONINPUTCOMPONENTSTRINGPREFILL", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    }
+  }, {
+    "name" : "transport",
+    "type" : {
+      "type" : "enum",
+      "name" : "TransportType",
+      "symbols" : [ "GRPC", "GRAPHQL", "HTTP" ],
+      "default" : "GRAPHQL"
+    }
+  }, {
+    "name" : "success",
+    "type" : {
+      "type" : "enum",
+      "name" : "MethodCallResult",
+      "symbols" : [ "TRUE", "FALSE", "OTHER_FAILURE" ],
+      "default" : "OTHER_FAILURE"
+    }
+  }, {
+    "name" : "status_code",
+    "type" : {
+      "type" : "enum",
+      "name" : "StatusCode",
+      "symbols" : [ "OK", "GRAPHQL_FAILURE", "SERVER_FAILURE", "OTHER_FAILURE" ],
+      "default" : "OTHER_FAILURE"
+    }
+  }, {
+    "name" : "duration_milliseconds",
+    "type" : "float"
+  }, {
+    "name" : "latency_threshold",
+    "type" : {
+      "type" : "enum",
+      "name" : "LatencyResult",
+      "symbols" : [ "MET", "EXCEEDED", "UNUSED" ],
+      "default" : "UNUSED"
+    }
+  }, {
+    "name" : "client_app",
+    "type" : {
+      "type" : "enum",
+      "name" : "ClientApp",
+      "symbols" : [ "JOB_POSTING", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    }
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "location.client.response",
+    "tags" : [ "service", "method", "transport", "success", "status_code", "latency_threshold", "client_app" ]
+  }, {
+    "name" : "location.client.latency",
+    "type" : "distribution",
+    "value" : "duration_milliseconds",
+    "tags" : [ "service", "method", "transport", "success", "status_code", "client_app" ]
+  } ]
+}

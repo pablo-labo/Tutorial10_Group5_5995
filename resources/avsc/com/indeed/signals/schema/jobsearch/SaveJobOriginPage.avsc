@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "SaveJobOriginPage",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "symbols" : [ "serp", "viewjob", "homepage" ],
+  "default" : "serp"
+}

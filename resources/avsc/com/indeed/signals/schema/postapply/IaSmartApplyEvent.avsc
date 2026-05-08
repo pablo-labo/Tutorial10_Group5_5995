@@ -1,0 +1,106 @@
+{
+  "type" : "record",
+  "name" : "IaSmartApplyEvent",
+  "namespace" : "com.indeed.signals.schema.postapply",
+  "fields" : [ {
+    "name" : "event",
+    "type" : "string"
+  }, {
+    "name" : "promoName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ratingValue",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "feedbackText",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "reason",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "calendarType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isPartnerIntegration",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isMessagingOptInSectionEnabled",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "hasPhoneNumber",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isMessagingOptInProviderEnabled",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isProctorActive",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "finishAppUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "loggedIn",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "encryptedApplicationId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "draftApplyId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobCountry",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "applyPreviewId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "automationExecutionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "automationExecutionConfig",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "tk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "v",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "iaUid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaSmartApplyEvent"
+}

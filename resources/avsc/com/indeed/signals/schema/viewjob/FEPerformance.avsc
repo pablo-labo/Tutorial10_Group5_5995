@@ -1,0 +1,84 @@
+{
+  "type" : "record",
+  "name" : "FEPerformance",
+  "namespace" : "com.indeed.signals.schema.viewjob",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "hostId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hostRenderType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "HostRenderType",
+      "symbols" : [ "UNKNOWN", "IFRAME", "FEDERATED", "PANE_WRAPPER", "STANDALONE", "SPA" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "viewJobDisplay",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "viewJobTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isFirstRender",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "vjNavigationStartTs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "hostNavigationStartTs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "requestRenderTs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "renderTs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "isSimple",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "schemaVersion",
+    "type" : "string"
+  } ],
+  "logEntryType" : "viewJobFEPerformance"
+}

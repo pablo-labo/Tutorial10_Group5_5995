@@ -1,0 +1,143 @@
+{
+  "type" : "record",
+  "name" : "CortexAIChatAction",
+  "namespace" : "com.indeed.signals.schema.daap",
+  "fields" : [ {
+    "name" : "action",
+    "type" : "string",
+    "doc" : "The action type (e.g., userMessage, toggleSQL, selectMode, visitSharedSession, etc.)"
+  }, {
+    "name" : "username",
+    "type" : "string",
+    "doc" : "LDAP username of the user performing the action"
+  }, {
+    "name" : "session_id",
+    "type" : "string",
+    "doc" : "Unique identifier for the chat session"
+  }, {
+    "name" : "exchange_id",
+    "type" : [ "null", "string" ],
+    "doc" : "Unique identifier for the message exchange"
+  }, {
+    "name" : "exchange_seq",
+    "type" : [ "null", "string" ],
+    "doc" : "Sequence number of the exchange in the session"
+  }, {
+    "name" : "msg_seq",
+    "type" : [ "null", "string" ],
+    "doc" : "Sequence number of the message in the exchange"
+  }, {
+    "name" : "action_details",
+    "type" : [ "null", "string" ],
+    "doc" : "Additional details about the action (flexible field for action-specific metadata)"
+  }, {
+    "name" : "user_message",
+    "type" : [ "null", "string" ],
+    "doc" : "The actual user message content (for userMessage action)"
+  }, {
+    "name" : "before",
+    "type" : [ "null", "string" ],
+    "doc" : "Previous state before the action (e.g., \"collapsed\" for toggle events, old topic name for rename)"
+  }, {
+    "name" : "after",
+    "type" : [ "null", "string" ],
+    "doc" : "New state after the action (e.g., \"expanded\" for toggle events, new topic name for rename)"
+  }, {
+    "name" : "session_mode",
+    "type" : [ "null", "string" ],
+    "doc" : "Session mode: \"agent\" (AI agents auto-select and query) or \"coworker\" (user-configured MCP servers)",
+    "default" : null
+  }, {
+    "name" : "selected_agent",
+    "type" : [ "null", "string" ],
+    "doc" : "Selected agent ID or name in agent mode (e.g., \"sql-agent\", \"python-agent\")",
+    "default" : null
+  }, {
+    "name" : "selected_profile_id",
+    "type" : [ "null", "string" ],
+    "doc" : "Selected profile ID in Co-Worker mode",
+    "default" : null
+  }, {
+    "name" : "selected_profile",
+    "type" : [ "null", "string" ],
+    "doc" : "Selected profile name in Co-Worker mode",
+    "default" : null
+  }, {
+    "name" : "mcp_servers",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "doc" : "List of selected MCP server IDs in coworker mode",
+    "default" : null
+  }, {
+    "name" : "model",
+    "type" : [ "null", "string" ],
+    "doc" : "Claude model used for this interaction (e.g., \"claude-sonnet-4\", \"claude-opus-4.5\")",
+    "default" : null
+  }, {
+    "name" : "latency_ms",
+    "type" : [ "null", "long" ],
+    "doc" : "Time in milliseconds from user message to first response token (user experience metric)",
+    "default" : null
+  }, {
+    "name" : "duration_ms",
+    "type" : [ "null", "long" ],
+    "doc" : "Total duration in milliseconds for the operation to complete (user experience metric)",
+    "default" : null
+  }, {
+    "name" : "link_type",
+    "type" : [ "null", "string" ],
+    "doc" : "Type of deep link navigation: \"new_chat_with_agent\", \"new_chat_with_profile\", \"open_shared_session\"",
+    "default" : null
+  }, {
+    "name" : "target_mode",
+    "type" : [ "null", "string" ],
+    "doc" : "Target mode for mode selection events",
+    "default" : null
+  }, {
+    "name" : "target_agent",
+    "type" : [ "null", "string" ],
+    "doc" : "Target agent for agent selection events",
+    "default" : null
+  }, {
+    "name" : "target_profile",
+    "type" : [ "null", "string" ],
+    "doc" : "Target profile for profile selection events",
+    "default" : null
+  }, {
+    "name" : "session_owner",
+    "type" : [ "null", "string" ],
+    "doc" : "LDAP username of the session owner (for visitSharedSession action - whose chat is being viewed)",
+    "default" : null
+  }, {
+    "name" : "is_positive",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Whether the session feedback was positive (true = thumbs up, false = thumbs down)",
+    "default" : null
+  }, {
+    "name" : "feedback_tags",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "doc" : "Tags selected by the user for negative session feedback (e.g., \"Incorrect or incomplete answer\")",
+    "default" : null
+  }, {
+    "name" : "feedback_details",
+    "type" : [ "null", "string" ],
+    "doc" : "Free-text details provided by the user for negative session feedback",
+    "default" : null
+  }, {
+    "name" : "app_module",
+    "type" : [ "null", "string" ],
+    "doc" : "The application module that generated this event (e.g., \"chat_page\", \"crystal_side_panel\", \"chat_page_docked\")",
+    "default" : null
+  }, {
+    "name" : "page_url",
+    "type" : [ "null", "string" ],
+    "doc" : "The full URL of the page the user was on when the event occurred",
+    "default" : null
+  } ],
+  "logEntryType" : "cortex_ai_chat_events"
+}

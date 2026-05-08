@@ -1,0 +1,38 @@
+{
+  "type" : "record",
+  "name" : "MosaicModalAction",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "provider",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isEvergreenBrowser",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "action",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "success",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "openDuration",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ]
+}

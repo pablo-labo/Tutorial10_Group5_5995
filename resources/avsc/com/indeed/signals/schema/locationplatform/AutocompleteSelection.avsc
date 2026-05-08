@@ -1,0 +1,32 @@
+{
+  "type" : "record",
+  "name" : "AutocompleteSelection",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "fields" : [ {
+    "name" : "clientPage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "sessionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageSessionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : "string"
+  }, {
+    "name" : "language",
+    "type" : "string"
+  }, {
+    "name" : "previousSelectionIndex",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "selectionIndex",
+    "type" : "int"
+  } ],
+  "logEntryType" : "licAutocompleteSelection"
+}

@@ -1,0 +1,49 @@
+{
+  "type" : "record",
+  "name" : "LLMExplainerRender",
+  "namespace" : "com.indeed.signals.schema.mosaicprovideraiassistant",
+  "fields" : [ {
+    "name" : "commonDetails",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "CommonEventDetails",
+      "namespace" : "com.indeed.signals.common",
+      "fields" : [ {
+        "name" : "ipAddress",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "ctk",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "renderType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "RenderType",
+      "symbols" : [ "INITIAL", "SUCCESS", "ERROR" ],
+      "default" : "INITIAL"
+    } ],
+    "default" : null
+  }, {
+    "name" : "pagetk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "renderTime",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "llmExplainerPerformance"
+}

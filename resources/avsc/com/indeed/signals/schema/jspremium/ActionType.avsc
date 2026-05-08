@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ActionType",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "UNKNOWN", "OPEN_BOTTOM_SHEET", "NEXT", "BACK", "DISMISS", "COMPLETE" ],
+  "default" : "UNKNOWN"
+}

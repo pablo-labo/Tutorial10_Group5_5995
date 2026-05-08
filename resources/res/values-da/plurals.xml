@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 anmeldelse</item>
+        <item quantity="other">%d anmeldelser</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Spol %d sekund frem</item>
+        <item quantity="other">Spol %d sekunder frem</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Spol %d sekund tilbage</item>
+        <item quantity="other">Spol %d sekunder tilbage</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s minut</item>
+        <item quantity="other">%s minutter</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">Jobsamtalen starter om %d time</item>
+        <item quantity="other">Jobsamtalen starter om %d timer</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">Jobsamtalen starter om %d minut</item>
+        <item quantity="other">Jobsamtalen starter om %d minutter</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d fil blev ikke uploadet og vil ikke blive inkluderet i din besked.</item>
+        <item quantity="other">%d filer blev ikke uploadet og vil ikke blive inkluderet i din besked.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d fil blev ikke uploadet</item>
+        <item quantity="other">%d filer blev ikke uploadet</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d ulæst besked</item>
+        <item quantity="other">%d ulæste beskeder</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ny notifikation</item>
+        <item quantity="other">%d nye notifikationer</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Denne arbejdsgiver svarer normalt i løbet af %d dag</item>
+        <item quantity="other">Denne arbejdsgiver svarer normalt i løbet af %d dage</item>
+    </plurals>
+</resources>

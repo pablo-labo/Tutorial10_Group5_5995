@@ -1,0 +1,60 @@
+{
+  "type" : "record",
+  "name" : "PrefillValidation",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "fields" : [ {
+    "name" : "clientPage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "sessionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageSessionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : "string"
+  }, {
+    "name" : "language",
+    "type" : "string"
+  }, {
+    "name" : "prefillValid",
+    "type" : "boolean"
+  }, {
+    "name" : "prefillCountry",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "prefillAdmin1",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "prefillAdmin2",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "prefillAdmin3",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "prefillAdmin4",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "prefillCity",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "prefillPostalCode",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "prefillPreciseLocation",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "licPrefillValidation"
+}

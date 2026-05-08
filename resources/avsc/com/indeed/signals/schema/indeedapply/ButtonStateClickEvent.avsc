@@ -1,0 +1,63 @@
+{
+  "type" : "record",
+  "name" : "ButtonStateClickEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "startTk",
+    "type" : "string"
+  }, {
+    "name" : "ms",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "tk",
+    "type" : "string"
+  }, {
+    "name" : "vjtk",
+    "type" : "string"
+  }, {
+    "name" : "mobtk",
+    "type" : "string"
+  }, {
+    "name" : "mobvjtk",
+    "type" : "string"
+  }, {
+    "name" : "gtk",
+    "type" : "string"
+  }, {
+    "name" : "jobKey",
+    "type" : "string"
+  }, {
+    "name" : "hl",
+    "type" : "string"
+  }, {
+    "name" : "co",
+    "type" : "string"
+  }, {
+    "name" : "apiToken",
+    "type" : "string"
+  }, {
+    "name" : "partnerToken",
+    "type" : "string"
+  }, {
+    "name" : "src",
+    "type" : "string"
+  }, {
+    "name" : "userAgent",
+    "type" : "string"
+  }, {
+    "name" : "isTrusted",
+    "type" : "string",
+    "default" : ""
+  }, {
+    "name" : "buttonState",
+    "type" : "string",
+    "default" : ""
+  } ],
+  "logEntryType" : "iaBtnClick"
+}

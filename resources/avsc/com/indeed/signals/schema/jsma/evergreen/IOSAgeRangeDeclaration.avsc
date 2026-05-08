@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "IOSAgeRangeDeclaration",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "symbols" : [ "SELF_DECLARED", "GUARDIAN_DECLARED", "CHECKED_BY_OTHER_METHOD", "GUARDIAN_CHECKED_BY_OTHER_METHOD", "GOVERNMENT_ID_CHECKED", "PAYMENT_CHECKED", "GUARDIAN_PAYMENT_CHECKED", "UNKNOWN" ]
+}

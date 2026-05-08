@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "BuildVariant",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "symbols" : [ "debug", "release" ]
+}

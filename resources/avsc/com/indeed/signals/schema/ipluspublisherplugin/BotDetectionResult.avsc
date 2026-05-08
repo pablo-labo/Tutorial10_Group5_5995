@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "BotDetectionResult",
+  "namespace" : "com.indeed.signals.schema.ipluspublisherplugin",
+  "symbols" : [ "PASS", "FAIL", "NEVER" ]
+}

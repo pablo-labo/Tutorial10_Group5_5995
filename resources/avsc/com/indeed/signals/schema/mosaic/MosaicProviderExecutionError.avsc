@@ -1,0 +1,66 @@
+{
+  "type" : "record",
+  "name" : "MosaicProviderExecutionError",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "provider",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isEvergreenBrowser",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "stack",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "name",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "message",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hasError",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isCanary",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "initializationType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "zoneId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorLocation",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "indexInZone",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "loadMethod",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

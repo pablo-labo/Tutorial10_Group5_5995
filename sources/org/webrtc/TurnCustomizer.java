@@ -1,0 +1,33 @@
+package org.webrtc;
+
+import defpackage.r6;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class TurnCustomizer {
+    private long nativeTurnCustomizer;
+
+    public TurnCustomizer(long j) {
+        this.nativeTurnCustomizer = j;
+    }
+
+    private void checkTurnCustomizerExists() {
+        if (this.nativeTurnCustomizer != 0) {
+            return;
+        }
+        r6.g("TurnCustomizer has been disposed.");
+    }
+
+    private static native void nativeFreeTurnCustomizer(long j);
+
+    public void dispose() {
+        checkTurnCustomizerExists();
+        nativeFreeTurnCustomizer(this.nativeTurnCustomizer);
+        this.nativeTurnCustomizer = 0L;
+    }
+
+    @CalledByNative
+    public long getNativeTurnCustomizer() {
+        checkTurnCustomizerExists();
+        return this.nativeTurnCustomizer;
+    }
+}

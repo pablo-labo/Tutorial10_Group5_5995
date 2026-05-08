@@ -1,0 +1,32 @@
+{
+  "type" : "record",
+  "name" : "CommonOnboardingDetails",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Platform",
+      "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE" ],
+      "default" : "UNKNOWN"
+    } ]
+  }, {
+    "name" : "proctorGroups",
+    "type" : {
+      "type" : "array",
+      "items" : "string"
+    }
+  }, {
+    "name" : "accountId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "language",
+    "type" : [ "null", "string" ]
+  } ]
+}

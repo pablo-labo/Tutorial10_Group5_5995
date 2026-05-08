@@ -1,0 +1,48 @@
+package defpackage;
+
+import android.webkit.ConsoleMessage;
+import defpackage.s87;
+import defpackage.xh8;
+import kotlin.Lazy;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class vwg implements xh8 {
+    public final Lazy a = boa.E(qt8.a, new a(this));
+    public final rja b = new rja();
+
+    public static final class a extends mj8 implements gu5<gz4> {
+        final /* synthetic */ xh8 $this_inject;
+        final /* synthetic */ a9c $qualifier = null;
+        final /* synthetic */ gu5 $parameters = null;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        public a(vwg vwgVar) {
+            super(0);
+            this.$this_inject = vwgVar;
+        }
+
+        /* JADX WARN: Type inference failed for: r4v2, types: [gz4, java.lang.Object] */
+        @Override // defpackage.gu5
+        public final gz4 invoke() {
+            xh8 xh8Var = this.$this_inject;
+            a9c a9cVar = this.$qualifier;
+            return (xh8Var instanceof ai8 ? ((ai8) xh8Var).d() : (qpd) xh8Var.getKoin().a.b).a(this.$parameters, fwc.a.b(gz4.class), a9cVar);
+        }
+    }
+
+    public final void a(ConsoleMessage consoleMessage, String str, String str2) {
+        str2.getClass();
+        Lazy<s87> lazy = s87.f;
+        gz4 gz4Var = (gz4) this.a.getValue();
+        String strMessage = consoleMessage.message();
+        strMessage.getClass();
+        k3e k3eVar = new k3e(1, str, str2, consoleMessage);
+        this.b.getClass();
+        s87.a.a(gz4Var, new mja("webview_console_line", strMessage, "", -1L, "webviewConsoleError", k3eVar));
+    }
+
+    @Override // defpackage.xh8
+    public final vh8 getKoin() {
+        return xh8.a.a();
+    }
+}

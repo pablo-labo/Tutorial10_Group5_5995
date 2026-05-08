@@ -1,0 +1,70 @@
+{
+  "type" : "record",
+  "name" : "Impression",
+  "namespace" : "com.indeed.signals.schema.careerscout",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : "string"
+  }, {
+    "name" : "provider",
+    "type" : "string"
+  }, {
+    "name" : "accountId",
+    "type" : "long",
+    "default" : 0
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctaType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "CTAType",
+      "symbols" : [ "EXPLORECAREERS", "INTERVIEWPREP" ],
+      "default" : "EXPLORECAREERS"
+    } ],
+    "default" : null
+  }, {
+    "name" : "action",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Action",
+      "symbols" : [ "UNKNOWN", "BUTTON_CLICK", "RESULT" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "value",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isPrivileged",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctaVariant",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "csSerpPromoImpression"
+}

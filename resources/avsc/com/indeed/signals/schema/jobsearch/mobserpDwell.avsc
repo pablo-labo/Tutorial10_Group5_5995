@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "mobserpDwell",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "tk",
+    "type" : [ "null", "string" ],
+    "doc" : "The Page Tracking Key, i.e. the mobtk, such as 1hsuhpfqs0000001",
+    "default" : null
+  }, {
+    "name" : "pgtype",
+    "type" : [ "null", "string" ],
+    "doc" : "The Page that this is being sent from, such as mobserp",
+    "default" : null
+  }, {
+    "name" : "duration",
+    "type" : [ "null", "long" ],
+    "doc" : "How long in ms that the user has been using the application, e.g. 74871",
+    "default" : null
+  }, {
+    "name" : "end",
+    "type" : [ "null", "long" ],
+    "doc" : "The end time for dwell tracking which is ms from epoch time, e.g. 1714717330806",
+    "default" : null
+  } ],
+  "logEntryType" : "mobserpDwell"
+}

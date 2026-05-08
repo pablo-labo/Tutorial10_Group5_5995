@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "iaStructuredDataPreview",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaStructuredDataPreview"
+  }, {
+    "name" : "status",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "PreviewStatus",
+      "symbols" : [ "OPENED", "CLOSED" ]
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaStructuredDataPreview"
+}

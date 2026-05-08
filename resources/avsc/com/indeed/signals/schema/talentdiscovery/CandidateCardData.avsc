@@ -1,0 +1,82 @@
+{
+  "type" : "record",
+  "name" : "CandidateCardData",
+  "namespace" : "com.indeed.signals.schema.talentdiscovery",
+  "fields" : [ {
+    "name" : "rcpRequestId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "viewMode",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ViewMode",
+      "symbols" : [ "UNKNOWN", "LIST", "GRID" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageNumber",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "position",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "hasName",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "location",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "providerTags",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "labels",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "workExperience",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "education",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "licensesAndCertifications",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "skills",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "candidateCardData"
+}

@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "YellowLightRedirectedToThirdPartySite",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "redirectReason",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "RedirectReason",
+      "symbols" : [ "MOSAIC_PROVIDER_NOT_LOADED", "PROVIDER_STATE_UPDATE_FAILED", "QUESTION_FETCH_FAILED", "SAVE_AND_CONTINUE_CLICKED", "SKIP_BUTTON_CLICKED", "NO_QUESTIONS_TO_SHOW", "YELLOW_LIGHT_ALREADY_OPENED", "MOSAIC_PROVIDER_LAZY_LOAD_FAILED", "UNKNOWN" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "redirectURL",
+    "type" : "string",
+    "default" : ""
+  } ],
+  "logEntryType" : "iaYellowLight3PRedirectedToThirdPartySite"
+}

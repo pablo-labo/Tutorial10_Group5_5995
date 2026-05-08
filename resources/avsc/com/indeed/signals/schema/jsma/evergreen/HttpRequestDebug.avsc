@@ -1,0 +1,31 @@
+{
+  "type" : "record",
+  "name" : "HttpRequestDebug",
+  "namespace" : "com.indeed.signals.schema.jsma.evergreen",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : "long"
+  }, {
+    "name" : "headerLength",
+    "type" : "long"
+  }, {
+    "name" : "cookiesLength",
+    "type" : "long"
+  }, {
+    "name" : "referrer",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errDomain",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errCode",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "networkInterface",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

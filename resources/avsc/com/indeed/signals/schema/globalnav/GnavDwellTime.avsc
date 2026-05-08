@@ -1,0 +1,30 @@
+{
+  "type" : "record",
+  "name" : "GnavDwellTime",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "hostAppTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "from",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "start",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "end",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "duration",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

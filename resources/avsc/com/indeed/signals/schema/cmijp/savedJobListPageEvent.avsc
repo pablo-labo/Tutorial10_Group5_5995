@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "savedJobListPageEvent",
+  "namespace" : "com.indeed.signals.schema.cmijp",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "mobtk",
+    "type" : "string"
+  }, {
+    "name" : "actionType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ActionType",
+      "symbols" : [ "impression", "signUp", "dismiss", "defer" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : "string"
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "savedJobListPage.event",
+    "tags" : [ "actionType" ]
+  } ],
+  "logEntryType" : "savedJobListPageEvent"
+}

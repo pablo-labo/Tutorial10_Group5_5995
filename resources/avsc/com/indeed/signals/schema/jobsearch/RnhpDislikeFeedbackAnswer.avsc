@@ -1,0 +1,36 @@
+{
+  "type" : "record",
+  "name" : "RnhpDislikeFeedbackAnswer",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "fields" : [ {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "platform",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "Platform",
+      "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE", "APP_IOS", "APP_ANDROID" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "reasons",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "other",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "jobKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "logTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "rnhpDislikeFeedbackAnswer"
+}

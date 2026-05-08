@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">1 yorum</item>
+        <item quantity="other">%d yorum</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d saniye ileri sar</item>
+        <item quantity="other">%d saniye ileri sar</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d saniye geri sar</item>
+        <item quantity="other">%d saniye geri sar</item>
+    </plurals>
+    <plurals name="interview_duration_time_minutes">
+        <item quantity="one">%s dakika</item>
+        <item quantity="other">%s dakika</item>
+    </plurals>
+    <plurals name="interview_start_time">
+        <item quantity="one">İş görüşmesi %d saat sonra başlıyor</item>
+        <item quantity="other">İş görüşmesi %d saat sonra başlıyor</item>
+    </plurals>
+    <plurals name="interview_start_time_minutes">
+        <item quantity="one">İş görüşmesi %d dakika sonra başlıyor</item>
+        <item quantity="other">İş görüşmesi %d dakika sonra başlıyor</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d dosya yüklenmedi ve mesajına dahil edilmeyecek.</item>
+        <item quantity="other">%d dosya yüklenmedi ve mesajına dahil edilmeyecek.</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d dosya yüklenmedi</item>
+        <item quantity="other">%d dosya yüklenmedi</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d okunmamış mesaj</item>
+        <item quantity="other">%d okunmamış mesaj</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d yeni bildirim</item>
+        <item quantity="other">%d yeni bildirim</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">Bu işveren genellikle %d gün içinde yanıt veriyor</item>
+        <item quantity="other">Bu işveren genellikle %d gün içinde yanıt veriyor</item>
+    </plurals>
+</resources>

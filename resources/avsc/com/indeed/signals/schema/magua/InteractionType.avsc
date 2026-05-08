@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "InteractionType",
+  "namespace" : "com.indeed.signals.schema.magua",
+  "symbols" : [ "UNKNOWN", "IMPRESSION", "CLICK", "DISMISS", "EMP_CLICK", "EMP_DISMISS", "EMP_GO_EMPLOYER_WEB", "EMP_IMPRESSION", "EMP_OPEN_APP", "EMP_OPEN_PROMO" ],
+  "default" : "UNKNOWN"
+}

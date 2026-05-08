@@ -1,0 +1,20 @@
+{
+  "type" : "record",
+  "name" : "YellowLightQuestionsFetched",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "success",
+    "type" : "boolean"
+  }, {
+    "name" : "questionsFetched",
+    "type" : "int"
+  }, {
+    "name" : "host",
+    "type" : "string",
+    "default" : ""
+  } ],
+  "logEntryType" : "iaYellowLight3PQuestionsFetched"
+}

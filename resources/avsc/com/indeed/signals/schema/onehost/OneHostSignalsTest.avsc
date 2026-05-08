@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "OneHostSignalsTest",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "fields" : [ {
+    "name" : "scope",
+    "type" : "string"
+  }, {
+    "name" : "module",
+    "type" : "string"
+  }, {
+    "name" : "stagingLevel",
+    "type" : {
+      "type" : "enum",
+      "name" : "StagingLevel",
+      "symbols" : [ "QA", "PROD", "LOCAL" ],
+      "default" : "QA"
+    }
+  }, {
+    "name" : "message",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "oneHostSignalsTestScopeCountMetric",
+    "tags" : [ "stagingLevel" ]
+  } ],
+  "logEntryType" : "oneHostSignalsTest"
+}

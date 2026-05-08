@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ProviderId",
+  "namespace" : "com.indeed.signals.schema.reactnative",
+  "symbols" : [ "ViewJob", "Onboarding", "AceChat", "AceHub", "HomePage", "InterviewPrep", "ProfileForms", "Unknown", "Pathfinder", "Messaging" ],
+  "default" : "Unknown"
+}

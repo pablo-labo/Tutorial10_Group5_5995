@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "JsOnboardingFrontendError",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "fields" : [ {
+    "name" : "errorMsg",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "url",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "lineNumber",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "column",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "errorObj",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "jsonboardingfrontenderror"
+}

@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Variant",
+  "namespace" : "com.indeed.signals.schema.jsonboarding",
+  "symbols" : [ "page", "section", "component", "element" ],
+  "default" : "element"
+}

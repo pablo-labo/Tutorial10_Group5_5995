@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "CentralExposureEvent",
+  "namespace" : "com.indeed.signals.schema.expplat",
+  "fields" : [ {
+    "name" : "v",
+    "type" : "int",
+    "default" : 5
+  }, {
+    "name" : "grp",
+    "type" : "string"
+  }, {
+    "name" : "identifier",
+    "type" : "string"
+  }, {
+    "name" : "testType",
+    "type" : "string"
+  }, {
+    "name" : "rolledOut",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "requestId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "exposure"
+}

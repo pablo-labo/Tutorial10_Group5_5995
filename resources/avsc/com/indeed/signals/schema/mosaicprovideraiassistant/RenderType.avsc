@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "RenderType",
+  "namespace" : "com.indeed.signals.schema.mosaicprovideraiassistant",
+  "symbols" : [ "INITIAL", "SUCCESS", "ERROR" ],
+  "default" : "INITIAL"
+}

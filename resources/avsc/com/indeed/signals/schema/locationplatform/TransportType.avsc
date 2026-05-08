@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "TransportType",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "symbols" : [ "GRPC", "GRAPHQL", "HTTP" ],
+  "default" : "GRAPHQL"
+}

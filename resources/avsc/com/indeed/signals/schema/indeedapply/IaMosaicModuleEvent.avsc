@@ -1,0 +1,20 @@
+{
+  "type" : "record",
+  "name" : "IaMosaicModuleEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "moduleName",
+    "type" : "string"
+  }, {
+    "name" : "event",
+    "type" : {
+      "type" : "enum",
+      "name" : "ModuleEvent",
+      "symbols" : [ "ENTER", "COMPLETE", "SKIP" ]
+    }
+  } ],
+  "logEntryType" : "iaMosaicModuleEvent"
+}

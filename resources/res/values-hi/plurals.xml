@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="company_reviews">
+        <item quantity="one">%d रिव्यु</item>
+        <item quantity="other">%d रिव्यु</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">वीडियो को %d सेकंड आगे बढ़ाएं</item>
+        <item quantity="other">वीडियो को %d सेकंड आगे बढ़ाएं</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">वीडियो को %d सेकंड पीछे ले जाएं</item>
+        <item quantity="other">वीडियो को %d सेकंड पीछे ले जाएं</item>
+    </plurals>
+    <plurals name="messaging_attachment_alert_multiple_files_failed">
+        <item quantity="one">%d फ़ाइल अपलोड नहीं हुई और आपके मेसेज में शामिल नहीं होगी।</item>
+        <item quantity="other">%d फ़ाइलें अपलोड नहीं हुईं और आपके मेसेज में शामिल नहीं होंगी।</item>
+    </plurals>
+    <plurals name="messaging_attachment_failed_multi_upload_title">
+        <item quantity="one">%d फ़ाइल अपलोड नहीं हुई</item>
+        <item quantity="other">%d फ़ाइलें अपलोड नहीं हुईं</item>
+    </plurals>
+    <plurals name="messaging_unread_messages_count">
+        <item quantity="one">%d मेसेज पढ़ा नहीं गया</item>
+        <item quantity="other">%d मेसेजेज पढ़े नहीं गए</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d नई सूचनाएं</item>
+        <item quantity="other">%d नई सूचनाएं</item>
+    </plurals>
+    <plurals name="response_time_in_days">
+        <item quantity="one">यह एम्प्लॉयर आमतौर पर %d दिन में जवाब दे देते हैं</item>
+        <item quantity="other">यह एम्प्लॉयर आमतौर पर %d दिनों में जवाब दे देते हैं</item>
+    </plurals>
+</resources>

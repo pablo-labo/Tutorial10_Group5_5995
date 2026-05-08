@@ -1,0 +1,84 @@
+{
+  "type" : "record",
+  "name" : "McpAppLoaded",
+  "namespace" : "com.indeed.signals.schema.aixagentplatform",
+  "fields" : [ {
+    "name" : "mcpAppLoadTK",
+    "type" : "string",
+    "doc" : "A uuid that represents an instance of the MCP App being loaded in a chat. It is unique per load of the iframe. For OpenAI Apps SDK, this should be the value of openai/widgetSessionId"
+  }, {
+    "name" : "mcpAppName",
+    "type" : "string",
+    "doc" : "The name of the MCP App that is loaded, like \"jobsearch-mcp\"."
+  }, {
+    "name" : "mcpAppNameEnum",
+    "type" : {
+      "type" : "enum",
+      "name" : "McpAppName",
+      "doc" : "The name of the MCP App that is loaded.",
+      "symbols" : [ "JOBSEARCH_MCP", "JOBSEEKER_PROFILE_MCP", "JS_COWORKER_MCP", "OTHER" ],
+      "default" : "OTHER"
+    },
+    "doc" : "The name of the MCP App that is loaded.",
+    "default" : "OTHER"
+  }, {
+    "name" : "mcpAppHost",
+    "type" : "string",
+    "doc" : "The host where the MCP App is loaded, like \"claude\", \"chatgpt\", or \"talentscout\"."
+  }, {
+    "name" : "mcpAppHostEnum",
+    "type" : {
+      "type" : "enum",
+      "name" : "McpAppHost",
+      "doc" : "The host where the MCP App is loaded.",
+      "symbols" : [ "CHATGPT", "OTHER" ],
+      "default" : "OTHER"
+    },
+    "doc" : "The host where the MCP App is loaded.",
+    "default" : "OTHER"
+  }, {
+    "name" : "page",
+    "type" : "string",
+    "doc" : "The page that is defined by the user according to their unique surface. In an MCP App that doesn't have traditional \"pages\", but does have \"compact\", \"fullscreen\", and \"picture in picture\"  formats of the \"search_jobs\" tool response, the pageTK could be \"search_jobs/compact\", \"search_jobs/fullscreen\", \"search_jobs/picture_in_picture\""
+  }, {
+    "name" : "mcpToolName",
+    "type" : "string",
+    "doc" : "The MCP Tool that most recently returned. This can change during the lifecycle of the MCP APP depending upon the user interaction."
+  }, {
+    "name" : "correlationId",
+    "type" : [ "null", "string" ],
+    "doc" : "The correlationId (a logrepo UID) from aix-mcp-gateway that is returned by the MCP Server for logging correlation. Should be set to the latest correlationId that was received.",
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "doc" : "Job seeker accountKey",
+    "default" : null
+  }, {
+    "name" : "advertiserKey",
+    "type" : [ "null", "string" ],
+    "doc" : "Employer advertiserKey",
+    "default" : null
+  }, {
+    "name" : "isWebview",
+    "type" : "boolean",
+    "doc" : "Whether MCP App was loaded within a webview or not (i.e. are we in a mobile app)",
+    "default" : false
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "doc" : "Browser userAgent where MCP App is loaded",
+    "default" : null
+  }, {
+    "name" : "deviceType",
+    "type" : [ "null", "string" ],
+    "doc" : "Device type where MCP App is loaded (likely one of 'mobile' | 'tablet' | 'desktop')",
+    "default" : null
+  }, {
+    "name" : "osType",
+    "type" : [ "null", "string" ],
+    "doc" : "Operating System where the MCP App is loaded (likely one of 'ios' | 'android' | 'macos' | 'windows' | 'linux' | 'unknown')",
+    "default" : null
+  } ],
+  "logEntryType" : "mcpAppLoaded"
+}

@@ -1,0 +1,15 @@
+{
+  "type" : "record",
+  "name" : "segPhoneUpdateNudgeEligible",
+  "namespace" : "com.indeed.signals.schema.segind",
+  "fields" : [ {
+    "name" : "accountId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "nudgeEligible",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "segPhoneUpdateNudgeEligible"
+}

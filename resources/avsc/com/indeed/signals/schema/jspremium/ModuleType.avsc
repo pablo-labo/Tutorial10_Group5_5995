@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ModuleType",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "symbols" : [ "UNKNOWN", "CTA", "APPLICANT_INSIGHTS", "TOP_APPLICANT", "TOP_CHOICE", "PRO_FEEDBACK", "ASSISTED_APPLY_V2", "AUTO_APPLY" ],
+  "default" : "UNKNOWN"
+}

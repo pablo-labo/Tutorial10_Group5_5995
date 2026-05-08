@@ -1,0 +1,38 @@
+{
+  "type" : "record",
+  "name" : "WebView",
+  "namespace" : "com.indeed.signals",
+  "fields" : [ {
+    "name" : "eventId",
+    "type" : "string"
+  }, {
+    "name" : "environmentId",
+    "type" : "string"
+  }, {
+    "name" : "viewSessionId",
+    "type" : "string"
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "canonicalViewName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageUrl",
+    "type" : "string"
+  }, {
+    "name" : "referrerUrl",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "referrerView",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "loggerVersion",
+    "type" : "string"
+  } ],
+  "logEntryType" : "clickstreamWebView"
+}

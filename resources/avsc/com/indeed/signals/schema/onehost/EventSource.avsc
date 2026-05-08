@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "EventSource",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "symbols" : [ "FAR", "LEGACY" ]
+}

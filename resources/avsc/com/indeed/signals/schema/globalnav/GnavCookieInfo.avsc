@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "GnavCookieInfo",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cookieAges",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cookieDomains",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "gnavCookieInfo"
+}

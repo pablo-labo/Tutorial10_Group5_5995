@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_container"
+    android:fitsSystemWindows="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.fragment.app.FragmentContainerView
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/mainNavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:filterTouchesWhenObscured="true"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_main"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ViewStub
+            android:id="@+id/debugStub"
+            android:layout="@layout/debug_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/network_error_compose_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/reportErrorToast"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.compose.ui.platform.ComposeView
+        android:layout_gravity="center"
+        android:id="@+id/componentReportEmailThanks"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

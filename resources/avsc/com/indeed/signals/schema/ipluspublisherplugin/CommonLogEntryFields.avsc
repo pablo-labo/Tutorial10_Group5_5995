@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "CommonLogEntryFields",
+  "namespace" : "com.indeed.signals.schema.ipluspublisherplugin",
+  "fields" : [ {
+    "name" : "sessionId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "partnerAppId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "placementId",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  } ]
+}

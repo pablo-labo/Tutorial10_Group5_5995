@@ -1,0 +1,20 @@
+{
+  "type" : "record",
+  "name" : "iaResumeInfo",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumeInfo"
+  }, {
+    "name" : "profileRezType",
+    "type" : "string"
+  }, {
+    "name" : "selectedRezType",
+    "type" : "string"
+  } ],
+  "logEntryType" : "iaResumeInfo"
+}

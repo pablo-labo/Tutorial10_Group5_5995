@@ -1,0 +1,53 @@
+package defpackage;
+
+import kotlin.jvm.functions.Function2;
+
+/* JADX INFO: loaded from: classes.dex */
+@uh3(c = "androidx.compose.foundation.pager.PagerState$requestScrollToPage$1", f = "PagerState.kt", l = {583}, m = "invokeSuspend")
+public final class d2b extends c1f implements Function2<e13, lu2<? super j6g>, Object> {
+    int label;
+    final /* synthetic */ e2b this$0;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public d2b(e2b e2bVar, lu2<? super d2b> lu2Var) {
+        super(2, lu2Var);
+        this.this$0 = e2bVar;
+    }
+
+    @Override // defpackage.x81
+    public final lu2<j6g> create(Object obj, lu2<?> lu2Var) {
+        return new d2b(this.this$0, lu2Var);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(e13 e13Var, lu2<? super j6g> lu2Var) {
+        return ((d2b) create(e13Var, lu2Var)).invokeSuspend(j6g.a);
+    }
+
+    @Override // defpackage.x81
+    public final Object invokeSuspend(Object obj) {
+        int i = this.label;
+        if (i == 0) {
+            r7d.b(obj);
+            e2b e2bVar = this.this$0;
+            this.label = 1;
+            srd srdVar = new srd(2, null);
+            e2bVar.getClass();
+            Object objU = e2b.u(e2bVar, n4a.a, srdVar, this);
+            Object obj2 = g13.a;
+            if (objU != obj2) {
+                objU = j6g.a;
+            }
+            if (objU == obj2) {
+                return obj2;
+            }
+        } else {
+            if (i != 1) {
+                r6.g("call to 'resume' before 'invoke' with coroutine");
+                return null;
+            }
+            r7d.b(obj);
+        }
+        return j6g.a;
+    }
+}

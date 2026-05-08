@@ -1,0 +1,273 @@
+{
+  "type" : "record",
+  "name" : "ProfileMicroContentClick",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : "string",
+    "default" : ""
+  }, {
+    "name" : "ipCntry",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "grps",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageSrc",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cardId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "cardDetails",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "locale",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "userAgent",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "impressionId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionGenerationSource",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "questionAttributeSources",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "relatedOccupationCategory",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isReAsk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "hasSalaryRangeData",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "questionName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "taxonomyRenderedValues",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "taxonomyRenderedCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "attributeAttachRate",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "isIndeedProBranded",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "inferredMinPayAmount",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "inferredMinPayPeriod",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "inferredMinPayDataSource",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "clickType",
+    "type" : "string"
+  }, {
+    "name" : "minPayAmount",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "minPayPeriod",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "minimumPayMessageShown",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "sentiment",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "yearsOfExperience",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "inferredWeight",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "submitStatus",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "submitDetailsTaxonomyId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "submitDetailsTaxonomyIdCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "submitDetailsRaw",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "submitDetailsRawCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "displayProBenefitsResponse",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "skipQuestionCallDuration",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "inferredMinPayChanged",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "wasAppliedJobSelected",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "prefilledTaxonomySubmittedValues",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "prefilledTaxonomySubmittedValueCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "submitDurationMS",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "relatedJobTitle",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "relatedjobTitle_CrowTaxoEligible",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "occupationSUID",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isCrowtaxoAttribute",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "questionText",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "tagSUID",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "tagSeenCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "tagSubmittedCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "questionSeenCount",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "questionSUID",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "tagLabels",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "valueSUID",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "success",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "name" : "actionType",
+    "type" : {
+      "type" : "enum",
+      "name" : "ActionTypeEnum",
+      "symbols" : [ "deferPromo", "dismissButton", "dismissPromo", "noResponse", "showMore", "skipQuestion", "submitButton", "viewProfileChangesLink", "unknown" ],
+      "default" : "unknown"
+    },
+    "default" : "unknown"
+  }, {
+    "name" : "actionDurationMS",
+    "type" : "int",
+    "default" : 0
+  }, {
+    "name" : "hostPage",
+    "type" : {
+      "type" : "enum",
+      "name" : "HostPage",
+      "symbols" : [ "serp", "serpGlobal", "hpClassic", "unknown" ],
+      "default" : "unknown"
+    },
+    "default" : "unknown"
+  }, {
+    "name" : "localeEnum",
+    "type" : {
+      "type" : "enum",
+      "name" : "LocaleEnum",
+      "symbols" : [ "ar_AE", "ar_BH", "ar_EG", "ar_KW", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "cs_CZ", "da_DK", "de_AT", "de_BE", "de_CH", "de_DE", "de_LU", "el_GR", "en_AE", "en_AQ", "en_AU", "en_BE", "en_BH", "en_CA", "en_CH", "en_EG", "en_GB", "en_HK", "en_ID", "en_IE", "en_IL", "en_IN", "en_KW", "en_LU", "en_MA", "en_MY", "en_NG", "en_NL", "en_NZ", "en_OM", "en_PH", "en_PK", "en_QA", "en_SA", "en_SG", "en_TH", "en_US", "en_VN", "en_ZA", "es_AR", "es_CL", "es_CO", "es_CR", "es_EC", "es_ES", "es_MA", "es_MX", "es_PA", "es_PE", "es_US", "es_UY", "es_VE", "fi_FI", "fr_BE", "fr_CA", "fr_CH", "fr_FR", "fr_LU", "fr_MA", "hi_IN", "hu_HU", "in_ID", "it_CH", "it_IT", "iw_IL", "ja_JP", "ko_KR", "nl_BE", "nl_NL", "no_NO", "pl_PL", "pt_BR", "pt_PT", "ro_RO", "ru_UA", "sv_FI", "sv_SE", "th_TH", "tr_TR", "uk_DE", "uk_PL", "uk_UA", "vi_VN", "zh_CN", "zh_HK", "zh_SG", "zh_TW", "unknown" ],
+      "default" : "unknown"
+    },
+    "default" : "unknown"
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "profile.microcontent.action",
+    "tags" : [ "success", "actionType", "hostPage", "localeEnum" ]
+  }, {
+    "name" : "profile.microcontent.action.latency",
+    "type" : "histogram",
+    "value" : "actionDurationMS",
+    "tags" : [ "success", "actionType", "hostPage", "localeEnum" ]
+  } ],
+  "logEntryType" : "profileMicroContentClick"
+}

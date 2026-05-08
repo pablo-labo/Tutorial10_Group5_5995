@@ -1,0 +1,26 @@
+{
+  "type" : "record",
+  "name" : "InteractiveAttributeInteraction",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "v",
+    "type" : "string",
+    "default" : "0"
+  }, {
+    "name" : "mobtk",
+    "type" : "string"
+  }, {
+    "name" : "suid",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "action",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "section",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "interactiveAttributeInteraction"
+}

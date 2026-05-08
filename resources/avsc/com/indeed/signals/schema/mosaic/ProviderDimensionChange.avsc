@@ -1,0 +1,33 @@
+{
+  "type" : "record",
+  "name" : "ProviderDimensionChange",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "providerId",
+    "type" : "string"
+  }, {
+    "name" : "hostId",
+    "type" : "string"
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "height",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "width",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "hasHtml",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  } ],
+  "logEntryType" : "mosaicProviderDimensionChange"
+}

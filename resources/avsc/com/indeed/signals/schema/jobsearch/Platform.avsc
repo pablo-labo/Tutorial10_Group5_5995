@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "Platform",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "symbols" : [ "UNKNOWN", "DESKTOP", "MOBILE", "APP_IOS", "APP_ANDROID" ],
+  "default" : "UNKNOWN"
+}

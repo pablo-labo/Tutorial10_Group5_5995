@@ -1,0 +1,13 @@
+{
+  "type" : "record",
+  "name" : "YellowLightModalOpened",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "mobTk",
+    "type" : "string"
+  }, {
+    "name" : "questionsShown",
+    "type" : "int"
+  } ],
+  "logEntryType" : "iaYellowLight3PModalOpened"
+}

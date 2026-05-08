@@ -1,0 +1,18 @@
+{
+  "type" : "record",
+  "name" : "AutoApplySetupPageViewEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "doc" : "Page view event",
+  "fields" : [ {
+    "name" : "setupLogUid",
+    "type" : "string"
+  }, {
+    "name" : "currentPage",
+    "type" : "string"
+  }, {
+    "name" : "timeOnPageMs",
+    "type" : [ "null", "long" ],
+    "default" : null
+  } ],
+  "logEntryType" : "autoApplySetupPageViewEvent"
+}

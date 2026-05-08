@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "ErrorType",
+  "namespace" : "com.indeed.signals.schema.homepage",
+  "symbols" : [ "UNKNOWN", "DUPE_PAGE" ],
+  "default" : "UNKNOWN"
+}

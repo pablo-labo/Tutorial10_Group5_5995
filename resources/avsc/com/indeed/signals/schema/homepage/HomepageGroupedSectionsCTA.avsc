@@ -1,0 +1,40 @@
+{
+  "type" : "record",
+  "name" : "HomepageGroupedSectionsCTA",
+  "namespace" : "com.indeed.signals.schema.homepage",
+  "fields" : [ {
+    "name" : "userEnvironment",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "UserEnvironment",
+      "symbols" : [ "UNKNOWN", "MOBILEWEB", "DESKTOP", "APP" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "logtk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "groupName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctaName",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "actionType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ActionType",
+      "symbols" : [ "IMPRESSION", "SEEN", "CLICK", "ERROR" ]
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "hpGroupedSectionsCTA"
+}

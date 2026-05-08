@@ -1,0 +1,34 @@
+{
+  "type" : "record",
+  "name" : "WebVitalSegment",
+  "namespace" : "com.indeed.signals.schema.globalnav",
+  "fields" : [ {
+    "name" : "loggedIn",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "deviceType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "WebVitalSegmentDeviceType",
+      "symbols" : [ "DESKTOP", "MOBILEWEB", "ANDROIDAPP", "IOSAPP" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "WebVitalSegmentCountry",
+      "symbols" : [ "US", "JP", "ROW" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "language",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "WebVitalSegmentLanguage",
+      "symbols" : [ "EN" ]
+    } ],
+    "default" : null
+  } ]
+}

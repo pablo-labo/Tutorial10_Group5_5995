@@ -1,0 +1,71 @@
+{
+  "type" : "record",
+  "name" : "PremiumChecklistAction",
+  "namespace" : "com.indeed.signals.schema.jspremium",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : "string"
+  }, {
+    "name" : "accountId",
+    "type" : "long"
+  }, {
+    "name" : "country",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "parentLogId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "checklistId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "view",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ChecklistView",
+      "symbols" : [ "UNKNOWN", "PROMO", "CHECKLIST_DIALOG", "CHECKLIST_COMPLETE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "checklistActionType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ChecklistActionType",
+      "symbols" : [ "UNKNOWN", "CLICK", "COMPLETE" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "itemType",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "ChecklistItemType",
+      "symbols" : [ "UNKNOWN", "TOP_CHOICE", "TOP_EARLY_APPLICANT", "AI_INTERVIEW", "PROFILE_ENGAGEMENT" ],
+      "default" : "UNKNOWN"
+    } ],
+    "default" : null
+  }, {
+    "name" : "itemId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isPrivileged",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "proctorGroups",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  }, {
+    "name" : "accountKey",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "jsPremiumChecklistAction"
+}

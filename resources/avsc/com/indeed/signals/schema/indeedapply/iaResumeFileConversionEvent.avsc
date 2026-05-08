@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "iaResumeFileConversionEvent",
+  "namespace" : "com.indeed.signals.schema.indeedapply",
+  "fields" : [ {
+    "name" : "iaUid",
+    "type" : "string"
+  }, {
+    "name" : "eventName",
+    "type" : "string",
+    "default" : "iaResumeFileConversion"
+  }, {
+    "name" : "success",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "name" : "errorMessage",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "iaResumeFileConversion"
+}

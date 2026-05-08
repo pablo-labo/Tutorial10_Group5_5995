@@ -1,0 +1,10 @@
+{
+  "type" : "record",
+  "name" : "RNHiringEventNotFoundError",
+  "namespace" : "com.indeed.signals.schema.hiringevents",
+  "fields" : [ {
+    "name" : "jobkey",
+    "type" : [ "null", "string" ]
+  } ],
+  "logEntryType" : "rnHiringEventNotFoundError"
+}

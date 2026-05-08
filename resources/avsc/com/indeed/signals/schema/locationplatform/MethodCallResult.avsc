@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "MethodCallResult",
+  "namespace" : "com.indeed.signals.schema.locationplatform",
+  "symbols" : [ "TRUE", "FALSE", "OTHER_FAILURE" ],
+  "default" : "OTHER_FAILURE"
+}

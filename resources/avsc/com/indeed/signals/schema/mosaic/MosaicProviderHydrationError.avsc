@@ -1,0 +1,46 @@
+{
+  "type" : "record",
+  "name" : "MosaicProviderHydrationError",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "hostId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "pageId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "providerId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "errorMsg",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "url",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "isLoggedIn",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "mosaicTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "gnavTk",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "zonedProviders",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : "string"
+    } ],
+    "default" : null
+  } ],
+  "logEntryType" : "mosaicProviderHydrationError"
+}

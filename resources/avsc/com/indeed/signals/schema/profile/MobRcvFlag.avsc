@@ -1,0 +1,25 @@
+{
+  "type" : "record",
+  "name" : "MobRcvFlag",
+  "namespace" : "com.indeed.signals.schema.profile",
+  "fields" : [ {
+    "name" : "v",
+    "type" : "string",
+    "default" : "0"
+  }, {
+    "name" : "mobtk",
+    "type" : "string"
+  }, {
+    "name" : "parentEventType",
+    "type" : "string"
+  }, {
+    "name" : "ts",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "flag",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "logEntryType" : "mobRcvFlag"
+}

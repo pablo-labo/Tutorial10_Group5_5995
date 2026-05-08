@@ -1,0 +1,63 @@
+{
+  "type" : "record",
+  "name" : "JobPostingStarted",
+  "namespace" : "com.indeed.signals.schema.onehost",
+  "fields" : [ {
+    "name" : "jobId",
+    "type" : "string"
+  }, {
+    "name" : "clientStartedTimestamp",
+    "type" : "long"
+  }, {
+    "name" : "flowType",
+    "type" : {
+      "type" : "enum",
+      "name" : "FlowType",
+      "symbols" : [ "FROM_SCRATCH", "REPOST", "REUSE" ]
+    }
+  }, {
+    "name" : "isIhp",
+    "type" : "boolean"
+  }, {
+    "name" : "jobposting_session_id",
+    "type" : "string"
+  }, {
+    "name" : "advertiserNumber",
+    "type" : "string"
+  }, {
+    "name" : "advertiserKey",
+    "type" : "string"
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  }, {
+    "name" : "employerHasHostedJobs",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "isFirstJob",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "eventSource",
+    "type" : [ "null", {
+      "type" : "enum",
+      "name" : "EventSource",
+      "symbols" : [ "FAR", "LEGACY" ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "reuseEmployerJobId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "reusePublishedId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "signals.onehost.jobposting.started",
+    "tags" : [ "flowType", "isFirstJob", "isIhp" ]
+  } ],
+  "logEntryType" : "jobPostingStarted"
+}

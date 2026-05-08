@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="64dp"
+    android:width="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:fillColor="@drawable/_ic_idl_ace_logo__0_res_0x7f08004c"
+        android:pathData="M32,64C49.673,64 64,49.673 64,32C64,14.327 49.673,0 32,0C14.327,0 0,14.327 0,32C0,49.673 14.327,64 32,64ZM9.6,32C21.273,30.522 30.522,21.273 32,9.6C33.478,21.273 42.727,30.522 54.4,32C42.727,33.478 33.478,42.727 32,54.4C30.522,42.727 21.273,33.478 9.6,32Z"
+        android:fillType="evenOdd"/>
+</vector>

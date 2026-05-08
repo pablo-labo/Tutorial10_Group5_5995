@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "MosaicSignalsDDNestedMetricTest",
+  "namespace" : "com.indeed.signals.schema.mosaic",
+  "fields" : [ {
+    "name" : "sub",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "MosaicNestedSubObject",
+      "fields" : [ {
+        "name" : "testBoolean",
+        "type" : [ "null", "boolean" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "testString",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "mosaicSignalsDDTest.nestedBoolean",
+    "tags" : [ "sub.testBoolean" ]
+  } ],
+  "logEntryType" : "mosaicSignalsTestsNestedMetrics"
+}

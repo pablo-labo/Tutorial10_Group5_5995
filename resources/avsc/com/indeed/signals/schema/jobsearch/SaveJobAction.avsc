@@ -1,0 +1,7 @@
+{
+  "type" : "enum",
+  "name" : "SaveJobAction",
+  "namespace" : "com.indeed.signals.schema.jobsearch",
+  "symbols" : [ "save", "unsave" ],
+  "default" : "save"
+}

@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "PayInsightsImpression",
+  "namespace" : "com.indeed.signals.schema.payinsightsevents",
+  "fields" : [ {
+    "name" : "surface",
+    "type" : "string"
+  }, {
+    "name" : "jobTitle",
+    "type" : "string"
+  }, {
+    "name" : "location",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "ctk",
+    "type" : "string"
+  } ],
+  "unstable_metrics" : [ {
+    "name" : "payInsightsImpression"
+  } ],
+  "logEntryType" : "payInsightsImpression"
+}
