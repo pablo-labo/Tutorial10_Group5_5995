@@ -32,6 +32,9 @@ diagnostic-pipeline-supplement.zh.md
 replay-validation-supplement.md
   Supplemental controlled replay validation. It treats adb/logcat as the research validation method, not the only exposure scenario, and documents a tester-controlled read-only authenticated replay result with a redacted account marker hash.
 
+replay-validation-supplement.zh.md
+  Chinese version of the controlled replay validation supplement.
+
 bugcrowd-report-draft.zh.md
   Chinese Bugcrowd-style report draft kept as supporting material.
 
@@ -102,9 +105,10 @@ The replay validation uses adb/logcat as a controlled research method. The broad
 1. `academic-report.md`
 2. `diagnostic-pipeline-supplement.md`
 3. `replay-validation-supplement.md`
-4. `diagnostic-pipeline-supplement.zh.md`
-5. `evidence-redacted-logcat-cookiehelper.txt`
-6. `evidence-summary-clean-authenticated-run.txt`
-7. `poc-deeplink-logcat-capture.py`
-8. `poc-replay-from-adb-logcat.py`
-9. `technical-risk-report.md`
+4. `replay-validation-supplement.zh.md`
+5. `diagnostic-pipeline-supplement.zh.md`
+6. `evidence-redacted-logcat-cookiehelper.txt`
+7. `evidence-summary-clean-authenticated-run.txt`
+8. `poc-deeplink-logcat-capture.py`
+9. `poc-replay-from-adb-logcat.py`
+10. `technical-risk-report.md`
