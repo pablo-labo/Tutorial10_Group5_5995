@@ -1,0 +1,20 @@
+﻿Clean deep link capture summary for Bugcrowd triage
+Timestamp: 20260509-002214
+Package: com.indeed.android.jobsearch
+URL: http://www.indeed.com/jobs?q=test
+TLS mode: passthrough
+mitm server connect hits: 47
+logcat URL hits: 15
+sensitive log hits: 10
+
+Key evidence:
+05-09 00:22:19.482 I/DeeplinkStore(...): Emitting LinkClick(uri=http://www.indeed.com/jobs?q=test&utm_eao_tk=<redacted>, referrer=null)
+05-09 00:22:22.238 D/IndeedCookieHelper(23685): cookies: Device-ID=<redacted>; CSRF=<redacted>; INDEED_CSRF_TOKEN=<redacted>; LV=<redacted>; sp=<redacted>; appSignIn=<redacted>; SURF=<redacted>; indeed_rcc=<redacted>; PP=<redacted>; ROJC=<redacted>; CLK=<redacted>; RQ=<redacted>; JSESSIONID=<redacted>; RJAS=<redacted>; _cfuvid=<redacted>; __cf_bm=<redacted>; SOCK=<redacted>; SHOE=<redacted>; jsopfc=<redacted>; gopfc=<redacted>; __Secure-PassportAuthProxy-BearerToken=<redacted>; __Secure-PassportAuthProxy-RefreshToken=<redacted>; __Secure-PassportAuthProxy-OauthHMAC=<redacted>; __Secure-PassportAuthProxy-OauthExpires=<redacted>; PPID=<redacted>; _sp_ses.27f6=<redacted>; ENC_CSRF=<redacted>; g_state=<redacted>; LOCALE=<redacted>; _sp_id.27f6=<redacted>; CTK=<redacted>; Indeed-App-Proctor-Groups=<redacted>
+05-09 00:22:25.258 D/IndeedCookieHelper(23685): cookies: Device-ID=<redacted>; CSRF=<redacted>; sp=<redacted>; appSignIn=<redacted>; SURF=<redacted>; _cfuvid=<redacted>; SOCK=<redacted>; SHOE=<redacted>; jsopfc=<redacted>; gopfc=<redacted>; __Secure-PassportAuthProxy-BearerToken=<redacted>; __Secure-PassportAuthProxy-RefreshToken=<redacted>; __Secure-PassportAuthProxy-OauthHMAC=<redacted>; __Secure-PassportAuthProxy-OauthExpires=<redacted>; PPID=<redacted>; INDEED_CSRF_TOKEN=<redacted>; LV=<redacted>; indeed_rcc=<redacted>; _sp_ses.27f6=<redacted>; jobseeker_fraud_banner_dismissed=<redacted>; ENC_CSRF=<redacted>; g_state=<redacted>; LOCALE=<redacted>; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=<redacted>; JSESSIONID=<redacted>; CTK=<redacted>; __cf_bm=<redacted>; _sp_id.27f6=<redacted>; Indeed-App-Proctor-Groups=<redacted>
+05-09 00:22:27.462 D/IndeedCookieHelper(23685): cookies: Device-ID=<redacted>; CSRF=<redacted>; sp=<redacted>; appSignIn=<redacted>; SURF=<redacted>; _cfuvid=<redacted>; SOCK=<redacted>; SHOE=<redacted>; jsopfc=<redacted>; gopfc=<redacted>; __Secure-PassportAuthProxy-BearerToken=<redacted>; __Secure-PassportAuthProxy-RefreshToken=<redacted>; __Secure-PassportAuthProxy-OauthHMAC=<redacted>; __Secure-PassportAuthProxy-OauthExpires=<redacted>; PPID=<redacted>; _sp_ses.27f6=<redacted>; ENC_CSRF=<redacted>; LOCALE=<redacted>; CTK=<redacted>; __cf_bm=<redacted>; _sp_id.27f6=<redacted>; g_state=<redacted>; Indeed-App-Proctor-Groups=<redacted>
+
+TLS note:
+mitmproxy was used in passthrough mode only. HTTPS payload leakage is not claimed.
+
+Redaction note:
+Cookie/session/token values are removed. Cookie key names are preserved to show impact without exposing live secrets.
